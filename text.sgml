@@ -1,0 +1,71 @@
+<chapter>
+
+
+<title>Text software</title>
+<subtitle>Text editing and publishing with dyne:bolic</subtitle>
+
+<para>
+Dyne:bolic includes software to let you easily write and compose
+any kind of text document: hyper-texts that can be published on
+the internet (HTML), formatted texts that can be printed (RTF,
+PDF, Postscript and even the deprecated DOC
+
+<footnote><para>
+You shouldn't use the .DOC format for many reasons: it exposes
+all your previous changes in your documents which can often lead to
+a privacy problem, it can vehicle dangerous viruses that affect other
+proprietary systems and it stores your text in a non-readable way
+which ties you up to the availability of proprietary software.
+See the extensive document <ulink url="http://www.gnu.org/philosophy/no-word-attachments.html"></ulink>
+on the topic. However, dyne:bolic is able to read and write all .DOC files.
+</para></footnote>
+
+format).
+</para>
+
+<para>
+<emphasis>AbiWord</emphasis> and <emphasis>Ted</emphasis> are
+word processors, with them you can write and edit documents and
+articles mostly made of text, formatting things like the font
+properties, alignement and so on, saving them in Rich Text Format
+and other similar formats. While <emphasis>AbiWord</emphasis> is
+a full fledged word processor, <emphasis>Ted</emphasis> should be
+choosen for its simplicity and lightweight, being able to run on
+slower computers.
+</para>
+
+<para>
+<emphasis>Scribus</emphasis> is a desktop publishing program to 
+compose vectorial formats like PDF and Postscript, it is useful
+to paginate text in a professional printable form to produce
+magazines, flyers and most publications that need to mix text and
+images in pages following customizable schemes.
+</para>
+
+<para>
+In order to edit webpages, <emphasis>Bluefish</emphasis> is provided
+for web designers to edit plain HTML scripts, aided by a series of
+toolbars which provide element templates for links, images, tables etc.
+giving you a useful highlight for the tags.
+</para>
+
+<para>
+<emphasis>Nedit</emphasis> is a plain text editor providing syntax
+highlight for a couple of sourcecode languages, it is intuitive and
+easy to use for the newbies, but at the same can offer a powerful
+environment for programmers.
+</para>
+
+<para>
+At last, <emphasis>Antiword</emphasis> is a very handy commandline
+application to convert with a simple command any .doc file into a
+plain text file, keeping the alignement of the lines intact.
+For a quick start try it out:
+<screen>
+<prompt>[d:b] ~ #</prompt><userinput>antiword evil.doc > good.txt</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+as usual there are manual pages providing more informations on its usage,
+just type <emphasis>man antiword</emphasis> into a terminal.
+</para>
+
+</chapter>

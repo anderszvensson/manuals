@@ -1,0 +1,160 @@
+<chapter>
+<title>Communication software</title>
+<subtitle>Communication software included in dyne:bolic</subtitle>
+
+<para>
+Since their birth, UNIX systems have been specially enhanced for
+network tasks, to efficiently handle communication protocols connecting
+computers across the net and of course the Internet.
+Being a GNU/Linux system, dyne:bolic offers a vast range of possibilities
+and applications, from the simpliest to the most advanced network software.
+</para>
+
+<para>
+Given its variety, the Communication section is the biggest software category
+in dyne:bolic and is separated into various subsections, which we will further
+analyze in this chapter. Read on if you want to discover how to connect with
+people across the Net and the many ways to do that.
+</para>
+
+<!-- 
+<para>
+Our dyne:bolic distribution gives you a full range of programs to
+cover most of the ways to comunicate wich are commonly used today,
+protects your privacy with encryption whenever it is possible, offers
+peer to peer and filesharing tools working both on local and remote
+networks, lets you share desktop between two computers and more...
+</para>
+-->
+
+<section>
+<title>Surf the web</title>
+<subtitle>software to access the world wide web</subtitle>
+
+<para>
+There are three different ways to access the WWW pages on the net using
+dyne:bolic, thanks to the variety of web browsers developed for the
+GNU/Linux platform.
+</para>
+
+<para>
+The first and most familiar browser is <emphasis>Firefox</emphasis> which
+is developed by the Mozilla team in order to have a fully capable tool to
+access the web. Firefox offers an intuitive interface, bookmark handling
+and a couple of plugins that can be used to extend its functionalities.
+</para>
+
+<para>
+Then we have <emphasis>Links</emphasis> which is a lightweight alternative
+to the previous: it runs much faster on old computers while still offering
+most of the crucial functionalities. It is remarkable its quality and speed
+in rendering web pages, making it a great tool for presentations.
+</para>
+
+<para>
+At last there is <emphasis>Lynx</emphasis> which is a text-only browser
+capable to show the text on a web page without images, which can result
+in a faster access to the content, while being the faster tool available
+to browse the web.
+</para>
+
+<para>
+Besides the browsers, dyne:bolic also includes a powerful "spider" to
+crawl and download entire websites: <emphasis>WGet</emphasis>, which is
+a commandline tool. As usual you can discover how it works by consulting
+the manual from an XTERM, typing <emphasis>man wget</emphasis>.
+</para>
+
+</section>
+
+<section>
+<title>Email and encryption</title>
+<subtitle>Send your letters in a safe way</subtitle>
+
+<para>
+Email is nowadays the most widespread technology used for personal
+communication on the net. Alltough it is often not secured for privacy
+and it is being easily intercepted by all kind of third parties:
+to enforce governmental control, market surveys and spionage.
+If you are concerned about privacy then you probably allready heard
+about the solution to secure email communication:
+<emphasis>encryption</emphasis>
+</para>
+
+<para>
+Encryption is a technique based on mathematical formulas, it can ensure
+security in your communication by using two keys: a private and a public
+one, you will give the public to your friends while keep the private one to
+decypher the messages you receive - everyone wanting to send you a secure
+message will need to use your public key to encrypt it and only your private
+key will be able to decrypt it.
+For more information on its usage and implementation refer to the web pages
+on <ulink url="http://www.gnupg.org"></ulink>
+</para>
+
+<para>
+Dyne:bolic comes equipped with an easy to use email program called
+<emphasis>Sylpheed</emphasis> which can handle local downloading of mailbox,
+filters, folders and multiple accounts, while being integrated with the
+<emphasis>GnuPG encryption</emphasis> system.
+</para>
+
+<para>
+Also included is <emphasis>GPA</emphasis> the GNU Privacy Assistant which
+will help you in the task of generating your encryption keys and handling
+the collection of your friends keys into a local keyring.
+</para>
+
+<para>
+If you are interested into the history of encryption - an hot topic
+which made USA react with their weapon export regulations to the spreading
+of such techniques - I suggest you refer to the book "Crypto" by Stephen Levy.
+</para>
+
+</section>
+
+
+<section>
+<title>Filesharing and Peer 2 Peer</title>
+<subtitle>Share your data across the net</subtitle>
+
+<para>to be continued..</para>
+
+</section>
+
+
+<section>
+<title>Chat and conferencing</title>
+<subtitle>Chat, conferencing and messaging</subtitle>
+
+<para>to be continued..</para>
+
+</section>
+
+
+<section>
+<title>File transfer</title>
+<subtitle>FTP clients</subtitle>
+
+<para>to be continued..</para>
+
+</section>
+
+
+<section>
+<title>Remote access to desktop</title>
+<subtitle>Share your desktop and remotely control it</subtitle>
+
+<para>to be continued..</para>
+
+</section>
+
+<section>
+<title>Network tools</title>
+<subtitle>to survive in this changing world you need an up to date toolbox!</subtitle>
+
+<para>to be continued..</para>
+
+</section>
+
+</chapter>

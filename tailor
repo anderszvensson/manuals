@@ -1,0 +1,17 @@
+[DEFAULT]
+verbose = True
+
+[project]
+target = git:target
+start-revision = INITIAL
+root-directory = /home/jaromil/devel/dynebolic-manual
+state-file = tailor.state
+source = svn:source
+subdir = .
+
+[svn:source]
+module = dynebolic-manual
+repository = svn://dyne.org/montevideo
+
+[git:target]
+

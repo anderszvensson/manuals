@@ -1,0 +1,113 @@
+<chapter>
+<title>Audio production</title>
+<subtitle>audio software included in dyne:bolic</subtitle>
+
+<para>
+This distribution is full with audio software to do all kind of things:
+electronic music, sound processing, voice effects, interviews and more.
+And there is one important thing that makes this system superior to any
+other commercial solution: there is no competition :)
+</para>
+
+<para>
+Most of the audio applications in dyne:bolic can be connected together,
+input to output, in order to form a chain of tools processing the sound:
+this is done thanks to a technologies like JACK and the Advanced Linux
+Sound Architecture. Instead of keeping separated the tasks of every
+single application, now it is possible to take advantage of the great
+variety of approaches that a GNU/Linux system like dyne:bolic has to
+offer.
+</para>
+
+<para>
+This revolutionary approach will surely pay you back the effort to
+be introduced to its use, a good starting point is the Spot perspective
+on technology at <ulink url="http://spot.river-styx.com/viewarticle.php?id=14"></ulink>
+and <ulink url="http://spot.river-styx.com/viewarticle.php?id=17"></ulink>.
+</para>
+
+<section>
+<title>DeeJay</title>
+
+<para>
+       <emphasis>TerminatorX</emphasis>
+       is  a  realtime audio synthesizer that allows
+       you to "scratch" on digitally sampled audio  data  (*.wav,
+       *.au,  *.mp3,  etc.)  the  way hiphop-DJs scratch on vinyl
+       records. It features multiple turntables, realtime effects
+       (buit-in  as  well  as LADSPA plugin effects), a sequencer
+       and an easy-to-use gtk+ GUI.
+</para>
+
+<para>
+<emphasis>SoundTracker</emphasis> A great tracker/sequencer in the style of FastTracker2, working with .xm and .mod and other formats, also exporting to wav and using midi (can be also used as a sampler).
+</para>
+
+<para>
+<emphasis>GDam</emphasis>
+is an incredibly rich program featuring the possibility to deejay with
+multiple files, also remotely connected to a central server (multiple
+djying) and implementing a lot of effects.
+</para>
+
+<para>
+<emphasis>PD</emphasis>, Pure Data signal processing,
+is an extremely advanced program for digital signal processing featuring
+the possibility to develop your own patches.
+</para>
+<para>
+       Pd  is  a  graphical programming environment for real-time
+       audio synthesis and related  applications.   It  sports  a
+       rich set of real-time control and I/O features.
+</para>
+<para>
+Dyne:bolic offers the most complete PD installation out of the box,
+including a vast amount of externals built by the wide community of users.
+To get a full list of available extensions, see /home/.pdrc or
+start 'pd' from an XTERM.
+</para>
+
+</section> <!-- /DEEJAY -->
+
+
+
+
+<section>
+<title>Play</title>
+
+<para>To be continued...</para>
+
+</section> <!-- /PLAY -->
+
+
+
+<section>
+<title>Record</title>
+
+<para>To be continued...</para>
+
+</section>
+
+
+
+
+<section>
+<title>Edit</title>
+
+<para>To be continued...</para>
+
+</section>
+
+
+
+
+<section>
+<title>Stream</title>
+
+<para>To be continued...</para>
+
+</section>
+
+
+</chapter>
+

@@ -1,0 +1,274 @@
+<chapter>
+<title>Video production</title>
+<subtitle>Video software included in dyne:bolic</subtitle>
+
+<para>
+The GNU/Linux platform nowadays offers an interesting range of tools
+for video manipulation; most of them are in development, being video a
+frounteer for multimedia production, they are being set new standards
+and paradigms of interaction which users may not always find familiar.
+At present time there are reliable and flexible tools to encode, convert
+between video formats, stream and apply realtime effects on video.
+</para>
+
+<para>
+However, you should consider that most of the video tools running on
+GNU/Linux platform are still in a BETA stage of usability and
+therefore can reveal to be unstable in certain situations. Indeed you
+can help much in testing and reporting the bugs you encounter, that's
+how anyone can help free software to grow better and better, as it does.
+</para>
+
+<para>
+Now lets proceed on how to configure an available video device and then
+browse thru the video software included in dyne:bolic,
+following a subdivision in task categories.
+</para>
+
+<section>
+<title>Configure your video devices</title>
+
+<para>
+There are various devices that can be used on PC computers in order to
+have video input: USB webcams and capture cards, PCI TV cards, Firewire
+and even parallel port. Most of them have different chipsets and manufacturers
+and need different Linux device drivers.
+</para>
+
+<para>
+Dyne:bolic is capable to automaticly
+recognize most PCI (internal) TV cards at boot time (WinTV, BTTV); also
+Firewire controllers are supported without any problem, but your device will
+need to speak plain DV protocol to interact with applications.
+</para>
+
+<para>
+All other video devices must be configured by hand, if you have
+an USB camera a good place to start looking for hints is 
+<ulink url="http://www.linux-usb.org"></ulink>,
+once you found the right kernel module  for you, load it using the
+command '<emphasis>modprobe modulename</emphasis>' and see if everything went
+well by looking in the last lines of the messages printed out by the
+<emphasis>dmesg</emphasis> command.
+</para>
+
+<para>
+As usual you can have a look to the Spot's technology
+guide about rolling your camera on dyne:bolic:
+<ulink url="http://spot.river-styx.com/viewarticle.php?id=16"></ulink>.
+</para>
+
+
+</section>
+
+<section>
+<title>VeeJay</title>
+
+<para>
+The VeeJay applications implement a pioneeristical approach to
+video manipulation in realtime,taking advantage of the high
+computational power offered by personal computers nowadays.
+If you're active in the field of media and visual art, dance or
+scenografy, this software can be interesting and sometimes very
+useful to your research.
+</para>
+
+<para>
+<emphasis>FreeJ</emphasis>
+is a software that I started writing myself in 2001, collecting
+video compositing tecniques i developed in theatre and interactive
+installations.
+It is still in development, but it's allready usable and offers multiple
+approaches to realtime video manipulation: can be controlled lively and
+from a remote console (VeeJay over Ethernet!) or scripted in an object
+oriented syntax. More documentation about its
+usage, complete with manuals and a friendly tutorial, can be found online
+at its homepage on <ulink url="http://freej.dyne.org"></ulink>.
+</para>
+
+<para>
+Other tools included in dyne:bolic are useful to be employed in different
+ways on realtime video, the most remarkable are the <emphasis>PD</emphasis>
+extensions for video called <emphasis>PDP / PiDiP</emphasis> and
+<emphasis>GEM</emphasis> which can be scripted in a visual way to build
+the most visionary 2d and 3d interactive video tools, which can also interact
+with audio.
+</para>
+
+<para>
+The so called PD, which stands for Pure Data, is as powerful as complicated to learn.
+There is a wide community of wild geniuses creating all kind of visionary
+audio/visual patches and interactive installations.
+You can get started from the author pages: Miller Puckette wrote
+extensive documentation about it on <ulink url="http://www.crca.ucsd.edu/~msp/Pd_documentation/index.htm"></ulink>,
+and if you don't want to feel alone with it you can get in contact with the
+mailinglist on <ulink url="http://iem.kug.ac.at/mailinglists/pd-list/"></ulink>.
+</para>
+
+</section>
+
+
+<section>
+<title>Play</title>
+
+<para>
+In this section you'll find tools to playback various video formats as
+AVI, MPEG, DIVX and WMV files, signals from TV cards or Quicktime, RTSP and
+HTTP live streams from the net.
+At the time being, dyne:bolic is compatible with most of
+the video formats around: thanks to the <emphasis>MPlayer</emphasis>
+and <emphasis>FFMpeg</emphasis> free software
+you have chances to view files otherwise unsupported by other proprietary
+systems.
+</para>
+
+</section>
+
+<section>
+<title>Record</title>
+
+<para>
+Video recording is supported using a vast number of devices:
+from TV/video card and DVD using <emphasis>MEncoder</emphasis>,
+from DV firewire using <emphasis>Kino</emphasis>,
+from webcams using <emphasis>XawTV</emphasis>,
+while it is also possible to record your desktop actions in a movie
+using the included screen grabber tool.
+</para>
+
+</section>
+
+<section>
+<title>Edit</title>
+
+<para>
+Editing video is a hot topic for free software, in fact GNU/Linux still
+lacks stable tools to perform the most popular non-linear editing technique,
+but development is rapidly evolving.
+</para>
+
+<para>
+Inside dyne:bolic you'll find the two best applications that are
+available for the task: <emphasis>Cinelerra</emphasis> implements
+a canonical approach to non-linear editing,
+while <emphasis>LiVES</emphasis> is a new promising application
+using an almost-linear "cut and paste" approach and supports 
+more video formats for input files.
+Both applications are being actively developed during the time being
+and will require a bit more patience and attention to be properly used,
+given the complexity of the task they accomplish.
+</para>
+
+<para>
+You can be introduced to <emphasis>Cinelerra</emphasis> by the
+manual available on <ulink url="http://manual.cinelerra.org"></ulink>.
+</para>
+
+<para>
+<emphasis>LiVES</emphasis> uses large amounts of scratch
+space during processing. By default it will try to use the /tmp
+directory, which is located in memory when d:b first boots. There are
+several ways to improve this. Using a 'nest' file replaces the memory
+version of /tmp with space from the nest, so if you make it large
+enough, that can solve the problem. You also can set a different
+location for the temporary files in the LiVES preferences. If you set  
+this to point to a real disk, things go much smoother.
+</para>
+
+<para>
+Also consider that d:b will boot with 64 Meg of memory,
+but it will be limited in what you can accomplish. Video editing is a
+memory intensive activity. Linux systems generally use virtual memory in
+the form of 'swap' space to extend capabilities beyond the physical
+memory. d:b will use a swap partition if it exists, but if you are
+hosting on a system without a writable partition, there won't be a Linux swap partition to
+use. It is possible to create a swap file on a FAT formatted hard drive.
+</para>
+
+<para>
+For converting between video formats its included the powerful
+<emphasis>Transcode</emphasis> tool, which is a commandline application
+that can be scripted to convert large number of files or easily accessed
+via a graphical interface.
+</para>
+
+</section> <!-- /EDIT -->
+
+
+
+
+<section>
+<title>Stream</title>
+
+<para>
+Streaming video can be easily setted up in three different ways: each
+of them has advantages, requirements and drawbacks.
+</para>
+
+<para>
+Let's draw a scheme to make things easier to catch: in the top row
+you'll find the name of the software employed in each of the three
+ways, and further down explained their peculiarities.
+</para>
+
+<table><title>The three ways to stream video with dyne:bolic</title>
+
+<tgroup cols=4 colsep=1><thead>
+<row>
+<entry> </entry>
+<entry> Mp4Live </entry>
+<entry> Palantir </entry>
+<entry> HasciiCam </entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry><emphasis>codec</emphasis></entry>
+<entry>Mpeg 4</entry>
+<entry>Multipart/Jpeg</entry>
+<entry>(h)ASCII</entry>
+</row>
+
+<row>
+<entry><emphasis>requirements</emphasis></entry>
+<entry>an online server running Darwin broadcast software; to watch the stream an external video player is necessary.</entry>
+<entry>the video camera must be directly attached to the server; needs a web browser supporting multipart content push (m$ IE doesn't works).</entry>
+<entry>need just a video-in and eventually an online webserver with ftp access.</entry>
+
+</row>
+
+<row>
+<entry><emphasis>features</emphasis></entry>
+<entry>good quality and smooth framerate; can record while streaming; efficiently uses bandwidth when running on multicast; can stream audio synced with the video.</entry>
+<entry>good quality; can be seamlessy embedded in webpages and works very smoothly in local networks; can stream audio synced with the video.</entry>
+<entry>uses very low bandwidth; can upload video via ftp to a server; can be viewed directly from any web browser (also text based); it looks pretty cool</entry>
+</row>
+
+<row>
+<entry><emphasis>drawbacks</emphasis></entry>
+<entry>can be hard to find or setup a broadcast server; slower machines can't stream neither play it.</entry>
+<entry>uses much bandwidth; it's impossible to have smooth movement when streaming on the web.</entry>
+<entry>the image is formed of characters: nifty, but doesn't gives a clear image and is just monochrome; can't achieve a smooth frame movement.</entry>
+</row>
+
+</tbody>
+</tgroup>
+</table>
+
+<para>
+I'm writing an extensive research on the topic of streaming video
+with free software, the latest version is published online at the address
+<ulink url="http://korova.dyne.org/video_streaming">
+korova.dyne.org/video_streaming</ulink>
+and available as well as a downloadable and printable document:
+<ulink url="http://korova.dyne.org/video_streaming.pdf">
+korova.dyne.org/video_streaming.pdf</ulink>.
+</para>
+
+
+</section> <!-- /STREAM -->
+
+
+</chapter> <!-- VIDEO -->
+
+

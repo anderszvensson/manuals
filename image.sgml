@@ -1,0 +1,46 @@
+<chapter>
+<title>Graphical software</title>
+<subtitle>Image manipulation and 3d modeling</subtitle>
+
+<para>
+The dyne:bolic distribution includes some eccellent programs 
+for image composition and 3d modeling:
+</para>
+
+<para>
+<emphasis>Gimp</emphasis> is a well mature application capable to
+create and edit bitmap images, offers a perfect environment for
+web graphics as well a powerful script engine to automatize its
+operations and even generate automatically stylish logos.
+</para>
+
+<para>
+<emphasis>Blender</emphasis> consists of a powerful environment for
+3d modeling and game development: it features a well designed
+interface, a ray tracing engine and scriptability of object behaviours
+in python: it can produce rendered scenes as well interactive applications
+and animations on timelines.
+There is allready a great comunity of artists using it, tutorial and
+examples are available on its website, as well a detailed manual that
+can be ordered online. Blender is one of the best tools in the open source
+and free software world for multimedia productions of many kinds, being
+adopted in the production of several professional movies.
+Using the clustering capability of dyne:bolic you can easily build render
+farms distributing the load on several computers on the same network, see
+the Spot's tutorial available online on <ulink url="http://"></ulink>.
+</para>
+
+<para>
+<emphasis>GQview</emphasis> is an easy to use image browser which you can
+also use to build slideshows to interactively show your image galleries.
+</para>
+
+<para>
+<emphasis>ImageMagick</emphasis> is a set of commandline tools, starting
+from the <emphasis>convert</emphasis> terminal command
+(see <emphasis>man convert</emphasis>) you can easily script batch operations
+over multiple files, applying format conversion and filters on large
+quantities of images.
+</para>
+
+</chapter>

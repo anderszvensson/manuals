@@ -1,0 +1,417 @@
+<chapter>
+<title>Discover the dyne:bolic system</title>
+
+<section>
+<title>Your desktop environment</title>
+
+<para>
+Dyne:bolic is a preconfigured GNU/Linux system which runs without
+installing anything on you harddisks, to run it doesn't need to make
+any change to your stored data, in fact you can also boot it on
+diskless computers. The whole operating system fits on a single CD.
+It can also run from harddisk, without the need to change its
+partition geometry: just store a local copy of one file big ~600MB.
+This makes dyne:bolic very easy to be employed, while there
+is no risk for misconfiguration: the system comes as it is, 
+to provide you with a slick desktop full of applications ready to use.
+</para>
+
+<para>
+The desktop is managed by
+<ulink url="http://www.windowmaker.org">WindowMaker</ulink>,
+it offers you multiple desktops (try alt+2 and other numbers)
+and a menu that you can recall by clicking the right mouse button on
+the background. On the upper right corner you have your storage devices
+which you can access with a double click, on the lower right corner you
+have a system monitor informing about your computer usage.
+</para>
+
+<para>
+The menu of dyne:bolic is organized by tasks, in categories.
+You can easily find software to play, record, edit and stream both
+audio and video, communicate and publish text, webpages, 3d animations
+and more. And of course you have also games ;)
+</para>
+
+<para>
+If you are interested in more comments and reviews that can take you
+in a quick tour of dyne:bolic,
+you can visit Spot's homepage on
+<ulink url="http://spot.river-styx.com/viewarticle.php?id=8"></ulink>
+and read the OSNews review on <ulink url="http://www.osnews.com/story.php?news_id=6490"></ulink>.
+</para>
+
+</section>
+
+<section>
+<title>Access your data</title>
+
+<para>
+With dyne:bolic your <emphasis>/home</emphasis> directory resides
+in your RAM memory
+and every new file you write into it will not be there at the next
+boot, unless you create a <emphasis>nest</emphasis>
+<footnote><para>
+see the following section about NESTING.
+</para></footnote>
+where to store your data and settings on harddisk or usb storage
+devices.
+</para>
+
+<para>
+You can easily browse your stored data (harddisks, cd, floppy, usb)
+using the buttons in the upper right corner of your desktop.
+Your harddisk partitions are automatically
+mounted in the <emphasis>/vol</emphasis> directory and
+you can both read and write
+
+<footnote><para>
+NTFS partitions are only readable, but non writable: use FAT32 instead!
+</para></footnote>
+
+the data inside them.
+
+</para>
+
+<para>
+Usb storage devices (like usb pens, smartcards and digital photo
+cameras) are generally supported
+<footnote><para>
+see <ulink url="http://www.linux-usb.org">www.linux-usb.org</ulink>
+if your model is compatible with the Linux kernel.
+</para></footnote>
+: just double click the blue button with a usb symbol on it, the
+connected device is automatically mounted in the removable media
+directory <emphasis>/rem/usb</emphasis>.
+</para>
+
+<para>
+Data on floppy disks can be accessed as well using the floppy button,
+the disk is automounted when you access the directory <emphasis>/rem/floppy</emphasis>.
+</para>
+
+<para>
+If you have an unused cdrom player on your computer (other than
+the one booting dyne:bolic, or in case you docked the system
+
+<footnote><para>
+see the following section about DOCKING your system if you
+want to run dyne:bolic from the harddisk, even without the need
+for a CD player
+</para></footnote>
+
+then you can access, browse, play and rip a compact disc as well.
+The cd is automatically mounted in
+<emphasis>/rem/cd*</emphasis>
+directories, where the star is a number starting from 1 in case you
+have multiple readers.
+If you have a cd burner, you can also use it to create cd and
+you can even clone the dyne:bolic from the running system.
+</para>
+
+<para>
+The <emphasis>Samba</emphasis> filesharing daemon is running on your
+dyne:bolic: everything contained in the
+<emphasis>/home/shared</emphasis> directory is accessible (read and
+write) as a shared folder on the network you are connected, without
+any password protection - the share is called 'dyne:bolic casbah'.
+If you want to share other directories you'll need to tweak by hand
+the configuration file in <emphasis>/etc/samba</emphasis>
+</para>
+
+<para>
+Finally, to have a general overview about the meaning and organizations
+of the various directories you'll find in the system, you can open
+an XTERM and type <emphasis>man hier</emphasis>.
+And remember that the "man" command is your friend! any command is
+documented and its manual can be recalled by typing
+<emphasis>man command</emphasis> into a console terminal.
+</para>
+
+</section>
+
+<section>
+<title>Nest your home and settings</title>
+
+<para>
+The <emphasis>nesting</emphasis> function offered by dyne:bolic is a quite
+simple but revolutionary concept for the way operating systems usually
+worked until now. dyne:bolic was the first (but no more the only)
+GNU/Linux distribution really implementing it.
+</para>
+
+<para>
+The concept is simple: you cannot modify the operating system, you
+use it as it comes and you update it all in once with new versions,
+it is a whole compressed file, which is only readable.
+The writable part, where you store your data and settings, is stored
+in a separated way, inside another file of variable size which you
+can store on a usb key or an harddisk. This is a nest.
+If the nest you stored is
+found by dyne:bolic while booting, then you use its space for
+your /home and settings, which are no more lost in volatile RAM at the
+next boot.
+</para>
+
+<para>
+In this way when you upgrade your system you simply have to get
+a new dyne:bolic version, all your data is not affected by any
+re-installation process and is safely stored in your nest, while
+you don't risk to break your operating system with an upgrade
+(which is a common case with many other solutions around).
+</para>
+
+<para>
+A nest is just one single file, the size you want, in a writable partition
+of your choice
+<footnote><para>
+Supported partition formats are: Dos, Fat32, Ext2, ReiserFS, Beos (BeFS) and
+BSD (UFS), but not NTFS</para>
+</footnote>
+. Making a nest doesn't
+requires any change in the data structure of the partitions: just one
+file is created in the root
+<footnote><para>
+it means the very beginning of a storage unit, like C:\ the drive letter
+followed by a single backslash in the DOS filesystem.
+</para></footnote>
+, it will be called <emphasis>dynebol.nst</emphasis> and will keep all
+your home and settings inside (/home and /etc).
+</para>
+
+<para>
+To get rid of a nest you can simply delete it from a system outside
+dyne:bolic. And if you are concerned about the privacy of the data
+you store inside it, then you can also make an encrypted nest
+<footnote><para>
+it is an <emphasis>AES128</emphasis> stream encryption algorithm, way
+more secure than usual "security" because <emphasis>all</emphasis> the
+data is encoded by your 20 chars long passphrase: is not only about
+weak software access policy, see the <ulink url="http://loop-aes.sf.net">
+loop-aes</ulink> project.
+</para></footnote>
+: to activate it you'll be asked by a passphrase at every boot.
+</para>
+
+<para>
+In dyne:bolic it is very easy to create a nest just with a few clicks
+of the mouse, using the graphical installer included: you'll find it
+in the menu <emphasis>System -> Nesting</emphasis>.
+</para>
+</section>
+
+<section>
+<title>Install on harddisk? dock!</title>
+
+<para>
+Dyne:bolic solves the problem of istallation in a very simple way:
+there is no installation! you simply copy a directory and this is
+called "docking".
+</para>
+
+<para>
+Docking lets you run the system from an harddisk, with shorter load
+time and more speed. With a dock you can also boot from floppy, or
+from a multi-boot partition.
+</para>
+
+<para>
+In dyne:bolic this only consists of copying one directory from the CD to the harddisk,
+you don't need to change anything of your partition, just copy a directory in it:
+drag the dyne/ folder from the CD on the icon of your harddisk, that's it!
+</para>
+
+<para>
+However, to do that you need approximately 600 megabytes of free space.
+After 'docking', if you boot from the CD it will eject automatically after the
+first phase of the boot process, this is the sign the dock went well!
+</para>
+
+<para>
+The dyne directory consists of a couple of essential files, which can be checked
+for integrity using 'md5sum' and 'gpg' on cryptographical signatures of the
+mantainer. Do it if you are unsure about their provenience!
+</para>
+
+<para>
+And of course, when you want to uninstall the dock is as easy:
+just delete the /dyne directory in your harddisk!
+</para>
+
+<para>
+Rembember that docking is different from nesting:
+<emphasis>Docking</emphasis> is done to run the system and all application from harddisk instead of cd,
+<emphasis>nesting</emphasis> is to store your home and settings in a single file on harddisk or usb storage.
+</para>
+
+<para>
+More online information about docking: <ulink url="http://lab.dyne.org/Docking"></ulink>.
+</para>
+
+<para>
+If you are wondering about this new system of installation:
+if it wouldn't be so simple, one could say it was invented on dyne:bolic! ;)
+</para>
+
+</section>
+
+<section> <title>Boot from harddisk</title>
+<para>
+With the procedure described above, we saw that simply moving
+a directory in the root of a partition we can boot from CD and
+run from harddisk. Ok, what about getting rid of the CD?
+Well in fact i hope you give it to somebody else, please
+don't waste all that silicium! ;)
+</para>
+<para>
+Anyway, here we go with some instructions - but you gotta be hacking a bit eh!
+also browse the dyne:bolic mailinglist archives and eventually
+ask there or your closest UNIX Guru for help in understanding.
+</para>
+
+<para>
+What you have to do is to install a bootloader (Lilo or Grub) on
+in a NON-windoz partition on your computer.
+If you allready have a GNU/Linux system installed then you have that.
+To have a list of your partitions, type as root
+<emphasis>>fdisk -l</emphasis>
+in a XTERM.
+</para>
+
+
+<para>
+In case you have installed lilo, you can
+add the following runes to the end of your /etc/lilo.conf file:
+<screen>
+<userinput>
+
+image = /dyne/linux
+  root = /dev/ram0
+  initrd = /dyne/initrd.gz
+  label = dyne:bolic
+  append = "hdd=ide-scsi"
+  read-write
+  vga = 788
+
+</userinput>
+</screen>
+Being sure that the /dyne directory is inside the partition
+you boot, which in lilo is configured by the
+<emphasis>boot = /dev/hd*</emphasis>
+usually at the beginning of the lilo.conf file.
+</para>
+
+<para>
+In case you have grub you should use the following runes in your
+/boot/grub/grub.conf file (replacing partition numbers with your
+actual ones, see man grub)
+<screen>
+<userinput>
+
+title dyne:bolic GNU/Linux - RASTASOFT
+root (hd0,1) # it is hda2, hda1 is (hd0,0)
+kernel /dyne/linux root=/dev/ram0 rw load_ramdisk=1 \
+       prompt_ramdisk=0 ramdisk_start=0 vga=788
+initrd /dyne/initrd.gz
+
+</userinput>
+</screen>
+</para>
+
+<para>
+If you are online and yoy need to install a couple of computers, like
+in a media center, you can do it quickly so:
+<screen>
+<userinput>
+
+# lynx -dump dynebolic.org/lilo.conf >> /etc/lilo.conf
+
+ or
+
+# lynx -dump dynebolic.org/grub.conf >> /boot/grub/grub.conf
+
+</userinput>
+</screen>
+
+don't forget to customize the configuration files to fit your needs!
+</para>
+
+<para> Happy hacking ;)</para>
+
+</section>
+
+<section>
+<title>Cluster CPU farms</title>
+
+<para>
+Dyne:bolic Linux kernel allows all the computers running the system on
+the same local network to share CPU power by migrating processes from
+machines that are working harder to machines that are idle. This
+feature is provided to enhance multiprocessing computation on slower
+computers: they are then aided by faster computers on the same
+network, with a more equitous sharing of common resources.
+</para>
+
+<para>
+The cluster activates itself at every boot and on every new
+configuration of the network card, trying to autodetect other cluster
+nodes on the network: the process of sharing CPU power is totally
+automated and the groups are formed thru the autodiscovery scan of
+each node.
+</para>
+
+<para>
+Your Dyne:bolic system encloses all the clustering tools in the
+filesystem directory <emphasis>/usr/mosix</emphasis>. You can manually
+startup the clustering at any time by launching the command
+<emphasis>/usr/mosix/openmosix start</emphasis> from an XTERM, while
+in that directory you'll also find useful tools to control and gather
+information on the way your network cluster works:
+<emphasis>mosctl</emphasis> and <emphasis>showmap</emphasis> among the
+others; for each you'll find also a man page.
+</para>
+
+<para>
+This feature is implemented by a kernel patch from the OpenMosix
+project, you can know more about this technology and discover about
+advanced uses for it on the <ulink
+url="http://openmosix.sf.net">OpenMosix webpage</ulink>, where you'll
+find extensive documentation and usage guides, while there is also
+a useful guide to the use of clustering in dyne:bolic on Spot's perspective
+on Technology website <ulink url="http://spot.river-styx.com/viewarticle.php?id=12"></ulink>.
+</para>
+</section>
+
+<section>
+<title>For the curious hacker</title>
+
+<para>
+Now if you are wondering what's inside to make it work like it does,
+you are very welcome to discover it, dynebolic is free software! and
+hackers more familiar with GNU/Linux systems will easily recognize
+the architecture.
+</para>
+
+<para>
+But remember you are on your own in doing so, this documentation is
+not about hacking and the author's objective for dynebolic was
+to build an environment friendly for the end user, not necessarily
+for those who want to modify it. Anyway, if you look for a
+customizable bootable cd there are plenty to pick around, Morphix seems to be
+a good one to start with.
+</para>
+
+<para>
+A dyne:bolic SDK is available, it is the one used in development,
+and there is a brilliant introduction on how to use it on Spot's site:
+<ulink url="http://spot.river-styx.com/viewarticle.php?id=18"></ulink>.
+</para>
+
+<para>
+You can visit the <ulink url="http://cvs.dyne.org">cvs.dyne.org</ulink>
+which is where all dynebolic specific sourcecode is stored and thru all its
+development revisions.
+</para>
+
+</section>
+</chapter>

@@ -1,0 +1,305 @@
+
+<chapter>
+<title>dyne:bolic the hacktive media</title>
+
+<para>
+dyne:bolic GNU/Linux is a live bootable distribution working directly
+from the CD without the need to install or change anything on
+harddisk. It can recognize most of your hardware devices and offers a
+vast range of softwares for sound and video production, streaming, 3d
+modeling, peer to peer and filesharing, deejaying and veejaying,
+games, a world navigator with detailed maps and factbooks and much
+more ;)
+</para>
+
+<para>
+Surf, stream, record, edit, encode and broadcast both sound and video,
+all just in one CD you have simply to boot.
+</para>
+
+<para>
+dyne:bolic it is made by and shaped on the needs of media activists,
+artists and creatives to stimulate the production and not only the
+fruition of digital and analog informations.
+It takes birth as a grassroot effort to spread free software and
+the spirit of sharing informations.
+</para>
+
+<para>
+This manual will go thru all the tasks and possibilities offered by
+dyne:bolic, listing the distributed applications and their functions.
+</para>
+
+<para>
+You can get in contact with the community of users and developers thru
+the discussion mailinglist <email>dynebolic@dyne.org</email> which you
+can subscribe easily from the homepage <ulink
+url="http://dynebolic.org">dynebolic.org</ulink> or peeking into the
+<emphasis>irc.freenode.net #dynebolic</emphasis> chat channel.
+</para>
+
+
+<section>
+<title>How to use this manual</title>
+
+<para>
+In this manual I will give you an overview of the possibilities offered
+by the dyne:bolic operating system, introducing you to the various
+software included and their functionalities.
+Far from being complete in exploring the possibilities of each
+single software, you'll get introduced and find basic directions for
+every specific task.
+</para>
+
+<para>
+When in need of more information, expecially on how to operate a particular
+software, you should consult the included <emphasis>man pages</emphasis>
+
+<footnote>
+<para>
+The manpage is the name of the manual page describing usage of the
+program, you can use it with the <emphasis>man</emphasis> command from
+an <emphasis>XTERM</emphasis> inside dyne:bolic :
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>man hasciicam</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+it will show an higly informative text about the usage of the program;
+the manpage name usually matches the name of the program executable
+itself.
+</para>
+</footnote>
+
+
+and the specific application's homepage.
+Also consider to subscribe the user mailinglist of a specific software you
+are using: there you can discover more about its development and realize if
+any bugs that you encounter have been allready addressed by developers.
+Always remember that the value of such communities is one of the strongest
+resources of free software, as the Rastaman says:
+One Love, One People, be United!
+</para>
+
+</section>
+
+<section>
+<title>This is Rasta software</title>
+<para>
+Jah Rastafari Livity bless our Freedom!
+This is free software, you should share it for the good of yourself
+and your people, respect others and let them express, be free and let
+others be free.
+Live long and prosper in Peace!
+</para>
+
+<para>
+But remember there is no Peace without Justice.
+This software is about Resistance ina babylon world which tries to control
+more and more the way we communicate and we share informations and knowledge.
+This software is for all those who cannot afford to have the latest expensive
+hardware to speak out their words of consciousness and good will.
+This software has a full range of applications for the production and not only
+the fruition of information, it's a full multimedia studio and has nothing
+to envy to other proprietary systems, because freedom and share of knowledge
+are solid principles for evolution and that's where this software comes from.
+</para>
+
+<para>
+In the panorama of existing operating systems we see that there is a great
+number of possibilities to listen: all kinds of "free to download" players
+for audio and video, but no easy way for everybody to speak out loud and
+spread their words.
+The way communication is structured follows the hierarchy of powers allready
+established in babylon's mediascapes and, worst than ever, money is the main 
+requirement for making a voice spread and possible to be heard by others.
+</para>
+
+<para>
+Neverthless, proprietary software spreads the dependence from business
+companies thru the populace: whenever we share our knowledge on how to use
+a certain software, we make the people in need to buy the tools from merchants
+in order to express their creativity. This is great responsability for anyone
+of us who teaches somebody how to do something with software: the need to buy
+will be slavery under the merchantile interests of capitalism.
+</para>
+
+<para>
+The roots of Rasta culture can be found in Resistance to slavery.
+This software is not a business.
+This software is free as of speech and is one step in the struggle for
+Redemption and Freedom.
+This software is dedicated to the memory of Patrice Lumumba, Marcus Garvey,
+Marthin Luther King, Steve Biko, Walter Rodney, Malcom X; with respect to
+Mumia Abu Jamal and all those who still resist to slavery, racism and oppression,
+who still fight imperialism and seek an alternative to the egemony of capitalism 
+in our World.
+</para>
+
+<para>
+Hic Sunt Leones.
+And Much Blessings in Jah Luv to All Those who still Resist.
+Selah.
+</para>
+
+<para>
+You should read on this chapter if you are interested to know how this
+operating system had birth and who contributed to make it real. Here i
+introduce myself, i'm writing this manual and i'm the mantainer of
+dyne:bolic, while i'm also the author of three software contained in
+it: FreeJ, HasciiCam and MuSE.  My name is Denis "jaromil" Rojo, i'm a
+south italian emigrant and <ulink
+url="http://rastasoft.org">Rastaman</ulink> traveling ina babylon,
+i code in C/C++ since more than 10 years and have a decent experience of
+multimedia development under GNU/Linux.
+</para>
+
+<para>
+My motivation in doing free software comes from the intention to give
+people free access to comunication channels and to promote free
+speech, against any form of censorship, adding my little effort to
+break cultural and economical monopolies on information and
+technology.
+</para>
+
+<para>
+You are kindly invited to support my activity: you can offer me ospitality,
+invite me to give presentations, performances (i'm a photogenical
+audio/visual performer, see what one must do to make a living today!),
+<ulink url="https://rastasoft.org/donate.php"> make a donation thru
+paypal</ulink>, <ulink
+url="http://www.dynebolic.org/index.php?show=cust">pay me to customize
+my software</ulink> to fit it to your needs or to help you using it,
+invite me at dinner, <ulink
+url="http://www.dynebolic.org/index.php?show=workshops">call me to
+teach in a class</ulink>, help me to submit a grant, invite me to your
+theatre company to work on multimedia setups (i've made a <ulink
+url="http://dyne.org/perform.php">fairly good experience in
+theatre and interactive installations</ulink> so far),
+encourage your company or organization to be a patron of the dyne:bolic
+project.
+</para>
+
+<para>
+Enough about me, now i'd like to mention the great support and help
+given by <ulink url="http://www.autistici.org/loa/bomboclat">Federico
+"Bomboclat" Prando</ulink> and <ulink
+url="http://www.autistici.org/loa/c1cc10">Francesco "C1cc10"
+Rana</ulink> for the development of dyne:bolic. Together with Liw they
+are the authors of <ulink
+url="http://autistici.org/bolic1">bolic1</ulink> which is the first 
+bootable GNU/Linux distribution i ever saw, reduced to fit just in a small
+cardsized CD and aiming to give slick tools to analyze and tweak
+networks. The <ulink
+url="http://www.hackmeeting.org">hackmeeting</ulink> is the place
+where we met, it is also where they presented bolic1 spawning in me
+and Lobo the idea of dyne:bolic.
+</para>
+
+<para>
+Bomboclat and C1cc10 helped me to compile and configure dyne:bolic,
+giving suggestions and testing it on hardware. Most important thing
+has been the great friendship between us which made it very funny to
+meet and hack together on a common project.
+</para>
+
+<para>
+Here i salute and give great respect also to <ulink
+url="http://sfrajone.org">Alexander "Smilzo" Gnoli</ulink> who
+hacked dyne:bolic to make it run on XBOX game
+consoles, with the help of the documentation produced by the
+<ulink url="http://xbox-linux.sf.net">xbox-linux</ulink> project.
+We spend some time hacking together and sharing visions about dyne:bolic,
+while he is planning to keep his focus on support for game consoles.
+
+</para>
+
+<para>
+The following people also directly contributed to development: Lobo
+(karma and knowledge), Sandolo and Rageman (scripts and tricks),
+Nightolo and Rubik (MuSE interface coders), Maox (logo and graphics),
+Eni and Newmark (watching horizons). I'm very sorry i can't say more
+about them, alltough it would be worth, i know them fairly well and
+they are all great hackers - probably i'll write more story here in
+some future.
+</para>
+
+<para>
+Help with online documentation was given by: Isazi, Quique,
+Ali Uelke, Thomas Hassan, Ricardo Perry, Marco Herrn,
+Tommaso Gagliardi, Patrice.
+</para>
+
+<para>
+Support for development was given by the following
+organizazions:
+TENOVIS (Intl) http://tenovis.com
+PUBLIC VOICE Lab (Vienna) http://pvl.at
+MALASystem (Milano) http://malasystem.com 
+SERVUS.at (Linz) http://servus.at
+OSSA (Intl) http://streamingalliance.org
+Montevideo (Amsterdam) http://montevideo.nl
+Stream on the fly (EU project)
+JuX project (Vienna) http://netbridge.at
+European Social Forum http://www.fse-esf.org
+and individu2als:
+Stefano Chiccarelli, Roland Alton-Scheidl, Adam Hyde,
+Markus Panholzer, Zeljko Blace and Blicero
+</para>
+
+<para>
+And finally we get to the waves and cheers:
+NeURo, Neural.it, cjm di enemy.org, Luca Lampo per la camicia :)
+littlejohn, Odo grand visir di mufhd0, kobaiashi di sikurezza.org
+Tommaso aka m_0, Dolce, chmod, radio Ondarossa, enuzzo, void,
+Dindon il carbonaro, #mdp and all the hackers at dyne.org.
+</para>
+
+<para>
+dyne:bolic GNU/Linux includes the work of hundreds of people all
+around the world developing free software and GNU/Linux applications
+without the efforts of this big communities dyne:bolic would have
+never existed, among the others are gnu.org and the Free Software
+Foundation, gentoo.org, kernel.org, xfree86.org, mozilla.org ...
+</para>
+
+
+</section>
+
+<section>
+<title>License and disclaimer</title>
+<para>
+The dyne:bolic user's manual is
+copyright (c) 2003 - 2004 Denis "jaromil" Rojo
+</para>
+<para>
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with the Introductory and Colophon sections being invariant, with the
+Front-Cover and Back-Cover Texts clearly stating authorship and
+copyright notices.
+You should have received a copy of the GNU Free Documentation License
+along with this manual; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+</para>
+
+<para>
+dyne:bolic GNU/Linux is
+copyright (C) 2001 - 2004 Denis Rojo aka jaromil
+</para>
+<para>
+Dyne:bolic is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+</para>
+</section>
+
+</chapter>
