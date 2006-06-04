@@ -1,4 +1,4 @@
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.1//EN"
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V3.1//EN"
 [
 <!ENTITY intro SYSTEM  "intro.sgml">
 
@@ -14,26 +14,15 @@
 
 <!ENTITY network SYSTEM "network.sgml">
 
-<!--
-<!ENTITY files SYSTEM "files.sgml">
-
-<!ENTITY games SYSTEM "games.sgml">
-
-<!ENTITY utils SYSTEM "utils.sgml">
-
-<!ENTITY xbox SYSTEM "xbox.sgml">
-
 <!ENTITY devel SYSTEM "devel.sgml">
--->
-
 ]>
 
 <book label="dyne:bolic GNU/Linux user's guide">
 
 
 <bookinfo>
-<title>Dyne:bolic GNU/Linux User's Guide</title>
-<subtitle>http://dynebolic.org</subtitle>
+<title>Dyne:II GNU/Linux User's Guide</title>
+<subtitle>dynebolic.org</subtitle>
 <!--<graphic fileref="dyne.jpg">-->
 
 <authorgroup>
@@ -41,30 +30,25 @@
 <othername>Jaromil</othername>
 <authorblurb><para>http://rastasoft.org</para></authorblurb>
 <affiliation>
-<orgname>dyne.org / rastasoft.org</orgname>
+<orgname>dyne.org / rastasoft / afrolinux</orgname>
 </affiliation>
 </author>
 </authorgroup>
 
+<!--
 <edition>
-Dynebolic GNU/Linux User's Guide
-<emphasis>"$Id: dynebolic-man.sgml,v 1.7 2003/11/17 16:15:51 jaromil Exp $"</emphasis>
+Dynebolic 2.0 GNU/Linux user's Guide
 </edition>
 
-<date>2003 - 2004</date>
-
+<date>2006</date>
+-->
 <copyright>
-<year>2003 - 2004</year>
-<holder>Denis "jaromil" Rojo - http://rastasoft.org</holder>
+<year>2003 - 2006</year>
+<holder>Denis "jaromil" Roio - http://rastasoft.org</holder>
 </copyright>
 
 </bookinfo>
 
-<dedication>
-<para>
-A Marta dei boschi.
-</para>
-</dedication>
 
 &intro;
 
@@ -80,38 +64,22 @@ A Marta dei boschi.
 
 &network;
 
-<!--
-&files;
-
-&games;
-
-&utils;
-
-&xbox;
-
 &devel;
--->
 
 <colophon>
 <para>
-This is the essential user's guide to the dyne:bolic GNU/Linux
-bootable CD distribution. Designed to introduce newbies to approach
+This is the essential user's guide to the dyne:bolic GNU/Linux operating
+system. Designed to introduce newbies to approach
 the powerful tools and applications offered by the distribution,
-covers task by task the various possibilities offered to work with
+covers the various possibilities offered to work with
 both audio and video in different ways: playing, recording, editing
-and streaming. Coverage introduces to the existing documentation for
-the included software, giving a simple overview of their main features. 
+and streaming.
 </para>
 
 <para>
 Concise and to the point, readers will find this volume packed with
 informations gathered from not previously available in any other
-single reference source.
-</para>
-
-<para>
-And what about dyne:bolic? it's a GNU/Linux bootable CD distribution
-containing a wide range of tools like:
+single reference source. Software in dyne:bolic includes:
 </para>
 
 <para><programlisting>
@@ -122,20 +90,15 @@ MPlayer :: digital video player
 XawTV :: television viewer
 MP4Live :: mpeg4 rtsp streamer 
 Cinelerra :: non-linear video editing
-LiVES :: almost-linear video editing
-JahShaka :: video compositing
 Kino :: DV firewire recorder
-Palantir :: webcam streamer
 
 Audio { DeeJay, Play, Record, Edit, Stream }
+Ardour :: multitrack studio
 Jack-it :: multiple audio system
 PD +ext :: pure data signal processing
+Amarok :: music jukebox
 Jamit :: professional equalizer
-TerminatorX :: digital turntables
-SoundTracker :: tracker / sequencer
 Hydrogen :: drum machine
-ZynAddSubFX :: software synthetizer
-FreqTweak :: frequency tweaker
 XMMS :: hifi audio player
 GRip :: audio CD ripper
 Audacity :: multitrack audio editor
@@ -146,29 +109,19 @@ Icecast :: streaming server
 Graphic tools { 2d & 3d image manipulation }
 Gimp :: GNU Image Manipulation Program 
 Blender :: 3d modeling and rendering tool
+Inkscape :: vectorial freehand drawing
+XSane :: scanner acquisition
 
 Text tools { read, edit and publish texts }
-RTF, PDF, DOC word processing with AbiWord,
-vectorial publishing with Scribus and yet
-more: Ted, Bluefish, NEdit, Antiword
+RTF, PDF, DOC word processing
+vectorial publishing with Scribus
 
 Comunication tools { web, mail and privacy }
 surf the web, mail encryption, filesharing
 and chat with Firefox, Links, Sylpheed,
-GnuPg, Lopster, XChat, GFtp, Vnc, OpenMash,
-Kphone, Silc, Ettercap, NMap ...
+GnuPg, Bittorrend, Nicotine, Gnutella, XChat
 
-World atlas navigator and factbook
-
-Games! : have phun ;) with Anatolia, FreeCiv
-Freecraft, FrozenBubble, LBreakout, LTris,
-Matanza, Nethack, PowerManga, GnuChess,
-Wesnoth, XMahjongg, XWellTris, FooBillard,
-CSmash, Armagetron and more...
-
-all in dyne:bolic GNU/Linux
-free and opensource RASTA SOFTWARE
-freely available from http://dynebolic.org
+and more! visit http://dynebolic.org
 </programlisting></para>
 
 

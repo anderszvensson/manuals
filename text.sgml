@@ -5,6 +5,7 @@
 <subtitle>Text editing and publishing with dyne:bolic</subtitle>
 
 <para>
+
 Dyne:bolic includes software to let you easily write and compose
 any kind of text document: hyper-texts that can be published on
 the internet (HTML), formatted texts that can be printed (RTF,
@@ -24,30 +25,36 @@ format).
 </para>
 
 <para>
-<emphasis>AbiWord</emphasis> and <emphasis>Ted</emphasis> are
-word processors, with them you can write and edit documents and
-articles mostly made of text, formatting things like the font
-properties, alignement and so on, saving them in Rich Text Format
-and other similar formats. While <emphasis>AbiWord</emphasis> is
-a full fledged word processor, <emphasis>Ted</emphasis> should be
-choosen for its simplicity and lightweight, being able to run on
-slower computers.
+
+In case you need a full blown office suite to satisfy your needs here,
+there is an <emphasis>Open Office 2.0</emphasis> dyne module available
+online for download from our website, you can place it into your Dock
+modules directory ( dyne/modules/ ) and at next reboot you'll find it
+in the application menu. With Open Office you can read and write all
+.DOC files, .XLS spreadsheets, .PPT presentations and more.
+
 </para>
 
 <para>
+
 <emphasis>Scribus</emphasis> is a desktop publishing program to 
 compose vectorial formats like PDF and Postscript, it is useful
 to paginate text in a professional printable form to produce
 magazines, flyers and most publications that need to mix text and
 images in pages following customizable schemes.
+
 </para>
 
 <para>
-In order to edit webpages, <emphasis>Bluefish</emphasis> is provided
-for web designers to edit plain HTML scripts, aided by a series of
-toolbars which provide element templates for links, images, tables etc.
-giving you a useful highlight for the tags.
+
+<emphasis>Lyx</emphasis> is a document editor whose backend is the
+powerful Tex environment, supporting various character sets and
+scientific symbols. Along Tex is also provided a complete setup of
+DocBook tools to process SGML files into the many formats supported
+
 </para>
+
+
 
 <para>
 <emphasis>Nedit</emphasis> is a plain text editor providing syntax

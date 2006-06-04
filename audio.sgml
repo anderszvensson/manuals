@@ -1,6 +1,6 @@
 <chapter>
 <title>Audio production</title>
-<subtitle>audio software included in dyne:bolic</subtitle>
+<subtitle>Play, record edit and stream your audio</subtitle>
 
 <para>
 This distribution is full with audio software to do all kind of things:
@@ -27,87 +27,217 @@ and <ulink url="http://spot.river-styx.com/viewarticle.php?id=17"></ulink>.
 </para>
 
 <section>
-<title>DeeJay</title>
-
-<para>
-       <emphasis>TerminatorX</emphasis>
-       is  a  realtime audio synthesizer that allows
-       you to "scratch" on digitally sampled audio  data  (*.wav,
-       *.au,  *.mp3,  etc.)  the  way hiphop-DJs scratch on vinyl
-       records. It features multiple turntables, realtime effects
-       (buit-in  as  well  as LADSPA plugin effects), a sequencer
-       and an easy-to-use gtk+ GUI.
-</para>
-
-<para>
-<emphasis>SoundTracker</emphasis> A great tracker/sequencer in the style of FastTracker2, working with .xm and .mod and other formats, also exporting to wav and using midi (can be also used as a sampler).
-</para>
-
-<para>
-<emphasis>GDam</emphasis>
-is an incredibly rich program featuring the possibility to deejay with
-multiple files, also remotely connected to a central server (multiple
-djying) and implementing a lot of effects.
-</para>
-
-<para>
-<emphasis>PD</emphasis>, Pure Data signal processing,
-is an extremely advanced program for digital signal processing featuring
-the possibility to develop your own patches.
-</para>
-<para>
-       Pd  is  a  graphical programming environment for real-time
-       audio synthesis and related  applications.   It  sports  a
-       rich set of real-time control and I/O features.
-</para>
-<para>
-Dyne:bolic offers the most complete PD installation out of the box,
-including a vast amount of externals built by the wide community of users.
-To get a full list of available extensions, see /home/.pdrc or
-start 'pd' from an XTERM.
-</para>
-
-</section> <!-- /DEEJAY -->
-
-
-
-
-<section>
 <title>Play</title>
 
-<para>To be continued...</para>
+<para>
+This operating systems provides players for many audio formats
+available around out of the box: WAV, MIDI, MP3, OGG, MOD, XM and even
+more can be played out or re-encoded, switching between formats.
+</para>
 
-</section> <!-- /PLAY -->
+<para>
 
+The <emphasis>Xmms</emphasis> player is a practical audio player with
+a minimal and intuitive playlist manager, can play online radio
+streams and local files and can be skinned or customized with plugins
+as you like.
 
+</para>
 
-<section>
-<title>Record</title>
+<para>
 
-<para>To be continued...</para>
+<emphasis>Amarok</emphasis> is a fully featured personal jukebox,
+handling the collection of your audio and downloading automatically
+printable lables and lyrics of your favourite music. Let it explore
+your collection of audio so that it will let you search for keywords,
+memorize your preferences and guess playlists out of your favourite
+music. It makes it a perfect interface for a jukebox station!
+
+</para>
+
+<para>
+
+<emphasis>Timidity</emphasis> is a midi synthetizers using GUS patches
+to render your MIDI files into audio files, as well make you listen to
+MIDI partitures.
+
+</para>
+
+<para>
+
+<emphasis>MikMod</emphasis> is a tracker module player (file
+extensions as MOD, XM, S3M etc.) which can let you listen to
+demo-scene prods, video game music and what's commony called "chip
+tunes".
+
+</para>
 
 </section>
 
-
-
-
 <section>
-<title>Edit</title>
+<title>Perform</title>
 
-<para>To be continued...</para>
+<para>
+
+This section includes software to produce live music, interacting in
+realtime with the applications that generate sound out of microphone,
+midi, keyboard and mouse inputs. All this software requires Jack to
+work properly, so that it can be interconnected in a chain of
+programs, like a virtual rack of different applications.
+
+</para>
+
+<para>
+
+<emphasis>Hydrogen</emphasis> is a drum-machine where you can load
+sample kits of instruments and compose a partiture for them to play on
+a specific rythm. It's homepage offers a collection of many more drum
+kits you can download, go to <ulink
+url="http://www.hydrogen-music.org"></ulink>.
+
+</para>
+
+
+<para>
+
+<emphasis>Mixxx</emphasis> is a dj tool still in development but
+already quite usable that lets you play and mix your music playlists,
+match them to a particular beat and feed in between. It can be also
+configured to be controlled via MIDI and it's skinnable.
+
+</para>
+
+
+<para>
+
+<emphasis>Jamin</emphasis> is the Jack audio mastering interface, it
+can perform professional audio mastering of stereo input streams,
+equalizing signals with an intuitive and advanced interface to shape
+all frequencies in realtime.
+
+</para>
+
+
+<para>
+
+<emphasis>Jack Rack</emphasis> is a powerful effect rack that can
+apply chains of audio plugins (LADSPA) on the sound currently being
+played by other programs. Using Jack you can interface it with all
+other performance tools and add one of the more than 200 effects
+available in dyne:bolic.
+
+</para>
+
+<para>
+
+<emphasis>FreeWheeling</emphasis> is a funky application that lets you
+record and play multiple samples in realtime, so that they stay
+looping and can be overlayed one after the other: is a fresh tool to
+manipulate, sum and and create over recorded sounds, but requires you
+to read some instructions before start using it, since it's all
+controlled via keyboard (and, optionally, midi).
+
+</para>
+
 
 </section>
 
+<section>
+<title>Record and edit</title>
 
+<para>
+
+This version of dyne:bolic comes with up to date software to record
+and manipulate audio: it is generally more stable and feature rich
+than the previous, so you'll hopefully notice the improvements while
+using it.
+
+</para>
+
+
+<para>
+
+<emphasis>Ardour</emphasis> is the fully featured multitrack studio
+that offers the most advanced interface for your music recording
+studio. Combined together with other applications when necessary (it
+also uses Jack) it can really solve all your needs for audio mastering
+and music production. Check the online documentation for this valuable
+software on <ulink url="http://www.ardour.org">Ardour
+homepage</ulink>: if you are a musician, the patience needed to learn
+it's usage and hotkeys is definitely worth the effort.
+
+</para>
+
+
+<para>
+
+<emphasis>Audacity</emphasis> is a user-friendly audio editing program
+suitable to manipulate your audio files, interviews and recordings,
+separating or mixing them, applying effects and encoding in various
+formats. It can also be used to record audio straight away via its
+intuitive interface, which can be commonly found also on other
+operating systems since it is a cross-platform free application.
+A perfect choice to start manipulating audio.
+
+</para>
+
+
+<para>
+
+<emphasis>Rezound</emphasis> is a well capable sample editor that lets
+you manipulate with good precision your music samples, record, loop
+and apply effects using an intuitive and complete interface, quite
+responsive also on slower systems.
+
+</para>
+
+
+<para>
+
+<emphasis>TimeMachine</emphasis> is a simple yet very useful tool for
+recording audio, requiring Jack as a sound engine. It is simply a big
+red button: when you press it it will start recording starting from 10
+seconds ago, so that you can record what you find interesting in an
+audio input just while listening. Whenever you press it records what
+you just listened, without the need to rewind the tape.
+
+</para>
+
+</section>
 
 
 <section>
 <title>Stream</title>
 
-<para>To be continued...</para>
+<para>
+
+<emphasis>MuSE</emphasis> is another rasta soft by dyne.org included,
+which lets you stream audio on the internet over various servers
+(Icecast, Darwin and Shoutcast) in MP3 or OGG format, so that
+listeners will be able to listen to your voice and music connecting
+with most available sound players around. 
+
+</para>
+
+<para>
+
+MuSE can mix up to 6 encoded audio bitstreams (from files or network,
+mp3 or ogg) plus a souncard input signal, the resulting stream can be
+played locally on the sound card and/or encoded at different bitrates,
+recorded to harddisk and/or streamed to the net.
+
+</para>
+
+<para>
+
+A great introduction to streaming and how to operate muse is available
+online on <ulink url="http://flossmanuals.org/muse"></ulink>, while
+even more documentation can be found on <ulink
+url="http://muse.dyne.org">its website</ulink>.
+
+</para>
 
 </section>
-
 
 </chapter>
 

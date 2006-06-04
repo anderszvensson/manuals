@@ -14,11 +14,11 @@ all : pdf
 
 html : $(DEPS)
 	rm -f html/*.html
-	docbook2html -d dsssl-stylesheets-1.77/html/docbook.dsl \
+	docbook2html -d dsssl-stylesheets-1.79/html/docbook.dsl \
 		-o html dynebolic-manual.sgml
 
 pdf : $(DEPS)
-	docbook2pdf -d dsssl-stylesheets-1.77/print/docbook.dsl \
+	docbook2pdf -d dsssl-stylesheets-1.79/print/docbook.dsl \
 		dynebolic-manual.sgml
 
 clean :

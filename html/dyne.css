@@ -1,0 +1,144 @@
+/*
+    dyne.org cascade style sheet
+*/
+
+body {
+/*    background-color: #ffeedd; */
+    background: #ffeedd url(/pics/dyneheadbg.png) repeat-x;}
+    color: #000000;
+    font-color: #000000;
+/*    font-family: Fixed;
+      font-size: 12pt; */
+    font: 14px arial, helvetica;
+}
+
+/*
+table {
+    font-family: Fixed;
+    font-size: 12pt;
+}
+*/
+img {
+    border:0;
+}
+/*
+td.headline {
+    font-family: Helvetica;
+    font-size: 20pt;
+}
+*/
+h1,h2,h3,h4,h5 {
+    font-family: Helvetica, Arial sans-serif;
+    background-color: #EECC99;
+    padding:3pt;
+    margin:2pt;
+    margin-bottom:8pt;
+    border-style:dotted;
+    border-width:thin;
+    width:95%;
+}
+h1 {
+    font-size: 18pt;
+}
+h2 {
+    font-size: 16pt;
+    padding-left:6pt;
+}
+h3 {
+    font-size: 12pt;
+    padding-left:9pt;
+}
+h4 {
+    font-size: 10pt;
+    padding-left:12pt;
+}
+h5 {
+    font-size: 8pt;
+    padding-left:15pt;
+}
+span.emphasis {
+    font-weight: bold;
+}
+a:link {
+    font-weight: bold;
+    color: #AA6600;
+    text-decoration: none;
+    border:0;
+}
+a:visited {
+    font-weight: bold;
+    color: #884400;
+    text-decoration: none;
+    border:0;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a.nonexistent {
+    background-color: #ffeedd;
+    color: #AA88AA;
+    text-decoration: none;
+}
+a.nonexistent:visited {
+    background-color: #Ffeeff;
+    color: #AA88AA;
+    text-decoration: none;
+}
+a.external {
+    font-weight: bold;
+    color: #AA6600;
+    border:0;
+}
+dl,ul,ol {
+    margin-top: 1pt;
+}
+tt,pre {
+    font-family: Fixed, Lucida Console,Courier New,Courier,monotype;
+    font-size: 12pt;
+}
+pre.code {
+    margin-top: 8pt;
+    margin-bottom: 8pt;
+/*    background-color: #ffeedd; */
+    white-space:pre;
+    border-style:none;
+    border-width:thin;
+    width:100%;
+}
+
+p.ongoing {
+	padding:3pt;
+	margin:0pt;
+	margin-bottom:5pt;
+	border-style:dotted;
+	border-width:thin;
+	background-color: #EECC99;
+}
+
+table.rastasoft {
+	padding:2pt;
+	margin:2pt;
+	border-style:dotted;
+	/* border-width:thin; */
+}
+	
+table.timezones {
+	padding:3pt;
+	margin:2pt;
+	margin-bottom:8pt;
+	border-style:dotted;
+	border-width:thin;
+	background-color: #EECC99;
+}
+
+/* PALLOTRON 21 AGOSTO 2003 -> porcodio! ECCO PERCHE' NON SIVEDE UN CAZZO
+   ALTRO CHE OPACITA'! IL MIO MOZILLA NON VEDE UN CAZZO. ho provato con valori
+   tipo 0.8 ma non va ergo metto a 1
+*/
+#footer a {
+	-moz-opacity:		1;
+}
+#footer a:hover, #footer a:focus {
+  -moz-opacity:		1;
+}
