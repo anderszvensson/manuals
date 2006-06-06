@@ -160,16 +160,81 @@ Selah.
 
 </section>
 
+<section>
+<title>Streamtime</title>
+<subtitle>Employing dyne:bolic for the freedom of communication</subtitle>
+
+<para>
+
+<ulink url="http://www.streamtime.org">Streamtime</ulink> is a project
+of <emphasis>Radio Reedflute</emphasis> in collaboration with
+<emphasis>Rastasoft</emphasis>, developed with artists and activists
+from Iraq and elsewhere. Streamtime is a loose network of media
+activists dedicated to assist autonomous networking. Streamtime uses
+old and new media for the production of content and networks in the
+fields of media, arts, culture and activism in crisis areas, like
+Iraq.
+
+</para>
 
 
+<para>
+
+We imagine improvised expressive devices like a CD that turns your PC
+into an on line streaming studio. Imagine a mob that creates a traffic
+jam. Think of the religious policeman in London, the konfused kollege
+kid and the jealous dentist in Baghdad and the jailed blogger blogging
+on in Cairo. Building autonomous networks in extreme conditions.
+
+</para>
+
+<para>
+
+Streamtime uses old and new media for the production of content and
+networks in the fields of media, arts, culture and activism in crisis
+areas, like Iraq. Streamtime offers a diffuse environment for
+developing do-it-yourself media. We focus on a cultural sense of
+finding your own way in the quagmire that is Iraq, and its
+representation in the global media. We should not try to change
+politics in order to foster cultural change; we should support
+cultural manifestation in order to force political change.
+
+</para>
+
+<para>
+
+Streamtime may take the form of a campaign, a work of collaborative
+art, a current of unheard sounds, unspeakable words and unseen
+imaginations.
+
+Remote interaction and ubiquitous dialogues, dematerialized communication and participation on the streets.
+Space in its territorial, acoustic and cybernetic dimensions is fragmented and recomposed realtime.
+Hacking codes both moral and digital, forming new maps, mutant drawings and unstable skins.
+Information overload can be abandoned in favor of consciousness and collaborative practices.
+Memory has a digital, diverse, horizontal voice.
+
+</para>
+
+</section>
 
 
 <section>
 <title>License and disclaimer</title>
 <para>
-The dyne:bolic user's manual is
-copyright (c) 2003 - 2006 Denis "jaromil" Roio
+The dyne user's manual is
+copyright (c) 2003 - 2006 Denis Roio aka <ulink url="http://rastasoft.org">Jaromil</ulink>
 </para>
+
+<para>
+
+Thanks for reviewing and inspirations go to the Streamtime crew, all
+the bloggers from Baghdad and any other crazy place in the world where
+people like us happens to be living, has to live it, and can even find
+a way to survive.
+
+</para>
+
+
 <para>
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.2
@@ -184,7 +249,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 <para>
 dyne GNU/Linux is
-copyright (C) 2001 - 2006 Denis Rojo aka jaromil
+copyright (C) 2001 - 2006 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>
 </para>
 <para>
 Dyne:bolic is free software; you can redistribute it and/or modify
