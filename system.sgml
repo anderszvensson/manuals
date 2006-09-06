@@ -4,20 +4,25 @@
 <section>
 <title>Your desktop environment</title>
 
+
 <para>
-Dyne:bolic is a preconfigured GNU/Linux system which runs without
-installing anything on you harddisks, to run it doesn't need change
-anything in your stored data, in fact you can also boot it on
-diskless computers. The whole operating system fits on a single CD.
-Ant to run it from harddisk you just need to copy the dyne/ directory
-in it. That's it, no need for repartitioning, occupies less than 700 megabytes.
-This makes dyne:bolic very easy to be employed, while there
+Dyne:bolic doesn't requires to install anything on your harddisks,
+which can be left untouched while the system is used; depending from
+your preferred way to operate, it can boot from CD, USB or harddisk
+and it can store data in a single file on a harddisk or USB stick.
+The whole operating system fits on a single CD, to run it from harddisk
+<!-- you just need to copy the dyne/ directory in it (see <xref linkend="dock-sect">), while in a diskless thin-client -->
+you just need to copy the dyne/ directory in it (see docking), while in a diskless thin-client
+setup that can also be mounted via network.
+This makes dyne:bolic very easy to be employed and mantained, while there
 is no risk for misconfiguration: the system comes as it is, 
 providing a slick desktop full of applications ready to use.
 </para>
 
+<indexterm><primary>WindowMaker</primary></indexterm>
+
 <para>
-The desktop is managed by
+The desktop manager is
 <ulink url="http://www.windowmaker.info">WindowMaker</ulink>,
 it offers you multiple desktops (try alt+2 and other numbers)
 and a menu that you can recall by clicking the right mouse button on
@@ -26,57 +31,51 @@ which you can access with a double click.
 </para>
 
 <para>
-The menu of dyne:bolic is organized by tasks, in categories.
-You can easily find software to play, record, edit and stream both
+The menu of applications can be visualized with a right click of the
+mouse on the desktop. Software is organized by tasks, so 
+you can easily find your way to play, record, edit and stream both
 audio and video, communicate and publish text, webpages, 3d animations
-and more.
+and much more.
 </para>
 
-<para>
+<indexterm><primary>OSNews review</primary></indexterm>
+<indexterm><primary>Spot's tasty recipes</primary></indexterm>
 
-To be introduced you can follow the practical tours of functionalities
-on on <ulink
-url="http://spot.river-styx.com/viewarticle.php?id=8">Spot's
-homepage</ulink> and read the on <ulink
-url="http://www.osnews.com/story.php?news_id=6490">OSNews
-review</ulink>.  </para>
+<para>
+To be introduced to various desktop functionalities you can visit
+<ulink url="http://spot.river-styx.com/viewarticle.php?id=8">Spot's homepage</ulink>
+and read the <ulink url="http://www.osnews.com/story.php?news_id=6490">OSNews dyne:bolic review</ulink>.
+</para>
 
 </section>
 
 <section>
-<title>Access your data</title>
-
-<para>
-With dyne:bolic your <emphasis>/home</emphasis> directory resides
-in your RAM memory:
-and every new file you write into it will not be there at the next
-boot. To avoid this and keep your home and settings remembered after the next boot, you can create a <emphasis>nest</emphasis> (see the following section about NESTING).
-Then you can store all settings and your home (and those of all users, if you run it in multiuser mode) on an harddisk or usb storage device.
-</para>
+<title>Access your data volumes</title>
 
 <para>
 
-You can easily browse your storage devices (harddisks, cd, floppy,
+You can easily access your files on connected storage devices (harddisks, cd, floppy,
 usb) using the buttons in the upper right corner of your desktop, as
-well your local network and remote internet accounts.  Your partitions
+well your local network shares and remote internet accounts.  Your partitions
 are automatically mounted in the <emphasis>/mnt</emphasis> directory,
-you can read and write (except for NTFS, which you can only read, use
-FAT32 instead!).
+you can read and write them except for NT filesystems, which you can only read.
 
 </para>
 
+<indexterm><primary>accessing usb</primary></indexterm>
+
 <para>
-Usb storage devices (like usb pens, smartcards and digital photo
-cameras) can generally be opened with a double click on the usb symbol,
-but sometimes unusual partition schemes can confuse the autodetection,
-so you can try by hand in a Xterminal:
+Usb storage devices (like usb pens, smartcards and some digital photo
+cameras) can be opened simply with a double click on the usb symbol.
+But beware that sometimes unusual partition schemes can confuse the autodetection,
+so you can try by hand in a Xterminal issuing manual commands:
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>mount /dev/sdXY /mnt/usb</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
 Where you must substitute X with letters (a,b,c...) and Y with numbers
-(1,2,3) for exemple <emphasis>/dev/sda2</emphasis>.
+(1,2,3) for example <emphasis>/dev/sda2</emphasis>.
 
 </para>
 
@@ -87,37 +86,44 @@ use after booting dyne:bolic (see following chapter about DOCKING),
 then you can access, browse, play and rip compact discs and dvd.
 </para>
 
-<para>
-If you have a cd burner, you can also use it to create cd and
-you can even clone the dyne:bolic from the running system.
-</para>
-
+<indexterm><primary>hier</primary></indexterm>
 
 <para>
-Finally, to have a general overview about the meaning and
-organizations of the various directories you'll find in the system,
-you can read the manual <emphasis>hier</emphasis> (type "man hier" in
-the terminal).  At this point you remember "man" right? man is your
-friend, don't forget :) every time there is something that you don't
-understand, you can find out in the documentation, in fact with all
-the commands that are around there is a lot to discover! have a look
-at manuals like "sox" or "convert", you'll find out that you can do
-a lot of things just from the XTerminal commandline!
+To have a general overview about the organization of various directories you find in GNU/Linux systems,
+read the manual <emphasis>hier</emphasis> (type "man hier" in the Xterminal).
 </para>
 
 </section>
 
+
+
 <section>
 <title>Nest your home and settings</title>
+
+<indexterm><primary>nesting</primary></indexterm>
+
+<para>
+By default your <emphasis>/home, /etc and /var</emphasis> directories reside
+in RAM memory: every file and configuration you save will not be there again at the next boot.
+
+To save your home and settings permanently you need to create a <emphasis>NEST</emphasis>:
+it is just a file on the harddisk or on the usb storage device where they will be stored
+and loaded back at every boot. You just need to create your nest once, dyne:bolic looks for
+it at every startup and if its present starts using it automatically.
+</para>
+
 
 <para>
 The <emphasis>nesting</emphasis> function is very practical to keep
 all the modifications you make to the system while using it (settings,
 saved files, accounts, language etc.) and transport or backup them.
+For example, in case you nest on your USB stick, you can boot with it connected
+at startup, then that nest will be used and all your /home and settings
+will always stay with you, in your personal USB stick.
 </para>
 
 <para>
-At the boot screen or in your <emphasis>Home</emphasis>, click on the
+<emphasis>How to create a nest?</emphasis> at the boot screen or in your <emphasis>Home</emphasis>, click on the
 <emphasis>Configure</emphasis> button, then choose <emphasis>Nest</emphasis>
 (the little icon of a duck). You will be prompted to create a nest
 on your harddisk or USB stick, proceed choosing the partition you want
@@ -127,51 +133,41 @@ for other users.
 </para>
 
 <para>
-With a nest you will find all your /home and settings back at the next boot.
-</para>
-
-<para>
-
-In fact when you install new software you don't modify the operating
-system which is made of read-only compressed files (dyne.sys and
-modules, mounted in the /usr and /opt directories) .  The writable
-part, where you store your data and settings, is the Nest, which also
-holds all your modifications to the system (overlayed using the Union
-filesystem)
-
+Since version 2.0 of dyne:bolic you can also install new software inside
+the nest! it will hold all modifications you apply to the original system,
+overlaying them automatically using the Union filesystem.
 </para>
 
 
 <para>
-
 In this way when you upgrade your system you simply have to get
 a new dyne:bolic version, all your data is not affected by any
 re-installation process and is safely stored in your nest, and
 you don't risk to break your operating system with an upgrade.
-
 </para>
 
 <para>
 
 If you nest on harddisk, the supported partition formats are: Dos,
 Fat32, Ext2, ReiserFS, Beos (BeFS) and BSD (UFS), but not NTFS.  The
-nest is just one file created in the /dyne directory at the root of
+nest is just one file  created in the /dyne directory at the root of
 your partition (C:\ or D:\ in the DOS filesystem) called
-<emphasis>dyne.nst</emphasis>. To get rid of a nest simply delete that
-file.
+<emphasis>dyne.nst</emphasis>. To erase a nest simply delete that file.
 
 </para>
 
 
 </section>
 
-<section>
+<section id="dock-sect">
 <title>Install on harddisk? Dock!</title>
+
+<indexterm><primary>docking</primary></indexterm>
 
 <para>
 
 Dyne:bolic solves the problem of istallation in a very simple way:
-there is no installation! you simply copy a directory and this is
+there is no installation :) you simply copy a directory and this is
 called "docking".
 
 </para>
@@ -225,36 +221,28 @@ url="http://lab.dyne.org/Docking">wiki community pages</ulink>.
 
 </para>
 
-<para>
-
-If you are wondering about this new system of installation: if it
-wouldn't be so simple, one could say it was invented by dyne:bolic! ;)
-in fact its semplicity made this software widespread all over the
-world and even elected as one of the top 10 open source projects in
-2005.
-
-</para>
-
 </section>
+
 
 <section>
 <title>Extra software modules</title>
+
+<indexterm><primary>modules</primary></indexterm>
 
 <para>
 
 Dyne:II offers the possibility to be expanded using software modules:
 collections of applications that can be easily installed and used.  In
 fact the basic system already contains some of these modules, that can
-be found in your dock ( the dyne/ directory on your harddisk or CD)
-inside the modules/ directory.
+be found in your dock as the <emphasis>dyne/modules/</emphasis> directory.
 
 </para>
 
 <para>
 
-Additional dyne modules are freely available online and to activate
+Additional dyne modules are available online, to activate
 them or include them in a CD you just drop the .dyne files into the
-dyne/modules docked directory. Then reboot, that's it.
+dyne/modules docked directory. Then reboot, that's it!
 
 </para>
 
@@ -267,14 +255,26 @@ your good old modules.
 
 </para>
 
+<indexterm><primary>pure:dyne</primary></indexterm>
+
 <para>
 
 Download free and open source dyne modules online from <ulink
 url="http://dynebolic.org"></ulink>, there are many interesting
-extensions already: Pure:dyne (Pure-Data and other digital art tools),
+extensions already: <ulink url="http://puredyne.goto10.org">pure:dyne</ulink> (Pure-Data and other digital art tools),
 Open Office (all you need to handle office documents), Devel (more
 development tools) and there will be the Games modules soon,
 don't worry ;)
+
+</para>
+
+<indexterm><primary>developers lounge</primary></indexterm>
+
+<para>
+
+Developers wanting to create modules for certain software collections
+can refer to documentation online at <ulink url="http://dev.dynebolic.org">dev.dynebolic.org</ulink>
+which includes all necessary informations on how to do that.
 
 </para>
 
@@ -297,36 +297,78 @@ you just did it by running this system on your computer didn't you?
 
 
 <section> <title>Boot from harddisk</title>
+
+<indexterm><primary>booting from harddisk</primary></indexterm>
+
 <para>
 
-With the procedure described above, we saw that simply moving a
-directory in the root of a partition we can boot from CD and run from
-harddisk. Ok, what about getting rid of the CD? Here it is explained how.
+With docking we saw that simply moving a directory in the root of a partition
+can let us boot from CD and run from harddisk. This is a very simple and safe
+way to have a dual-boot system: Cd in for dyne:bolic, CD out for anything else.
+Still some people really likes to get rid of the CD, so here it is explained how.
 
 </para>
 
 <para>
 
-But keep in mind that the following operations are not necessary to run dyne:bolic from harddisk and they can be difficult and even dangerous to your system unless you have already installed a GNU/Linux system before.
+Keep in mind that <emphasis>the following operation is not necessary to run dyne:bolic from harddisk</emphasis>.
+If you are not familiar with boot sectors and partition geometry you might need the
+intervention of an expert when anything goes wrong. Furthermore, in case of a mistake you
+might delete all the data stored on your harddisks and/or be left without the possibility
+to boot back into your old operating system.
 
 </para>
 
 <para>
 
-In order to boot from harddisk you need a bootloader (Lilo or Grub) installed in a NON-windoz
-partition on your computer, so this means repartitioning and since
-dyne:bolic doesn't yet offers an easy way to do this, you can have a
-look at how is done in some other distribution: Debian, Slackware,
-Mandriva... however, if you allready have another GNU/Linux system
-installed then you have such a bootloader already installed.
+In order to boot from harddisk you need a bootloader (Lilo or Grub) installed.
+We recommend the use of Grub for its simplicity and flexibility: in fact that
+is the default bootloader dyne:bolic will install for you, but in case you have
+Lilo already installed and you don't want to change it, then there is also a way
+to add a dyne:bolic entry to it.
 
 </para>
 
 <para>
 
-Then go look into your harddisk partitions, in case you have a
-directory boot/ see if inside there is another directory called grub/,
-if yes there you found your grub configuration, a simple text file
+The following instructions will cover various situations: you can omit some operations
+in case your computer is already setted up with them.
+
+</para>
+
+<indexterm><primary>partitioning</primary></indexterm>
+<indexterm><primary>cfdisk</primary></indexterm>
+<indexterm><primary>mke3fs</primary></indexterm>
+
+<para>
+
+<emphasis>In case you are installing a computer from scratch</emphasis>, without
+anything installed on it yet, then you need to partition the harddisk and format it.
+You can do so using the command <emphasis>cfdisk</emphasis> to create or
+modify your harddisk partitions, then <emphasis>mke3fs</emphasis> to format the partitions
+(or other mk* commands in case you desire to use a different filesystem than Ext3).
+<emphasis>Beware that this operation above will erase all the data on the disk</emphasis>.
+
+</para>
+
+<indexterm><primary>grub</primary></indexterm>
+
+<para>
+
+Once you have a disc partitioned and formatted you need to install the bootloader.
+To do this use the command <emphasis>grubconfig</emphasis> and follow the steps
+you are prompted, at the end of the process you will be able to boot your computer
+directly into dyne:bolic, without the need to use a CD.
+
+</para>
+
+
+<para>
+
+<emphasis>To re-configure your bootloader</emphasis> (not necessary if
+you installed one from scratch using dyne:bolic) go look into your harddisk
+partitions, in case you have a directory boot/ see if inside there is another
+directory called grub/, if yes there you found your grub configuration, a simple text file
 called grub.conf or menu.lst which you have to edit by hand, adding a
 few lines at the bottom in order to add dyne:bolic among the boot menu
 selection:
@@ -349,6 +391,8 @@ documentation about this process in the grub manual pages.
 
 </para>
 
+<indexterm><primary>lilo</primary></indexterm>
+
 <para>
 
 In case you have installed lilo, search among your harddisk partitions
@@ -360,8 +404,9 @@ found then add the following lines at the end of it:
 
 image = /dyne/linux
   root = /dev/ram0
+  append = "max_loop=64"
   initrd = /dyne/initrd.gz
-  label = dyne-2.0
+  label = dyne
   read-write
   vga = 791
 

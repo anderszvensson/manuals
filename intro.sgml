@@ -3,16 +3,20 @@
 <title>dyne:bolic the hacktive media</title>
 
 <para>
-dyne:bolic GNU/Linux is a live bootable distribution working directly
-from the CD without the need to install or change anything on
-harddisk. It can recognize most of your hardware devices and offers a
+dyne:bolic GNU/Linux is a live bootable distribution working
+<emphasis>directly from the CD without the need to install</emphasis>
+or change anything on harddisk. It can recognize most of your hardware devices and offers a
 vast range of softwares for sound and video production, streaming, 3d
 modeling, peer to peer and filesharing, deejaying, veejaying and more.
 </para>
 
 <para>
-Surf, stream, record, edit, encode and broadcast both sound and video,
-all just in one CD you have simply to boot.
+This operating system focuses on providing <emphasis>multimedia functionalities</emphasis>
+to surf, stream, record, edit, encode and broadcast both sound and video;
+it also overcomes usual installation problems by providing an easy way
+to <emphasis>run from harddisk without repartitioning</emphasis>, but just copying
+a directory (<emphasis>docking</emphasis>), thus avoiding any risk of data loss and preserving the integrity
+of other systems you are already using.
 </para>
 
 <para>
@@ -25,15 +29,16 @@ software and the spirit of sharing informations.
 </para>
 
 <para>
-This manual will go thru various tasks and possibilities offered by
-dyne:bolic, describing various functionalities of the distributed applications.
-</para>
-
-<para>
-You can get in contact with the community of users and developers thru
-the discussion mailinglist you can subscribe easily from the homepage
-<ulink url="http://dynebolic.org">dynebolic.org</ulink> or maybe get in
-touch peeking into the <emphasis>irc.freenode.net #dyne</emphasis> chat channel.
+The latest version of this document is made available online at the address
+<ulink url="http://dynebolic.org/manual">dynebolic.org/manual</ulink> and in
+printable format at <ulink url="http://dynebolic.org/dynebolic-manual.pdf">
+dynebolic.org/dynebolic-manual.pdf</ulink>.
+For more informations visit the homepage on <ulink url="http://dynebolic.org">dynebolic.org</ulink>
+where more online documentation is made available.
+To contribute you can <ulink url="http://bugs.dyne.org">report bugs</ulink> and
+get in touch with the community of users and developers joining the
+the <ulink url="http://lists.dyne.org">discussion mailinglists</ulink> or the
+ <emphasis>irc.freenode.net #dyne</emphasis> chat channel.
 </para>
 
 
@@ -62,12 +67,21 @@ the manpage name usually matches the name of the program executable
 itself.
 </para>
 
+<para>
+Always keep in mind: the <emphasis>man</emphasis> command is your
+friend :) it works in every GNU/Linux system providing information
+about every command, and with all the commands that are around there
+is a lot to discover! for example have a look at manuals like "sox"
+or "convert", you'll find out that you can do a lot of things just
+from the XTerminal commandline!
+</para>
+
 
 <para>
-Also consider to consult the documentation and join the community of a
-specific software you are using: there you can discover more about its
-use and development and realize if any bugs that you encounter have
-been allready addressed by developers.
+At last, in case you are using intensively a certain software for
+your purposes, don't miss to consult its own documentation and join
+the community of users around it: there you can discover more about its
+usage and development.
 </para>
 
 </section>
@@ -222,7 +236,7 @@ Memory has a digital, diverse, horizontal voice.
 <title>License and disclaimer</title>
 <para>
 The dyne user's manual is
-copyright (c) 2003 - 2006 Denis Roio aka <ulink url="http://rastasoft.org">Jaromil</ulink>
+copyright (c) 2003 - 2006 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>
 </para>
 
 <para>
@@ -248,7 +262,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 </para>
 
 <para>
-dyne GNU/Linux is
+dyne:bolic GNU/Linux is
 copyright (C) 2001 - 2006 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>
 </para>
 <para>

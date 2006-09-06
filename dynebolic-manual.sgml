@@ -15,6 +15,8 @@
 <!ENTITY network SYSTEM "network.sgml">
 
 <!ENTITY devel SYSTEM "devel.sgml">
+
+<!ENTITY index SYSTEM "index.sgml">
 ]>
 
 <book label="dyne:bolic GNU/Linux user's guide">
@@ -24,6 +26,18 @@
 <title>Dyne:II GNU/Linux User's Guide</title>
 <subtitle>dynebolic.org</subtitle>
 <!--<graphic fileref="dyne.jpg">-->
+
+
+<mediaobject>
+   <imageobject>
+     <imagedata scale="75" align="center" fileref="images/logo" format="bmp">
+   </imageobject>
+</mediaobject>
+
+<publisher>
+  <publishername>Dyne.org foundation</publishername>
+  <address>Keizersgracht 264, Amsterdam, 1016 EV</address>
+</publisher>
 
 <authorgroup>
 <author>
@@ -43,8 +57,11 @@ Dynebolic 2.0 GNU/Linux user's Guide
 <date>2006</date>
 -->
 <copyright>
-<year>2003 - 2006</year>
-<holder>Denis "jaromil" Roio - http://rastasoft.org</holder>
+<year>2003</year>
+<year>2004</year>
+<year>2005</year>
+<year>2006</year>
+<holder>Denis "jaromil" Rojo - http://rastasoft.org</holder>
 </copyright>
 
 </bookinfo>
@@ -65,6 +82,8 @@ Dynebolic 2.0 GNU/Linux user's Guide
 &network;
 
 &devel;
+
+&index;
 
 <colophon>
 <para>

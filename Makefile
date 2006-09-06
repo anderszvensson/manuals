@@ -8,21 +8,32 @@ intro.sgml \
 system.sgml \
 video.sgml \
 audio.sgml \
-text.sgml
+text.sgml \
+index.sgml
 
-all : pdf
+all : pdf html
 
-html : $(DEPS)
-	rm -f html/*.html
+# jade omissis options: -V nochunks
+
+index :
+	collateindex.pl -N -o index.sgml -t index
+	rm -f HTML.index
+	jade -wno-valid -t sgml -V html-index -d dsssl-stylesheets-1.79/html/docbook.dsl dynebolic-manual.sgml >/dev/null
+	collateindex.pl -o index.sgml HTML.index
+	rm -f HTML.index
+
+html : index $(DEPS)
+	rm -rf html/*.htm
 	docbook2html -d dsssl-stylesheets-1.79/html/docbook.dsl \
 		-o html dynebolic-manual.sgml
 
-pdf : $(DEPS)
+pdf : index $(DEPS)
+	rm dynebolic-manual.pdf
 	docbook2pdf -d dsssl-stylesheets-1.79/print/docbook.dsl \
 		dynebolic-manual.sgml
 
 clean :
-	rm -f html/*.html \
+	rm -f html/*.htm \
 	dynebolic-manual.pdf \
 	dynebolic-manual.ps  \
 	dynebolic-manual.tex \
