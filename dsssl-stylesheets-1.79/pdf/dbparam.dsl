@@ -966,7 +966,7 @@
   ;; AUTHOR N/A
   ;; /REFENTRY
   ;; "A4"
-  "booklet-140")
+  "A4")
 
 (define %two-side% 
   ;; REFENTRY two-side
@@ -1044,8 +1044,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  ;;3pi)
-  12.7mm)
+  3pi)
 
 (define %right-margin% 
   ;; REFENTRY right-margin
@@ -1057,8 +1056,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  ;;3pi)
-  12.7mm)
+  3pi)
 
 (define %page-width%
   ;; REFENTRY page-width
@@ -1069,8 +1067,6 @@
   ;; /DESC
   ;; /REFENTRY
   (case %paper-type%
-    (("booklet-152") 152mm)
-    (("booklet-140") 140mm)
     (("A4landscape") 297mm)
     (("USletter") 8.5in)
     (("USlandscape") 11in)
@@ -1120,8 +1116,6 @@
   ;; /DESC
   ;; /REFENTRY
   (case %paper-type%
-    (("booklet-152") 229mm)
-    (("booklet-140") 216mm)
     (("A4landscape") 210mm)
     (("USletter") 11in)
     (("USlandscape") 8.5in)
@@ -1208,10 +1202,9 @@
   ;; not the writing direction.
   ;; /DESC
   ;; /REFENTRY
-  ;;(if (equal? %visual-acuity% "large-type")
-  ;;    7.5pi
-  ;;    6pi))
-  25mm)
+  (if (equal? %visual-acuity% "large-type")
+      7.5pi
+      6pi))
 
 (define %bottom-margin% 
   ;; REFENTRY bottom-margin
@@ -1223,10 +1216,9 @@
   ;; not the writing direction.
   ;; /DESC
   ;; /REFENTRY
-  ;;(if (equal? %visual-acuity% "large-type")
-  ;;    9.5pi 
-  ;;    8pi))
-  12.7mm)
+  (if (equal? %visual-acuity% "large-type")
+      9.5pi 
+      8pi))
 
 (define %header-margin% 
   ;; REFENTRY header-margin
@@ -1392,7 +1384,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  'justify)
+  'start)
 
 (define %division-title-quadding% 
   ;; REFENTRY division-title-quadding
@@ -1764,7 +1756,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  0pi)
+  4pi)
 
 (define %blockquote-start-indent%
   ;; PURP Default indent of blockquoted text
@@ -1793,7 +1785,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  (/ %bf-size% 1.0))
+  (/ %bf-size% 2.0))
 
 (define %block-sep% 
   ;; REFENTRY block-sep
@@ -1804,7 +1796,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  (* %para-sep% 1.0))
+  (* %para-sep% 2.0))
 
 ;; REFERENCE Indents
 
@@ -1819,7 +1811,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  4pt)
+  0pt)
 
 (define %para-indent-firstpara%
   ;; REFENTRY para-indent-firstpara

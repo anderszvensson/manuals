@@ -1,6 +1,6 @@
 
 <chapter>
-<title>dyne:bolic the hacktive media</title>
+<title>The hacktive media</title>
 
 <para>
 dyne:bolic GNU/Linux is a live bootable distribution working
@@ -45,6 +45,8 @@ the <ulink url="http://lists.dyne.org">discussion mailinglists</ulink> or the
 <section>
 <title>How to use this manual</title>
 
+<indexterm><primary>manuals</primary></indexterm>
+
 <para>
 Far from being complete in exploring the possibilities of each
 single software, you'll get introduced and find basic directions on
@@ -88,6 +90,11 @@ usage and development.
 
 <section>
 <title>This is Rasta software</title>
+
+<indexterm><primary>rastasoft</primary></indexterm>
+<indexterm><primary>afrolinux</primary></indexterm>
+
+
  <para> Jah Rastafari Livity
 bless our Freedom!  This is free software, share it for the good of
 yourself and your people, respect others and let them express, be free
@@ -178,6 +185,8 @@ Selah.
 <title>Streamtime</title>
 <subtitle>Employing dyne:bolic for the freedom of communication</subtitle>
 
+<indexterm><primary>streamtime</primary></indexterm>
+
 <para>
 
 <ulink url="http://www.streamtime.org">Streamtime</ulink> is a project
@@ -234,6 +243,9 @@ Memory has a digital, diverse, horizontal voice.
 
 <section>
 <title>License and disclaimer</title>
+
+<indexterm><primary>license</primary><secondary>copyright</secondary></indexterm>
+
 <para>
 The dyne user's manual is
 copyright (c) 2003 - 2006 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>

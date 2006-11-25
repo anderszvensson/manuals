@@ -38,8 +38,6 @@ audio and video, communicate and publish text, webpages, 3d animations
 and much more.
 </para>
 
-<indexterm><primary>OSNews review</primary></indexterm>
-<indexterm><primary>Spot's tasty recipes</primary></indexterm>
 
 <para>
 To be introduced to various desktop functionalities you can visit
@@ -49,6 +47,9 @@ and read the <ulink url="http://www.osnews.com/story.php?news_id=6490">OSNews dy
 
 </section>
 
+<indexterm><primary>Volumes</primary></indexterm>
+<indexterm><primary>NTFS</primary></indexterm>
+
 <section>
 <title>Access your data volumes</title>
 
@@ -57,12 +58,13 @@ and read the <ulink url="http://www.osnews.com/story.php?news_id=6490">OSNews dy
 You can easily access your files on connected storage devices (harddisks, cd, floppy,
 usb) using the buttons in the upper right corner of your desktop, as
 well your local network shares and remote internet accounts.  Your partitions
-are automatically mounted in the <emphasis>/mnt</emphasis> directory,
-you can read and write them except for NT filesystems, which you can only read.
+are automatically mounted in the <emphasis>/mnt</emphasis> directory, which you
+see linked in your home as <emphasis>Volumes</emphasis>.
+You can read and write on all your volumes except for NT filesystems, which you can only read.
 
 </para>
 
-<indexterm><primary>accessing usb</primary></indexterm>
+<indexterm><primary>usb pendrive</primary></indexterm>
 
 <para>
 Usb storage devices (like usb pens, smartcards and some digital photo
@@ -86,7 +88,7 @@ use after booting dyne:bolic (see following chapter about DOCKING),
 then you can access, browse, play and rip compact discs and dvd.
 </para>
 
-<indexterm><primary>hier</primary></indexterm>
+<indexterm><primary>filesystem organization</primary></indexterm>
 
 <para>
 To have a general overview about the organization of various directories you find in GNU/Linux systems,
@@ -155,13 +157,11 @@ your partition (C:\ or D:\ in the DOS filesystem) called
 <emphasis>dyne.nst</emphasis>. To erase a nest simply delete that file.
 
 </para>
-
-
 </section>
 
-<section id="dock-sect">
-<title>Install on harddisk? Dock!</title>
+<section>
 
+<title>Install on harddisk? Dock!</title>
 <indexterm><primary>docking</primary></indexterm>
 
 <para>
@@ -268,7 +268,7 @@ don't worry ;)
 
 </para>
 
-<indexterm><primary>developers lounge</primary></indexterm>
+<indexterm><primary>developers documentation</primary></indexterm>
 
 <para>
 
@@ -298,7 +298,7 @@ you just did it by running this system on your computer didn't you?
 
 <section> <title>Boot from harddisk</title>
 
-<indexterm><primary>booting from harddisk</primary></indexterm>
+<indexterm><primary>boot from harddisk</primary></indexterm>
 
 <para>
 

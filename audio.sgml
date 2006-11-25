@@ -2,6 +2,9 @@
 <title>Audio production</title>
 <subtitle>Play, record edit and stream your audio</subtitle>
 
+<indexterm><primary> Audio </primary>
+</indexterm>
+
 <para>
 This distribution is full with audio software to do all kind of things:
 electronic music, sound processing, voice effects, interviews and more.
@@ -28,14 +31,23 @@ and <ulink url="http://spot.river-styx.com/viewarticle.php?id=17"></ulink>.
 
 <section>
 <title>Play</title>
-
+ 
 <para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Formats </secondary>
+</indexterm>
+
 This operating systems provides players for many audio formats
-available around out of the box: WAV, MIDI, MP3, OGG, MOD, XM and even
-more can be played out or re-encoded, switching between formats.
+available around out of the box: WAV, MIDI, MP3, OGG / VORBIS, MOD, XM, FLAC, SPEEX
+and even more can be played out or re-encoded, switching between formats.
 </para>
 
 <para>
+ 
+<indexterm><primary> Audio </primary>
+<secondary> Xmms </secondary>
+</indexterm>
 
 The <emphasis>Xmms</emphasis> player is a practical audio player with
 a minimal and intuitive playlist manager, can play online radio
@@ -45,6 +57,10 @@ as you like.
 </para>
 
 <para>
+ 
+<indexterm><primary> Audio </primary>
+<secondary> Amarok </secondary>
+</indexterm>
 
 <emphasis>Amarok</emphasis> is a fully featured personal jukebox,
 handling the collection of your audio and downloading automatically
@@ -57,6 +73,10 @@ music. It makes it a perfect interface for a jukebox station!
 
 <para>
 
+<indexterm><primary> Audio </primary>
+<secondary> Timidity </secondary>
+</indexterm>
+
 <emphasis>Timidity</emphasis> is a midi synthetizers using GUS patches
 to render your MIDI files into audio files, as well make you listen to
 MIDI partitures.
@@ -64,6 +84,10 @@ MIDI partitures.
 </para>
 
 <para>
+
+<indexterm><primary> Audio </primary>
+<secondary> MikMod </secondary>
+</indexterm>
 
 <emphasis>MikMod</emphasis> is a tracker module player (file
 extensions as MOD, XM, S3M etc.) which can let you listen to
@@ -89,6 +113,10 @@ programs, like a virtual rack of different applications.
 
 <para>
 
+<indexterm><primary> Audio </primary>
+<secondary> Hydrogen </secondary>
+</indexterm>
+
 <emphasis>Hydrogen</emphasis> is a drum-machine where you can load
 sample kits of instruments and compose a partiture for them to play on
 a specific rythm. It's homepage offers a collection of many more drum
@@ -97,7 +125,7 @@ url="http://www.hydrogen-music.org"></ulink>.
 
 </para>
 
-
+<!--
 <para>
 
 <emphasis>Mixxx</emphasis> is a dj tool still in development but
@@ -106,9 +134,14 @@ match them to a particular beat and feed in between. It can be also
 configured to be controlled via MIDI and it's skinnable.
 
 </para>
-
+-->
 
 <para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Jamin </secondary>
+</indexterm>
+
 
 <emphasis>Jamin</emphasis> is the Jack audio mastering interface, it
 can perform professional audio mastering of stereo input streams,
@@ -120,6 +153,10 @@ all frequencies in realtime.
 
 <para>
 
+<indexterm><primary> Audio </primary>
+<secondary> Jack Rack </secondary>
+</indexterm>
+
 <emphasis>Jack Rack</emphasis> is a powerful effect rack that can
 apply chains of audio plugins (LADSPA) on the sound currently being
 played by other programs. Using Jack you can interface it with all
@@ -129,6 +166,10 @@ available in dyne:bolic.
 </para>
 
 <para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Free Wheeling </secondary>
+</indexterm>
 
 <emphasis>FreeWheeling</emphasis> is a funky application that lets you
 record and play multiple samples in realtime, so that they stay
@@ -157,6 +198,10 @@ using it.
 
 <para>
 
+<indexterm><primary> Audio </primary>
+<secondary> Ardour </secondary>
+</indexterm>
+
 <emphasis>Ardour</emphasis> is the fully featured multitrack studio
 that offers the most advanced interface for your music recording
 studio. Combined together with other applications when necessary (it
@@ -171,6 +216,10 @@ it's usage and hotkeys is definitely worth the effort.
 
 <para>
 
+<indexterm><primary> Audio </primary>
+<secondary> Audacity </secondary>
+</indexterm>
+
 <emphasis>Audacity</emphasis> is a user-friendly audio editing program
 suitable to manipulate your audio files, interviews and recordings,
 separating or mixing them, applying effects and encoding in various
@@ -184,6 +233,10 @@ A perfect choice to start manipulating audio.
 
 <para>
 
+<indexterm><primary> Audio </primary>
+<secondary> Rezound </secondary>
+</indexterm>
+
 <emphasis>Rezound</emphasis> is a well capable sample editor that lets
 you manipulate with good precision your music samples, record, loop
 and apply effects using an intuitive and complete interface, quite
@@ -193,6 +246,10 @@ responsive also on slower systems.
 
 
 <para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Time Machine </secondary>
+</indexterm>
 
 <emphasis>TimeMachine</emphasis> is a simple yet very useful tool for
 recording audio, requiring Jack as a sound engine. It is simply a big
@@ -210,6 +267,10 @@ you just listened, without the need to rewind the tape.
 <title>Stream</title>
 
 <para>
+
+<indexterm><primary> Audio </primary>
+<secondary> MuSE </secondary>
+</indexterm>
 
 <emphasis>MuSE</emphasis> is another rasta soft by dyne.org included,
 which lets you stream audio on the internet over various servers
@@ -229,6 +290,10 @@ recorded to harddisk and/or streamed to the net.
 </para>
 
 <para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Streaming manual </secondary>
+</indexterm>
 
 A great introduction to streaming and how to operate muse is available
 online on <ulink url="http://flossmanuals.org/muse"></ulink>, while

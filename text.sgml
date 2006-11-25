@@ -4,6 +4,8 @@
 <title>Text software</title>
 <subtitle>Text editing and publishing with dyne:bolic</subtitle>
 
+<indexterm><primary> Text </primary></indexterm>
+
 <para>
 
 Dyne:bolic includes software to let you easily write and compose
@@ -26,6 +28,10 @@ format).
 
 <para>
 
+<indexterm><primary> Text </primary>
+<secondary> Open Office </secondary>
+</indexterm>
+
 In case you need a full blown office suite to satisfy your needs here,
 there is an <emphasis>Open Office 2.0</emphasis> dyne module available
 online for download from our website, you can place it into your Dock
@@ -37,6 +43,10 @@ in the application menu. With Open Office you can read and write all
 
 <para>
 
+<indexterm><primary> Text </primary>
+<secondary> Scribus </secondary>
+</indexterm>
+
 <emphasis>Scribus</emphasis> is a desktop publishing program to 
 compose vectorial formats like PDF and Postscript, it is useful
 to paginate text in a professional printable form to produce
@@ -46,6 +56,10 @@ images in pages following customizable schemes.
 </para>
 
 <para>
+
+<indexterm><primary> Text </primary>
+<secondary> Lyx, Tex </secondary>
+</indexterm>
 
 <emphasis>Lyx</emphasis> is a document editor whose backend is the
 powerful Tex environment, supporting various character sets and
@@ -57,6 +71,11 @@ DocBook tools to process SGML files into the many formats supported
 
 
 <para>
+
+<indexterm><primary> Text </primary>
+<secondary> Nedit </secondary>
+</indexterm>
+
 <emphasis>Nedit</emphasis> is a plain text editor providing syntax
 highlight for a couple of sourcecode languages, it is intuitive and
 easy to use for the newbies, but at the same can offer a powerful
@@ -64,6 +83,11 @@ environment for programmers.
 </para>
 
 <para>
+
+<indexterm><primary> Text </primary>
+<secondary> AntiWord </secondary>
+</indexterm>
+
 At last, <emphasis>Antiword</emphasis> is a very handy commandline
 application to convert with a simple command any .doc file into a
 plain text file, keeping the alignement of the lines intact.

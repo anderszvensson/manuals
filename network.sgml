@@ -1,6 +1,7 @@
 <chapter>
 <title>Communication software</title>
 <subtitle>Communication software included in dyne:bolic</subtitle>
+<indexterm><primary> Network </primary></indexterm>
 
 <para>
 Since their birth, UNIX systems have been specially enhanced for
@@ -16,7 +17,13 @@ protecting the privacy of the users, providing an anonymizing proxy
 and email encryption tools ready for use.
 </para>
 
+
 <para>
+
+<indexterm><primary> Network </primary>
+<secondary> Samba </secondary>
+</indexterm>
+
 The <emphasis>Samba</emphasis> filesharing daemon runs by default on
 dyne:bolic, sharing in read-only the currently running system on the
 local network to make it available for network installing. If you want
@@ -47,6 +54,10 @@ GNU/Linux platform.
 
 <para>
 
+<indexterm><primary> Network </primary>
+<secondary> Mozilla Firefox </secondary>
+</indexterm>
+
 The first and most familiar browser is <emphasis>Firefox</emphasis> which
 is developed by the Mozilla team in order to have a fully capable tool to
 access the web. Firefox offers an intuitive interface, bookmark handling
@@ -56,6 +67,10 @@ and a couple of plugins that can be used to extend its functionalities.
 
 <para>
 
+<indexterm><primary> Network </primary>
+<secondary> Links </secondary>
+</indexterm>
+
 Then we have <emphasis>Links</emphasis> which is a lightweight alternative
 to the previous: it runs much faster on old computers while still offering
 most of the crucial functionalities. It is remarkable its quality and speed
@@ -64,6 +79,9 @@ in rendering web pages, making it a great tool for presentations.
 </para>
 
 <para>
+
+<indexterm><primary> Network </primary>
+<secondary> NVU Web page editor </secondary></indexterm>
 
 In order to edit webpages, <emphasis>Nvu</emphasis> is provided for
 web designers, which provides a powerful WYSIWYG environment that is
@@ -76,6 +94,9 @@ learn how to use it, then you can have your homepage ready in minutes.
 
 <para>
 
+<indexterm><primary> Network </primary>
+<secondary> Wget Web spider </secondary></indexterm>
+
 A powerful "spider" is also included to crawl and download entire
 websites: <emphasis>WGet</emphasis>, which is a commandline tool. As
 usual you can discover how it works by consulting its manual from an
@@ -84,6 +105,16 @@ XTerminal, typing <emphasis>man wget</emphasis>.
 </para>
 
 <para>
+
+<indexterm>
+<primary> Network </primary>
+<secondary> Tor </secondary>
+</indexterm>
+
+<indexterm>
+<primary> Privacy </primary>
+<secondary> Tor anonymity proxy </secondary>
+</indexterm>
 
 For better privacy and anomymity when browsing, but also to weed out
 often annoying advertisements and popups, a proxy is running by
@@ -99,6 +130,14 @@ details.
 <section>
 <title>Email and encryption</title>
 <subtitle>Send your letters in a safe way</subtitle>
+
+<indexterm><primary> Privacy </primary>
+<secondary> Email </secondary>
+</indexterm>
+
+<indexterm><primary> Network </primary>
+<secondary> Email </secondary>
+</indexterm>
 
 <para>
 Email is nowadays the most widespread technology used for personal
@@ -121,6 +160,15 @@ For more information on its usage and implementation refer to the web pages
 on <ulink url="http://www.gnupg.org"></ulink>
 </para>
 
+
+<indexterm><primary> Privacy </primary>
+<secondary> Enigmail </secondary>
+</indexterm>
+
+<indexterm><primary> Network </primary>
+<secondary> Thunderbird </secondary>
+</indexterm>
+
 <para>
 
 Dyne:bolic comes equipped with a popular email program:
@@ -130,6 +178,10 @@ with the <emphasis>GnuPG encryption</emphasis> system installing a
 plugin extension called <emphasis>Enigmail</emphasis>.
 
 </para>
+
+<indexterm><primary> Privacy </primary>
+<secondary> Gpa </secondary>
+</indexterm>
 
 <para>
 Also included is <emphasis>GPA</emphasis> the GNU Privacy Assistant which

@@ -85,67 +85,6 @@ Dynebolic 2.0 GNU/Linux user's Guide
 
 &index;
 
-<colophon>
-<para>
-This is the essential user's guide to the dyne:bolic GNU/Linux operating
-system. Designed to introduce newbies to approach
-the powerful tools and applications offered by the distribution,
-covers the various possibilities offered to work with
-both audio and video in different ways: playing, recording, editing
-and streaming.
-</para>
-
-<para>
-Concise and to the point, readers will find this volume packed with
-informations gathered from not previously available in any other
-single reference source. Software in dyne:bolic includes:
-</para>
-
-<para><programlisting>
-Video { Veejay, Play, Record, Edit, Stream }
-FreeJ :: set the veejay free!
-HasciiCam :: (h)ascii for the masses!
-MPlayer :: digital video player
-XawTV :: television viewer
-MP4Live :: mpeg4 rtsp streamer 
-Cinelerra :: non-linear video editing
-Kino :: DV firewire recorder
-
-Audio { DeeJay, Play, Record, Edit, Stream }
-Ardour :: multitrack studio
-Jack-it :: multiple audio system
-PD +ext :: pure data signal processing
-Amarok :: music jukebox
-Jamit :: professional equalizer
-Hydrogen :: drum machine
-XMMS :: hifi audio player
-GRip :: audio CD ripper
-Audacity :: multitrack audio editor
-ReZound :: audio file editor
-MuSE :: Multiple Streaming Engine
-Icecast :: streaming server
-
-Graphic tools { 2d & 3d image manipulation }
-Gimp :: GNU Image Manipulation Program 
-Blender :: 3d modeling and rendering tool
-Inkscape :: vectorial freehand drawing
-XSane :: scanner acquisition
-
-Text tools { read, edit and publish texts }
-RTF, PDF, DOC word processing
-vectorial publishing with Scribus
-
-Comunication tools { web, mail and privacy }
-surf the web, mail encryption, filesharing
-and chat with Firefox, Links, Sylpheed,
-GnuPg, Bittorrend, Nicotine, Gnutella, XChat
-
-and more! visit http://dynebolic.org
-</programlisting></para>
-
-
-</colophon>
-
 
 </book>
 

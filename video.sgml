@@ -2,6 +2,9 @@
 <title>Video production</title>
 <subtitle>Play, record, edit and stream your video</subtitle>
 
+<indexterm><primary> Video </primary>
+</indexterm>
+
 <para>
 
 The GNU/Linux platform nowadays offers an interesting range of tools
@@ -29,6 +32,10 @@ following a subdivision in task categories.
 
 <section>
 <title>Configure your video devices</title>
+
+<indexterm><primary> Video </primary>
+<secondary>Device setup</secondary>
+</indexterm>
 
 <para>
 There are various devices that can be used on PC computers in order to
@@ -94,6 +101,10 @@ be interesting and sometimes very useful to your research.
 
 <para>
 
+<indexterm><primary> Video </primary>
+<secondary> FreeJ </secondary>
+</indexterm>
+
 <emphasis>FreeJ</emphasis> is also a dyne.org rasta software that
 Jaromil started writing in 2001, collecting video compositing
 tecniques developed in theatre and interactive installations.
@@ -111,9 +122,18 @@ url="http://freej.dyne.org">freej.dyne.org</ulink>.
 
 <para>
 
+<indexterm><primary> Video </primary>
+<secondary> EffecTV </secondary>
+</indexterm>
+
 Other tools included in dyne:bolic are useful to be employed in
 different ways on realtime video: <emphasis>EffecTV</emphasis> can
 apply realtime effects to images, one by one, realizing "distortion
+
+<indexterm><primary> Video </primary>
+<secondary> Xaos </secondary>
+</indexterm>
+
 mirrors" and other possible funny uses; <emphasis>Xaos</emphasis> can
 let you explore the psychedelical word of chaos mathematics and
 fractals :)
@@ -121,6 +141,10 @@ fractals :)
 </para>
 
 <para>
+
+<indexterm><primary> Video </primary>
+<secondary> Pure Data </secondary>
+</indexterm>
 
 A remarkable piece of software is <emphasis>Pure Data</emphasis> which
 together with various extensions realizes a tool to connect various
@@ -149,6 +173,18 @@ download a copy and add it to your dyne:bolic system.
 <section>
 <title>Play</title>
 
+<indexterm><primary> Video </primary>
+<secondary> Xine </secondary>
+</indexterm>
+
+<indexterm><primary> Video </primary>
+<secondary> Mplayer </secondary>
+</indexterm>
+
+<indexterm><primary> Video </primary>
+<secondary> FFMpeg </secondary>
+</indexterm>
+
 <para>
 Players are provided to playback various video formats as AVI, MPEG,
 DIVX and WMV files, signals from TV cards or Quicktime, RTSP and HTTP
@@ -170,13 +206,27 @@ then you have to press 'q').
 <section>
 <title>Record</title>
 
+<indexterm><primary> Video </primary>
+<secondary> Mencoder </secondary>
+</indexterm>
+
 <para>
 
 Video recording is supported using a vast number of devices: from
 TV/video card and DVD using <emphasis>MEncoder</emphasis>, a
 commandline tool to be used from an XTerminal, a bit complicated but
 very powerful, see it's manual. An user-friendly interface for DV
+
+<indexterm><primary> Video </primary>
+<secondary> Kino </secondary>
+</indexterm>
+
 acquisition via firewire is provided by <emphasis>Kino</emphasis>;
+
+<indexterm><primary> Video </primary>
+<secondary> XawTV </secondary>
+</indexterm>
+
 while <emphasis>XawTV</emphasis> supports all other types of video
 devices and can be good to check if your is recognized as it has the
 widest support for hardware.
@@ -189,6 +239,11 @@ widest support for hardware.
 <title>Edit</title>
 
 <para>
+
+<indexterm><primary> Video </primary>
+<secondary> Cinelerra </secondary>
+</indexterm>
+
 Inside dyne:bolic you'll find <emphasis>Cinelerra</emphasis>, which
 implements a common approach to non-linear editing, with a nice user
 interface, speed and responsiveness.
@@ -199,6 +254,10 @@ manual available on <ulink url="http://manual.cinelerra.org">manual.cinelerra.or
 </para>
 
 <para>
+
+<indexterm><primary> Video </primary>
+<secondary> AviDeMux </secondary>
+</indexterm>
 
 Also <emphasis>AviDeMux</emphasis> is a useful tool for quickly
 cutting video, supports even more input formats than Cinelerra and can
@@ -215,6 +274,11 @@ decent interactivity and satisfactory results.
 </para>
 
 <para>
+
+<indexterm><primary> Video </primary>
+<secondary> Transcode </secondary>
+</indexterm>
+
 For converting between video formats its included the powerful
 <emphasis>Transcode</emphasis> tool, which is a commandline application
 that can be scripted to convert large number of files or easily accessed
@@ -240,6 +304,10 @@ Streaming video can be easily setted up in three different ways: using
 
 <para>
 
+<indexterm><primary> Video </primary>
+<secondary> Mpeg4IP </secondary>
+</indexterm>
+
 With <emphasis>Mpeg4IP</emphasis> you'll stream in Mpeg4 format and you'll need an online
 server running Darwin broadcast software, the resulting stream can be
 watched with most video players available today on various platform.
@@ -252,6 +320,10 @@ stream neither play it (cpu intensive).
 </para>
 
 <para>
+
+<indexterm><primary> Video </primary>
+<secondary> FreeJ </secondary>
+</indexterm>
 
 With <emphasis>FreeJ</emphasis> you can combine different video
 sources, apply effects and overlay text, put transparent images and
@@ -280,6 +352,10 @@ options to be given:
 
 <para>
 
+<indexterm><primary> Video </primary>
+<secondary> HasciiCam </secondary>
+</indexterm>
+
 <emphasis>Hasciicam</emphasis> is another Rasta software, the first one Jaromil ever
 published (2000), distributed by dyne.org. It is capable of rendering
 a video into text, having letters in place of colors, filling up the
@@ -297,11 +373,14 @@ movement.
 
 <para>
 
+<indexterm><primary> Video </primary>
+<secondary> Streaming </secondary>
+</indexterm>
+
 A documented research on the topic of streaming video with free
 software is being mantained by Jaromil and is <ulink
-url="http://korova.dyne.org/video_streaming"> published
-online</ulink> on his webpage.
-
+url="http://montevideo.dyne.org"> published online</ulink> as part
+of his academic activity.
 </para>
 
 
