@@ -37,10 +37,37 @@ book : index $(DEPS)
 	docbook2pdf -d dsssl-stylesheets-1.79/print/docbook.dsl \
 		dynebolic-manual.sgml
 
+postscript : index $(DEPS)
+	rm -f dynebolic-manual.pdf
+	docbook2ps -d dsssl-stylesheets-1.79/print/docbook.dsl \
+		dynebolic-manual.sgml
+
+rtf : index $(DEPS)
+	rm -f dynebolic-manual.rtf
+	docbook2rtf -d dsssl-stylesheets-1.79/pdf/docbook.dsl \
+		dynebolic-manual.sgml
+
+tex : index $(DEPS)
+	rm -f dynebolic-manual.tex
+	docbook2tex -d dsssl-stylesheets-1.79/print/docbook.dsl \
+		dynebolic-manual.sgml
+
+dvi : index $(DEPS)
+	rm -f dynebolic-manual.dvi
+	docbook2dvi -d dsssl-stylesheets-1.79/print/docbook.dsl \
+		dynebolic-manual.sgml
+
+
+
 clean :
 	rm -f html/*.htm \
 	dynebolic-manual.pdf \
 	dynebolic-manual.ps  \
 	dynebolic-manual.tex \
-	dynebolic-manual.txt
+	dynebolic-manual.rtf \
+	dynebolic-manual.txt \
+	dynebolic-manual.aux \
+	dynebolic-manual.log \
+	dynebolic-manual.out \
+	dynebolic-manual.dvi
 
