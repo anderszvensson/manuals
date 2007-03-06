@@ -7,43 +7,40 @@
 
 <para>
 Dyne:bolic doesn't requires to install anything on your harddisks,
-which can be left untouched while the system is used; depending from
-your preferred way to operate, it can boot from CD, USB or harddisk
-and it can store data in a single file on a harddisk or USB stick.
-The whole operating system fits on a single CD, to run it from harddisk
-<!-- you just need to copy the dyne/ directory in it (see <xref linkend="dock-sect">), while in a diskless thin-client -->
-you just need to copy the dyne/ directory in it (see docking), while in a diskless thin-client
-setup that can also be mounted via network.
-This makes dyne:bolic very easy to be employed and mantained, while there
-is no risk for misconfiguration: the system comes as it is, 
-providing a slick desktop full of applications ready to use.
-</para>
+which can be left untouched while the system is used. Still, depending
+from your preferred way to operate, it can boot from CD, USB or
+harddisk and it can store data in a single file that can be
+transported across different media.  The whole operating system fits
+on a single CD, to run it from harddisk you just need to copy the
+DYNE directory in it (see docking), while in a diskless thin-client
+setup that can also be mounted via network.  This makes dyne:bolic
+very easy to be employed and mantained, while there is no risk for
+misconfiguration: the system comes as it is, providing a slick desktop
+full of applications ready to use.  </para>
 
-<indexterm><primary>WindowMaker</primary></indexterm>
-
-<para>
-The desktop manager is
-<ulink url="http://www.windowmaker.info">WindowMaker</ulink>,
-it offers you multiple desktops (try alt+2 and other numbers)
-and a menu that you can recall by clicking the right mouse button on
-the background. On the upper right corner you have your storage devices
-which you can access with a double click.
-</para>
+<indexterm><primary>Xfce</primary></indexterm>
 
 <para>
-The menu of applications can be visualized with a right click of the
-mouse on the desktop. Software is organized by tasks, so 
-you can easily find your way to play, record, edit and stream both
-audio and video, communicate and publish text, webpages, 3d animations
-and much more.
-</para>
+The default desktop manager is <ulink
+url="http://www.xfce.org">Xfce</ulink>, it offers you multiple
+desktops (try ctrl+F2 and other numbers) and a menu that you can
+recall by clicking the right mouse button on the background. On the
+upper right corner you have your storage devices which you can access
+with a click.  </para>
+
+<para>
+Inside the application menu software is organized by tasks, so you can
+easily find your way to play, record, edit and stream both audio and
+video, communicate and publish text, webpages, 3d animations and much
+more.  </para>
 
 
 <para>
 To be introduced to various desktop functionalities you can visit
-<ulink url="http://spot.river-styx.com/viewarticle.php?id=8">Spot's homepage</ulink>
-and read the <ulink url="http://www.osnews.com/story.php?news_id=6490">OSNews dyne:bolic review</ulink>.
-</para>
+<ulink url="http://spot.river-styx.com/viewarticle.php?id=8">Spot's
+homepage</ulink> and read the <ulink
+url="http://www.osnews.com/story.php?news_id=6490">OSNews dyne:bolic
+review</ulink>.  </para>
 
 </section>
 
@@ -55,12 +52,13 @@ and read the <ulink url="http://www.osnews.com/story.php?news_id=6490">OSNews dy
 
 <para>
 
-You can easily access your files on connected storage devices (harddisks, cd, floppy,
-usb) using the buttons in the upper right corner of your desktop, as
-well your local network shares and remote internet accounts.  Your partitions
-are automatically mounted in the <emphasis>/mnt</emphasis> directory, which you
-see linked in your home as <emphasis>Volumes</emphasis>.
-You can read and write on all your volumes except for NT filesystems, which you can only read.
+You can easily access your files on connected storage devices
+(harddisks, cd, floppy, usb) using the buttons in the upper right
+corner of your desktop, as well your local network shares and remote
+internet accounts.  Your partitions are automatically mounted in the
+<emphasis>/mnt</emphasis> directory, which you see linked in your home
+as <emphasis>Volumes</emphasis>.  You can read and write on all your
+volumes except for NT filesystems, which you can only read.
 
 </para>
 
@@ -69,8 +67,9 @@ You can read and write on all your volumes except for NT filesystems, which you 
 <para>
 Usb storage devices (like usb pens, smartcards and some digital photo
 cameras) can be opened simply with a double click on the usb symbol.
-But beware that sometimes unusual partition schemes can confuse the autodetection,
-so you can try by hand in a Xterminal issuing manual commands:
+But beware that sometimes unusual partition schemes can confuse the
+autodetection, so you can try by hand in a Xterminal issuing manual
+commands:
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>mount /dev/sdXY /mnt/usb</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
@@ -105,51 +104,51 @@ read the manual <emphasis>hier</emphasis> (type "man hier" in the Xterminal).
 <indexterm><primary>nesting</primary></indexterm>
 
 <para>
-By default your <emphasis>/home, /etc and /var</emphasis> directories reside
-in RAM memory: every file and configuration you save will not be there again at the next boot.
+By default your <emphasis>/home, /etc and /var</emphasis> directories
+reside in RAM memory: every file and configuration you save will not
+be there again at the next boot.
 
-To save your home and settings permanently you need to create a <emphasis>NEST</emphasis>:
-it is just a file on the harddisk or on the usb storage device where they will be stored
-and loaded back at every boot. You just need to create your nest once, dyne:bolic looks for
-it at every startup and if its present starts using it automatically.
-</para>
+To save your home and settings permanently you need to create a
+<emphasis>NEST</emphasis>: it is just a file called "dyne.nst" that
+can be placed on a harddisk or usb storage device and it loaded at
+every boot. You just need to create your nest once, dyne:bolic looks
+for it at every startup and if it is present starts using it
+automatically.  </para>
 
 
 <para>
 The <emphasis>nesting</emphasis> function is very practical to keep
 all the modifications you make to the system while using it (settings,
-saved files, accounts, language etc.) and transport or backup them.
-For example, in case you nest on your USB stick, you can boot with it connected
-at startup, then that nest will be used and all your /home and settings
-will always stay with you, in your personal USB stick.
+saved files, accounts, language, private data etc.) and transport or
+backup them.  For example, in case you nest on your USB stick, you can
+boot with it connected at startup, then that nest will be used and all
+your /home and settings will always stay with you, in your personal
+USB stick. This way you don't even need a laptop to travel around with
+your software environment and data, just carry a dyne:bolic CD and
+your nested USB stick with you, wherever you'll be able to boot it
+you'll have your /home. </para>
+
+<para>
+<emphasis>How to create a nest?</emphasis> at the boot screen or in
+your <emphasis>Home</emphasis>, click on the
+<emphasis>Configure</emphasis> button, then choose
+<emphasis>Nest</emphasis> (the little icon of a duck). You will be
+prompted to create a nest on your harddisk or USB stick, proceed
+choosing the partition you want and how big you need it: good sizes
+may vary between 250 and 500 megabytes, depending from how much you
+plan to use the system, modify it and open it for other users.
 </para>
 
 <para>
-<emphasis>How to create a nest?</emphasis> at the boot screen or in your <emphasis>Home</emphasis>, click on the
-<emphasis>Configure</emphasis> button, then choose <emphasis>Nest</emphasis>
-(the little icon of a duck). You will be prompted to create a nest
-on your harddisk or USB stick, proceed choosing the partition you want
-and how big you need it: good sizes may vary between 250 and 500 megabytes,
-depending from how much you plan to use the system, modify it and open it
-for other users.
+Since version 2.4 when creating a nest you'll also see a padlock
+button: press it and your new nest will be secured with encryption,
+you'll be asked to set a password, which will be then asked at every
+boot when you mount the nest.  Without that password it will be very
+hard to access your nest, so you'll be granted with fairly good
+security for your personal data. 
 </para>
 
 <para>
-Since version 2.0 of dyne:bolic you can also install new software inside
-the nest! it will hold all modifications you apply to the original system,
-overlaying them automatically using the Union filesystem.
-</para>
-
-
-<para>
-In this way when you upgrade your system you simply have to get
-a new dyne:bolic version, all your data is not affected by any
-re-installation process and is safely stored in your nest, and
-you don't risk to break your operating system with an upgrade.
-</para>
-
-<para>
-
 If you nest on harddisk, the supported partition formats are: Dos,
 Fat32, Ext2, ReiserFS, Beos (BeFS) and BSD (UFS), but not NTFS.  The
 nest is just one file  created in the /dyne directory at the root of
@@ -261,10 +260,11 @@ your good old modules.
 
 Download free and open source dyne modules online from <ulink
 url="http://dynebolic.org"></ulink>, there are many interesting
-extensions already: <ulink url="http://puredyne.goto10.org">pure:dyne</ulink> (Pure-Data and other digital art tools),
-Open Office (all you need to handle office documents), Devel (more
-development tools) and there will be the Games modules soon,
-don't worry ;)
+extensions already: <ulink
+url="http://puredyne.goto10.org">pure:dyne</ulink> (Pure-Data and
+other digital art tools), Open Office (all you need to handle office
+documents), Devel (more development tools) and there will be the Games
+modules soon, don't worry ;)
 
 </para>
 
@@ -426,6 +426,62 @@ usually at the beginning of the lilo.conf file.
 
 </section>
 
+<section>
+<title>Privacy for your data</title>
+
+<para>
+Dyne:bolic is developed with your privacy in mind: as mentioned before
+the NEST can be encrypted to make your private data unaccessible
+unless your password is provided, now we'll proceed to analize in deep
+all the aspects of this security measure.
+</para>
+
+
+<para>
+When an encrypted nest is created, every file you place in your home
+directory will be preserved in a scrambled form using a
+Rijndael/SHA256 algorithm: such a cypher can be considered very
+secure, maybe some military organizations are able to break it, but
+anyway that would be very expensive in terms of resources employed.
+</para>
+
+<para>
+Dyne:bolic encryption mechanism employes a passfile "dyne.nst.gpg"
+which contains the cypher used to protect your data: that file holds
+the password that, matched together with your dyne.nst file, can
+access all the data you store in your nest. So actually that file is
+very precious for your privacy, you should be careful and not copy it
+around.
+</para>
+
+<para>
+Since the passfile is so delicate, it is also protected with a
+password: the one you choose at the beginning, which is used to
+scramble the passfile through a CAT5 algorithm. Keep in mind that this
+cypher algorithm is weak and eventually, in case you loose your
+passfile, it can be cracked by an intruder.
+</para>
+
+<para>
+Now in practical terms all this encryption scheme means that you can
+safely move around your dyne.nst file alone without the dyne.nst.gpg
+passfile, there will be no intrusion in the data stored inside even in
+case you loose it. It also means that you can give your passfile to a
+friend, still protected by the password you memorized, so that neither
+you nor your friend will be able to access the nest until you meet up
+again. More in general, this scheme lets you separate your encrypted
+data from the passfile, still keeping everything sealed by the
+password you keep in mind, and move the data around in different
+places being sure meanwhile it's not accessed by anyone else.
+</para>
+
+<para>
+So for sure we can say our privacy protection is way above the usual
+schemes used in most common operating systems, which keep your data in
+clear and physically accessible.
+  </para>
+
+
 <!-- 
 
 <section>
@@ -470,7 +526,7 @@ on Technology website <ulink url="http://spot.river-styx.com/viewarticle.php?id=
 </para>
 </section>
 
-
+-->
 
 <section>
 <title>For the curious hacker</title>
@@ -483,28 +539,15 @@ the architecture.
 </para>
 
 <para>
-But remember you are on your own in doing so, this documentation is
-not about hacking and the author's objective for dynebolic was
-to build an environment friendly for the end user, not necessarily
-for those who want to modify it. Anyway, if you look for a
-customizable bootable cd there are plenty to pick around, Morphix seems to be
-a good one to start with.
-</para>
-
-<para>
-A dyne:bolic SDK is available, it is the one used in development,
-and there is a brilliant introduction on how to use it on Spot's site:
-<ulink url="http://spot.river-styx.com/viewarticle.php?id=18"></ulink>.
-</para>
-
-<para>
-You can visit the <ulink url="http://cvs.dyne.org">cvs.dyne.org</ulink>
-which is where all dynebolic specific sourcecode is stored and thru all its
-development revisions.
-</para>
+A dyne:bolic SDK is available, it is the one used in development, and
+there is a brilliant introduction on how to use it on Spot's site:
+<ulink url="http://spot.river-styx.com/viewarticle.php?id=18"></ulink>
+plus plenty of documentation in the <ulink
+url="http://dev.dynebolic.org">dyne:bolic developers lounge</ulink>,
+along with revision of every single modification done to the system
+during development phases.
+  </para>
 
 </section>
-
--->
 
 </chapter>
