@@ -34,6 +34,16 @@ easily find your way to play, record, edit and stream both audio and
 video, communicate and publish text, webpages, 3d animations and much
 more.  </para>
 
+<para>
+Click on <emphasis>CONFIGURE</emphasis> in your menu to access system
+configuration facilities and customize your system.  </para>
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/shot-configure" format="jpg">
+   </imageobject>
+</mediaobject>
+
 
 <para>
 To be introduced to various desktop functionalities you can visit
@@ -49,6 +59,14 @@ review</ulink>.  </para>
 
 <section>
 <title>Access your data volumes</title>
+
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-volumes" format="jpg">
+   </imageobject>
+</mediaobject>
+
 
 <para>
 
@@ -103,6 +121,15 @@ read the manual <emphasis>hier</emphasis> (type "man hier" in the Xterminal).
 
 <indexterm><primary>nesting</primary></indexterm>
 
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-nest-main" format="jpg">
+   </imageobject>
+</mediaobject>
+
+
+
 <para>
 By default your <emphasis>/home, /etc and /var</emphasis> directories
 reside in RAM memory: every file and configuration you save will not
@@ -139,6 +166,14 @@ may vary between 250 and 500 megabytes, depending from how much you
 plan to use the system, modify it and open it for other users.
 </para>
 
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-nest-hd" format="jpg">
+   </imageobject>
+</mediaobject>
+
+
 <para>
 Since version 2.4 when creating a nest you'll also see a padlock
 button: press it and your new nest will be secured with encryption,
@@ -162,6 +197,13 @@ your partition (C:\ or D:\ in the DOS filesystem) called
 
 <title>Install on harddisk? Dock!</title>
 <indexterm><primary>docking</primary></indexterm>
+
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/shot-dock" format="jpg">
+   </imageobject>
+</mediaobject>
 
 <para>
 
@@ -230,17 +272,26 @@ url="http://lab.dyne.org/Docking">wiki community pages</ulink>.
 
 <para>
 
-Dyne:II offers the possibility to be expanded using software modules:
+Dyne:II offers the possibility to be expanded using <emphasis>.dyne</emphasis> modules:
 collections of applications that can be easily installed and used.  In
 fact the basic system already contains some of these modules, that can
 be found in your dock as the <emphasis>dyne/modules/</emphasis> directory.
 
+From the menu, you can see them clicking thru <emphasis>CONFIGURE -> DYNE -> MODULES</emphasis>
+
 </para>
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/shot-modules" format="jpg">
+   </imageobject>
+</mediaobject>
 
 <para>
 
-Additional dyne modules are available online, to activate
-them or include them in a CD you just drop the .dyne files into the
+Additional dyne modules are available online on the dynebolic.org
+homepage in the <emphasis>Modules</emphasis> section. Download and
+activate them just dropping the .dyne files into the
 dyne/modules docked directory. Then reboot, that's it!
 
 </para>
@@ -377,7 +428,7 @@ selection:
 <userinput>
 title dyne:bolic RASTASOFT Afro Linux
 root (hd0,0) # ADJUST THIS!
-kernel /dyne/linux root=/dev/ram0 rw load_ramdisk=1 max_loop=64 vga=791
+kernel /dyne/2618ck1d.krn root=/dev/ram0 rw load_ramdisk=1 max_loop=64 vga=791
 initrd /dyne/initrd.gz
 </userinput>
 </screen>
@@ -402,7 +453,7 @@ found then add the following lines at the end of it:
 <screen>
 <userinput>
 
-image = /dyne/linux
+image = /dyne/2618ck1d.krn
   root = /dev/ram0
   append = "max_loop=64"
   initrd = /dyne/initrd.gz
@@ -418,6 +469,11 @@ you boot, which in lilo is configured by the
 <emphasis>boot = /dev/hd*</emphasis>
 usually at the beginning of the lilo.conf file.
 
+Please note the "image =" parameter takes a full path to
+the kernel file, which is named after it's version in a condensed form,
+for instance here 2618ck1d stands for 2.6.18-ck1-dyne .
+The condensed format is necessary for a 8.3 filename restriction of
+the isolinux CD boot system.
 </para>
 
 
@@ -427,7 +483,7 @@ usually at the beginning of the lilo.conf file.
 </section>
 
 <section>
-<title>Privacy for your data</title>
+<title>Keep your data safe</title>
 
 <para>
 Dyne:bolic is developed with your privacy in mind: as mentioned before
@@ -458,8 +514,9 @@ around.
 Since the passfile is so delicate, it is also protected with a
 password: the one you choose at the beginning, which is used to
 scramble the passfile through a CAT5 algorithm. Keep in mind that this
-cypher algorithm is weak and eventually, in case you loose your
-passfile, it can be cracked by an intruder.
+cypher algorithm is weak and eventually, in case an intruder takes
+possession of your .gpg passfile, crack the protection on your data
+will be easier.
 </para>
 
 <para>
@@ -481,7 +538,7 @@ schemes used in most common operating systems, which keep your data in
 clear and physically accessible.
   </para>
 
-
+</section>
 <!-- 
 
 <section>
