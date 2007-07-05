@@ -16,9 +16,10 @@ all : pdf html
 # jade omissis options: -V nochunks
 
 index :
+	ln -s ../images ./
 	collateindex.pl -N -o index.sgml -t index
 	rm -f HTML.index
-	jade -wno-valid -t sgml -V html-index -d dsssl-stylesheets-1.79/html/docbook.dsl dynebolic-manual.sgml >/dev/null
+	jade -wno-valid -t sgml -V html-index -d ../dsssl-stylesheets-1.79/html/docbook.dsl dynebolic-manual.sgml >/dev/null
 	collateindex.pl -o index.sgml HTML.index
 	rm -f HTML.index *.htm
 
