@@ -19,11 +19,11 @@
 <!ENTITY index SYSTEM "index.sgml">
 ]>
 
-<book label="dyne:bolic GNU/Linux user's guide">
+<book label="dyne:bolic GNU/Linux guia de la usuaria">
 
 
 <bookinfo>
-<title>Dyne:II GNU/Linux User's Guide</title>
+<title>Dyne:II GNU/Linux guia de la usuaria</title>
 <subtitle>dynebolic.org</subtitle>
 <!--<graphic fileref="dyne.jpg">-->
 
