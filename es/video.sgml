@@ -1,0 +1,392 @@
+<chapter>
+<title>Video production</title>
+<subtitle>Play, record, edit and stream your video</subtitle>
+
+<indexterm><primary> Video </primary>
+</indexterm>
+
+<para>
+
+The GNU/Linux platform nowadays offers an interesting range of tools
+for video production, editing and manipulation; you can play all kind
+of video files and DVDs, but also encode them for distribution and
+switch between formats. Furthermore, you'll find software for
+recording, veejaying and streaming, non-linear editing and subtitling.
+
+</para>
+
+<para>
+
+However, you should consider that most of the video tools running on
+GNU/Linux platform are in development: indeed you can help much in
+testing and reporting the bugs you encounter, that's how anyone can
+help free software to grow better and better, as it does.
+
+</para>
+
+<para>
+Now lets proceed on how to configure an available video device and then
+browse thru the video software included in dyne:bolic,
+following a subdivision in task categories.
+</para>
+
+<section>
+<title>Configure your video devices</title>
+
+<indexterm><primary> Video </primary>
+<secondary>Device setup</secondary>
+</indexterm>
+
+<para>
+There are various devices that can be used on PC computers in order to
+have video input: USB webcams and capture cards, PCI TV cards,
+Firewire and even parallel port. They all have different chipsets and
+manufacturers and need different Linux device drivers.
+</para>
+
+<para>
+
+Dyne:bolic is capable to automaticly recognize most PCI (internal) TV
+cards at boot time (WinTV, BTTV) and now also USB webcams as well
+Firewire controllers: they will all be initialized at boot and can be
+accessed from the video device <emphasis>/dev/video0</emphasis> or
+subsequent numbers (video1, video2 ..) in case you have more than one.
+</para>
+
+<para>
+
+If your video device is not recognized automatically (the /dev/video
+doesn't exists) then you need to configure it by hand. In case of USB
+webcams a good place to start looking for hints is <ulink
+url="http://www.linux-usb.org">the linux-usb website</ulink>.
+
+Also the <ulink
+url="http://spot.river-styx.com/viewarticle.php?id=16"> Spot's guide
+about rolling your camera </ulink> is a good place to visit for more
+informations on how to proceed.
+</para>
+
+
+<para>
+
+ If the online documentation says your device is supported by a
+particular kernel driver, you can try to load it using the command
+'<emphasis>modprobe modulename</emphasis>' and see if everything went
+well by looking in the last lines of the messages printed out by the
+<emphasis>dmesg</emphasis> command.
+
+Many modules are already present in dyne:bolic, but some might require
+to be compiled using the kernel sources, which is a more complicated
+process that can't be explained here: you'll need to find more
+instructions online about how to do it and download the dyne:II kernel
+sources using <emphasis>dyneSDK</emphasis> (see the DEVELOPMENT
+chapter about it).
+
+</para>
+
+</section>
+
+<section>
+<title>VeeJay</title>
+
+<para>
+
+The VeeJay applications implement a pioneeristical approach to video
+manipulation in realtime, taking advantage of the high computational
+power offered by personal computers nowadays.  If you're active in the
+field of media and visual art, dance or scenografy, this software can
+be interesting and sometimes very useful to your research.
+
+</para>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> FreeJ </secondary>
+</indexterm>
+
+<emphasis>FreeJ</emphasis> is also a dyne.org rasta software that
+Jaromil started writing in 2001, collecting video compositing
+tecniques developed in theatre and interactive installations.
+
+It is still in development, but it's allready usable and offers
+multiple approaches to realtime video manipulation: can be controlled
+lively and from a remote console (VeeJay over Ethernet!) or scripted
+in an object oriented syntax (JavaScript). More documentation is
+available online about FreeJ: manuals and a <ulink
+url="http://lab.dyne.org/FreejTutorialPiotr_01">user friendly
+tutorial</ulink>, can be found online at its homepage on <ulink
+url="http://freej.dyne.org">freej.dyne.org</ulink>.
+
+</para>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> EffecTV </secondary>
+</indexterm>
+
+Other tools included in dyne:bolic are useful to be employed in
+different ways on realtime video: <emphasis>EffecTV</emphasis> can
+apply realtime effects to images, one by one, realizing "distortion
+
+<indexterm><primary> Video </primary>
+<secondary> Xaos </secondary>
+</indexterm>
+
+mirrors" and other possible funny uses; <emphasis>Xaos</emphasis> can
+let you explore the psychedelical word of chaos mathematics and
+fractals :)
+
+</para>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> Pure Data </secondary>
+</indexterm>
+
+A remarkable piece of software is <emphasis>Pure Data</emphasis> which
+together with various extensions realizes a tool to connect various
+processing units in a visual scripting fashion, to create visionary
+audio machines and interactive video tools.
+
+Pure Data, also called PD, is as powerful as complicated to learn; it
+helps the fact that is getting now adopted by various media-art
+schools around the world as a free and open source for students to
+realize their projects.
+
+From the wide community of digital artists and creatives using it in
+all kinds of interactive installations and performances, the Goto10
+crew joined the development of dyne:II to implement the
+<emphasis>pure.dyne</emphasis> software module which provides you
+everything you need to start using Pure Data right out of the box,
+without installation problems: check their website at <ulink
+url="http://puredyne.goto10.org">http://puredyne.goto10.org</ulink> to
+download a copy and add it to your dyne:bolic system.
+
+</para>
+
+</section>
+
+
+<section>
+<title>Play</title>
+
+<indexterm><primary> Video </primary>
+<secondary> Xine </secondary>
+</indexterm>
+
+<indexterm><primary> Video </primary>
+<secondary> Mplayer </secondary>
+</indexterm>
+
+<indexterm><primary> Video </primary>
+<secondary> FFMpeg </secondary>
+</indexterm>
+
+<para>
+Players are provided to playback various video formats as AVI, MPEG,
+DIVX and WMV files, signals from TV cards or Quicktime, RTSP and HTTP
+live streams from the net.  At the time being, dyne:bolic is
+compatible with most of the video formats around: thanks to
+<emphasis>MPlayer</emphasis>, <emphasis>Xine</emphasis> and
+<emphasis>FFMpeg</emphasis> free software you have chances to view
+files otherwise unsupported by other proprietary systems.
+
+Xine is recommended for watching DVDs, while Xawtv is a fully featured
+television viewer. Mplayer will be used to playback videofiles
+whenever you'll doubleclick one in the file manager (to close mplayer
+then you have to press 'q').
+
+</para>
+
+</section>
+
+<section>
+<title>Record</title>
+
+<indexterm><primary> Video </primary>
+<secondary> Mencoder </secondary>
+</indexterm>
+
+<para>
+
+Video recording is supported using a vast number of devices: from
+TV/video card and DVD using <emphasis>MEncoder</emphasis>, a
+commandline tool to be used from an XTerminal, a bit complicated but
+very powerful, see it's manual. An user-friendly interface for DV
+
+<indexterm><primary> Video </primary>
+<secondary> Kino </secondary>
+</indexterm>
+
+acquisition via firewire is provided by <emphasis>Kino</emphasis>;
+
+<indexterm><primary> Video </primary>
+<secondary> XawTV </secondary>
+</indexterm>
+
+while <emphasis>XawTV</emphasis> supports all other types of video
+devices and can be good to check if your is recognized as it has the
+widest support for hardware.
+
+</para>
+
+</section>
+
+<section>
+<title>Edit</title>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> Cinelerra </secondary>
+</indexterm>
+
+Inside dyne:bolic you'll find <emphasis>Cinelerra</emphasis>, which
+implements a common approach to non-linear editing, with a nice user
+interface, speed and responsiveness.
+
+<para>
+You can be introduced to <emphasis>Cinelerra</emphasis> by the
+manual available on <ulink url="http://manual.cinelerra.org">manual.cinelerra.org</ulink> or this <ulink url="http://www.robfisher.net/video/cinelerra1.html">online tutorial</ulink>.
+</para>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> AviDeMux </secondary>
+</indexterm>
+
+Also <emphasis>AviDeMux</emphasis> is a useful tool for quickly
+cutting video, supports even more input formats than Cinelerra and can
+be used to convert between some formats and do simple editing tasks.
+
+</para>
+
+<para>
+
+Consider that video editing tasks are the most demanding, so you'll
+need a relatively fast computer (from 2004-2005) in order to achieve
+decent interactivity and satisfactory results.
+
+</para>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> Transcode </secondary>
+</indexterm>
+
+For converting between video formats its included the powerful
+<emphasis>Transcode</emphasis> tool, which is a commandline application
+that can be scripted to convert large number of files or easily accessed
+via a graphical interface.
+</para>
+
+</section> <!-- /EDIT -->
+
+
+
+
+<section>
+<title>Stream</title>
+
+
+<para>
+
+Streaming video can be easily setted up in three different ways: using
+<emphasis>Mpeg4IP</emphasis>, <emphasis>FreeJ</emphasis> or
+<emphasis>HasciiCam</emphasis>.
+
+</para>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> Mpeg4IP </secondary>
+</indexterm>
+
+With <emphasis>Mpeg4IP</emphasis> you'll stream in Mpeg4 format and you'll need an online
+server running Darwin broadcast software, the resulting stream can be
+watched with most video players available today on various platform.
+This method provides good quality and smooth framerate, can record
+while streaming, efficiently uses bandwidth when running on multicast
+and can stream audio synced with the video. It's drawbacks are that it
+can be hard to find or setup a broadcast server, slower machines can't
+stream neither play it (cpu intensive).
+
+</para>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> FreeJ </secondary>
+</indexterm>
+
+With <emphasis>FreeJ</emphasis> you can combine different video
+sources, apply effects and overlay text, put transparent images and
+even more, then all the resulting stream can be live encoded with the
+free Theora codec and sent to an Icecast2 server online, this way
+anyone will be able to take your stream from the internet and play it
+back for example using the <ulink
+url="http://www.videolan.org">VideoLan</ulink> player available for
+all computer platforms. The capability of mixing and effecting the
+video realtime is a unique feature of FreeJ, but the drawback can be
+the initial difficulty you can encounter in mastering the program,
+which has to be started with particular flags from an XTerminal in
+order to activate the streaming functionality. To find out more about
+it see the previous section about VeeJaying and check the <ulink
+url="http://lab.dyne.org/FreejStreaming">Streaming with FreeJ</ulink>
+documentation online. As a reference, this here are the commandline
+options to be given: 
+
+<screen>
+<prompt>[d:b] ~ #</prompt><userinput>freej -s [resolution] -T [theora_quality] -V [vorbis_quality] \
+-i http://server:port/mountpoint.ogg -p password [ .. other options and files]</userinput>
+</screen>
+
+
+</para>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> HasciiCam </secondary>
+</indexterm>
+
+<emphasis>Hasciicam</emphasis> is another Rasta software, the first one Jaromil ever
+published (2000), distributed by dyne.org. It is capable of rendering
+a video into text, having letters in place of colors, filling up the
+image as a greyscale palette. With such an encoding the images look
+way less detailed, but pretty cool, and the stream uses very low
+bandwidth: Hasciicam can upload video via ftp to a server and can be
+viewed directly from any web browser (also text based) - so it can
+work to provide a video stream even using very old computers, and adds
+a special bit to it: the ASCII chars. As drawbacks here we have that
+the video is formed of characters: nifty, but doesn't gives a clear
+picture, it is just monochrome and can't achieve a smooth framerate on
+movement.
+
+</para>
+
+<para>
+
+<indexterm><primary> Video </primary>
+<secondary> Streaming </secondary>
+</indexterm>
+
+A documented research on the topic of streaming video with free
+software is being mantained by Jaromil and is <ulink
+url="http://montevideo.dyne.org"> published online</ulink> as part
+of his academic activity.
+</para>
+
+
+</section> <!-- /STREAM -->
+
+
+</chapter> <!-- VIDEO -->
+
+
