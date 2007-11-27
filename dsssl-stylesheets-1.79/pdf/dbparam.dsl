@@ -1171,7 +1171,7 @@
   ;; The indent of a epigraph. Default 55% of the text width.
   ;; /DESC
   ;; /REFENTRY
-  (* %text-width% 0.55))
+  (* %text-width% 0.35))
 
 (define %epigraph-end-indent%
   ;; REFENTRY epigraph-end-indent
@@ -1756,7 +1756,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  4pi)
+  2pi)
 
 (define %blockquote-start-indent%
   ;; PURP Default indent of blockquoted text

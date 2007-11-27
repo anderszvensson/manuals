@@ -17,6 +17,8 @@
 <!ENTITY devel SYSTEM "devel.sgml">
 
 <!ENTITY index SYSTEM "index.sgml">
+
+
 ]>
 
 <book label="dyne:bolic GNU/Linux user's guide">
@@ -25,12 +27,10 @@
 <bookinfo>
 <title>Dyne:II GNU/Linux User's Guide</title>
 <subtitle>dynebolic.org</subtitle>
-<!--<graphic fileref="dyne.jpg">-->
-
 
 <mediaobject>
    <imageobject>
-     <imagedata scale="75" align="center" fileref="images/logo" format="bmp">
+     <imagedata align="center" fileref="images/logo" format="jpg">
    </imageobject>
 </mediaobject>
 
@@ -51,17 +51,18 @@
 
 <!--
 <edition>
-Dynebolic 2.0 GNU/Linux user's Guide
+Dyne:II GNU/Linux user's Guide
 </edition>
 
-<date>2006</date>
+<date>2007</date>
 -->
 <copyright>
 <year>2003</year>
 <year>2004</year>
 <year>2005</year>
 <year>2006</year>
-<holder>Denis "jaromil" Rojo - http://rastasoft.org</holder>
+<year>2007</year>
+<holder>Denis Rojo</holder>
 </copyright>
 
 </bookinfo>

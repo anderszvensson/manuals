@@ -11,7 +11,7 @@ audio.sgml \
 text.sgml \
 index.sgml
 
-all : pdf html
+all : index pdf html
 
 # jade omissis options: -V nochunks
 
@@ -22,37 +22,38 @@ index :
 	collateindex.pl -o index.sgml HTML.index
 	rm -f HTML.index *.htm
 
-html : index $(DEPS)
+html : $(DEPS)
 	rm -rf html/*.htm
+	images/convert_for_html.sh
 	docbook2html -d dsssl-stylesheets-1.79/html/docbook.dsl \
 		-o html dynebolic-manual.sgml
 
-pdf : index $(DEPS)
+pdf : $(DEPS)
 	rm -f dynebolic-manual.pdf
 	docbook2pdf -d dsssl-stylesheets-1.79/pdf/docbook.dsl \
 		dynebolic-manual.sgml
 
-book : index $(DEPS)
+book : $(DEPS)
 	rm -f dynebolic-manual.pdf
 	docbook2pdf -d dsssl-stylesheets-1.79/print/docbook.dsl \
 		dynebolic-manual.sgml
 
-postscript : index $(DEPS)
+postscript : $(DEPS)
 	rm -f dynebolic-manual.pdf
 	docbook2ps -d dsssl-stylesheets-1.79/print/docbook.dsl \
 		dynebolic-manual.sgml
 
-rtf : index $(DEPS)
+rtf : $(DEPS)
 	rm -f dynebolic-manual.rtf
 	docbook2rtf -d dsssl-stylesheets-1.79/pdf/docbook.dsl \
 		dynebolic-manual.sgml
 
-tex : index $(DEPS)
+tex : $(DEPS)
 	rm -f dynebolic-manual.tex
 	docbook2tex -d dsssl-stylesheets-1.79/print/docbook.dsl \
 		dynebolic-manual.sgml
 
-dvi : index $(DEPS)
+dvi : $(DEPS)
 	rm -f dynebolic-manual.dvi
 	docbook2dvi -d dsssl-stylesheets-1.79/print/docbook.dsl \
 		dynebolic-manual.sgml

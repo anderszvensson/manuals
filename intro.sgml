@@ -28,6 +28,12 @@ this operating system takes birth as a grassroot effort to spread free
 software and the spirit of sharing informations.
 </para>
 
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-support" format="jpg">
+   </imageobject>
+</mediaobject>
+
 <para>
 The latest version of this document is made available online at the address
 <ulink url="http://dynebolic.org/manual">dynebolic.org/manual</ulink> and in
@@ -93,6 +99,12 @@ usage and development.
 
 <indexterm><primary>rastasoft</primary></indexterm>
 <indexterm><primary>afrolinux</primary></indexterm>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-credits" format="jpg">
+   </imageobject>
+</mediaobject>
 
 
  <para> Jah Rastafari Livity
@@ -240,6 +252,66 @@ Memory has a digital, diverse, horizontal voice.
 
 </section>
 
+<section>
+<title>Privacy and freedom of expression</title>
+
+<para>
+The distinction between what is public and what is private is becoming
+more and more blurred with the increasing intrusiveness of the media
+and advances in electronic technology. While this distinction is
+always the outcome of continuous cultural negotiation, it continues to
+be critical, for where nothing is private, democracy becomes
+impossible (quote from Privacy Conference, Social Research, New School
+University).
+</para>
+
+<para>
+The internet offers plenty of free services, on the wave of the Web2.0
+fuzz and the community boom, while all private informations are hosted
+on servers owned by global corporations and monopolies.
+</para>
+
+<para>
+We urge you to reflect on the importance of keeping privacy for
+personal data. Our present world is full of prevarication and
+political imprisonments, war rages in several places and media is
+mainly used for propaganda by the powers in charge. Some of us face
+the dangers of being tracked by oppressors opposing our self
+definition, independent thinking and resistance to omologation.
+</para>
+
+<para>
+People have the right to protect their privacy as much as their
+freedom to express.
+</para>
+
+<para>
+It is important to keep in mind that noone else than *you* can ensure
+the privacy of your personal data. Server hosted services and web
+integrated technologies gather all data into huge information pools
+that are made available to established economical and cultural
+regimes.
+</para>
+
+<para>
+Since version 2.4 in this free operating system was introduced support
+for strong encryption of your /home private data with Linux dm-crypt
+i586 optimized Rijndael hashed SHA256, to provide an efficient and
+user-friendly tool to protect your bookmarks, addressbook, documents
+and emails by carrying them back with you, protected with a fairly
+strong cryptographic algorithm.  </para>
+
+<para>
+A passkey to read your data is stored inside a file, which is also
+protected by a password. It is possible to keep everything with you on
+a small usb stick, still being sure that the data won't be easily
+recovered in case you loose it. You can also give the passkey
+protecting your data to a friend, to make the data unaccessible until
+you meet again, which can be useful in case of tricky transports.
+You'll find more informations in the following sections about nesting
+and privacy.</para>
+
+</section>
 
 <section>
 <title>License and disclaimer</title>
@@ -248,7 +320,7 @@ Memory has a digital, diverse, horizontal voice.
 
 <para>
 The dyne user's manual is
-copyright (c) 2003 - 2006 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>
+copyright (c) 2003 - 2007 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>
 </para>
 
 <para>
@@ -275,7 +347,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 <para>
 dyne:bolic GNU/Linux is
-copyright (C) 2001 - 2006 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>
+copyright (C) 2001 - 2007 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>
 </para>
 <para>
 Dyne:bolic is free software; you can redistribute it and/or modify

@@ -185,10 +185,17 @@ security for your personal data.
 
 <para>
 If you nest on harddisk, the supported partition formats are: Dos,
-Fat32, Ext2, ReiserFS, Beos (BeFS) and BSD (UFS), but not NTFS.  The
-nest is just one file  created in the /dyne directory at the root of
-your partition (C:\ or D:\ in the DOS filesystem) called
+Fat32, Ext2, ReiserFS, Beos (BeFS), and NTFS (supported since version
+2.5).  The nest is just one file created in the /dyne directory at the
+root of your partition (C:\ or D:\ in the DOS filesystem) called
 <emphasis>dyne.nst</emphasis>. To erase a nest simply delete that file.
+
+<para>
+Since version 2.5 it is also possible to mount nests after boot: just
+plug in your usb stick and navigate the content of the dyne/
+directory, a double click on the dyne.nst (the duck icon) will mount
+your home and prompt for a password if it is encrypted.
+</para>
 
 </para>
 </section>
@@ -290,7 +297,7 @@ From the menu, you can see them clicking thru <emphasis>CONFIGURE -> DYNE -> MOD
 <para>
 
 Additional dyne modules are available online on the dynebolic.org
-homepage in the <emphasis>Modules</emphasis> section. Download and
+homepage in the <emphasis>Extras</emphasis> section. Download and
 activate them just dropping the .dyne files into the
 dyne/modules docked directory. Then reboot, that's it!
 
@@ -308,28 +315,18 @@ your good old modules.
 <indexterm><primary>pure:dyne</primary></indexterm>
 
 <para>
-
-Download free and open source dyne modules online from <ulink
-url="http://dynebolic.org"></ulink>, there are many interesting
-extensions already: <ulink
-url="http://puredyne.goto10.org">pure:dyne</ulink> (Pure-Data and
-other digital art tools), Open Office (all you need to handle office
-documents), Devel (more development tools) and there will be the Games
-modules soon, don't worry ;)
-
+Download free and open source dyne modules online from
+<ulink url="ftp://ftp.dyne.org/dynebolic/modules"</ulink>, there are
+many interesting extensions already: office and development tools,
+crosscompile chains, manuals and of course games :)
 </para>
-
-<indexterm><primary>developers documentation</primary></indexterm>
 
 <para>
-
-Developers wanting to create modules for certain software collections
-can refer to documentation online at <ulink url="http://dev.dynebolic.org">dev.dynebolic.org</ulink>
-which includes all necessary informations on how to do that.
-
+Quite some developers and artists are actively contributing with
+modules listed
+on <ulink url="http://lab.dyne.org/DyneModules"></ulink>.
 </para>
 
-<!--
 
 <para>
 
@@ -338,11 +335,10 @@ must be taken is their provenience, since a broken or malicious module
 can access all your system. Of course to install a module you must be
 root. On our website we'll suggest only modules we have tested, anyway
 you're free to choose, it's all up to you to decide whom you trust,
-you just did it by running this system on your computer didn't you?
+you just did it by running this system on your computer didn't you? :)
 
 </para>
 
--->
 
 </section>
 
@@ -482,6 +478,49 @@ the isolinux CD boot system.
 
 </section>
 
+<section> <title>Boot from network</title>
+
+<indexterm><primary>boot from network</primary></indexterm>
+
+<para>
+Network booting is supported on some personal computers: the PXE
+system was included on some BIOS already at the beginning of year 2000
+(rough estimation): if no harddisks or cd devices are found to boot,
+the first black screen of the computer will search for a PXE boot on
+the local network.
+</para>
+
+<para>
+When booting PXE looks for a DHCP server on the local network for an
+address assigned. When found it will connect via TFTP to receive the
+kernel and the ramdisk from that server or another one.
+</para>
+
+<para>
+To start a TFTP server distributing the current docked dyne:bolic system, it
+is enough to run this command in a terminal:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>tftpd -l -s $DYNE_SYS_MNT</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+</para>
+
+<para>
+You can also configure a DHCP server to provide the network addresses
+to any PXE client booting. To do that use the graphical program
+<emphasis>gdhcpd</emphasis> starting it from a terminal, or the sample
+configuration file in /etc/dhcpd.conf. See <emphasis>man
+dhcpd</emphasis> for a reference to how to launch and operate the DHCP
+daemon.
+</para>
+
+<para>
+For more informations see <emphasis>man tftpd</emphasis> and
+<emphasis>man dhcpd</emphasis>.
+</para>
+
+
+</section>
+
 <section>
 <title>Keep your data safe</title>
 
@@ -515,14 +554,13 @@ Since the passfile is so delicate, it is also protected with a
 password: the one you choose at the beginning, which is used to
 scramble the passfile through a CAT5 algorithm. Keep in mind that this
 cypher algorithm is weak and eventually, in case an intruder takes
-possession of your .gpg passfile, crack the protection on your data
-will be easier.
+possession of your .gpg passfile, it will be easy to crack.
 </para>
 
 <para>
 Now in practical terms all this encryption scheme means that you can
-safely move around your dyne.nst file alone without the dyne.nst.gpg
-passfile, there will be no intrusion in the data stored inside even in
+safely move around your dyne.nst file separated from the dyne.nst.gpg
+passfile: there will be no intrusion in the data stored inside even in
 case you loose it. It also means that you can give your passfile to a
 friend, still protected by the password you memorized, so that neither
 you nor your friend will be able to access the nest until you meet up
@@ -538,52 +576,139 @@ schemes used in most common operating systems, which keep your data in
 clear and physically accessible.
   </para>
 
+<para>
+In case you are involved in some mission critical task and you are
+facing the possibility of imprisonment and torture, you should take a
+bit more care. A good practice would be to customize a bit the startup
+scripts of dyne:bolic to have a false password prompt, the
+/lib/dyne/nest.sh script is a good start.  Another way can be to have
+an encrypted nest for which you would disclose the password if forced
+to, but then also another encrypted file hidden somewhere that is not
+prompting for a password at every boot.
+</para>
+
+
+
 </section>
-<!-- 
 
 <section>
-<title>Cluster CPU farms</title>
+<title>Cluster computer farms</title>
 
 <para>
-Dyne:bolic Linux kernel allows all the computers running the system on
-the same local network to share CPU power by migrating processes from
-machines that are working harder to machines that are idle. This
-feature is provided to enhance multiprocessing computation on slower
-computers: they are then aided by faster computers on the same
-network, with a more equitous sharing of common resources.
+Since version 2, dyne:bolic changes its approach to clustering
+implementing a "human driven" suite of tools that let you control
+various applications running on multiple computers connected to
+your network.
 </para>
 
 <para>
-The cluster activates itself at every boot and on every new
-configuration of the network card, trying to autodetect other cluster
-nodes on the network: the process of sharing CPU power is totally
-automated and the groups are formed thru the autodiscovery scan of
-each node.
+In situations where you have many old computers you can use one for
+each task and control all of them from the same keyboard and mouse.
+The desktops of the computers can be visualized on your own screen or
+on multiple screens in case you have monitors attached to each of
+them. Powerful workstations can be combined using multiple processing
+units and their displays can be tiled together to compose a unique
+wide desktop.
+</para>
+
+
+<para>
+This way to operate dyne:bolic computers involves different kinds of
+applications offering a flexible setup that you can customize to your
+needs. This part of the manual will just make you familiar with the
+tools and you'll need to refer to their manuals to discover all the
+potential.
 </para>
 
 <para>
-Your Dyne:bolic system encloses all the clustering tools in the
-filesystem directory <emphasis>/usr/mosix</emphasis>. You can manually
-startup the clustering at any time by launching the command
-<emphasis>/usr/mosix/openmosix start</emphasis> from an XTERM, while
-in that directory you'll also find useful tools to control and gather
-information on the way your network cluster works:
-<emphasis>mosctl</emphasis> and <emphasis>showmap</emphasis> among the
-others; for each you'll find also a man page.
+To connect multiple computers you should first make sure you can reach
+them over the network and you know their addresses. A simple way to do
+it that will work on every GNU/Linux system is using the
+command <emphasis>ifconfig</emphasis> on each computer to print out
+the currently configured network address:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>ifconfig | grep inet
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+then edit your <emphasis>/etc/hosts</emphasis> file with the full list
+of addresses and a name for them that you can choose. Copying the /etc/hosts file on all involved machines will make them aware of each other "hostnames".
+</para>
+
+
+<para>
+<emphasis>Synergy</emphasis> is a powerful tool that lets your
+keyboard and mouse control different desktops accessed simply moving
+the mouse out of the current screen into theirs. An example
+configuration file is provided
+in <emphasis>/etc/synergy.conf</emphasis> and it must be modified
+with the hostnames of your computers (to be associated to IP numeric
+addresses in /etc/hosts).
+
+
+<para>
+The main computer where the keyboard and mouse are attached should run
+the command:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>synergys -n hostname -c /etc/synergy.conf
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+All the other computers to be connected should run this command,
+making sure the config file include them in the setup:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>synergyc -n hostname -c /etc/synergy.conf
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
 </para>
 
 <para>
-This feature is implemented by a kernel patch from the OpenMosix
-project, you can know more about this technology and discover about
-advanced uses for it on the <ulink
-url="http://openmosix.sf.net">OpenMosix webpage</ulink>, where you'll
-find extensive documentation and usage guides, while there is also
-a useful guide to the use of clustering in dyne:bolic on Spot's perspective
-on Technology website <ulink url="http://spot.river-styx.com/viewarticle.php?id=12"></ulink>.
+<emphasis>VNC</emphasis> is a remote video client that lets you
+control the desktop of another computer on your network as inside a
+window on your current desktop. It can be also used to interact with
+two mouse and keyboard at the same time.
 </para>
+
+<para>
+To share the desktop of a computer for an incoming VNC connection just
+run:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>x11vnc
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+To connect to a computer sharing the VNC desktop:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>vncviewer computer
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+For more informations on VNC see <emphasis>man x11vnc</emphasis> and
+<emphasis>man vncviewer</emphasis>.
+</para>
+
+<para>
+<emphasis>Remote X</emphasis> execution lets you run an application on
+another computer and control it on your desktop, as if it would be
+running locally.
+</para>
+
+<para>
+In order to authorize other computers to open applications on your
+desktop you must first run the command:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>xhost +computer
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Then Click the network button on the top-right panel and
+run <emphasis>Exec_X11</emphasis>, fill in your user account (default
+is user:root password:luther) and write the command to start the application.
+</para>
+
+
 </section>
-
--->
 
 <section>
 <title>For the curious hacker</title>
