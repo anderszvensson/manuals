@@ -4,6 +4,8 @@
 
 <!ENTITY system SYSTEM "system.sgml">
 
+<!ENTITY install SYSTEM "install.sgml">
+
 <!ENTITY video SYSTEM  "video.sgml">
 
 <!ENTITY audio SYSTEM "audio.sgml">
@@ -71,6 +73,8 @@ Dyne:II GNU/Linux user's Guide
 &intro;
 
 &system;
+
+&install;
 
 &video;
 

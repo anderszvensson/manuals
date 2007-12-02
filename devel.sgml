@@ -19,53 +19,335 @@ it.
 
 <para>
 
-In the <ulink url="http://dev.dynebolic.org">dyne developers
-lounge</ulink> you'll find up to date documentation on how to create
-and publish new modules, repack a new CD and more in general to better
-understand the innards of dyne:II.
+Dyne:bolic is a quite simple and minimalistic operating system (the
+underlying distribution philosophy can be referred to the Slackware
+one and more in general to the KISS principle), all scripted in shell,
+awk and sed from scratch. Function libraries along with auxiliary
+programs are all included in the /lib/dyne directory, where the code
+is fairly documented.
 
 </para>
 
+<indexterm><primary>Architecture</primary></indexterm>
 
 <para>
 
-After all, this is a quite simple and minimalistic operating system
-(the underlying distribution philosophy can be referred to the
-Slackware one and more in general to the KISS principle), all scripted
-in shell, awk and sed from scratch. Function libraries along with
-auxiliary programs are all included in the /lib/dyne directory, where
-the code is fairly documented.
-
+In this chapter you'll find documentation on how to create and publish
+new modules, repack a new CD. For more informations and as a reference
+to the inner structure of dyne:bolic keep in mind this distribution is
+written from scratch following the
+book <ulink url="http://www.linuxfromscratch.org">Linux From
+Scratch</ulink> which provides an extensive explanation on how
+everything was put together
 </para>
 
-<para>
-
-As you'll acknowledge from the online documentation, the
-<emphasis>dynesdk</emphasis> is present to facilitate all your dyne
-related development tasks, try 'dynesdk -h' for a brief help on
-functionalities.
-
-</para>
+<indexterm><primary>Programming</primary></indexterm>
 
 <para>
-
-Not specifically related to dyne:II development, in this new release
-the GNU C and C++ Compiler is included along with several scripting
+The GNU C and C++ Compiler is included along with several scripting
 language and relative toolkit externals as Python, Perl, Tcl/Tk and
 Ruby. Also 3 different integrated development environments are
 included for visual programming: <emphasis>Glade</emphasis> working
 with GTK and C, <emphasis>Fluid</emphasis> working with Fltk and C++,
 <emphasis>Gambas</emphasis> (provided by the external devel module)
-for basic visual programming.
+for basic visual programming.  Also
+<emphasis>gtkdialog</emphasis> is used so you can quickly realize
+graphical dialogs and user interaction combining various components.
+</para>
 
+<indexterm><primary>Customize</primary></indexterm>
+
+<section>
+<title>Customize your dyne liveCD</title>
+
+<para>
+It is possible to customize and expand dyne:bolic in various ways:
+creating software modules to add applications and distribute them to
+friends, as well change the behaviour of the system when booting.  To
+facilitate customization and development
+a <emphasis>dynesdk</emphasis> tool is provided, automatizing the
+process of packing changes into a new live CD.
 </para>
 
 <para>
-
-And don't forget the force :) of shell scripting, as there is also
-<emphasis>gtkdialog</emphasis> that you can use to quickly realize
-graphical dialogs and user interaction combining various components.
-
+For a good introduction on the potential of this tool you can read
+online Stomfi's article on customizing dyne:bolic
+on <ulink url="http://www.linux.com/articles/54607"></ulink>
 </para>
+
+<para>
+To get started with your development first create the SDK in the DOCK
+on your harddisk: 
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>dynesdk mksdk
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+you'll be prompted with two questions: it is safe to
+answer <emphasis>no</emphasis> in both cases, unless you want to
+change things in the dyne:II core:
+
+<screen>
+<prompt>* [?] do you want to uncompress the dyne.sys (y/N) ?</prompt>
+<prompt>* [?] do you want to download the kernel sources (y/N) ?</prompt>
+</screen>
+
+in case you don't give an answer, it will default to NO after 10
+seconds and go on.
+</para>
+
+<para>
+This procedure will create an SDK directory inside $DYNE_SYS_MNT/dyne,
+then populate it with development files that are downloaded from the
+online subversion repository if you have network connectivity.
+</para>
+
+<para>
+With the SDK you can pack modifications to your system inside a new CD
+ISO: that is created out of the contents of SDK/cdrom, you can add and
+remove modules from SDK/cdrom/dyne/modules as well add things inside
+the CD filesystem.
+</para>
+
+</section>
+
+<section>
+<title>Create new software modules</title>
+
+<para>Once you have an SDK and some space available on your harddisk
+you can start creating your own software modules to add applications
+to dyne:bolic, see the "Extra software modules" section of this manual
+for more information about features and usage of .dyne modules, now
+we'll go on with some instructions on how to create them.
+</para>
+
+<para>
+First of all make sure you dock your system on a harddisk, then create
+an SDK (see previous chapter). When you have an SDK directory in your
+harddisk you can see it's location just typing:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>echo $DYNE_SYS_MNT/SDK
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Next step is to create the module directory in the SDK, so let's
+choose our module name first: we are going to create the spaghetti
+module, with the commands
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>mkdir -p $DYNE_SYS_MNT/SDK/modules/spaghetti
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+<prompt>[d:b] ~ # </prompt><userinput>mkdir $DYNE_SYS_MNT/SDK/modules/spaghetti/bin
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+<prompt>[d:b] ~ # </prompt><userinput>mkdir $DYNE_SYS_MNT/SDK/modules/spaghetti/lib
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+<prompt>[d:b] ~ # </prompt><userinput>touch $DYNE_SYS_MNT/SDK/modules/spaghetti/VERSION
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+basically we are just creating the bin and lib directories and a
+VERSION file inside the module, you can do that with any filebrowser
+or midnight commander if you like: c'mon, make yourself comfortable ;)
+</para>
+
+<para>
+The last thing to do is to activate our spaghetti module, mounting it
+on /opt/spaghetti since all modules are activated in the /opt
+prefix. To do that we use again a DyneSdk command
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>dynesdk mount
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+<prompt>[d:b] ~ # </prompt><userinput>source /boot/dynenv.modules
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+That's it! our new module is mounted in /opt and we have our PATHs
+configured accordingly.
+</para>
+
+<para>
+Keep in mind that you need to use dynesdk mount once after every boot,
+before starting development on your module. You can as well open up
+for development an already existing module (your good old gnocchi
+module for instance) with the command:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>dynesdk devel gnocchi
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+You'll be then prompted with a question, if you want to decompress the
+content of the module for development, with an indication about the
+space that will be occupied by it on your harddisk.
+</para>
+
+<para>
+Now you can compile the spaghetti software you like with
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>./configure --prefix=/opt/spaghetti
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+or editing the PREFIX in the Makefile in some cases - and don't forget
+the sauce! :)
+</para>
+
+<para>
+To make it easier, when software is built with the usual "./configure
+&& make && make install", you can use
+the <emphasis>dynemodconf</emphasis> command (followed by the module
+name) instead of calling ./configure directly: that will set the
+prefix and more environment correctly, for example to compile
+"aglio-0.5" with flag "--with-basilico" inside our spaghetti module:
+
+<screen>
+<prompt>[d:b] ~/aglio-0.5 # </prompt><userinput>dynemodconf spaghetti --with-basilico
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Once you are done with cook... ahem, compiling, then you can squash
+everything into a compressed .dyne module with
+
+<screen>
+<prompt>[d:b] ~/aglio-0.5 # </prompt><userinput>dynesdk squash spaghetti
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+and that's it! your new module will be found in
+$DYNE_SYS_MNT/dyne/SDK/cdrom/dyne/modules/spaghetti.dyne and ready
+to be included in the next CD ISO that you can pack with dynesdk
+mkiso.
+<para>
+
+<para>
+Before releasing your module into the public, is a good idea to fill
+up some information about your creation so that people can contact you
+and visit software homepages. That's what the VERSION file is for, and
+it's format is very simple:
+
+<screen>
+name            Spaghetti
+desc            spaghetti pizza mandolino e presidente scemo
+version         1.0
+url             http://tuttifrutti.org/spaghetti
+packager        The Crazy Cook http://tuttifrutti.org/~crazycook
+</screen>
+
+Just use your favorite text editor to fill in these fields, leave a
+space or a tab between the field name and value and that's it.
+<para>
+
+
+<para>
+You can add entries and submenus for the user to start up your
+software. To do so create an applist file inside your module's etc
+directory, like for example /opt/spaghetti/etc/applist.
+
+The applist file will list application binaries, descriptions and ways
+to start them up thru flags. Here it follows a description of the
+format, basically a | separated list:
+
+<screen>
+# format:
+# name | description | command | flags | web url | author
+
+# flags:
+# runonce | multi = if there should be only one instance running, or not
+# terminal        = if it should run in a terminal
+# manual          = if it's a manual entry
+# root | user     = if it must be run as root or as user
+
+# submenus can start and end with
+# Begin | MySubmenu
+# End | MySubmenu
+</screen>
+
+for example:
+
+<screen>
+Begin | SPAGHETTI
+
+AglioeOlio | aglio olio e peperoncino | pasta --agliolio | | http://tuttifrutti.org | The Crazy Cook
+Puttanesca | olive capperi e alici | pasta --puttan | | http://tuttifrutti.org | The Crazy Cook
+Pesto | pesto alla genovese | pasta --pesto | | http://tuttifrutti.org | The Crazy Cook
+
+End | SPAGHETTI
+</screen>
+
+You can also have submenus, just use Begin and End once again
+inside. For a complete example see the system application list in
+<emphasis>$DYNE_SYS_MNT/applist</emphasis>.
+</para>
+
+<para>
+In case your module needs to set environment variables (like custom
+paths and general settings for applications) you can simply declare
+them in a env file inside the etc directory. That file can contain
+declarations of environment variables, one per line, which will be
+exported in the running system, for example in our spaghetti module
+<emphasis>/opt/spaghetti/etc/env</emphasis> will look like:
+
+<screen>
+KITCHEN_PATH=/opt/spaghetti/lib/kitchen
+GLOBAL_TASTE=spicy
+COOK_PROFILE=big_nose
+</screen>
+</para>
+
+<para>
+You can include your own home settings inside a module, so that they
+will override the default dyne:II user settings. This is useful when
+you want to change the window manager default configuration (with a
+new desktop image for example) or deliver pre-configured applications
+(with a .config file in home).
+
+To do this you simply have to create a <emphasis>skel</emphasis>
+directory inside your module: all files that are included in it will
+be automatically copied into all users home directories and setted up
+to be adopted for users that are created in future.  <
+<para>
+
+<para>
+In your modules you can include any kernel module correctly compiled
+for the dyne:II kernel.
+
+To do this you have to create a <emphasis>kernel</emphasis> directory
+inside your module: all kernel modules contained will be searched and
+loaded if found by the <emphasis>loadmod</emphasis> command, to be
+used instead of the standard modprobe.
+
+In case the module is not naturally requested by your hardware
+configuration (not listed by the pcimodules command), you build your
+own detection or force loading of your module inside a module startup
+script.
+
+You can prepare a script inside your module to be executed every time
+your module is activated.
+
+To do this you have to create an <emphasis>etc</emphasis> directory
+inside your module: <emphasis>all executable files included in the
+rc.* wildcard</emphasis> will be launched at startup, with the first
+$1 argument being the name of the module itself.
+</para>
+
+<para>
+So here is resumed the file structure contained in modules:
+<screen>
+VERSION required file 	    contains information about the module and its sources
+bin 	optional directory  contains all binaries, automatically included in $PATH
+lib 	optional directory  contains all libraries, automatically included in $LD_LIBRARY_PATH
+etc 	optional directory, contains rc.* startup scripts executed at activation
+skel 	optional directory, contains all settings to be added to /home/user and /etc/skel
+kernel 	optional directory, contains kernel modules that can be loaded by loadmod
+</screen>
+You have the power to create, now go make something wonderful! :)
+<para>
+
+</section>
+
 
 </chapter>

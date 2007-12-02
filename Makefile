@@ -58,6 +58,16 @@ dvi : $(DEPS)
 	docbook2dvi -d dsssl-stylesheets-1.79/print/docbook.dsl \
 		dynebolic-manual.sgml
 
+man : $(DEPS)
+	rm -f dynebolic.man
+	docbook2man -d dsssl-stylesheets-1.79/html/docbook.dsl \
+		dynebolic-manual.sgml
+
+txt : $(DEPS)
+	rm -f dynebolic-manual.txt
+	docbook2txt -d dsssl-stylesheets-1.79/html/docbook.dsl \
+		dynebolic-manual.sgml
+
 
 
 clean :

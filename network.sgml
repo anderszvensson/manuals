@@ -55,7 +55,7 @@ GNU/Linux platform.
 <para>
 
 <indexterm><primary> Network </primary>
-<secondary> Mozilla Firefox </secondary>
+<secondary> Mozilla </secondary>
 </indexterm>
 
 The first and most familiar browser is <emphasis>Firefox</emphasis> which
@@ -117,12 +117,16 @@ XTerminal, typing <emphasis>man wget</emphasis>.
 </indexterm>
 
 For better privacy and anomymity when browsing, but also to weed out
-often annoying advertisements and popups, a proxy is running by
-default: <emphasis>Tor</emphasis> can be configured for use in each
-browser to make all internet connections completely anonymous and not
-traceable, see the starting web page of the graphical web browsers for
-details.
+often annoying advertisements and popups, a proxy can be configured to
+run by default: <emphasis>Tor</emphasis> can be configured for use in
+each browser to make all internet connections completely anonymous and
+not traceable.
+</para>
 
+<para>
+To enable this feature have a look at
+the <emphasis>dyne.cfg</emphasis> in your DOCK and add "tor" in the
+list of daemons to be started at boot.
 </para>
 
 </section>

@@ -57,8 +57,9 @@ subsequent numbers (video1, video2 ..) in case you have more than one.
 
 If your video device is not recognized automatically (the /dev/video
 doesn't exists) then you need to configure it by hand. In case of USB
-webcams a good place to start looking for hints is <ulink
-url="http://www.linux-usb.org">the linux-usb website</ulink>.
+webcams, if your is not recognized automatically a good place to look
+for hints is <ulink url="http://www.linux-usb.org">the linux-usb
+website</ulink>.
 
 Also the <ulink
 url="http://spot.river-styx.com/viewarticle.php?id=16"> Spot's guide
@@ -105,19 +106,37 @@ be interesting and sometimes very useful to your research.
 <secondary> FreeJ </secondary>
 </indexterm>
 
-<emphasis>FreeJ</emphasis> is also a dyne.org rasta software that
-Jaromil started writing in 2001, collecting video compositing
-tecniques developed in theatre and interactive installations.
+<para>
+<ulink url="http://freej.dyne.org">FreeJ</ulink> is a vision mixer: an
+instrument for realtime video manipulation used in the fields of dance
+teather, veejaying, medical visualisation and TV.
+</para>
 
-It is still in development, but it's allready usable and offers
-multiple approaches to realtime video manipulation: can be controlled
-lively and from a remote console (VeeJay over Ethernet!) or scripted
-in an object oriented syntax (JavaScript). More documentation is
-available online about FreeJ: manuals and a <ulink
-url="http://lab.dyne.org/FreejTutorialPiotr_01">user friendly
-tutorial</ulink>, can be found online at its homepage on <ulink
-url="http://freej.dyne.org">freej.dyne.org</ulink>.
+<para>
+FreeJ lets you interact with multiple layers of video, filtered by
+effect chains and then mixed together. Controllers can be scripted for
+keyboard, midi and joysticks, to manipulate images, movies, live
+cameras, particle generators, text scrollers, flash animations and
+more.  All the resulting video mix can be shown on multiple and remote
+screens, encoded into a movie and streamed live to the internet.
+</para>
 
+<para>
+FreeJ can be controlled locally or remotely, also from multiple places
+at the same time, using its slick console interface; can be automated
+via javascript and operated via MIDI and Joystick. Especially the
+javascript interpreted makes it an easy to learn language to make your
+first step in the wornderful world of programming.
+</para>
+
+<para>
+More documentation on freej can be found
+in <emphasis>/opt/video/share/freej</emphasis> especially the
+scripting
+reference. A <ulink url="http://lab.dyne.org/FreejTutorialPiotr_01">user
+friendly tutorial</ulink> can be found online, and more information at
+its homepage
+on <ulink url="http://freej.dyne.org">freej.dyne.org</ulink>.
 </para>
 
 <para>
@@ -249,8 +268,12 @@ implements a common approach to non-linear editing, with a nice user
 interface, speed and responsiveness.
 
 <para>
-You can be introduced to <emphasis>Cinelerra</emphasis> by the
-manual available on <ulink url="http://manual.cinelerra.org">manual.cinelerra.org</ulink> or this <ulink url="http://www.robfisher.net/video/cinelerra1.html">online tutorial</ulink>.
+You can be introduced to <emphasis>Cinelerra</emphasis> by the manual
+available
+on <ulink url="http://manual.cinelerra.org">manual.cinelerra.org</ulink>
+or
+this <ulink url="http://www.robfisher.net/video/cinelerra1.html">online
+tutorial</ulink>.
 </para>
 
 <para>
@@ -293,7 +316,6 @@ via a graphical interface.
 <section>
 <title>Stream</title>
 
-
 <para>
 
 Streaming video can be easily setted up in three different ways: using
@@ -308,14 +330,15 @@ Streaming video can be easily setted up in three different ways: using
 <secondary> Mpeg4IP </secondary>
 </indexterm>
 
-With <emphasis>Mpeg4IP</emphasis> you'll stream in Mpeg4 format and you'll need an online
-server running Darwin broadcast software, the resulting stream can be
-watched with most video players available today on various platform.
-This method provides good quality and smooth framerate, can record
-while streaming, efficiently uses bandwidth when running on multicast
-and can stream audio synced with the video. It's drawbacks are that it
-can be hard to find or setup a broadcast server, slower machines can't
-stream neither play it (cpu intensive).
+With <emphasis>Mpeg4IP</emphasis> you'll stream in Mpeg4 format and
+you'll need an online server running Darwin broadcast software, the
+resulting stream can be watched with most video players available
+today on various platform.  This method provides good quality and
+smooth framerate, can record while streaming, efficiently uses
+bandwidth when running on multicast and can stream audio synced with
+the video. It's drawbacks are that it can be hard to find or setup a
+broadcast server, slower machines can't stream neither play it (cpu
+intensive).
 
 </para>
 
@@ -330,23 +353,18 @@ sources, apply effects and overlay text, put transparent images and
 even more, then all the resulting stream can be live encoded with the
 free Theora codec and sent to an Icecast2 server online, this way
 anyone will be able to take your stream from the internet and play it
-back for example using the <ulink
-url="http://www.videolan.org">VideoLan</ulink> player available for
-all computer platforms. The capability of mixing and effecting the
-video realtime is a unique feature of FreeJ, but the drawback can be
-the initial difficulty you can encounter in mastering the program,
-which has to be started with particular flags from an XTerminal in
-order to activate the streaming functionality. To find out more about
-it see the previous section about VeeJaying and check the <ulink
-url="http://lab.dyne.org/FreejStreaming">Streaming with FreeJ</ulink>
-documentation online. As a reference, this here are the commandline
-options to be given: 
-
-<screen>
-<prompt>[d:b] ~ #</prompt><userinput>freej -s [resolution] -T [theora_quality] -V [vorbis_quality] \
--i http://server:port/mountpoint.ogg -p password [ .. other options and files]</userinput>
-</screen>
-
+back for example using
+the <ulink url="http://www.videolan.org">VideoLan</ulink> player
+available for all computer platforms. The capability of mixing and
+effecting the video realtime is a unique feature of FreeJ, but the
+drawback can be the initial difficulty you can encounter in mastering
+the program, which has to be started with particular flags from an
+XTerminal in order to activate the streaming functionality. To find
+out more about it see the previous section about VeeJaying and check
+the <ulink url="http://lab.dyne.org/FreejStreaming">Streaming with
+FreeJ</ulink> documentation online. In dyne:bolic you will find an
+example script to stream
+in <emphasis>/opt/video/share/freej</emphasis>
 
 </para>
 
@@ -356,31 +374,20 @@ options to be given:
 <secondary> HasciiCam </secondary>
 </indexterm>
 
-<emphasis>Hasciicam</emphasis> is another Rasta software, the first one Jaromil ever
-published (2000), distributed by dyne.org. It is capable of rendering
-a video into text, having letters in place of colors, filling up the
-image as a greyscale palette. With such an encoding the images look
-way less detailed, but pretty cool, and the stream uses very low
-bandwidth: Hasciicam can upload video via ftp to a server and can be
-viewed directly from any web browser (also text based) - so it can
-work to provide a video stream even using very old computers, and adds
-a special bit to it: the ASCII chars. As drawbacks here we have that
-the video is formed of characters: nifty, but doesn't gives a clear
-picture, it is just monochrome and can't achieve a smooth framerate on
-movement.
+<emphasis>Hasciicam</emphasis> is Rasta software, the first one
+Jaromil ever published (2000), distributed by dyne.org. It is capable
+of rendering a video into text, having letters in place of colors,
+filling up the image as a greyscale palette. With such an encoding the
+images look way less detailed, but pretty cool, and the stream uses
+very low bandwidth: Hasciicam can upload video via ftp to a server and
+can be viewed directly from any web browser (also text based) - so it
+can work to provide a video stream even using very old computers, and
+adds a special bit to it: the ASCII chars. As drawbacks here we have
+that the video is formed of characters: nifty, but doesn't gives a
+clear picture, it is just monochrome and can't achieve a smooth
+framerate on movement. For more informations on how to use
+see <emphasis>man hasciicam</emphasis>.
 
-</para>
-
-<para>
-
-<indexterm><primary> Video </primary>
-<secondary> Streaming </secondary>
-</indexterm>
-
-A documented research on the topic of streaming video with free
-software is being mantained by Jaromil and is <ulink
-url="http://montevideo.dyne.org"> published online</ulink> as part
-of his academic activity.
 </para>
 
 

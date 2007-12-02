@@ -1,5 +1,5 @@
 <chapter>
-<title>Discover the dyne:bolic system</title>
+<title>Discover the system</title>
 
 <section>
 <title>Your desktop environment</title>
@@ -8,15 +8,15 @@
 <para>
 Dyne:bolic doesn't requires to install anything on your harddisks,
 which can be left untouched while the system is used. Still, depending
-from your preferred way to operate, it can boot from CD, USB or
-harddisk and it can store data in a single file that can be
-transported across different media.  The whole operating system fits
-on a single CD, to run it from harddisk you just need to copy the
-DYNE directory in it (see docking), while in a diskless thin-client
-setup that can also be mounted via network.  This makes dyne:bolic
-very easy to be employed and mantained, while there is no risk for
-misconfiguration: the system comes as it is, providing a slick desktop
-full of applications ready to use.  </para>
+from your preferred way to operate, it can boot from harddisk, CD, USB
+or network (explained the following chapter) and it can store data in
+a single file that can be transported across different media.  The
+whole operating system fits on a single CD, to run it from harddisk
+you just need to copy the DYNE directory in it (see docking), while in
+a diskless thin-client setup that can also be mounted via network.
+This makes dyne:bolic very easy to be employed and mantained, while
+there is no risk for misconfiguration: the system comes as it is,
+providing a slick desktop full of applications ready to use.  </para>
 
 <indexterm><primary>Xfce</primary></indexterm>
 
@@ -197,7 +197,6 @@ directory, a double click on the dyne.nst (the duck icon) will mount
 your home and prompt for a password if it is encrypted.
 </para>
 
-</para>
 </section>
 
 <section>
@@ -279,12 +278,14 @@ url="http://lab.dyne.org/Docking">wiki community pages</ulink>.
 
 <para>
 
-Dyne:II offers the possibility to be expanded using <emphasis>.dyne</emphasis> modules:
-collections of applications that can be easily installed and used.  In
-fact the basic system already contains some of these modules, that can
-be found in your dock as the <emphasis>dyne/modules/</emphasis> directory.
+Dyne:II offers the possibility to be expanded
+using <emphasis>.dyne</emphasis> modules: collections of applications
+that can be easily installed and used.  In fact the basic system
+already contains some of these modules, that can be found in your dock
+as the <emphasis>dyne/modules/</emphasis> directory.
 
-From the menu, you can see them clicking thru <emphasis>CONFIGURE -> DYNE -> MODULES</emphasis>
+From the menu, you can see them clicking thru <emphasis>CONFIGURE ->
+DYNE -> MODULES</emphasis>
 
 </para>
 
@@ -339,396 +340,6 @@ you just did it by running this system on your computer didn't you? :)
 
 </para>
 
-
-</section>
-
-
-<section> <title>Boot from harddisk</title>
-
-<indexterm><primary>boot from harddisk</primary></indexterm>
-
-<para>
-
-With docking we saw that simply moving a directory in the root of a partition
-can let us boot from CD and run from harddisk. This is a very simple and safe
-way to have a dual-boot system: Cd in for dyne:bolic, CD out for anything else.
-Still some people really likes to get rid of the CD, so here it is explained how.
-
-</para>
-
-<para>
-
-Keep in mind that <emphasis>the following operation is not necessary to run dyne:bolic from harddisk</emphasis>.
-If you are not familiar with boot sectors and partition geometry you might need the
-intervention of an expert when anything goes wrong. Furthermore, in case of a mistake you
-might delete all the data stored on your harddisks and/or be left without the possibility
-to boot back into your old operating system.
-
-</para>
-
-<para>
-
-In order to boot from harddisk you need a bootloader (Lilo or Grub) installed.
-We recommend the use of Grub for its simplicity and flexibility: in fact that
-is the default bootloader dyne:bolic will install for you, but in case you have
-Lilo already installed and you don't want to change it, then there is also a way
-to add a dyne:bolic entry to it.
-
-</para>
-
-<para>
-
-The following instructions will cover various situations: you can omit some operations
-in case your computer is already setted up with them.
-
-</para>
-
-<indexterm><primary>partitioning</primary></indexterm>
-<indexterm><primary>cfdisk</primary></indexterm>
-<indexterm><primary>mke3fs</primary></indexterm>
-
-<para>
-
-<emphasis>In case you are installing a computer from scratch</emphasis>, without
-anything installed on it yet, then you need to partition the harddisk and format it.
-You can do so using the command <emphasis>cfdisk</emphasis> to create or
-modify your harddisk partitions, then <emphasis>mke3fs</emphasis> to format the partitions
-(or other mk* commands in case you desire to use a different filesystem than Ext3).
-<emphasis>Beware that this operation above will erase all the data on the disk</emphasis>.
-
-</para>
-
-<indexterm><primary>grub</primary></indexterm>
-
-<para>
-
-Once you have a disc partitioned and formatted you need to install the bootloader.
-To do this use the command <emphasis>grubconfig</emphasis> and follow the steps
-you are prompted, at the end of the process you will be able to boot your computer
-directly into dyne:bolic, without the need to use a CD.
-
-</para>
-
-
-<para>
-
-<emphasis>To re-configure your bootloader</emphasis> (not necessary if
-you installed one from scratch using dyne:bolic) go look into your harddisk
-partitions, in case you have a directory boot/ see if inside there is another
-directory called grub/, if yes there you found your grub configuration, a simple text file
-called grub.conf or menu.lst which you have to edit by hand, adding a
-few lines at the bottom in order to add dyne:bolic among the boot menu
-selection:
-
-<screen>
-<userinput>
-title dyne:bolic RASTASOFT Afro Linux
-root (hd0,0) # ADJUST THIS!
-kernel /dyne/2618ck1d.krn root=/dev/ram0 rw load_ramdisk=1 max_loop=64 vga=791
-initrd /dyne/initrd.gz
-</userinput>
-</screen>
-
-After doing that you'll need to set the harddisk where you have
-docked: where it says "ADJUST THiS" change the
-<emphasis>(hd0,0)</emphasis> if necessary: hd0,1 for hda2 - hd0,2 for
-hda3 - hd1,0 for hdb1 and so on... trying wrong values is not
-dangerous and in case you are confused there is a lot more
-documentation about this process in the grub manual pages.
-
-</para>
-
-<indexterm><primary>lilo</primary></indexterm>
-
-<para>
-
-In case you have installed lilo, search among your harddisk partitions
-for the directory etc/ and then inside for the lilo.conf file, if
-found then add the following lines at the end of it:
-
-<screen>
-<userinput>
-
-image = /dyne/2618ck1d.krn
-  root = /dev/ram0
-  append = "max_loop=64"
-  initrd = /dyne/initrd.gz
-  label = dyne
-  read-write
-  vga = 791
-
-</userinput>
-</screen>
-
-Being sure that the /dyne directory is inside the partition
-you boot, which in lilo is configured by the
-<emphasis>boot = /dev/hd*</emphasis>
-usually at the beginning of the lilo.conf file.
-
-Please note the "image =" parameter takes a full path to
-the kernel file, which is named after it's version in a condensed form,
-for instance here 2618ck1d stands for 2.6.18-ck1-dyne .
-The condensed format is necessary for a 8.3 filename restriction of
-the isolinux CD boot system.
-</para>
-
-
-
-<para> Happy hacking ;)</para>
-
-</section>
-
-<section> <title>Boot from network</title>
-
-<indexterm><primary>boot from network</primary></indexterm>
-
-<para>
-Network booting is supported on some personal computers: the PXE
-system was included on some BIOS already at the beginning of year 2000
-(rough estimation): if no harddisks or cd devices are found to boot,
-the first black screen of the computer will search for a PXE boot on
-the local network.
-</para>
-
-<para>
-When booting PXE looks for a DHCP server on the local network for an
-address assigned. When found it will connect via TFTP to receive the
-kernel and the ramdisk from that server or another one.
-</para>
-
-<para>
-To start a TFTP server distributing the current docked dyne:bolic system, it
-is enough to run this command in a terminal:
-<screen>
-<prompt>[d:b] ~ # </prompt><userinput>tftpd -l -s $DYNE_SYS_MNT</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-</screen>
-</para>
-
-<para>
-You can also configure a DHCP server to provide the network addresses
-to any PXE client booting. To do that use the graphical program
-<emphasis>gdhcpd</emphasis> starting it from a terminal, or the sample
-configuration file in /etc/dhcpd.conf. See <emphasis>man
-dhcpd</emphasis> for a reference to how to launch and operate the DHCP
-daemon.
-</para>
-
-<para>
-For more informations see <emphasis>man tftpd</emphasis> and
-<emphasis>man dhcpd</emphasis>.
-</para>
-
-
-</section>
-
-<section>
-<title>Keep your data safe</title>
-
-<para>
-Dyne:bolic is developed with your privacy in mind: as mentioned before
-the NEST can be encrypted to make your private data unaccessible
-unless your password is provided, now we'll proceed to analize in deep
-all the aspects of this security measure.
-</para>
-
-
-<para>
-When an encrypted nest is created, every file you place in your home
-directory will be preserved in a scrambled form using a
-Rijndael/SHA256 algorithm: such a cypher can be considered very
-secure, maybe some military organizations are able to break it, but
-anyway that would be very expensive in terms of resources employed.
-</para>
-
-<para>
-Dyne:bolic encryption mechanism employes a passfile "dyne.nst.gpg"
-which contains the cypher used to protect your data: that file holds
-the password that, matched together with your dyne.nst file, can
-access all the data you store in your nest. So actually that file is
-very precious for your privacy, you should be careful and not copy it
-around.
-</para>
-
-<para>
-Since the passfile is so delicate, it is also protected with a
-password: the one you choose at the beginning, which is used to
-scramble the passfile through a CAT5 algorithm. Keep in mind that this
-cypher algorithm is weak and eventually, in case an intruder takes
-possession of your .gpg passfile, it will be easy to crack.
-</para>
-
-<para>
-Now in practical terms all this encryption scheme means that you can
-safely move around your dyne.nst file separated from the dyne.nst.gpg
-passfile: there will be no intrusion in the data stored inside even in
-case you loose it. It also means that you can give your passfile to a
-friend, still protected by the password you memorized, so that neither
-you nor your friend will be able to access the nest until you meet up
-again. More in general, this scheme lets you separate your encrypted
-data from the passfile, still keeping everything sealed by the
-password you keep in mind, and move the data around in different
-places being sure meanwhile it's not accessed by anyone else.
-</para>
-
-<para>
-So for sure we can say our privacy protection is way above the usual
-schemes used in most common operating systems, which keep your data in
-clear and physically accessible.
-  </para>
-
-<para>
-In case you are involved in some mission critical task and you are
-facing the possibility of imprisonment and torture, you should take a
-bit more care. A good practice would be to customize a bit the startup
-scripts of dyne:bolic to have a false password prompt, the
-/lib/dyne/nest.sh script is a good start.  Another way can be to have
-an encrypted nest for which you would disclose the password if forced
-to, but then also another encrypted file hidden somewhere that is not
-prompting for a password at every boot.
-</para>
-
-
-
-</section>
-
-<section>
-<title>Cluster computer farms</title>
-
-<para>
-Since version 2, dyne:bolic changes its approach to clustering
-implementing a "human driven" suite of tools that let you control
-various applications running on multiple computers connected to
-your network.
-</para>
-
-<para>
-In situations where you have many old computers you can use one for
-each task and control all of them from the same keyboard and mouse.
-The desktops of the computers can be visualized on your own screen or
-on multiple screens in case you have monitors attached to each of
-them. Powerful workstations can be combined using multiple processing
-units and their displays can be tiled together to compose a unique
-wide desktop.
-</para>
-
-
-<para>
-This way to operate dyne:bolic computers involves different kinds of
-applications offering a flexible setup that you can customize to your
-needs. This part of the manual will just make you familiar with the
-tools and you'll need to refer to their manuals to discover all the
-potential.
-</para>
-
-<para>
-To connect multiple computers you should first make sure you can reach
-them over the network and you know their addresses. A simple way to do
-it that will work on every GNU/Linux system is using the
-command <emphasis>ifconfig</emphasis> on each computer to print out
-the currently configured network address:
-<screen>
-<prompt>[d:b] ~ # </prompt><userinput>ifconfig | grep inet
-</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-</screen>
-then edit your <emphasis>/etc/hosts</emphasis> file with the full list
-of addresses and a name for them that you can choose. Copying the /etc/hosts file on all involved machines will make them aware of each other "hostnames".
-</para>
-
-
-<para>
-<emphasis>Synergy</emphasis> is a powerful tool that lets your
-keyboard and mouse control different desktops accessed simply moving
-the mouse out of the current screen into theirs. An example
-configuration file is provided
-in <emphasis>/etc/synergy.conf</emphasis> and it must be modified
-with the hostnames of your computers (to be associated to IP numeric
-addresses in /etc/hosts).
-
-
-<para>
-The main computer where the keyboard and mouse are attached should run
-the command:
-<screen>
-<prompt>[d:b] ~ # </prompt><userinput>synergys -n hostname -c /etc/synergy.conf
-</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-</screen>
-
-All the other computers to be connected should run this command,
-making sure the config file include them in the setup:
-<screen>
-<prompt>[d:b] ~ # </prompt><userinput>synergyc -n hostname -c /etc/synergy.conf
-</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-</screen>
-</para>
-
-<para>
-<emphasis>VNC</emphasis> is a remote video client that lets you
-control the desktop of another computer on your network as inside a
-window on your current desktop. It can be also used to interact with
-two mouse and keyboard at the same time.
-</para>
-
-<para>
-To share the desktop of a computer for an incoming VNC connection just
-run:
-
-<screen>
-<prompt>[d:b] ~ # </prompt><userinput>x11vnc
-</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-</screen>
-
-To connect to a computer sharing the VNC desktop:
-
-<screen>
-<prompt>[d:b] ~ # </prompt><userinput>vncviewer computer
-</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-</screen>
-
-For more informations on VNC see <emphasis>man x11vnc</emphasis> and
-<emphasis>man vncviewer</emphasis>.
-</para>
-
-<para>
-<emphasis>Remote X</emphasis> execution lets you run an application on
-another computer and control it on your desktop, as if it would be
-running locally.
-</para>
-
-<para>
-In order to authorize other computers to open applications on your
-desktop you must first run the command:
-<screen>
-<prompt>[d:b] ~ # </prompt><userinput>xhost +computer
-</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-</screen>
-
-Then Click the network button on the top-right panel and
-run <emphasis>Exec_X11</emphasis>, fill in your user account (default
-is user:root password:luther) and write the command to start the application.
-</para>
-
-
-</section>
-
-<section>
-<title>For the curious hacker</title>
-
-<para>
-Now if you are wondering what's inside to make it work like it does,
-you are very welcome to discover it, dynebolic is free software! and
-hackers more familiar with GNU/Linux systems will easily recognize
-the architecture.
-</para>
-
-<para>
-A dyne:bolic SDK is available, it is the one used in development, and
-there is a brilliant introduction on how to use it on Spot's site:
-<ulink url="http://spot.river-styx.com/viewarticle.php?id=18"></ulink>
-plus plenty of documentation in the <ulink
-url="http://dev.dynebolic.org">dyne:bolic developers lounge</ulink>,
-along with revision of every single modification done to the system
-during development phases.
-  </para>
 
 </section>
 
