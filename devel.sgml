@@ -75,6 +75,8 @@ online Stomfi's article on customizing dyne:bolic
 on <ulink url="http://www.linux.com/articles/54607"></ulink>
 </para>
 
+<indexterm><primary>SDK</primary></indexterm>
+
 <para>
 To get started with your development first create the SDK in the DOCK
 on your harddisk: 
@@ -346,6 +348,76 @@ kernel 	optional directory, contains kernel modules that can be loaded by loadmo
 </screen>
 You have the power to create, now go make something wonderful! :)
 <para>
+
+</section>
+
+<section>
+<title>Compile a new kernel</title>
+
+<para>
+Assumed that you already learned how to compile a Linux kernel from
+the sources available on <emphasis>kernel.org</emphasis>, compiling a
+new kernel for dyne:bolic is relatively easy.
+</para>
+
+<para>
+Just go ahead as usual after unpacking the sourcecode:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>make menuconfig
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+The  kernel configuration  will be  prompted, which  you can  adapt as
+desired. In case you like to start from the current running dyne:bolic
+kernel as a base configuration, do from inside the kernel directory:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>zcat /proc/config.gz > .config
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+<prompt>[d:b] ~ # </prompt><userinput>make oldconfig
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+In case you are compiling a more recent kernel, you'll be prompted to
+answer to new questions introduced by this version. After configuring
+your kernel you can compile it using <emphasis>make</emphasis>:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>make bzImage && make modules
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+</para>
+
+<para>
+After you are done with  your kernel compilation, packing a dyne:bolic
+kernel is  done with  a simple command  given inside the  linux source
+directory:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>dynesdk mkkern
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+The <emphasis>mkkern</emphasis> function of dynesdk will pack the
+kernel and its modules inside <emphasis>SDK/cdrom/dyne</emphasis>.  A
+compressed file containing all modules (usually sized below 20MB) will
+be named after the linux version with file
+extension <emphasis>.kmods</emphasis>.  The kernel itself will also be
+named after the linux version (reduced to 8.3 chars for compatibility
+with some bootloaders) with file extension <emphasis>.krn</emphasis>.
+</para>
+
+<para>
+The  reason of  this setup  is  that, having  all the  kernel and  its
+modules in two files easily recognizable by their extension it becomes
+very easy  to swap kernels in a  dock: just drop the  new files inside
+the dyne/ directory and re-configure the bootloader accordingly. Since
+the .krn and .kmods files  are already compressed, distribution of new
+dyne:bolic  kernels can  be done  as-is,  just sharing  the two  files
+around.
+</para>
 
 </section>
 

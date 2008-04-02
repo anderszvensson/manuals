@@ -598,7 +598,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  #f)
+  #t)
 
 (define mif-backend 
   ;; REFENTRY mif-backend
@@ -1566,7 +1566,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  #f)
+  #t)
 
 (define bop-footnotes
   ;; REFENTRY bop-footnotes
@@ -1580,7 +1580,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  #f)
+  #t)
 
 ;; REFERENCE Graphics
 
