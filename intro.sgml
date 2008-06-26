@@ -186,7 +186,7 @@ an alternative to the hegemony of capitalism in our World.
   </para>
 
 <para>
-Hic Sunt Leones.
+<ulink url="http://rastasoft.org">Hic Sunt Leones</ulink>.
 And Much Blessings in Jah Luv to All Those who still Resist.
 Selah.
 </para>
@@ -241,12 +241,16 @@ cultural manifestation in order to force political change.
 Streamtime may take the form of a campaign, a work of collaborative
 art, a current of unheard sounds, unspeakable words and unseen
 imaginations.
+</para>
 
-Remote interaction and ubiquitous dialogues, dematerialized communication and participation on the streets.
-Space in its territorial, acoustic and cybernetic dimensions is fragmented and recomposed realtime.
-Hacking codes both moral and digital, forming new maps, mutant drawings and unstable skins.
-Information overload can be abandoned in favor of consciousness and collaborative practices.
-Memory has a digital, diverse, horizontal voice.
+<para>
+Remote interaction and ubiquitous dialogues, dematerialized
+communication and participation on the streets.  Space in its
+territorial, acoustic and cybernetic dimensions is fragmented and
+recomposed realtime.  Hacking codes both moral and digital, forming
+new maps, mutant drawings and unstable skins.  Information overload
+can be abandoned in favor of consciousness and collaborative
+practices.  Memory has a digital, diverse, horizontal voice.
 
 </para>
 
@@ -261,8 +265,9 @@ more and more blurred with the increasing intrusiveness of the media
 and advances in electronic technology. While this distinction is
 always the outcome of continuous cultural negotiation, it continues to
 be critical, for where nothing is private, democracy becomes
-impossible (quote from Privacy Conference, Social Research, New School
-University).
+impossible
+<footnote><para>quote from Privacy Conference, Social Research, New
+School University</para></footnote>
 </para>
 
 <para>
@@ -305,7 +310,7 @@ strong cryptographic algorithm.  </para>
 A passkey to read your data is stored inside a file, which is also
 protected by a password. It is possible to keep everything with you on
 a small usb stick, still being sure that the data won't be easily
-recovered in case you loose it. You can also give the passkey
+recovered in case you loose it.  You can also give the passkey
 protecting your data to a friend, to make the data unaccessible until
 you meet again, which can be useful in case of tricky transports.
 You'll find more informations in the following sections about nesting
@@ -320,7 +325,7 @@ and privacy.</para>
 
 <para>
 The dyne user's manual is
-copyright (c) 2003 - 2007 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>
+copyright (c) 2003 - 2008 Denis Jaromil Rojo
 </para>
 
 <para>
@@ -347,7 +352,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 <para>
 dyne:bolic GNU/Linux is
-copyright (C) 2001 - 2007 Denis Rojo aka <ulink url="http://rastasoft.org">Jaromil</ulink>
+copyright (C) 2001 - 2008 Denis Jaromil Rojo
 </para>
 <para>
 Dyne:bolic is free software; you can redistribute it and/or modify

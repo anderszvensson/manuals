@@ -16,6 +16,8 @@
 
 <!ENTITY network SYSTEM "network.sgml">
 
+<!ENTITY console SYSTEM "console.sgml">
+
 <!ENTITY devel SYSTEM "devel.sgml">
 
 <!ENTITY index SYSTEM "index.sgml">
@@ -46,7 +48,7 @@
 <othername>Jaromil</othername>
 <authorblurb><para>http://rastasoft.org</para></authorblurb>
 <affiliation>
-<orgname>dyne.org / rastasoft / afrolinux</orgname>
+<orgname>dyne.org / rastasoft / flossmanuals</orgname>
 </affiliation>
 </author>
 </authorgroup>
@@ -64,7 +66,8 @@ Dyne:II GNU/Linux user's Guide
 <year>2005</year>
 <year>2006</year>
 <year>2007</year>
-<holder>Denis Rojo</holder>
+<year>2008</year>
+<holder>Denis Roio</holder>
 </copyright>
 
 </bookinfo>
@@ -85,6 +88,8 @@ Dyne:II GNU/Linux user's Guide
 &text;
 
 &network;
+
+&console;
 
 &devel;
 
