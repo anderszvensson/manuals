@@ -1,0 +1,64 @@
+\BOOKMARK [0][-]{1.0}{Dyne:II GNU/Linux User's Guide}{}
+\BOOKMARK [0][-]{2.0}{Table of Contents}{}
+\BOOKMARK [0][-]{3.0}{Chapter 1. The hacktive media}{}
+\BOOKMARK [1][-]{3.1.1}{How to use this manual}{3.0}
+\BOOKMARK [1][-]{3.2.1}{This is Rasta software}{3.0}
+\BOOKMARK [1][-]{3.3.1}{Streamtime}{3.0}
+\BOOKMARK [1][-]{3.4.1}{Privacy and freedom of expression}{3.0}
+\BOOKMARK [1][-]{3.5.1}{License and disclaimer}{3.0}
+\BOOKMARK [0][-]{4.0}{Chapter 2. Discover the system}{}
+\BOOKMARK [1][-]{4.6.1}{Your desktop environment}{4.0}
+\BOOKMARK [1][-]{4.7.1}{Access your data volumes}{4.0}
+\BOOKMARK [1][-]{4.8.1}{Nest your home and settings}{4.0}
+\BOOKMARK [1][-]{4.9.1}{Install on harddisk? Dock!}{4.0}
+\BOOKMARK [1][-]{4.10.1}{Extra software modules}{4.0}
+\BOOKMARK [0][-]{5.0}{Chapter 3. Install the medialab}{}
+\BOOKMARK [1][-]{5.11.1}{Boot from harddisk}{5.0}
+\BOOKMARK [1][-]{5.12.1}{Boot from network}{5.0}
+\BOOKMARK [1][-]{5.13.1}{Boot from USB}{5.0}
+\BOOKMARK [1][-]{5.14.1}{Cluster computer farms}{5.0}
+\BOOKMARK [1][-]{5.15.1}{Keep your data safe}{5.0}
+\BOOKMARK [0][-]{6.0}{Chapter 4. Video production}{}
+\BOOKMARK [1][-]{6.16.1}{Configure your video devices}{6.0}
+\BOOKMARK [1][-]{6.17.1}{VeeJay}{6.0}
+\BOOKMARK [1][-]{6.18.1}{Play}{6.0}
+\BOOKMARK [1][-]{6.19.1}{Record}{6.0}
+\BOOKMARK [1][-]{6.20.1}{Edit}{6.0}
+\BOOKMARK [1][-]{6.21.1}{Stream}{6.0}
+\BOOKMARK [0][-]{7.0}{Chapter 5. Audio production}{}
+\BOOKMARK [1][-]{7.22.1}{Play}{7.0}
+\BOOKMARK [1][-]{7.23.1}{Perform}{7.0}
+\BOOKMARK [1][-]{7.24.1}{Record and edit}{7.0}
+\BOOKMARK [1][-]{7.25.1}{Stream}{7.0}
+\BOOKMARK [0][-]{8.0}{Chapter 6. Graphical software}{}
+\BOOKMARK [0][-]{9.0}{Chapter 7. Text software}{}
+\BOOKMARK [0][-]{10.0}{Chapter 8. Communication software}{}
+\BOOKMARK [1][-]{10.26.1}{Surf the web}{10.0}
+\BOOKMARK [1][-]{10.27.1}{Email and encryption}{10.0}
+\BOOKMARK [0][-]{11.0}{Chapter 9. Command line console}{}
+\BOOKMARK [1][-]{11.28.1}{Text commands}{11.0}
+\BOOKMARK [2][-]{11.28.1.2}{man}{11.28.1}
+\BOOKMARK [2][-]{11.28.2.2}{ls}{11.28.1}
+\BOOKMARK [2][-]{11.28.3.2}{cd}{11.28.1}
+\BOOKMARK [2][-]{11.28.4.2}{mkdir}{11.28.1}
+\BOOKMARK [2][-]{11.28.5.2}{pwd}{11.28.1}
+\BOOKMARK [2][-]{11.28.6.2}{mv}{11.28.1}
+\BOOKMARK [2][-]{11.28.7.2}{rm}{11.28.1}
+\BOOKMARK [2][-]{11.28.8.2}{locate}{11.28.1}
+\BOOKMARK [2][-]{11.28.9.2}{cp}{11.28.1}
+\BOOKMARK [2][-]{11.28.10.2}{ping}{11.28.1}
+\BOOKMARK [2][-]{11.28.11.2}{tab}{11.28.1}
+\BOOKMARK [2][-]{11.28.12.2}{Other Commands}{11.28.1}
+\BOOKMARK [1][-]{11.29.1}{Linux File Structure}{11.0}
+\BOOKMARK [1][-]{11.30.1}{Text Editors}{11.0}
+\BOOKMARK [2][-]{11.30.13.2}{less}{11.30.1}
+\BOOKMARK [2][-]{11.30.14.2}{vim}{11.30.1}
+\BOOKMARK [1][-]{11.31.1}{Install Software from Source}{11.0}
+\BOOKMARK [2][-]{11.31.15.2}{Uncompress}{11.31.1}
+\BOOKMARK [2][-]{11.31.16.2}{Configure}{11.31.1}
+\BOOKMARK [2][-]{11.31.17.2}{Compile}{11.31.1}
+\BOOKMARK [0][-]{12.0}{Chapter 10. Development tools}{}
+\BOOKMARK [1][-]{12.32.1}{Customize your dyne liveCD}{12.0}
+\BOOKMARK [1][-]{12.33.1}{Create new software modules}{12.0}
+\BOOKMARK [1][-]{12.34.1}{Compile a new kernel}{12.0}
+\BOOKMARK [0][-]{13.0}{Index}{}

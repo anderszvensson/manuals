@@ -1,0 +1,544 @@
+<chapter>
+<title>Install the medialab</title>
+
+<para>
+This chapter will describe various advanced uses of the dyne:bolic
+system: how to cluster multiple computers to take advantage of shared
+resources, how to make the system resident on various computers in a
+medialab and how to keep your data safe from intrusions into your
+privacy.
+</para>
+
+<para>
+The knowledge provided by this chapter requires some basic confidence
+with GNU/Linux systems and the use of the text console terminal. It
+will empower you with the ability to flexibly setup fully operational
+medialabs even using found computers, but you need to plan well the
+architecture of your resources depending from your specific situation.
+</para>
+
+
+<section> <title>Boot from harddisk</title>
+
+<indexterm><primary>boot from harddisk</primary></indexterm>
+
+<para>
+
+With docking we saw that simply moving a directory in the root of a partition
+can let us boot from CD and run from harddisk. This is a very simple and safe
+way to have a dual-boot system: Cd in for dyne:bolic, CD out for anything else.
+Still some people really likes to get rid of the CD, so here it is explained how.
+
+</para>
+
+<para>
+
+Keep in mind that <emphasis>the following operation is not necessary to run dyne:bolic from harddisk</emphasis>.
+If you are not familiar with boot sectors and partition geometry you might need the
+intervention of an expert when anything goes wrong. Furthermore, in case of a mistake you
+might delete all the data stored on your harddisks and/or be left without the possibility
+to boot back into your old operating system.
+
+</para>
+
+<para>
+
+In order to boot from harddisk you need a bootloader (Lilo or Grub) installed.
+We recommend the use of Grub for its simplicity and flexibility: in fact that
+is the default bootloader dyne:bolic will install for you, but in case you have
+Lilo already installed and you don't want to change it, then there is also a way
+to add a dyne:bolic entry to it.
+
+</para>
+
+<para>
+
+The following instructions will cover various situations: you can omit some operations
+in case your computer is already setted up with them.
+
+</para>
+
+<indexterm><primary>partitioning</primary></indexterm>
+<indexterm><primary>cfdisk</primary></indexterm>
+<indexterm><primary>mke3fs</primary></indexterm>
+
+<para>
+
+<emphasis>In case you are installing a computer from scratch</emphasis>, without
+anything installed on it yet, then you need to partition the harddisk and format it.
+You can do so using the command <emphasis>cfdisk</emphasis> to create or
+modify your harddisk partitions, then <emphasis>mke3fs</emphasis> to format the partitions
+(or other mk* commands in case you desire to use a different filesystem than Ext3).
+<emphasis>Beware that this operation above will erase all the data on the disk</emphasis>.
+
+</para>
+
+<indexterm><primary>grub</primary></indexterm>
+
+<para>
+
+Once you have a disc partitioned and formatted you need to install the bootloader.
+To do this use the command <emphasis>grubconfig</emphasis> and follow the steps
+you are prompted, at the end of the process you will be able to boot your computer
+directly into dyne:bolic, without the need to use a CD.
+
+</para>
+
+
+<para>
+
+<emphasis>To re-configure your bootloader</emphasis> (not necessary if
+you installed one from scratch using dyne:bolic) go look into your harddisk
+partitions, in case you have a directory boot/ see if inside there is another
+directory called grub/, if yes there you found your grub configuration, a simple text file
+called grub.conf or menu.lst which you have to edit by hand, adding a
+few lines at the bottom in order to add dyne:bolic among the boot menu
+selection:
+
+<screen>
+<userinput>
+title dyne:bolic RASTASOFT Afro Linux
+root (hd0,0) # ADJUST THIS!
+kernel /dyne/2618ck1d.krn root=/dev/ram0 rw load_ramdisk=1 max_loop=64 vga=791
+initrd /dyne/initrd.gz
+</userinput>
+</screen>
+
+After doing that you'll need to set the harddisk where you have
+docked: where it says "ADJUST THiS" change the
+<emphasis>(hd0,0)</emphasis> if necessary: hd0,1 for hda2 - hd0,2 for
+hda3 - hd1,0 for hdb1 and so on... trying wrong values is not
+dangerous and in case you are confused there is a lot more
+documentation about this process in the grub manual pages.
+
+</para>
+
+<indexterm><primary>lilo</primary></indexterm>
+
+<para>
+
+In case you have installed lilo, search among your harddisk partitions
+for the directory etc/ and then inside for the lilo.conf file, if
+found then add the following lines at the end of it:
+
+<screen>
+<userinput>
+
+image = /dyne/2618ck1d.krn
+  root = /dev/ram0
+  append = "max_loop=64"
+  initrd = /dyne/initrd.gz
+  label = dyne
+  read-write
+  vga = 791
+
+</userinput>
+</screen>
+
+Being sure that the /dyne directory is inside the partition
+you boot, which in lilo is configured by the
+<emphasis>boot = /dev/hd*</emphasis>
+usually at the beginning of the lilo.conf file.
+
+Please note the "image =" parameter takes a full path to
+the kernel file, which is named after it's version in a condensed form,
+for instance here 2618ck1d stands for 2.6.18-ck1-dyne .
+The condensed format is necessary for a 8.3 filename restriction of
+the isolinux CD boot system.
+</para>
+
+
+
+<para> Happy hacking ;)</para>
+
+</section>
+
+<section> <title>Boot from network</title>
+
+<indexterm><primary>boot from network</primary></indexterm>
+
+<para>
+Network booting is supported on some personal computers: the PXE
+system was included on some BIOS already at the beginning of year 2000
+(rough estimation): if no harddisks or cd devices are found to boot,
+the first black screen of the computer will search for a PXE boot on
+the local network.
+</para>
+
+<para>
+When booting PXE looks for a DHCP server on the local network for an
+address assigned. When found it will connect via TFTP to receive the
+kernel and the ramdisk from that server or another one.
+</para>
+
+<para>
+To start a TFTP server distributing the current docked dyne:bolic system, it
+is enough to run this command in a terminal:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>tftpd -l -s $DYNE_SYS_MNT</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+You can also configure a DHCP server to provide the network addresses
+to any PXE client booting. To do that use the graphical program
+<emphasis>gdhcpd</emphasis> starting it from a terminal, or the sample
+configuration file in /etc/dhcpd.conf. See <emphasis>man
+dhcpd</emphasis> for a reference to how to launch and operate the DHCP
+daemon.
+</para>
+
+<para>
+For more informations see <emphasis>man tftpd</emphasis> and
+<emphasis>man dhcpd</emphasis>.
+</para>
+
+
+</section>
+
+<section>
+<title>Boot from USB</title>
+
+<para>
+The following instructions explain how to make a usb storage device
+(like usb stick) bootable with grub and install dyne:bolic on it so
+that you can run it from USB, without harddisk or CD.
+</para>
+
+<para>
+If you are looking for instructions on how to save your personal data
+on a USB stick, then this is not the right place: look
+at <emphasis>Nesting</emphasis>. If you're looking to copy the entire
+system over to your harddrive, again, this is not the right place,
+look at <emphasis>Docking</emphasis>. This section documents on how to
+put the whole system on the usb stick.
+</para>
+
+<para>
+The whole system requires a USB device about the size of the /dyne
+directory (currently ~655MB at version 2.4.2) + ~30MB (for file system
+headers). Therefore, the entire system should fit on a USB stick of
+~685MB, but you may want a bit more space for your personal files. If
+your USB stick is smaller try Nesting instead.
+</para>
+
+<para>
+How DyneII loads (technical):
+
+<simplelist>
+<member>the boot system consists of a bootloader, in our case grub</member>
+<member>the bootloader loads a kernel, in our case linux :)</member>
+<member>the kernel loads a ramdisk, in our case dyne:II initrd.gz</member>
+<member>the ramdisk will look for a dyne/ dock</member>
+<member>we keep both kernel and ramdisk in a dock and install grub</member>
+</simplelist>
+
+First of all find what device your USB drive is
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>cat /proc/partitions
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Ignore the entries that end in numbers, those are individual
+partitions on each separate device. The ones that end in letters are
+different devices: <emphasis>hda</emphasis> means your primary IDE
+harddrive, <emphasis>sda</emphasis> (or sdb sdc etc.) generally means
+a USB device (but can also mean a SCSI or SATA harddisk, be sure to
+verify this on your specific system configuration)
+</para>
+
+<para>
+If you're confused, look at the blocks column, which shows the # of
+1KB blocks on the device. If you know how big your USB stick is, you
+can find it this way. ~1,000,000 blocks = a 1 gigabyte device; ~64,000
+blocks = 64MB device. From here on this tutorial assumes your usb
+device is <emphasis>/dev/sda</emphasis>, if it's not /dev/sda, change
+it as necessary.
+</para>
+
+
+<para>Now let's prepare the partitions of the usb key: in this example
+we are using the console based cfdisk here, but you can also try to
+use Parted which is a graphical tool in MENU->FILES->Parted.  Be
+careful that you selected the right device to operate on (eventually
+different from the /dev/sda in the examples below) because from now on
+the operations described will erase all data on the device.
+</para>
+
+<para>
+Let's start the partition tool:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>cfdisk /dev/sda
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Now from inside cfdisk:
+
+<simplelist>
+<member>delete all partitions</member>
+<member>create a new primary at the default maximum size</member>
+<member>set the type to 83 (Linux)</member>
+<member>Write everything and then Quit</member>
+</simplelist>
+
+Now you are ready to format your drive:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>mke2fs /dev/sda1
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+You can change the above command <emphasis>mke2fs -j</emphasis> in
+case you want to use EXT3 instead of EXT2. However, it is probably not
+advised to use the EXT3 journaled filesystem on a flash/USB device:
+journaling writes to the disk more often than necessary, which wears
+out the USB device more quickly. Use a non-journaled filesystem such
+as EXT2 (Linux only) or FAT32 (if you want to make your usb device
+readable outside of Linux). The default (ext2) is a safe choice,
+however, you may want to read up on journaled vs non-journaled file
+systems and make an informed decision in your case.
+</para>
+
+<para>
+Now mount the drive:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>mount /dev/sda1 /mnt/usb 
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+And Install the bootloader (grub):
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>grubconfig
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Select the correct usb device, generally the last item in the
+list. Note that if all the items in the list start
+with <emphasis>hda</emphasis> the computer you're currently using can't
+be booted from a usb device and you'd be installing grub to a
+partition of your harddrive instead.
+</para>
+
+<para>
+Now copy the dyne/ dock directory from your current system
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>mkdir /mnt/usb/dyne
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+<prompt>[d:b] ~ # </prompt><userinput>rsync --inplace -Pr $DYNE_SYS_MNT/* /mnt/usb/dyne/
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Rsync is better than cp and we have a progressbar for this operation,
+which will take quite some time, depending if you have a USB 1.0 or
+2.0 connection.
+</para>
+
+<para>
+It should be all ready at this point, so try booting your USB device
+on a computer which supports USB booting. If it works, great!  If not,
+open your /boot/grub/menu.lst (on the USB device) and change the
+root(...) line from (hd0,0) to (hd1,0).
+</para>
+
+
+
+</section>
+
+
+
+<section>
+<title>Cluster computer farms</title>
+
+<para>
+Since version 2, dyne:bolic changes its approach to clustering
+implementing a "human driven" suite of tools that let you control
+various applications running on multiple computers connected to
+your network.
+</para>
+
+<para>
+In situations where you have many old computers you can use one for
+each task and control all of them from the same keyboard and mouse.
+The desktops of the computers can be visualized on your own screen or
+on multiple screens in case you have monitors attached to each of
+them. Powerful workstations can be combined using multiple processing
+units and their displays can be tiled together to compose a unique
+wide desktop.
+</para>
+
+
+<para>
+This way to operate dyne:bolic computers involves different kinds of
+applications offering a flexible setup that you can customize to your
+needs. This part of the manual will just make you familiar with the
+tools and you'll need to refer to their manuals to discover all the
+potential.
+</para>
+
+<para>
+To connect multiple computers you should first make sure you can reach
+them over the network and you know their addresses. A simple way to do
+it that will work on every GNU/Linux system is using the
+command <emphasis>ifconfig</emphasis> on each computer to print out
+the currently configured network address:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>ifconfig | grep inet
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+then edit your <emphasis>/etc/hosts</emphasis> file with the full list
+of addresses and a name for them that you can choose. Copying the /etc/hosts file on all involved machines will make them aware of each other "hostnames".
+</para>
+
+
+<para>
+<emphasis>Synergy</emphasis> is a powerful tool that lets your
+keyboard and mouse control different desktops accessed simply moving
+the mouse out of the current screen into theirs. An example
+configuration file is provided
+in <emphasis>/etc/synergy.conf</emphasis> and it must be modified
+with the hostnames of your computers (to be associated to IP numeric
+addresses in /etc/hosts).
+
+
+<para>
+The main computer where the keyboard and mouse are attached should run
+the command:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>synergys -n hostname -c /etc/synergy.conf
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+All the other computers to be connected should run this command,
+making sure the config file include them in the setup:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>synergyc -n hostname -c /etc/synergy.conf
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+</para>
+
+<para>
+<emphasis>VNC</emphasis> is a remote video client that lets you
+control the desktop of another computer on your network as inside a
+window on your current desktop. It can be also used to interact with
+two mouse and keyboard at the same time.
+</para>
+
+<para>
+To share the desktop of a computer for an incoming VNC connection just
+run:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>x11vnc
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+To connect to a computer sharing the VNC desktop:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>vncviewer computer
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+For more informations on VNC see <emphasis>man x11vnc</emphasis> and
+<emphasis>man vncviewer</emphasis>.
+</para>
+
+<para>
+<emphasis>Remote X</emphasis> execution lets you run an application on
+another computer and control it on your desktop, as if it would be
+running locally.
+</para>
+
+<para>
+In order to authorize other computers to open applications on your
+desktop you must first run the command:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>xhost +computer
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Then Click the network button on the top-right panel and
+run <emphasis>Exec_X11</emphasis>, fill in your user account (default
+is user:root password:luther) and write the command to start the application.
+</para>
+
+
+</section>
+
+
+
+
+<section>
+<title>Keep your data safe</title>
+
+<para>
+Dyne:bolic is developed with your privacy in mind: as mentioned before
+the NEST can be encrypted to make your private data unaccessible
+unless your password is provided, now we'll proceed to analize in deep
+all the aspects of this security measure.
+</para>
+
+
+<para>
+When an encrypted nest is created, every file you place in your home
+directory will be preserved in a scrambled form using a
+Rijndael/SHA256 algorithm: such a cypher can be considered very
+secure, maybe some military organizations are able to break it, but
+anyway that would be very expensive in terms of resources employed.
+</para>
+
+<para>
+Dyne:bolic encryption mechanism employes a passfile "dyne.nst.gpg"
+which contains the cypher used to protect your data: that file holds
+the password that, matched together with your dyne.nst file, can
+access all the data you store in your nest. So actually that file is
+very precious for your privacy, you should be careful and not copy it
+around.
+</para>
+
+<para>
+Since the passfile is so delicate, it is also protected with a
+password: the one you choose at the beginning, which is used to
+scramble the passfile through a CAT5 algorithm. Keep in mind that this
+cypher algorithm is weak and eventually, in case an intruder takes
+possession of your .gpg passfile, it will be easy to crack.
+</para>
+
+<para>
+Now in practical terms all this encryption scheme means that you can
+safely move around your dyne.nst file separated from the dyne.nst.gpg
+passfile: there will be no intrusion in the data stored inside even in
+case you loose it. It also means that you can give your passfile to a
+friend, still protected by the password you memorized, so that neither
+you nor your friend will be able to access the nest until you meet up
+again. More in general, this scheme lets you separate your encrypted
+data from the passfile, still keeping everything sealed by the
+password you keep in mind, and move the data around in different
+places being sure meanwhile it's not accessed by anyone else.
+</para>
+
+<para>
+So for sure we can say our privacy protection is way above the usual
+schemes used in most common operating systems, which keep your data in
+clear and physically accessible.
+  </para>
+
+<para>
+In case you are involved in some mission critical task and you are
+facing the possibility of imprisonment and torture, you should take a
+bit more care. A good practice would be to customize a bit the startup
+scripts of dyne:bolic to have a false password prompt, the
+/lib/dyne/nest.sh script is a good start.  Another way can be to have
+an encrypted nest for which you would disclose the password if forced
+to, but then also another encrypted file hidden somewhere that is not
+prompting for a password at every boot.
+</para>
+
+
+
+</section>
+
+</chapter>
