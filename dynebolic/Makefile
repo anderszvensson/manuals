@@ -28,7 +28,9 @@ man-language ?= EN
 
 all : lang index pdf html
 
-lang: dynebolic-manual-$(man-language).sgml
+lang: $(man-language)/dynebolic-manual-$(man-language).sgml
+
+$(man-language)/dynebolic-manual-$(man-language).sgml:
 	ln -sf ../dynebolic-manual.sgml $(man-language)/dynebolic-manual-$(man-language).sgml
 
 # jade omissis options: -V nochunks
@@ -47,6 +49,7 @@ html : $(DEPS)
 	images/convert_for_html.sh $(man-language) html
 	cd $(man-language) && docbook2html -u -d $(DSSSL-html) \
 		-o html dynebolic-manual-$(man-language).sgml
+	cp -f dyne.css $(man-language)/html
 
 pdf : $(DEPS)
 	rm -f $(man-language)/dynebolic-manual-$(man-language).pdf
@@ -113,4 +116,7 @@ clean :
 	dynebolic-manual.log \
 	dynebolic-manual.out \
 	dynebolic-manual.dvi
-
+	rm -rf $(man-language)/images
+	rm -rf $(man-language)/html
+	rm -rf $(man-language)/dynebolic-manual-$(man-language).*
+	
