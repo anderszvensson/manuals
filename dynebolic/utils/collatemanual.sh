@@ -27,8 +27,12 @@ devel
 #initialise output file
 out=$lang/dynebolic-manual-$lang.sgml
 rm -f $out
-echo "<!DOCTYPE book PUBLIC \"-//OASIS//DTD DocBook V3.1//EN\"" > $out
-echo "[" >> $out
+
+cat <<EOF > $out
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V3.1//EN"
+[
+EOF
+
 
 # collate the chapters
 
