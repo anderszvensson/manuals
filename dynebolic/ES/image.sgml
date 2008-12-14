@@ -1,0 +1,85 @@
+<chapter>
+  <title>Software para Gráficos</title>
+  <subtitle>Manipulación de imágenes y modelaje 3d</subtitle>
+
+<para>
+
+La distribución  dyne:bolic incluye algunos  programas excelentes para
+la composición de imágenes y el modelaje 3d:
+</para>
+
+<para>
+<indexterm><primary> Image </primary>
+<secondary> Gimp </secondary>
+</indexterm>
+
+<emphasis>Gimp</emphasis> es una aplicación  muy completa que capaz de
+crear y editar imágenes de mapas  de bits y ofrece un entorno perfecto
+para los  gráficos de internet  así como una poderosa  tecnología para
+automatizar sus operaciones y hasta generar logotipos estilizados.
+</para>
+
+
+<para>
+
+<indexterm><primary> Image </primary>
+<secondary> InkScape </secondary>
+</indexterm>
+
+<emphasis>Inkscape</emphasis>  es un  editor  de gráficos  vectoriales
+adaptable para el dibujo a mano, caricaturas y comics y demás gráficos
+generalmente escalables, convirtiéndose  en una herramienta ideal para
+folletos e impresiones de alta resolución y tetracromáticas.
+
+</para>
+
+<para>
+
+<indexterm><primary> Image </primary>
+<secondary> Blender </secondary>
+</indexterm>
+
+<emphasis>Blender</emphasis> consiste en  una poderoso entorno para el
+modelaje en 3d y el desarrollo  de juegos: tiene una interfaz muy bien
+desarrollada, un motor  escrito en Phyton para el  trazado y escritura
+del  comportamiento  de  objetos.   Puede producir  escenas  así  como
+aplicaciones    interactivas    y    animaciones    en    líneas    de
+tiempo. Actualmente  existe una  gran comunidad de  artistas usándolo,
+hay tutoriales y  ejemplos disponibles en su sitio  web, además de que
+un detallado manual puede ser  solicitado en línea.  Blender es una de
+las  mejores herramientas  en el  mundo  del software  libre y  código
+abierto para  producciones multimedia de cualquier  tipo.  Está siendo
+adoptado para la producción  de varias películas profesionales. Usando
+la  modularidad  de dyne:bolic  (clustering  capability) puedes  crear
+granjas computarizadas o de  segmentos (render farms) distribuyendo la
+carga   en    varias   computadoras    en   la   misma    red,   checa
+el <ulink url="http://spot.river-styx.com/viewarticle.php?id=12">tutorial
+de Spot disponible en línea</ulink>.
+
+</para>
+
+<para>
+<indexterm><primary> Image </primary>
+<secondary> GQview </secondary>
+</indexterm>
+
+<emphasis>GQview</emphasis> es un navegador  de imágenes fácil de usar
+con  el  que  incluso  puedes construir  presentaciones  para  mostrar
+interactivamente tus galerías de imágenes.
+
+</para>
+
+<para>
+
+<indexterm><primary> Image </primary>
+<secondary> ImageMagick </secondary>
+</indexterm>
+
+<emphasis>Image Magick</emphasis> es un paquete de líneas de comandos,
+iniciando  con el  convertidor  desde la  terminal (ver  <emphasis>man
+convert</emphasis>)   puedes  fácilmente  aplicar   operaciones  sobre
+múltiples archivos aplicándoles conversión de formatos y filtros a una
+gran cantidad de imágenes.
+</para>
+
+</chapter>

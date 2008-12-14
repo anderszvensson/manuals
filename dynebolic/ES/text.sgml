@@ -1,0 +1,96 @@
+<chapter>
+
+  <title>Software para Texto</title>
+  <subtitle>Edición de texto y publicación con dyne:bolic</subtitle>
+
+
+<indexterm><primary> Text </primary></indexterm>
+
+<para>
+
+
+Dyne:bolic  incluye  software que  te  permite  fácilmente escribir  y
+componer  cualquier  tipo de  documento:  hipertextos  que pueden  ser
+publicados en internet (HTML),  textos formateados para imprimir (RTF,
+PDF                 Postscript                 y                 hasta
+el <ulink url="http://www.gnu.org/philosophy/no-word-attachments.html">desacreditado
+formato DOC</ulink>)
+</para>
+
+<para>
+<indexterm><primary> Text </primary>
+<secondary> AbiWord </secondary>
+</indexterm>
+
+El procesador  de palabras Abiword esta alcanzando  un nivel artistico
+rapidamente con multiples herramientas  utiles para tu trabajo diario,
+tus necesidades  personales o tan solo para  divertirte escribiendo al
+viejo  estilo.  Es  capaz  de  leer  y escribir  todos  los  tipos  de
+documentos  industriales   standard,  como  los   documentos  de  Open
+Office.org, Microsoft Word,  Wordperfect, Texto de Formato Enriquecido
+(RTF), paginas HTML para web y mucho mas.
+</para>
+
+<para>
+
+<indexterm><primary> Text </primary>
+<secondary> Scribus </secondary>
+</indexterm>
+
+Scribus  es  un programa  de  publicación  para  componer en  formatos
+vectoriales  como PDF y  Postscript, resulta  útil para  paginar texto
+imprimible  de  forma   profesional.  Sirve  para  producir  revistas,
+folletos y la mayoría de las publicaciones que necesiten mezclar texto
+e imágen en una página siguiendo plantillas ajustables.
+</para>
+
+
+<para>
+
+<indexterm><primary> Text </primary>
+<secondary> Nedit </secondary>
+</indexterm>
+
+Nedit es  un editor de texto  plano que ofrece un  marcado de sintaxis
+para un par de lenguajes de  código fuente. Es un programa intuitivo y
+fácil de  usar para novatos, pero  al mismo tiempo  ofrece un poderoso
+entorno para programadores.
+</para>
+
+<para>
+
+<indexterm><primary> Text </primary>
+<secondary> AntiWord </secondary>
+</indexterm>
+
+Finalmente,  Antiword  es  una  aplicación  muy  útil  para  convertir
+cualquier  archivo .doc  en un  archivo de  texto plano  utilizando un
+simple comando, dejando el  posicionamiento de líneas intacto. Para un
+rápido inicio, intenta esto:
+<screen>
+<prompt>[d:b] ~ #</prompt><userinput>antiword evil.doc > good.txt</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+como sucede en otros casos,  existen páginas de manual que ofrecen mas
+información   del    uso   de   este   programa,    solo   tienes   qe
+teclear <emphasis>man antiword</emphasis> en una terminal.
+</para>
+
+<para>
+
+<indexterm><primary> Text </primary>
+<secondary> Open Office </secondary>
+</indexterm>
+
+
+En  caso de  que necesites  una  completa paquetería  de oficina  para
+satisfacer tus necesidades,  existe el módulo de dyne  Open Office 2.0
+disponible  en  línea para  descargarlo  desde  nuestro sitio,  puedes
+colocarlo dentro del directorio de  módulos de tu Dock ( dyne/modules/
+) y  al próximo reinicio  de tu sistema  lo encontrarás en el  menú de
+aplicaciones.  Con  Open  Office  puedes  leer y  escribir  todos  los
+archivos .DOC, las  hojas de cálculo .XLS, las  presentaciones .PPT, y
+mas.
+</para>
+
+</chapter>
