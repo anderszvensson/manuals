@@ -1,0 +1,48 @@
+
+
+<book label="dyne:bolic GNU/Linux user's guide">
+
+<bookinfo>
+<title>Dyne:II GNU/Linux User's Guide</title>
+<subtitle>dynebolic.org</subtitle>
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/logo" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<publisher>
+  <publishername>[ dyne.org ]</publishername>
+  <address>Keizersgracht 264, Amsterdam, 1016 EV</address>
+</publisher>
+
+<authorgroup>
+<author>
+<othername>Jaromil</othername>
+<authorblurb><para>http://jaromil.dyne.org</para></authorblurb>
+<affiliation>
+<orgname>rastasoft / flossmanuals</orgname>
+</affiliation>
+</author>
+</authorgroup>
+
+<!--
+<edition>
+Dyne:II GNU/Linux user's Guide
+</edition>
+
+<date>2007</date>
+-->
+<copyright>
+<year>2003</year>
+<year>2004</year>
+<year>2005</year>
+<year>2006</year>
+<year>2007</year>
+<year>2008</year>
+<holder>Denis Roio</holder>
+</copyright>
+
+</bookinfo>
+

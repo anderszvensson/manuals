@@ -26,16 +26,17 @@ man-language ?= EN
 
 
 
-all : lang index pdf html
+all : index pdf html
 
-lang: $(man-language)/dynebolic-manual-$(man-language).sgml
+#collate:
+#	utils/collatemanual.sh $(man-language)
 
 $(man-language)/dynebolic-manual-$(man-language).sgml:
-	ln -sf ../dynebolic-manual.sgml $(man-language)/dynebolic-manual-$(man-language).sgml
+	utils/collatemanual.sh $(man-language)
 
 # jade omissis options: -V nochunks
 
-index :
+index : $(man-language)/dynebolic-manual-$(man-language).sgml
 	collateindex.pl -N -o $(man-language)/index.sgml -t index
 	rm -f $(man-language)/HTML.index
 	cd $(man-language) && openjade -wno-valid -t sgml -V html-index \
@@ -46,14 +47,14 @@ index :
 
 html : $(DEPS)
 	rm -rf html/*.htm
-	images/convert_for_html.sh $(man-language) html
+	utils/formatimages.sh $(man-language) html
 	cd $(man-language) && docbook2html -u -d $(DSSSL-html) \
 		-o html dynebolic-manual-$(man-language).sgml
-	cp -f dyne.css $(man-language)/html
+	cp -f stylesheets/dyne.css $(man-language)/html
 
 pdf : $(DEPS)
 	rm -f $(man-language)/dynebolic-manual-$(man-language).pdf
-	images/convert_for_html.sh $(man-language) pdf
+	utils/formatimages.sh $(man-language) pdf
 	cd $(man-language) && docbook2pdf  -d $(DSSSL-pdf) \
 		dynebolic-manual-$(man-language).sgml
 
@@ -119,5 +120,6 @@ clean :
 	dynebolic-manual.dvi
 	rm -rf $(man-language)/images
 	rm -rf $(man-language)/html
+	rm -ff $(man-language)/index.sgml
+	rm -ff $(man-language)/db2texi.refs
 	rm -rf $(man-language)/dynebolic-manual-$(man-language).*
-	
