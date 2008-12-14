@@ -3,7 +3,8 @@
 
 # check which language is set to compile, english is default
 # to choose another language run: make man-language=ES
-man-language ?= EN
+
+include config.mk
 
 # list of all files
 DEPS = \
