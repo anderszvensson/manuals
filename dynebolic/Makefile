@@ -77,32 +77,33 @@ info : $(DEPS) texi
 book : $(DEPS)
 	rm -f dynebolic-manual.pdf
 	docbook2pdf -d $(DSSSL-print) -D $(man-language) \
-		dynebolic-manual.sgml
+		dynebolic-manual-$(man-language).sgml
 
 postscript : $(DEPS)
 	rm -f dynebolic-manual.pdf
 	docbook2ps -d $(DSSSL-print) -D $(man-language) \
-		dynebolic-manual.sgml
+		dynebolic-manual-$(man-language).sgml
+
 
 rtf : $(DEPS)
 	rm -f dynebolic-manual.rtf
 	docbook2rtf -d $(DSSSL-pdf) -D $(man-language) \
-		dynebolic-manual.sgml
+		dynebolic-manual-$(man-language).sgml
 
 tex : $(DEPS)
 	rm -f dynebolic-manual.tex
 	docbook2tex -d $(DSSSL-print) -D $(man-language) \
-		dynebolic-manual.sgml
+		dynebolic-manual-$(man-language).sgml
 
 dvi : $(DEPS)
 	rm -f dynebolic-manual.dvi
 	docbook2dvi -d $(DSSSL-print) -D $(man-language) \
-		dynebolic-manual.sgml
+		dynebolic-manual-$(man-language).sgml
 
 man : $(DEPS)
 	rm -f dynebolic.man
 	docbook2man -d $(DSSSL-html) -D $(man-language) \
-		dynebolic-manual.sgml
+		dynebolic-manual-$(man-language).sgml
 
 
 clean :

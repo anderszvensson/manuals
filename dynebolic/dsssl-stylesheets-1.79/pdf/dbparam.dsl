@@ -1304,7 +1304,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  "../images/")
+  "images/")
 
 
 ;; just for back compat, set it false to say its not set

@@ -348,7 +348,7 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  "../images/")
+  "images/")
 
 (define ($admon-graphic$ #!optional (nd (current-node)))
   ;; REFENTRY admon-graphic
