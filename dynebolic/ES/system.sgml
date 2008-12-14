@@ -1,0 +1,58 @@
+<chapter>
+<title>Descubre el sistema</title>
+
+<para>
+Con Dyne:bolic no necesitas instalar nada en tu disco duro porque este
+no es  se toca mientras  usas el sistema.  Más aún, dependiendo  de tu
+forma preferida de uso, puede  arrancar desde el disco duro, desde CD,
+USB  o desde  la red  (se explica  en el  siguiente capítulo)  y puede
+guardar datos en  un sólo archivo que puede  ser transportado a través
+de diferentes medios.  El sistema operativo completo cabe  en un disco
+compacto, y  para ejecutarse  desde el disco  duro tan  sólo necesitas
+copiar el directorio  DYNE (ver docking), en tanto  que en ordenadores
+ligeros esto se puede hacer por  red. Esto hace a dyne:bolic muy fácil
+de usar y mantener,  evitando riesgos por desconfiguración: el sistema
+se  presenta tal  como es  ofreciendo  un gran  escritorio repleto  de
+aplicaciones listas para usar.
+</para>
+
+<indexterm><primary>Xfce</primary></indexterm>
+
+<para>
+El        manejador       de       escritorio        por       defecto
+es   <ulink  url="http://www.xfce.org">Xfce</ulink>  el   cual  ofrece
+múltiples escritorios  (presiona ctrl+F2 y  otros números) y  un menún
+que  puedes desplegar si  presionas el  botón del  lado derecho  de tu
+mouse sobre el fondo de  tu escritorio. En la esquina superior derecha
+encuentras los dispositivos de  almacenamiento a los que puedes entrar
+con tan solo un click.
+</para>
+
+<para>
+El menú  de software  está organizado por  tareas, así  que fácilmente
+puedes encontrar la manera  de reproducir, grabar, editar y transmitir
+tanto audio  como video, comunicarte  y publicar textos,  páginas web,
+animaciones 3d y mucho mas.
+</para>
+
+<para>
+Haz click en CONFIGURE en tu menú para ajustar tu sistema.
+</para>
+
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/shot-configure" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<para>
+Para  una  introducción  a  las  funcionalidades  al  utilizar  varios
+escritorios                                                      puedes
+visitar <ulink url="http://spot.river-styx.com/viewarticle.php?id=8">la
+página      de      Spot</ulink>      y     leer      el      artículo
+sobre <ulink url="http://www.osnews.com/story.php?news_id=6490">dyne:bolic
+en OS News</ulink> (en ingles).
+</para>
+
+</chapter>

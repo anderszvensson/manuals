@@ -1160,7 +1160,10 @@
   ;; /DESC
   ;; AUTHOR N/A
   ;; /REFENTRY
-  '())
+;  '(
+    '(("META" ("http-equiv" "Content-Type") ("content" "text/html; charset=UTF-8")))
+)
+
 
 (define %html-pubid%
   ;; REFENTRY html-pubid

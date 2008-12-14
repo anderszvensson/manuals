@@ -1,0 +1,151 @@
+<chapter>
+  <title>Instalar el laboratorio de medios</title>
+
+<para>
+Este capítulo describe varias formas  de usar el sistema de dyne:bolic
+de   manera  avanzada:  Cómo   agrupar  múltiples   computadoras  para
+aprovechar  sus  recursos   compartidos,  cómo  convertir  el  sistema
+residente en  varias computadoras en  un laboratorio de medios  y cómo
+mantener tus datos seguros de invasiones a tu privacidad.
+</para>
+
+<para>
+El conocimiento proveído por  este capítulo requiere algo de confianza
+con  lo básico  de los  sistemas GNU/Linux  y el  uso de  la  línea de
+comandos.  Te  dará poder  con  la  habilidad  de instalar  de  manera
+flexible laboratorios  de medios completamente  funcionales aún usando
+computadoras encontradas, pero  necesitas planear bien la arquitectura
+de tus recursos dependiendo de tu situación específica.
+</para>
+
+<section> <title>Arrancar desde el disco duro</title>
+
+<para>
+Arrancar  desde el  disco duro  Con Docking  vimos que  simplemente el
+mover  un  directorio en  la  raíz  de  una partición  puede  dejarnos
+arrancar desde  el CD y usar el  sistema desde el disco  duro. Esto es
+una manera muy simple y segura  de tener un sistema de arranque doble:
+con el CD dentro para dyne:bolic,  con el CD fuera para cualquier otra
+cosa. Aún así  a mucha gente realmente le  gustaría deshacerse del CD,
+así que aquí se explica cómo:
+</para>
+
+<para>
+Mantén en mente que la siguiente operación no es necesaria para correr
+dyne:bolic  desde el  disco duro.  Si no  estás familiarizado  con los
+sectores de arranque y la  geometría de partición tal vez necesites la
+intervención de  un experto si algo  sale mal. Además, en  caso de que
+cometas un error podrías borrar  todos los datos guardados en tu disco
+duro y/o quedarte sin la posibilidad  de arrancar de nuevo en tu viejo
+sistema operativo.
+</para>
+
+<para>
+Para  arrancar desde  el disco  duro  necesitas tener  un cargador  de
+arranque (Lilo o  Grub) instalado. Recomendamos el uso  de Grub por su
+simplicidad  y  flexibilidad: de  hecho  es  el  cargador de  arranque
+preconfigurado que dyne:bolic  instalará para ti, pero en  caso de que
+ya tengas  Lilo instalado  y no quieras  cambiarlo, hay una  manera de
+añadir una entrada para dyne:bolic en él.
+</para>
+
+<para>
+Las  siguientes  instrucciones  cubrirán  varias  situaciones:  puedes
+omitir algunas operaciones en caso  de que ya estén establecidas en tu
+computadora.
+</para>
+
+
+<indexterm><primary>partitioning</primary></indexterm>
+<indexterm><primary>cfdisk</primary></indexterm>
+<indexterm><primary>mke3fs</primary></indexterm>
+
+<para>
+
+<emphasis>En  caso  de  que  estés instalando  una  computadora  desde
+cero</emphasis>,  sin  nada  instalado  en  ella,  entonces  necesitas
+particionar  tu disco duro  y formatearlo.   Puedes hacerlo  usando el
+comando  <emphasis>cfdisk</emphasis>   para  crear  o   modificar  las
+particiones de  tu disco duro,  luego <emphasis>mke3fs</emphasis> para
+formatear las  particiones (o  algún otro comando  mk* en caso  de que
+desees    usar     un    sistema    de     archivos    diferente    de
+Ext3).  <emphasis>Recuerda  que esta operación  borrará cualquier dato
+que haya en el disco</emphasis>.
+</para>
+
+
+<indexterm><primary>grub</primary></indexterm>
+
+<para>
+Una  vez que  tengas un  disco particionado  y  formateado necesitarás
+instalar  el  cargador  de  arranque.  Para  hacerlo  usa  el  comando
+<emphasis>grubconfig</emphasis> y sigue los pasos que se te requieran,
+al  final  del  proceso  deberás  de  poder  arrancar  tu  computadora
+directamente en dyne:bolic, sin necesidad de usar un CD.
+</para>
+
+<para>
+  <emphasis>Para re-configurar tu  cargador de arranque</emphasis> (no
+es  necesario si instalaste  uno desde  cero usando  dyne:bolic) busca
+entre  las particiones  de tu  disco duro,  en caso  de que  tengas un
+directorio llamado  boot/ mira si  dentro hay otro  directorio llamado
+grub/, si  lo hay encontrarás  en él la  configuración de tu  grub, un
+simple archivo de  texto llamado grub.conf o menu.lst  el cuál tendrás
+que editar  a mano,  añadiendo algunas líneas  al final  para integrar
+dyne:bolic a las opciones del menú de arranque:
+
+<screen>
+<userinput>
+title dyne:bolic RASTASOFT Afro Linux
+root (hd0,0) # ADJUST THIS!
+kernel /dyne/2618ck1d.krn root=/dev/ram0 rw load_ramdisk=1 max_loop=64 vga=791
+initrd /dyne/initrd.gz
+</userinput>
+</screen>
+
+Después de hacer  eso necesitarás asignar el disco duro  en el que has
+hecho    el    dock;     donde    dice    "AJUSTA    ESTO"    cambia
+el  <emphasis>(hd0,0)</emphasis> si  es necesario:  hd0,1 para  hda2 -
+hd0,2 para hda3 - hd1,0  para hdb1 etc. Probar con valores equivocados
+no  es peligroso  y en  caso  de que  estés confundido  hay mucha  más
+documentación sobre este proceso en las páginas de manual de grub.
+</para>
+
+<indexterm><primary>lilo</primary></indexterm>
+
+<para>
+En caso de  que tengas instalado lilo, busca  entre las particiones de
+tu  disco duro  el directorio  etc/ y  luego busca  dentro  el archivo
+lilo.conf, si lo encuentras añade las siguientes líneas al final:
+
+
+<screen>
+<userinput>
+
+image = /dyne/2618ck1d.krn
+  root = /dev/ram0
+  append = "max_loop=64"
+  initrd = /dyne/initrd.gz
+  label = dyne
+  read-write
+  vga = 791
+
+</userinput>
+</screen>
+
+Asegúrate de que el directorio /dyne esté dentro de la partición en la
+que arrancas, lo cual se  configura en lilo en la línea <emphasis>boot
+=  /dev/hd*</emphasis> que  usualmente se  encuentra al  principio del
+archivo grub.conf .  Por favor observa que el parámetro "image=" lleva
+un camino completo al archivo del kernel, que se llama como su versión
+en  una  forma  condensada,   por  ejemplo  aquí  2618ck1d  representa
+2.6.18-ck1-dyne.    El  formato  condensado   es  necesario   por  una
+restricción de nombre de archivo  8.3 del sistema de arranque isolinux
+del CD.
+</para>
+
+<para>Feliz hackeo ;)</para>
+
+</section>
+</chapter>
+

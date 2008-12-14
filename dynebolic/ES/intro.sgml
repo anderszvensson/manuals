@@ -1,0 +1,252 @@
+
+
+<chapter>
+<title>Los medios hack-activos</title>
+
+<para>
+dyne:bolic     GNU/Linux    es     una    distribución     live    que
+trabaja <emphasis>directamente  desde el disco  compacto sin necesidad
+de  instalar  o  cambiar  nada  en  tu  disco  duro</emphasis>.  Puede
+reconocer la mayor  parte de tus dispositivos de  hardware y ofrece un
+vasto rango de software para  producción de sonido y video, emisión de
+contenido multimedia,  modelado 3D,  compartición de archivos  punto a
+punto, mezcla de sonido y video y mas.
+</para>
+
+<para>
+Este sistema operativo  se enfoca en proveer <emphasis>funcionalidades
+multimedia</emphasis> para  navegar, emisión, edición,  codificación y
+difusión tanto  de sonido como video; también  soluciona los problemas
+usuales    de    instalación,   pues    provee    una   forma    fácil
+de   <emphasis>correr   desde  el   disco   duro   sin  necesidad   de
+particionarlo</emphasis>,    con    sólo    copiar    un    directorio
+(<emphasis>anclar</emphasis>),   evitando  así  cualquier   riesgo  de
+pérdida  de datos  y preservando  la integridad  de otros  sistemas de
+archivo que ya estés usando.
+</para>
+
+<para>
+dyne:bolic  está  hecho  por  y  para las  necesidades  de  activistas
+mediáticos y artistas, para estimular la producción creativa y no sólo
+la simple realización de informaciones digitales y análogas.
+
+Fortalecido  (impulsado) por  GNU/Linux  y por  la comunidad  vibrante
+(groovy) del  software de código abierto, este  sistema operativo nace
+como  un esfuerzo desde  abajo para  expander el  software libre  y el
+espíritu de compartir la informacion y el conocimiento.
+</para>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-support" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<para>
+La última versió  de este documento se hará disponible  en línea en la
+dirección <ulink url="http://dynebolic.org/manual">dynebolic.org/manual</ulink>
+y                 en                 formato                imprimible
+en <ulink url="dynebolic.org/dynebolic-manual-ES.pdf">dynebolic.org/dynebolic-manual-ES.pdf</ulink>. Para
+mas       información       visita       la       página       inicial
+en  <ulink url="http://dynebolic.org">dynebolic.org</ulink>  dónde mas
+documentación está  disponible en línea (en  inglés).  Para contribuir
+puedes <ulink url="http://bugs.dyne.org">reportar errores (en inglés y
+italiano)</ulink> y ponerte en contacto con la comunidad de usuarios y
+desarrolladores uniéndote a  las listas de discusión (en  inglés) o al
+canal de charla <emphasis>#dyne en irc.dyne.org</emphasis>.
+</para>
+
+
+<section>
+<title>Cómo usar este manual</title>
+
+<indexterm><primary>manual</primary></indexterm>
+
+<para>
+Lejos de estar completo en la exploración de las posibilidades de cada
+pieza de  software, encontrarás aquí una  introducción e instrucciones
+básicas  sobre como  usar,  modificar y  emplear  dynebolic en  varias
+circunstancias.
+</para>
+
+<para>
+Cuando  necesites  información en  profundidad  sobre  como operar  un
+software  en  particular, deberías  consultar  las  páginas de  manual
+incluidas.
+</para>
+
+<para>
+Las páginas de  manual describen el uso de  un programa, puedes verlas
+con el comando man desde una terminal X dentro de dyne:bolic :
+
+<screen><prompt>[d:b] ~ #</prompt><userinput>man hasciicam</userinput>
+<lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Mostrará un texto altamente informativo acerca del uso del programa; la página de manual usualmente coincide con el nombre del mismo programa ejecutable.
+</para>
+
+<para>
+Ten siempre en  mente que el comando man es tu  amigo :) este funciona
+en todos los sistemas  GNU/Linux, proporcionando información acerca de
+cada  comando, y  con todos  los comando  que hay,  itienes  mucho por
+descubrir! por  ejemplo, dales  un vistazo a  los manuales de  "sox" o
+"convert", iencontrarás que  puedes hacer un montón de  cosas desde la
+línea de comando de una terminal X!
+</para>
+
+<para>
+Por último, en caso de que estés usando intensivamente cierto software
+para tus  propósitos, no olvides  consultar su propia  documentación y
+unirte a  la comunidad de usuarios  alrededor de de  este: allí podrás
+descubrir mas acerca de su uso y desarrollo.
+</para>
+
+</section>
+
+<section>
+<title>Esto es Software Rasta</title>
+
+<indexterm><primary>rastasoft</primary></indexterm>
+<indexterm><primary>afrolinux</primary></indexterm>
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/shot-credits" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<para>
+¡Jah  Rastafari  Livity bendice  nuestra  libertad!  Esto es  software
+libre, compartelo  para el bien de tí  mismo y de tu  gente. Respeta a
+los  otros  y déjalos  expresarse,  sé libre  y  deja  que otros  sean
+libres. ¡Larga vida y prosperidad en Paz!
+</para>
+
+<para>
+Pero no  una Paz  sin Justicia. Este  software está en  la Resistencia
+dentro del mundo  de Babylon que intenta controlar  mas y mas nuestras
+formas  de comunicar  y  compartir información  y conocimientos.  Este
+software es para todos aquellos  quienes no pueden pagar para tener el
+hardware mas  reciente para  hablar su palabra  de conciencia  y buena
+voluntad. Este software tiene un completo abanico de aplicaciones para
+la producción y no sólo el simple uso de la información, es un estudio
+completo  de creación  multimedia,  no tienes  que  comprar nada  para
+expresar tu  voz. Liberar y  Compartir el conocimiento  son principios
+sólidos para la evolución y esto es de lo que este software proviene.
+</para>
+
+<para>
+Dentro de Babylon, el dinero  es el principal requisito para hacer que
+la  voz sea  escuchada por  los  demás. Los  gobiernos capitalistas  y
+fundamentalistas alrededor del mundo juegan con los grandes monopolios
+de TV difundiendo su propaganda, silenciando toda crítica.
+</para>
+
+<para>
+Esta  es una  lucha por  la  Redención desde  los sistemas  operativos
+existentes los cuales siempre requieren nuevo y muy caro hardware para
+hacer siempre  lo mismpo  de siempre: regalarnos  reproductores gratis
+pero haciendonos  pagar para producir  nuestras propias voces.  Y como
+los Arabes dicen, el que te está protegiendo te está robando.
+</para>
+
+<para>
+Dyne:bolic es una  herramienta para producir y publicar  por tí mismo,
+libremente.  Aquí  no hay  nada  que  consumir,  Aquí tienes  todo  lo
+necesario para crear.
+</para>
+
+<para>
+Los sistemas operativos comerciales  te dan la posibilidad de escuchar
+--todos los tipos de reproductores de "descarga gratis"-- pero siempre
+con restricciones y con maneras nada faciles para que cualquiera pueda
+hablar. El  sentido de la comunicación está  estructurado siguiendo la
+jerarquía del poder establecido en  el mundo mediatizado de Babylon, y
+lo  peor de  todo es  que  el dinero  es el  principal requisito  para
+difundir la voz y dejar a otros escucharla.
+
+Más  aún,  el  software  propietario  expande  la  dependencia  de  la
+población hacia  las grandes corporaciones: donde  sea que compartimos
+nuestro conocimiento sobre cómo usar un cierto tipo de software, damos
+a la  gente la necesidad  de comprar herramientas de  los comerciantes
+para   que  puedan  expresar   su  creatividad.   Esta  es   una  gran
+responsabilidad para cada uno  de nosotros quienes enseñamos a alguien
+cómo  hacer algo  con el  software: la  necesidad de  comprar  será la
+esclavitud a los intereses mercantiles del capitalismo.
+</para>
+
+<para>
+Las  raíces  de  la  cultura   Rasta  pueden  ser  encontradas  en  la
+Resistencia   a  la  esclavitud.   Este  software   no  es   para  los
+negocios. Este  software es  libre como el  habla y  es un paso  en la
+lucha por la Redención y la libertad. Este software está dedicado a la
+memoria de Patrice Lumumba,  Marcus Garvey, Marthin Luther King, Steve
+Biko, Walter  Rodney, Malcom X; en  solidaridad con Mumia  Abu Jamal y
+todos  aquellos quienes  continuarán resistiendo  a la  esclavitud, el
+racismo y  la opresión, para  quienes luchan contra el  imperialismo y
+buscan  una alternativa  a  la hegemonía  del  capitalismo en  nuestro
+mundo.
+</para>
+
+<para>
+<ulink url="http://rastasoft.org">Hic Sunt Leones</ulink>.
+Y muchas bendiciones en Jah Luv para todos aquellos que aún resisten. Selah.
+</para>
+
+</section>
+
+<section>
+  <title>El Proyecto Streamtime</title>
+  <subtitle>Utilizando dyne:bolic para la libertad de comunicación</subtitle>
+
+<indexterm><primary>streamtime</primary></indexterm>
+
+<para>
+<ulink    url="http://www.streamtime.org">Streamtime</ulink>   es   un
+proyecto  de  Radio Reedflute  en  colaboración  con  Rastasoft, y  es
+desarrollado junto con artistas y  activistas desde Iraq y desde donde
+sea. Streamtime  es una red  cambiante de mediactivistas  dedicados al
+apoyo de redes autónomas.  Streamtime usa viejas y nuevas herramientas
+para  la  producción  de  redes   y  contenidos  para  los  medios  de
+comunicación,  las  artes, la  cultura  y  el  activismo en  áreas  de
+conflicto, como Iraq.
+</para>
+
+<para>
+Nosotros imaginamos crear improvisados y expresivos dispositivos, como
+un CD que convierta tu PC en un estudio en línea. Imagina una multitud
+que logra  crear un  atascón en el  tráfico. Piensa en  los religiosos
+policías  de  Londres,  los  chamacos  estudiantes  confundidos  y  el
+dentista celoso en Baghdad, y el blogger encarcelado escribiendo desde
+El Cairo. Construyendo redes autónomas en condiciones extremas.
+</para>
+
+<para>
+Streamtime ofrece  un ambiente  difuso para desarrollar  medios hechos
+por tí  misma. Nos  enfocamos en el  sentido cultural de  encontrar un
+camino  propio en  el callejón  sin salida  que es  Iraq y  que  es su
+representación ante  los medios  de comunicación globales.  No debemos
+intentar cambiar la política para fomentar el cambio cultural; debemos
+apoyar las manifestaciones culturales para entonces forzar los cambios
+políticos.
+</para>
+
+<para>
+Streamtime puede tomar la forma  de una campaña, de arte colaborativo,
+de  una corriente  de  sonidos  no escuchados,  palabras  no dichas  e
+imaginaciones no vistas.</para>
+
+<para>  Interacciones  remotas   y  diálogos  ubicuos,  comunicaciones
+desmaterializadas  y participaciones  en las  calles. El  espacio está
+fragmentado   en   sus    dimensiones   territoriales,   acústicas   y
+cibernéticas,  y se recompone  en tiempo  real. Hackear  códigos tanto
+morales  como digitales,  formando  nuevos mapas,  dibujos mutantes  y
+pieles inestables.  La sobrecarga  de información puede ser abandonada
+en favor de  la conciencia y las prácticas  colaborativas.  La Memoria
+tiene una voz digital, diversa y horizontal.
+</para>
+
+</section>
+
+</chapter>

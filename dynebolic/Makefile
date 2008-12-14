@@ -14,6 +14,8 @@ $(man-language)/intro.sgml
 
 DSSSL-print = ../stylesheets/dsssl-1.79/print/docbook.dsl
 DSSSL-pdf   = ../stylesheets/dsssl-1.79/pdf/docbook.dsl
+# DSSSL-html  = ../stylesheets/dsssl-1.79/html/docbook.ds
+DSSSL-index = ../stylesheets/dsssl-1.79/html/docbook.dsl
 DSSSL-html  = ../stylesheets/dsssl-1.79/html/docbook.dsl
 
 # DSSSL-html = /usr/share/sgml/docbook/stylesheet/dsssl/modular/html/docbook.dsl
@@ -39,7 +41,7 @@ index : $(man-language)/dynebolic-manual-$(man-language).sgml
 	collateindex.pl -N -o $(man-language)/index.sgml -t index
 	rm -f $(man-language)/HTML.index
 	cd $(man-language) && openjade -wno-valid -t sgml -V html-index \
-		-d $(DSSSL-html) -D $(man-language) \
+		-d $(DSSSL-index) -D $(man-language) \
 		dynebolic-manual-$(man-language).sgml >/dev/null
 	collateindex.pl -o $(man-language)/index.sgml $(man-language)/HTML.index
 	rm -f $(man-language)/HTML.index $(man-language)/*.htm
@@ -48,9 +50,10 @@ html : $(DEPS)
 	rm -rf html/*.htm
 	utils/formatimages.sh $(man-language) html
 	cd $(man-language) && SP_ENCODING=XML \
-	docbook2html -u -d $(DSSSL-html) \
+	docbook2html -d $(DSSSL-html) \
 		-o html dynebolic-manual-$(man-language).sgml
 	cp -f stylesheets/dyne.css $(man-language)/html
+
 
 pdf : $(DEPS)
 	rm -f $(man-language)/dynebolic-manual-$(man-language).pdf
