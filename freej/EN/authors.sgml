@@ -1,0 +1,31 @@
+
+
+<book label="FreeJ Vision Mixer">
+
+<bookinfo>
+<title>FreeJ User's Guide</title>
+<subtitle>freej.dyne.org</subtitle>
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/logo" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<publisher>
+  <publishername>[ dyne.org ]</publishername>
+  <address>Keizersgracht 264, Amsterdam, 1016 EV</address>
+</publisher>
+
+<authorgroup>
+<author>
+<othername>Jaromil</othername>
+<authorblurb><para>http://jaromil.dyne.org</para></authorblurb>
+<affiliation>
+<orgname>RASTASOFT</orgname>
+</affiliation>
+</author>
+</authorgroup>
+
+</bookinfo>
+

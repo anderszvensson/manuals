@@ -1,0 +1,136 @@
+<chapter>
+<title>Install</title>
+
+
+<section>
+<title>Download the source</title>
+
+<para>
+Stable     sources    for     FreeJ     are    regularly     published
+on <ulink url="ftp://ftp.dyne.org/freej/releases">ftp.dyne.org</ulink>
+server and its  mirrors. You can use stable releases  in case you want
+to  employ this software  in a  production environment,  although some
+newest features and fixes will be missing.
+</para>
+
+<para>
+If you are  subscribed to the <ulink url="http://lists.dyne.org">FreeJ
+mailinglist</ulink> and  keen to share  help with the  community, then
+please  install  and  run your  tests  on  a  source code  fresh  from
+the  <ulink url="http://git.dyne.org">git.dyne.org</ulink> repository,
+to  be able to  interact with  people active  on making  this software
+better.  To  download the  latest FreeJ source  then install  the code
+revisioning  system <ulink url="http://git.or.cz">git</ulink>  in your
+system, then run from a terminal:
+
+<screen>
+  <userinput>git clone git://code.dyne.org/freej.git</userinput>
+</screen>
+
+This  will  download all  the  revisioned  source  repository on  your
+harddisk,  with an  occupation lower  than 50MB,  which you  can later
+update  running  the command  'git  pull'  from  inside the  directory
+created.
+</para>
+
+<para>
+In  case  you  are  invited   to  join  development  and  submit  your
+modifications           to          the           code          hosted
+on  <ulink url="http://dyne.org">dyne.org</ulink>, then  be introduced
+to          our          way          to          interact          by
+the <ulink url="http://lab.dyne.org/Code">Developer's Lounge</ulink>.
+</para>
+
+</section>
+
+<section>
+<title>Compile the source</title>
+
+<para>
+To compile FreeJ source code you will need to fulfill a minimum set of
+dependencies, while optionally  you can link a range  of libraries for
+extended  functionality  as video  playback,  encoding and  streaming.
+FreeJ  code has  been tested  to compile  on x86  (little-endian), PPC
+(big-endian) and ARM (embedded) architectures.
+</para>
+
+<para>
+Minimum requirements:
+
+<indexterm><primary>GCC</primary></indexterm>
+<indexterm><primary>SDL</primary></indexterm>
+
+<simplelist>
+  <member>A sane GNU C++ compiler toolchain</member>
+  <member>SDL libraries for visualization</member>
+</simplelist>
+</para>
+
+
+<para>
+Optional extensions:
+
+<indexterm><primary>SDL</primary></indexterm>
+<indexterm><primary>FFmpeg</primary></indexterm>
+<indexterm><primary>Swig</primary></indexterm>
+<indexterm><primary>Ogg</primary></indexterm>
+<indexterm><primary>Vorbis</primary></indexterm>
+
+<simplelist>
+  <member>FFmpeg  libraries for video playback</member>
+  <member>Ogg/Theora/Vorbis libraries for video encoding and streaming</member>
+  <member>Swig code wrapper for language bindings</member>
+  <member>Python and/or Ruby to use the language bindings</member>
+</simplelist>
+
+In case  your building system  is a GNU/Linux distribution,  then make
+sure  you  have installed  the  corresponding  -dev  packages for  the
+aforementioned components.
+</para>
+
+<para>
+If you  are trying to compile this  software on OSX, you  will need to
+open  an account  as  "Apple Developer"  and  download the  developers
+tools. These are not really free,  their use is a concession by the A.
+corporation even if they include the  GNU C compiler. Also you will to
+install     some    free     packaged    collection     of    software
+as             <ulink            url="http://fink.sf.net">Fink</ulink>
+or  <ulink url="http://www.macports.org">Macports</ulink>  and proceed
+installing the aforementioned components. You'll need good unix skills
+to  compile a working  executable, if  you don't  feel daring  then we
+suggest the more user-friendly packaging of stable binary releases for
+OSX                              found                              on
+the <ulink url="ftp://ftp.dyne.org/freej/binaries">ftp.dyne.org/freej</ulink>
+</para>
+
+<para>
+No-one of  us so  far felt  like compiling FreeJ  on the  M$ platform,
+while there  is a quick  and easy way  to try this software  using the
+<ulink   url="http://dynebolic.org">dyne:bolic   liveCD</ulink>   even
+without installing  anything. If you are  an hacker and  you know what
+you   are    doing   please   take   contact    with   developers   on
+the   <ulink   url="http://lists.dyne.org">FreeJ  mailinglist</ulink>,
+we'll  be   interested  to  include  patches:   some  minimum  porting
+adjustment needs to be done,  but basically the code is multi-platform
+(POSIX.1b)  and will  run; development  packages for  the dependencies
+should           be            provided           already           by
+the <ulink url="http://www.mingw.org">MinGW</ulink> project.
+</para>
+
+<para>
+Experimental builds  of FreeJ  have succeeded to  work on  common game
+consoles.   If you  are  trying  to compile  on  embedded ARM,  you'll
+probably have some fun :) the autoconf/automake setup will work out of
+the    box    with   a    sane    cross-compiling   toolchain    based
+on <ulink url="http://gcc.gnu.org">GCC</ulink>,  like the one provided
+by  <ulink  url="http://www.devkitpro">devkitPro</ulink>: if  properly
+linked to the right libraries  and with some minor adjustement to code
+this software  can run on game  consoles like NDS or  GP2X, set-top TV
+boxes and some palmar devices  as personal managers and new generation
+phones. Let's get  in touch: we are interested  in further development
+in this direction!
+</para>
+
+
+</section>
+</chapter>

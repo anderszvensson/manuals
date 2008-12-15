@@ -1,0 +1,90 @@
+<chapter>
+<title>Use in Ruby</title>
+
+<indexterm><primary>Ruby</primary></indexterm>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/ruby_logo" format="jpg">
+   </imageobject>
+</mediaobject>
+
+
+<para>
+There are bindings  to use FreeJ in Ruby, these are  at an early stage
+of development,  actually ready for  the first explorers :)  make sure
+you installed  FreeJ complete  with Swig to  wrap Ruby  bindings. Here
+below is a quick example of usage:
+
+<screen>
+require 'Freej'
+</screen>
+
+loads the Freej extension in Ruby
+
+<screen>
+cx = Freej::Context.new
+cx.init(400,300,0,0)
+</screen>
+
+creates and initialises a context,  that is an instance of FreeJ, with
+a size  of 400  by 300;  the size can  also be  adjusted interactively
+later, with screen implementations that support it.
+
+<screen>
+cx.plugger.refresh(cx)
+</screen>
+
+refresh the list  of plugins present on the system  (so far frei0r and
+freeframe video plugins are  supported and some distributed by default
+in FreeJ)
+
+<screen>
+lay = Freej::create_layer(cx,"/home/jaromil/Videos/Lesyeuxnoirs.mp4")
+# lay.start()
+</screen>
+
+opens the  file path given and starts  it in a layer  (change the file
+name to your own data)
+
+<screen>
+filter = cx.filters.search("vertigo")[0]
+lay.add_filter(filter)
+</screen>
+
+adds the visual effect "vertigo" to the layer created
+
+<screen>
+# lay.active = 1
+cx.add_layer(lay)
+</screen>
+
+adds the layer to the screen
+
+<screen>
+# main loop
+while 1
+  cx.cafudda(0.0)
+  sleep 0.04
+end
+sleep 10
+</screen>
+
+a slightly sloppy way to run the engine :) this is being worked on, we
+basically  want to offer  two ways  to handle  freej: via  setting its
+running time by steps as here, or via registering callbacks.
+
+</para>
+
+<para>
+However, the above  example is not all you can  already do with FreeJ:
+all the C++ API is mapped to Ruby  and you can use it as it is done in
+its code,  which right now  is the main documentation  source, already
+reasonably documented via doxygen. For example, studying the header of
+the video_encoder implementation  and how it is used  in the C++ code,
+you  can recognize  the classes  that are  accessible from  Python and
+script  the  encoding  and  streaming capabilities.   There  are  many
+possibilities out there ;^)
+</para>
+
+</chapter>
