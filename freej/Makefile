@@ -73,12 +73,6 @@ txt : $(DEPS)
 	docbook2txt -d $(DSSSL-print) \
 		$(filename).sgml
 
-txt : $(DEPS)
-	rm -f $(lang)/$(filename).txt
-	cd $(lang) && SP_ENCODING=XML \
-	docbook2txt -d $(DSSSL-print) \
-		$(filename).sgml
-
 
 texi : $(DEPS)
 	rm -f $(lang)/$(filename).txt
