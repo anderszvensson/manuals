@@ -1,0 +1,85 @@
+<chapter>
+<title>Stream to the masses</title>
+
+<para>
+FreeJ  can  produce audio/video  streams  and  broadcast  them to  the
+internet, as well save the encoded streams into local files. Following
+a recursive  scheme of re-transmission,  FreeJ can also  play internet
+streams and re-mix them and re-stream...
+</para>
+
+<para>
+Since the 0.10  release of FreeJ the way to do  this is by configuring
+stream parameters in  a javascript and then loading  it from a running
+FreeJ  instance  (pressing ctrl-j  in  the  console)  or from  another
+script (starting the stream script with freej -j).
+</para>
+
+<para>
+A typical streaming configuration looks like this:
+
+<screen>
+   // create a video encoder object
+   //    values 1-100         video quality  video bitrate  audio quality  audio_bitrate
+   encoder = new VideoEncoder(10,             64000,        5,             24000);
+   encoder.stream_host("giss.tv");
+   encoder.stream_port(8000);
+   encoder.stream_title("testing new freej");
+   encoder.stream_username("source");
+   encoder.stream_password("2t645");
+   encoder.stream_mountpoint("freej-test.ogg");
+
+   register_encoder(encoder);
+   encoder.start_stream();
+   // encoder.start_filesave("prova.ogg");
+</screen>
+
+</para>
+
+<para>
+Up  to date  information on  how to  include FreeJ  into a  webpage is
+provided on the <ulink url="http://lab.dyne.org/FreejStreaming">online
+documentation  wiki</ulink>,  where you'll  also  find  links to  free
+broadcasting  servers and clients to playback.
+</para>
+
+<section>
+<title>Remote Vision Mixer</title>
+
+<para>
+FreeJ can be easily scripted to execute various operations on a remote
+computer, like mixing together video streams, rendering RSS news feeds
+and logos on them and re-stream the result to the public.
+</para>
+
+<para>
+The  advantages  of running  such  a  setup  server-side are  several:
+multiple people can manage the  system remotely, while the engine will
+keep running an online stream, here below is a scheme:
+
+
+<mediaobject>
+  <imageobject>
+    <imagedata align="center" width="472" depth="350" scale="40"
+	       fileref="images/server_backend" format="jpg">
+  </imageobject>
+  <imageobject>
+    <imagedata align="center" scale="40"
+	       fileref="images/server_backend" format="eps">
+  </imageobject>
+  <textobject>
+    <phrase>Diagram  of  server-side  setup  for  a  streaming  vision
+    mixer</phrase>
+  </textobject>
+  <caption>
+    <para>Server-side setup diagram for FreeJ</para>
+  </caption>
+</mediaobject>
+
+</para>
+
+
+</section>
+
+
+</chapter>

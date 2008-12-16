@@ -1,0 +1,112 @@
+<chapter>
+
+<title>Scripting in Javascript</title>
+
+<section>
+  <title>Asynchronous and Object Oriented</title>
+
+<indexterm><primary>Javascript</primary></indexterm>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/spidermonkey" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<para>
+FreeJ is an  asynchronous video rendering engine that  can be scripted
+using javascript  syntax (ECMA script)  in an object oriented  way, to
+control its operations thru a procedural list of commands and actions.
+This way  we started  talking in 2005  about "procedural video"  as an
+evolution of  the current non/linear  paradigm widely spread  in video
+production.
+</para>
+
+<para>
+Far  from  starting  with  such  an high  theoretical  approach,  this
+document aims  to be a small  and effective introduction  to the first
+free  software implementation  of such  a powerful  functionality.  It
+will not cover the programming syntax, but simply describe the objects
+that are made available to  script FreeJ.  Knowledge of generic object
+oriented programming syntax is suggested but not strictly necessary to
+make  the first  steps  in  the wonderful  world  of Procedural  Video
+Scripting :)
+</para>
+
+<para>
+FreeJ  scripting is  completely object  oriented, meaning  that almost
+every operation is provided by  objects that can be created: there are
+no  global functions,  but commands  that  are strictly  related to  a
+certain object.
+</para>
+
+<para>
+Layers, Effects and  VideoEncoders are the object classes  we can deal
+with.  Once  they exist,  they will provide  methods to  control their
+operations.  This feature  represents the  most stable  way  to script
+
+<indexterm><primary>Spidermonkey</primary></indexterm>
+
+FreeJ  operations,  based on  an  implementation  of the  SpiderMonkey
+parser 1.6.
+</para>
+
+<para>
+Every Layer  inherits generic methods  that can be commonly  found, as
+for instance: set/get_position, set/get_blit, zoom, rotate etc.. while
+specific methods are  found on particular layers, as  they can control
+special operations like: print to a  word on the text layer, pause for
+the movie layer and so on.
+</para>
+
+<para>
+A   fairly   complete  reference   for   FreeJ   scripting  is   found
+on        <ulink        url="http://freej.dyne.org/docs/scripting">the
+freej.dyne.org online  documentation</ulink>, always check  that for a
+detailed description of the API  and get in touch with the mailinglist
+if you have suggestions.
+</para>
+
+</section>
+
+
+<section>
+  <title>Hello world</title>
+
+<para>
+Hereby  provided the hello  world example:  3 lines  in our  case. The
+TextLayer  is  provided  in  FreeJ  when compiled  with  the  FreeType
+libraries.
+
+<screen>
+text = new TxtLayer();
+</screen>
+
+we                               create                              a
+new <ulink url="http://freej.dyne.org/docs/scripting/TextLayer.html">TextLayer</ulink>
+
+<screen>
+text.print("Hello world!");
+</screen>
+
+will print the Hello world! message in the text layer
+
+<screen>
+add_layer(text);
+</screen>
+
+will make the new layer shown on the screen
+</para>
+
+<para>
+
+You can  try this 3 lines  script by writing  it into a file  and then
+executing it with  'freej -j helloworld' or even  giving live commands
+inside the  freej console,  pressing ctrl-x and  then typing  in every
+line.
+
+</para>
+
+</section>
+
+</chapter>

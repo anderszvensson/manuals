@@ -1,0 +1,78 @@
+
+<section>
+<title>Play and apply an effect</title>
+
+%playeffect
+
+<para>
+This script creates and initialises  a context, that is an instance of
+FreeJ,  with a  size of  400 by  300; the  size can  also  be adjusted
+interactively later,  with screen implementations that  support it. It
+then completes initialisation of plugin effects refreshing the list of
+those            present            on           the            system
+using <emphasis>plugger.refresh</emphasis>.
+</para>
+
+<para>
+It then opens  the file given at commandline  as first argument (argv)
+and starts  it in  a layer,  adds the visual  effect "vertigo"  to the
+layer created, adds the layer to the screen and runs.
+</para>
+
+<para>
+However, the above  example is not all you can  already do with FreeJ:
+all the C++ API  is mapped to various languages and you  can use it as
+it is  done in  its code,  which right now  is the  main documentation
+source,  already  reasonably  documented  via  doxygen.  For  example,
+studying the header of the  video_encoder implementation and how it is
+used  in  the  C++  code,  you  can recognize  the  classes  that  are
+accessible  from   Python  and  script  the   encoding  and  streaming
+capabilities.  There are many possibilities out there ;^)
+</para>
+</section>
+
+<section>
+<title>Controllers</title>
+
+<para>
+Controllers in  FreeJ are  listeners which will  dispatch asynchronous
+messages from input channels, that is for example a keyboard that will
+activate callbacks every time  keys are pressed, informing the running
+script  that something  is  happening. The  script  then can  overload
+the  <emphasis>dispatch()</emphasis>   function  of  the  instantiated
+controller,  to execute  arbitrary code  when events  occur  for that
+controller.
+
+</para>
+
+<para>
+Here below an example of this  use with the most basic controller: the
+<emphasis>TriggerCtrl</emphasis>,  once created  and  registered, will
+call dispatch() every time a frame is processed:
+</para>
+
+%controller
+
+<para>
+It initializes  a new FreeJ instance  as usual, then  declares the new
+class  <emphasis>Frame</emphasis> overloading  the  TriggerCtrl.  With
+this new class  we overload the <emphasis>dispatch</emphasis> function
+to  print  out  some  output  every  time is  called,  that  is  every
+frame.
+</para>
+
+<para>
+At  last  the  script creates  an  instance  of  the new  Frame  class
+(inheriting all methods from TriggerCtrl) registers it to be called by
+the engine  with the <emphasis>register_controller()</emphasis> method
+in the Context.
+</para>
+
+<para>
+Once initialized  this simple script will call  our dispatch function,
+executing all  its contents, every time  a frame is  processed: so far
+that is every time that cafudda() is called.
+</para>
+
+</section>
+

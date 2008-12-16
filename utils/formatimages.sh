@@ -9,6 +9,7 @@ case $target in
 
 
     html)
+	# png images
 	outdir="$lang/html/images"
 	mkdir -p $outdir
 	for i in `ls images/*.png`; do
@@ -16,10 +17,14 @@ case $target in
 	    echo "converting $file to jpeg"
 	    convert $i "$outdir/${file}"
 	done
+	# eps images
+	cp -f images/*.eps $outdir/
+
 	;;
 
 
     pdf)
+	# png images
 	outdir="$lang/images"
 	mkdir -p $outdir
 	for i in `ls images/*.png`; do
@@ -27,6 +32,8 @@ case $target in
 	    echo "converting $file to jpeg"
 	    convert $i "$outdir/${file}.jpg"
 	done
+	# eps images
+	cp -f images/*.eps $outdir/
 	
 	;;
 

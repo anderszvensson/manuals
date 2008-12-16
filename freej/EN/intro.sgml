@@ -1,0 +1,226 @@
+<chapter>
+<title>Introduction</title>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/dindon_mask_sospesa" format="jpg">
+   </imageobject>
+</mediaobject>
+
+
+<para>
+FreeJ is a vision mixer: an instrument for realtime video manipulation
+used in the fields  of dance teather, veejaying, medical visualisation
+and TV.
+</para>
+
+<para>
+With FreeJ multiple layers can be filtered thru effect chains and then
+mixed together.  The supported layer  inputs are images,  movies, live
+cameras,  particle  generators,  text  scrollers and  more.   All  the
+resulting  video mix  can be  shown  on multiple  and remote  screens,
+encoded into a movie and streamed live to the internet.
+</para>
+
+<para>
+FreeJ can be controlled locally or remotely, also from multiple places
+at the same time, using  its slick console interface; can be automated
+via javascript  and operated via MIDI and  Joystick.
+
+<indexterm><primary>Colorspace</primary></indexterm>
+
+ Internally, FreeJ
+handles video data in RGBA  colorspace, that is: 32bit wide collection
+of 4 channels, 8bit each,  representing the red, green, blue and alpha
+components.
+</para>
+
+<para>
+This manual will guide you to  the usage of this application, an up to
+date      version      of       it      can      be      found      on
+the <ulink url="http://freej.dyne.org">FreeJ website</ulink>.
+</para>
+
+
+
+<section>
+<title>This is Free software</title>
+
+<para>
+Nobody should be  restricted by the software they  use. There are four
+freedoms that every user should have:
+</para>
+
+<simplelist>
+  <member>the freedom to use the software for any purpose,</member>
+  <member>the freedom to change the software to suit your needs,</member>
+  <member>the freedom to share the software with your friends and neighbors, and</member>
+  <member>the freedom to share the changes you make.</member>
+</simplelist>
+
+<para>
+When a program offers users all of these freedoms, we call it free software.
+</para>
+
+<para>
+Developers who  write software can release  it under the  terms of the
+GNU  GPL.  When they  do,  it  will be  free  software  and stay  free
+software, no  matter who changes  or distributes the program.  We call
+this copyleft: the software is copyrighted, but instead of using those
+rights to restrict  users like proprietary software does,  we use them
+to ensure that every user has freedom.
+</para>
+
+</section>
+
+
+<section>
+<title>This is Rasta software</title>
+
+<indexterm><primary>Rastasoft</primary></indexterm>
+<indexterm><primary>Afrolinux</primary></indexterm>
+
+
+
+ <para> Jah Rastafari Livity
+bless our Freedom!  This is free software, share it for the good of
+yourself and your people, respect others and let them express, be free
+and let others be free.  Live long and prosper in Peace!
+</para>
+
+<para>
+But, no Peace without Justice.
+This software is about Resistance inna babylon world which tries to control
+more and more the way we communicate and we share informations and knowledge.
+This software is for all those who cannot afford to have the latest expensive
+hardware to speak out their words of consciousness and good will.
+This software has a full range of applications for production and not only
+fruition of information, it's a full multimedia studio, you don't need to buy
+anything to express your voice.
+Freedom and sharing of knowledge are solid principles for evolution and that's
+where this software comes from.
+</para>
+
+<para>
+Inna babylon, money is the main requirement to make a voice possible to
+be heard by others. Capitalist and fundamentalist governments all around
+the world rule with huge TV monopolies spreading their propaganda,
+silencing all criticism.
+</para>
+
+<para>
+
+This is a struggle for Redemption from existing operating systems
+which always require new expensive hardware for doing the same as
+ever: give us free players but make us pay for producing our own
+voices. And the one who protects you rips you off, as the Arabs say.
+
+</para>
+
+<para>
+FreeJ is  a tool  to produce and  publish yourself, freely.   There is
+nothing to consume here, there is all you need to create.
+</para>
+
+<para>
+
+Commercial operating systems always give a possibility to listen - all
+kinds of "free to download" players, but always with restrictions and
+no easy way for everybody to speak out.
+
+The way communication is structured follows the hierarchy of powers
+allready established in babylon's mediascapes and, worst than ever,
+money is the main requirement to spread a voice and let it be heard by
+others.
+
+</para>
+
+<para>
+
+Neverthless, proprietary software spreads the dependence from business
+companies thru the populace: whenever we share our knowledge on how to
+use a  certain software, we make the  people in need to  buy the tools
+from merchants  in order  to express their  creativity. This  is great
+responsability  for  anyone of  us  who  teaches  somebody how  to  do
+something with  software: the  need to buy  will be slavery  under the
+merchantile interests of capitalism.
+
+</para>
+
+<para>
+
+The  roots of Rasta  culture can  be found  in Resistance  to slavery.
+This software is  not a business.  This software is  free as of speech
+and  is one step  in the  struggle for  Redemption and  Freedom.  This
+software is dedicated to the memory of Patrice Lumumba, Marcus Garvey,
+Marthin  Luther  King,  Steve   Biko,  Walter  Rodney,  Malcom  X;  in
+solidarity  with Mumia Abu  Jamal and  all those  who still  resist to
+slavery, racism  and oppression, who still fight  imperialism and seek
+an alternative to the hegemony of capitalism in our World.
+
+  </para>
+
+<para>
+<ulink url="http://rastasoft.org">Hic Sunt Leones</ulink>.
+And Much Blessings in Jah Luv to All Those who still Resist.
+Selah.
+</para>
+
+</section>
+
+
+<section>
+<title>Disclaimer</title>
+
+<para>
+The FreeJ manual is copyleft (c) 2003 - 2008 Denis Jaromil Rojo
+</para>
+
+<para>
+Thanks  for reviewing  and inspirations  to this  documentation  go to
+people  that collaborated  documenting FreeJ  during all  these years:
+Anne-Marie  Skriver,   Marloes  de   Valk,  Robert  de   Geuss,  Piotr
+Sobolewski, Alejo Duque and more...
+</para>
+
+<para>
+You can  copy, distribute and/or  modify this documentation  under the
+terms of the GNU Free  Documentation License, Version 1.2 or any later
+version  published   by  the   Free  Software  Foundation;   with  the
+Introductory   and  Colophon  sections   being  invariant,   with  the
+Front-Cover  and  Back-Cover Texts  clearly  stating authorship.   You
+should  have received  a copy  of the  GNU Free  Documentation License
+along with this manual; if not, write to the Free Software Foundation,
+Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+</para>
+
+<para>FreeJ is copyleft (GNU GPLv3)
+
+<simplelist>
+  <member>2001 - 2008 by Denis Roio</member>
+  <member>2004 - 2005 by Silvano Galliani</member>
+  <member>2005 - 2008 by Christoph Rudorff</member>
+</simplelist>
+
+Statically included libraries are  copyright of the respective authors
+(see the AUTHORS file distributed with the source for details).
+</para>
+
+<para>
+FreeJ source  code is  free software; you  can redistribute  it and/or
+modify it  under the terms of  the GNU Public License  as published by
+the Free Software Foundation; either  version 3 of the License, or (at
+your option) any  later version.  FreeJ source code  is distributed in
+the hope  that it  will be useful,  but WITHOUT ANY  WARRANTY; without
+even  the  implied  warranty  of  MERCHANTABILITY  or  FITNESS  FOR  A
+PARTICULAR PURPOSE.  Please  refer to the GNU Public  License for more
+details. You  should have  received a copy  of the GNU  Public License
+along  with  this  source  code;  if  not,  write  to:  Free  Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+</para>
+
+
+</section>
+
+
+</chapter>

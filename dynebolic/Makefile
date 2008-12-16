@@ -4,19 +4,20 @@
 # check which language is set to compile, english is default
 # to choose another language run: make man-language=ES
 
-include config.mk
+include ../config.mk
 
 # list of all files
 DEPS = \
 $(man-language)/intro.sgml
 
+stylesheets = ../../stylesheets/dsssl-1.79
+utils = ../utils
 
-
-DSSSL-print = ../stylesheets/dsssl-1.79/print/docbook.dsl
-DSSSL-pdf   = ../stylesheets/dsssl-1.79/pdf/docbook.dsl
+DSSSL-print = $(stylesheets)/print/docbook.dsl
+DSSSL-pdf   = $(stylesheets)/pdf/docbook.dsl
 # DSSSL-html  = ../stylesheets/dsssl-1.79/html/docbook.ds
-DSSSL-index = ../stylesheets/dsssl-1.79/html/docbook.dsl
-DSSSL-html  = ../stylesheets/dsssl-1.79/html/docbook.dsl
+DSSSL-index = $(stylesheets)/html/docbook.dsl
+DSSSL-html  = $(stylesheets)/html/docbook.dsl
 
 # DSSSL-html = /usr/share/sgml/docbook/stylesheet/dsssl/modular/html/docbook.dsl
 # DSSSL-print = /usr/share/sgml/docbook/stylesheet/dsssl/modular/print/docbook.ds
@@ -32,7 +33,7 @@ all : index pdf html
 #	utils/collatemanual.sh $(man-language)
 
 $(man-language)/dynebolic-manual-$(man-language).sgml:
-	utils/collatemanual.sh $(man-language)
+	$(utils)/collatemanual.sh $(man-language)
 
 # jade omissis options: -V nochunks
 # setting the SP_ENCODING=XML is necessary for UTF-8 based typesetting
@@ -48,16 +49,16 @@ index : $(man-language)/dynebolic-manual-$(man-language).sgml
 
 html : $(DEPS)
 	rm -rf html/*.htm
-	utils/formatimages.sh $(man-language) html
+	$(utils)/formatimages.sh $(man-language) html
 	cd $(man-language) && SP_ENCODING=XML \
 	docbook2html -d $(DSSSL-html) \
 		-o html dynebolic-manual-$(man-language).sgml
-	cp -f stylesheets/dyne.css $(man-language)/html
+	cp -f ../stylesheets/dyne.css $(man-language)/html
 
 
 pdf : $(DEPS)
 	rm -f $(man-language)/dynebolic-manual-$(man-language).pdf
-	utils/formatimages.sh $(man-language) pdf
+	$(utils)/formatimages.sh $(man-language) pdf
 	cd $(man-language) && SP_ENCODING=XML \
 	docbook2pdf  -d $(DSSSL-pdf) \
 		dynebolic-manual-$(man-language).sgml
