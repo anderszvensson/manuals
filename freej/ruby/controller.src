@@ -1,0 +1,22 @@
+
+require 'Freej'
+
+cx = Freej::Context.new
+cx.init(400,300,0,0)
+
+class Frame < Freej::TriggerCtrl
+
+def dispatch
+
+    puts("dispatch callback activated")
+
+# please  note  the following return: is needed
+# at  the end of the function, else Ruby will
+# return an exception and bail out
+    return(1)
+
+end
+end
+
+f = Frame.new
+cx.register_controller(f)

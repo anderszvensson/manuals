@@ -1,0 +1,32 @@
+<chapter>
+  <title>Use in Python</title>
+
+  <indexterm><primary>Python</primary></indexterm>
+  <indexterm><primary>PyGame</primary></indexterm>
+  <indexterm><primary>Crystal Space</primary></indexterm>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/python_logo" format="jpg">
+   </imageobject>
+</mediaobject>
+
+
+<para>
+You  can  use FreeJ  in  your python  code  to  playback videos  quite
+efficiently, it's API has been designed in C++ and the namespace tends
+to be clear and intuitive. Layer lists map nicely to python arrays and
+can be indexed almost natively,  for instance. Altough this feature it
+at  its early  development stage  and  being refined  (with your  help
+please!)   it can  already give  some good  satisfaction when  used in
+conjunction with frameworks as PyGame and Crystal Space.
+</para>
+
+<para>
+First make  sure you have installed  a version of  FreeJ compiled with
+python bindings:  that means a  package or fresh source  compiled with
+Swig and Python development packages (see the chapter Install, Compile
+from source).   FreeJ should have  installed freej.py in  /usr/lib (or
+/usr/local/lib  depending   from  your  installation   prefix)  inside
+python/site-packages.
+</para>

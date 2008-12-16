@@ -1,0 +1,22 @@
+
+require 'Freej'
+
+cx = Freej::Context.new
+cx.init(400,300,0,0)
+
+cx.plugger.refresh(cx)
+
+lay = Freej::create_layer(cx,ARGV[0])
+
+filter = cx.filters.search("vertigo")[0]
+lay.add_filter(filter)
+
+cx.add_layer(lay)
+
+# main loop
+while 1
+  cx.cafudda(0.0)
+  sleep 0.04
+end
+sleep 10
+

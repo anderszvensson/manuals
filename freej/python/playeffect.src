@@ -1,0 +1,22 @@
+
+import freej
+import time
+import sys
+
+cx = freej.Context()
+cx.init(400,300,0,0)
+
+cx.plugger.refresh(cx)
+
+lay = freej.create_layer(cx,sys.argv[1])
+
+lay.add_filter(cx.filters["vertigo"])
+
+cx.add_layer(lay)
+
+# main loop
+while True:
+	cx.cafudda(1.0)
+	time.sleep(0.04)
+time.sleep(10)
+

@@ -138,5 +138,8 @@ clean :
 	rm -rf $(lang)/html
 	rm -ff $(lang)/index.sgml
 	rm -ff $(lang)/db2texi.refs
+	rm -rf $(lang)/ruby.sgml
+	rm -rf $(lang)/python.sgml
 	rm -rf $(lang)/$(filename).*
+
 

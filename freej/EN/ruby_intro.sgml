@@ -1,0 +1,20 @@
+<chapter>
+<title>Ruby</title>
+
+<indexterm><primary>Ruby</primary></indexterm>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/ruby_logo" format="jpg">
+   </imageobject>
+</mediaobject>
+
+
+<para>
+There are bindings  to use FreeJ in Ruby, these are  at an early stage
+of development,  actually ready for  the first explorers :)  make sure
+you installed  FreeJ complete  with Swig to  wrap Ruby  bindings
+</para>
+
+<!-- the above is generated  by collate.sh and should not be processed
+     directly -->
