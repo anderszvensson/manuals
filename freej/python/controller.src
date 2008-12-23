@@ -1,6 +1,32 @@
 
+import threading
+import freej
+
+cx = freej.Context()
+cx.init(400,300,0,0)
+
+class Frame(freej.TriggerController):
+
+  def __init__(self, *args):
+    super(Frame, self).__init__(*args)
+
+# to be removed (bugfix of activate in controller)
+  def activate(self):
+    self.active = True
 
 
-TODO: still missing
+  def dispatch(self):
+    print "dispatch callback activated"
+
+# please  note  the following return: is needed
+# at  the end of the function, else Ruby will
+# return an exception and bail out
+
+    return 1
 
 
+f = Frame()
+cx.register_controller(f)
+
+th = threading.Thread(target = cx.start , name = "freej")
+th.start();
