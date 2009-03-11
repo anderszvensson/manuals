@@ -100,8 +100,9 @@ postscript : $(DEPS)
 
 rtf : $(DEPS)
 	rm -f $(filename).rtf
+	$(utils)/formatimages.sh $(lang) rtf
 	cd $(lang) && SP_ENCODING=XML \
-	docbook2rtf -d $(DSSSL-pdf) \
+	docbook2rtf -d $(DSSSL-pdf) -s . \
 		$(filename).sgml
 
 tex : $(DEPS)
