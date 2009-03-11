@@ -401,7 +401,7 @@ configuration file is provided
 in <emphasis>/etc/synergy.conf</emphasis> and it must be modified
 with the hostnames of your computers (to be associated to IP numeric
 addresses in /etc/hosts).
-
+</para>
 
 <para>
 The main computer where the keyboard and mouse are attached should run
