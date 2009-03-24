@@ -1,0 +1,196 @@
+<chapter>
+
+<title>Producción de audio</title>
+<subtitle>
+Reproduce, graba, edita y transmite tus sonidos</subtitle>
+
+<indexterm>
+<primary> Audio </primary>
+</indexterm>
+
+<para>
+Esta distribución está repleta de software de audio para hacer todo tipo de cosas: música electrónica, procesamiento de sonidos, efectos de voz, entrevistas y más. Y hay una cosa importante que hace a este sistema superior a cualquier otra solución comercial: aquí no hay competencia :)
+</para>
+
+<para>
+La mayoría de las aplicaciones de audio en dyne:bolic se pueden conectar entre sí, entradas con salidas, para formar una cadena de herramientas para procesar el sonido: esto se hace gracias a tecnologías como JACK y la Arquitectura de Sonido Avanzada para Linux (ALSA). En lugar de mantener separadas las tareas de cada una de las aplicaciones, ahora es posible aprovechar la gran variedad de posibilidades que te ofrece un sistema GNU/Linux como dyne:bolic.
+</para>
+
+<para>
+Este enfoque revolucionario para la producción de audio, seguramente recompensará satisfactoriamente tu voluntad de utilizar estas herramientas. En este sentido, puedes comenzar conociendo las perspectivas tecnológicas de Spot (en inglés) que se encuentran en <ulink url="http://spot.river-styx.com/viewarticle.php?id=14"></ulink> y en <ulink url="http://spot.river-styx.com/viewarticle.php?id=17"></ulink>.
+</para>
+
+<section>
+<title>Reproduce</title>
+ 
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Formatos </secondary>
+</indexterm>
+
+Este sistema operativo ofrece versátiles reproductores para muchos formatos de audio disponibles: WAV, MIDI, MP3, OGG / VORBIS, MOD, XM, FLAC, SPEEX y muchos más pueden ser reproducidos o recodificados, cambiando incluso entre formatos.
+</para>
+
+<para>
+ 
+<indexterm><primary> Audio </primary>
+<secondary> Xmms </secondary>
+</indexterm>
+
+<emphasis>Xmms</emphasis> es un reproductor de audio práctico que contiene un editor de listas de reproducción minimalista e intuitiva. Puede reproducir streaming de radio o archivos locales y puede además cambiar su apariencia. Además puedes modificar su funcionalidad con diversos plugins.
+</para>
+
+<para>
+ 
+<indexterm><primary> Audio </primary>
+<secondary> Amarok </secondary>
+</indexterm>
+
+<emphasis>Amarok</emphasis> es una rocola personal muy completa que maneja la colección de tus archivos de audio y descarga automáticamente etiquetas imprimibles y letras. Déjalo explorar tu colección de audio y te permitirá buscar palabras claves, memorizará tus preferencias y adivinará listas de reproducción con tu música favorita. ¡Es la perfecta interfaz para una rocola!
+</para>
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Timidity </secondary>
+</indexterm>
+
+<emphasis>Timidity</emphasis> es un sintetizador de MIDI que usa parches GUS para traducir tus archivos MIDI en archivos de audio, así como para permitirte escuchar partituras MIDI.
+</para>
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> MikMod </secondary>
+</indexterm>
+
+<emphasis>MikMod</emphasis>es un reproductor de formatos como MOD, XM, S3M etc. Te permite escuchar producciones de la demo-scene, música de videojuegos y lo que comúnmente se conoce como "chip tunes".
+</para>
+
+</section>
+
+<section>
+<title>Acciona</title>
+
+<para>
+Esta sección incluye software para producir música en vivo, interactuar en tiempo real con las aplicaciones que generan sonido a partir de los inputs de micrófono, midi, teclado o mouse. Todos estos programas requieren que Jack funcione adecuadamente, de manera que pueda estar interconectado en una cadena de programas, como un rack virtual de diferentes aplicaciones.
+</para>
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Hydrogen </secondary>
+</indexterm>
+
+<emphasis>Hydrogen</emphasis>es una caja de ritmos en la que puedes cargar instrumentos de prueba y componer una partitura para que se toque a un ritmo específico. Su página ofrece una colección de muchos kits de percusiones más que puedes descargar, <ulink url="http://www.hydrogen-music.org"></ulink>.
+
+</para>
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Jamin </secondary>
+</indexterm>
+
+
+<emphasis>Jamin</emphasis>es la interfaz de masterización de audio de Jack. Puede desempeñar masterización de audio profesional en flujos de inputs en estéreo y ecualizar señales con una interfaz intuitiva y avanzada para dar forma a todas las frecuencias en tiempo real.
+</para>
+
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Jack Rack </secondary>
+</indexterm>
+
+<emphasis>Jack Rack</emphasis>es un poderoso rack de efectos que pueden aplicar cadenas de plugins de audio (LADSPA) al sonido ya producido con otros programas. Usando Jack puedes interconectar tus sonidos con todas las demás herramientas de interpretación y añadir uno de los más de 200 efectos disponibles en dyne:bolic.
+</para>
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Free Wheeling </secondary>
+</indexterm>
+
+<emphasis>FreeWheeling</emphasis> es una aplicación funky que te deja grabar y tocar múltiples muestras en tiempo real, de manera que permanecen en bucle y se pueden añadir una sobre otra: es una herramienta fresca para manipular, sumar y crear sonidos grabados, pero requiere que leas algunas instrucciones antes de empezar a usarlo ya que se controla enteramente desde el teclado (y opcionalmente, desde el midi).
+
+</para>
+
+
+</section>
+
+<section>
+<title>Graba y edita</title>
+
+<para>
+Esta versión de dyne:bolic llega a tí con sofware actualizado para grabar y manipular audio: es generalmente más estable y con más opciones que las versiones anteriores, así que con suerte notarás las mejoras al usarlo.
+</para>
+
+<para>
+<indexterm><primary> Audio </primary>
+<secondary> Ardour </secondary>
+</indexterm>
+
+<emphasis>Ardour</emphasis> es el estudio multipista que ofrece la interfaz más avanzada para tu estudio de grabación de música. Combinado con otras aplicaciones cuando sea necesario (también usa Jack) realmente puede solucionar tus necesidades de masterización de audio y producción de música. Revisa la documentación en línea para este valioso software visitando el <ulink url="http://ardour.org/">sitio web de Ardour</ulink>: si eres un músico, la paciencia requerida para aprender a usar este software y sus atajos de teclado definitivamente valdrán la pena.
+</para>
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Audacity </secondary>
+</indexterm>
+
+<emphasis>Audacity</emphasis> es un amigable programa de edición de audio adecuado para manipular tus archivos de audio, entrevistas y grabaciones, para separarlas o mezclarlas, aplicarles efectos y codificarlas en varios formatos. Puede ser usado también para grabar audio directamente utilizando su intuitiva interfaz, que también se puede encontrar comúnmente en otros sistemas operativos ya que es una aplicación multiplataforma. Una opción perfecta para empezar a maniular audio.
+</para>
+
+<para>
+<indexterm><primary> Audio </primary>
+<secondary> Rezound </secondary>
+</indexterm>
+
+<emphasis>Rezound</emphasis> es un editor de samples muy capaz que te permite manipular tus muestras, grabar, hacer bucles, y aplicar efectos usando una interfaz intuitiva y completa, muy eficiente también en sistemas lentos.
+</para>
+
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Time Machine </secondary>
+</indexterm>
+
+<emphasis>TimeMachine</emphasis> es una simple pero muy útil herramienta para grabar audio que requiere Jack como fuente de sonido. Básicamente es un gran botón rojo: cuando lo presionas comenzará a grabar desde 10 segundos antes, de manera que puedas grabar lo que te parezca interesante en un input de audio mientras lo escuchas. Cuando lo presionas graba lo que acabas de escuchar sin necesidad de regresar el audio.
+</para>
+
+</section>
+
+
+<section>
+<title>Transmite</title>
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> MuSE </secondary>
+</indexterm>
+
+<emphasis>MuSE</emphasis> es otro Software Rasta de dyne.org incluido, que te permite transmitir audio en internet a través de varios servidores (Icecast, Darwin y Shoutcast) en formato OGG o MP3, así tus escuchas podrán sintonizar tu voz y tu música conectándose con cualquier reproductor disponible.
+
+</para>
+
+<para>
+MuSE puede mezclar hasta 6 bitstreams de audio codificados (desde archivos o la red, ogg o mp3) más una señal de input de la tarjeta de sonido, el flujo resultante puede ser reproducido localmente en la tarjeta de sonido y/o codificado a diferentes bitrates, grabado en el disco duro y/o transmitido a la red.
+</para>
+
+<para>
+
+<indexterm><primary> Audio </primary>
+<secondary> Streaming manual </secondary>
+</indexterm>
+Una muy buena introducción a la transmisión y operación de MuSE está disponible en línea en: <ulink url="http://flossmanuals.org/muse"></ulink>. Para una documentación más completa visita <ulink
+url="http://muse.dyne.org">su sitio web</ulink>.
+</para>
+
+</section>
+
+</chapter>
