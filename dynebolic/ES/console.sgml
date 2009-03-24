@@ -1,0 +1,594 @@
+<chapter>
+<title>Consola de línea de comandos</title>
+
+<indexterm><primary>CLI</primary></indexterm>
+<indexterm><primary>GUI</primary></indexterm>
+
+<para>
+La más rápida y eficiente forma de realizar cambios en la configuración de tu computadora, instalarle software o trabajar en una computadora remota, es la línea de comandos. Mucha gente se espanta de la interfaz de línea de comandos (CLI) porque tienen la costumbre de utilizar la interfaz gráfica (CGI). Si nunca haz utilizado una CLI puede ser un poco desalentador aunque con un poco de práctica puedes encontrarlo mucho mas fácil hasta convertirlo en tu preferido.
+</para>
+
+<para>
+La clave está en tomarlo con calma y practicar lo que vas aprendiendo. No intentes recordarlo todo, solo utiliza lo que que sabes y extiende tu conocimiento cuando sea necesario. Todo llega a su tiempo. 
+</para>
+
+<section>
+<title>Comandos de Texto</title>
+
+<para>
+La línea de comandos es la manera mas poderosa de interactuar con Linux, pero si no la haz usado tu ruta de aprendizaje puede ser un poco difícil. La mejor estrategia es utilizar únicamente comandos básicos. No intentes de pronto hacer todo tu trabajo desde la línea de comandos. Aprende unos pocos comandos, usalos y aumenta paulatinamente tu entendimiento de lo que puedes hacer para que luego extiendas tu vocabulario de comandos cuando lo necesites. En seguida apuntamos algunos comandos básicos con los que puedes comenzar.
+ 
+</para>
+
+<para>
+
+No intentes aprenderlos todos de una sola vez. Elige algunos cuantos y practicalos.
+
+<simplelist>
+<member>man</member>
+<member>ls</member>
+<member>cd</member>
+<member>mkdir</member>
+<member>mv</member>
+<member>rm</member>
+<member>locate / slocate</member>
+<member>ping</member>
+<member>cp</member>
+<member>pwd</member>
+<member>tab</member>
+</simplelist>
+Y algunos otros más que es bueno conocer son: 
+
+<simplelist>
+<member>ldconfig</member>
+<member>./configure</member>
+<member>make</member>
+<member>make install</member>
+<member>tar</member>
+<member>more</member>
+<member>whereis</member>
+</simplelist>
+
+</para>
+
+<para>
+Ahora vamos a echarle un vistazo a cada uno. Sientete libre de experimentar con estos comandos. Ten un poco de cuidado con lo que haces porque se pueden dañar tus archivos, folders y hasta el sistema operativo. Si existe alguna posibilidad de que accidentalmente puedas destruir algo con los siguientes ejercicios, te lo haremos saber. 
+</para>
+
+<indexterm><primary>man</primary></indexterm>
+
+<section>
+<title>man</title>
+
+<para>
+Este es un buen comando para empezar porque nos permite ver y estudiar las páginas de ayuda de Linux. <emphasis>man</emphasis> es la abreviación de manual y si lo tecleas seguido de un espacio y luego el nombre de cualquier otro comando obtendrás una página de ayuda en la terminal que te mostrará una descripción de ese comando. Por ejemplo teclea esto:
+
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>man ls
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+Lo anterior te mostrará en la terminal la información relacionada con el comando <emphasis>ls</emphasis>. Aunque el formato de esta página de ayuda puede parecerte un poco confusa, navégala con calma y no te preocupes, lo que necesitas estudiar bien es la descripción del comando, es decir, lo que hace. Para ver el resto de la página del manual presiona la barra espaciadora y para salir presiona la tecla <emphasis>q</emphasis>.
+
+</para>
+
+<para>
+Intenta leer las páginas man de los otros comandos que enlistamos antes. Existe otra manera de ayuda en el sistema que funciona de la misma manera: para probarla, en vez de teclear man teclea <emphasis>info</emphasis> y luego el comando como se muestra a continuación: 
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>info ls
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+!Experimenta!
+</para>
+
+</section>
+
+<indexterm><primary>ls</primary></indexterm>
+
+<section>
+<title>ls</title>
+
+<para>
+
+<emphasis>ls</emphasis> es el comando que puedes usar para listar el contenido del directorio en el que estás. Teclea este comando en una ventana de terminal y mira lo que obtendrás. Una de las características de los comandos de Linux y que es algo muy simple de hacer, es que puedes agregarles varios parámetros para refinar la manera en que utilizas cada comando. Usualmente estos parámetros se agregan al comando colocando un guión intermedio ( - ) directamente después del comando seguido del nombre del parámetro o su abreviación. Por ejemplo si yo tecleo lo siguiente
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>ls -l
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+estoy pasándole el parámetro <emphasis>l</emphasis> al comando <emphasis>ls</emphasis>. El parámetro l es la abreviación de 'long list' (lista extendida) y se refiere al tipo de formato en que la información se debe desplegar, de esta manera es que este parámetro ofrece más detalles que tan solo teclear el comando ls. Intenta estas dos formas y compara las diferencias.
+</para>
+
+<para>
+Quizá ahora te preguntarás: ¿cómo sé cuales son los parámetros para cada comando?. La respuesta la puedes encontrar en las páginas man para cada comando tal y como vimos antes.
+</para>
+
+<para>
+Para el caso del comando ls, sugiero que te familiarizes con el formato usando solamente ls y también usando ls -al, ls -l, y ls -lh. 
+</para>
+
+</section>
+
+<indexterm><primary>cd</primary></indexterm>
+
+<section>
+<title>cd</title>
+
+<para>
+<emphasis>cd</emphasis> significa <emphasis>Change Directory</emphasis> (Cambiar Directorio) y es el comando mas utilizado para navegar en el sistema de archivos de tu computadora. Para probarlo, teclea ls para obtener la lista de todos los archivos y folders del directorio en el que estás ubicada. Luego intenta teclear ls seguido del nombre de uno de los archivos de la lista; por ejemplo si existiera un archivo llamado mio.txt puedo teclear: 
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>cd mio.txt
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+¡Esto muestra un error! ¿Porqué? Porque no puedes aplicar el cambio de directorio a un archivo. Es bueno intentar esto para que puedas entender que no puedes dañar nada si cometes errores usando el comando cd. Para cambiarte o ir a un directorio tecleas cd seguido del nombre del directorio al que quieres navegar. Si existiera un directorio llamado 'src' que apareciera listado cuando intentamos el comando ls, podríamos teclear: 
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>cd src
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+</para>
+
+<para>Si esto fue exitoso, entonces la terminal no te mostrará ningún error. Intentalo con un directorio verdadero de tu computadora. Si te falla puede ser debido a que no tienes los permisos para entrar a ese directorio, escribiste mal el nombre del directorio, o que el directorio simplemente no existe.
+</para>
+
+<para>
+Ahora unas palabras acerca del sistema de archivos de Linux. Si el sistema fue dispuesto adecuadamente para tí, generalmente estarás trabajando en tu <emphasis>directorio personal (home)</emphasis>, el cual está localizado normalmente en un lugar apropiado en Linux. Para encontrar tu directorio personal teclea lo siguiente: </para>
+<para>
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>cd /
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+Esto te ubicará en el directorio superior del sistema de archivos de tu computadora.
+</para>
+
+<para>Como sabes, si tecleamos ls nos mostrará la lista de directorios de la computadora en su nivel más superior del sistema de archivos.
+</para>
+<para>
+Aquí existen varios directorios importantes de los cuales el comando <emphasis>man hier</emphasis> te ofrecerá una descripción de su significado. Pero ahora tu necesitas estar mas interesada con el que se llama <emphasis>home</emphasis>. Para dirigirte a ese directorio podemos usar el comando cd que aprendimos antes:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>cd home
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+Si tecleas ahora ls obtendrás una lista de mas directorios y quizá alguno de estos tenga el mismo nombre de tu nombre de usuario. Este es tu directorio personal o /home/ al cual hemos navegado usando un <emphasis>posicionamiento relativo</emphasis>, es decir, si estoy en el directorio superior y tecleo 'cd home' entonces me ubicaré en el directorio donde se guardan todos los directorios personales de todos los usuarios.
+</para>
+
+<para>
+Si yo estuviera en cualquiera otro lugar del sistema de archivos y tecleara 'cd home' obtendría un error. Si lo necesitas puedes usar <emphasis>rutas absolutas</emphasis> para dirigirte al directorio que quieras. Por ejemplo, si yo estuviera en alguna esquina oscura de mi sistema de archivos y necesitara rápidamente ir al directorio home, debería teclear: 
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>cd /home
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+Si necesito entrar a un directorio ubicado dentro del directorio home (digamos por ejemplo que tengo un directorio llamado 'juana'), podría teclear: 
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>cd /home/juana
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+</section>
+
+<section>
+<title>mkdir</title>
+
+<para>
+Este comando es la abreviación de <emphasis>Make Directory (Hacer Directorio)</emphasis> y lo utilizas para crear nuevos directorios. Para hacer eso, simplemente teclea mkdir seguido del nombre del directorio que quieres crear:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>mkdir bleep
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+El comando anterior creará un directorio nuevo llamado 'bleep' en el directorio en el que estoy ubicado. Si ya existiera un directorio con este nombre, obtendría un error y la computadora no sustituiría el directorio existente. Experimenta creando algunos directorios.
+
+</para>
+
+</section>
+
+<section>
+<title>pwd</title>
+
+<para>
+Si estas perdida y no sabes en que lugar del sistema de archivos estás, siempre puedes teclear <emphasis>pwd</emphasis> y el sistema te dirá donde te encuentras. Este comando te muestra la <emphasis>ruta absoluta</emphasis> hacia donde estás. Por ejemplo, si estoy en mi directorio personal 'juana', la salida del comando pwd será:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>/home/juana
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Experimenta cambiando los directorios con cd y luego tecleando pwd para ver donde estás.
+</para>
+
+</section>
+
+<section>
+<title>mv</title>
+
+<para>
+
+Este comando es corto para <emphasis>Move (Mover)</emphasis> y como suena, te permite mover archivos dentro del sistema. Este comando es como las acciones de cortar y pegar de Mac y Windows. Para usar este comando tecléalo seguido del archivo que quieras mover (en su ruta absoluta o relativa incluyendo el nombre del archivo) y luego coloca el lugar hacia donde quieres mover el archivo (en su ruta absoluta o relativa). Por ejemplo, si quiero mover el archivo 'mio.txt' desde mi directorio actual hacia el directorio '/usr/bin' debería teclear lo siguiente:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>mv mio.txt /usr/bin
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+</para>
+
+<para>
+<emphasis>Nota</emphasis>: No tengo que teclear el nombre del archivo en la ruta hacia donde lo voy a mover a menos de que además de moverlo de lugar quiera cambiarle el nombre. Si por ejemplo quiero mover el archivo 'mio.txt' y quiero cambiarle el nombre a 'tuyo.txt' debería teclear:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>mv mio.txt /usr/bin/tuyo.txt
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+Si solo quiero renombrar un archivo y no moverlo puedo usar también el comando mv para cambiar el nombre del archivo sin moverlo:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>mv mio.txt tuyo.txt
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+</para>
+
+<para>
+
+Observa que cuando usas el comando mv estás <emphasis>moviendo</emphasis> y no copiando el archivo, por lo tanto el archivo será desplazado y no existirá en el lugar desde donde lo moviste. También <emphasis>tienes que tener cuidado con sustituir archivos accidentalmente</emphasis>: si por ejemplo yo muevo un archivo hacia un directorio que contiene otro con el mismo nombre, entonces el archivo que estoy moviendo sustiuirá o sobre-escribirá este archivo, y quizá podrías estar en problemas... por lo tanto tienes que tener cuidado con lo que tocas.
+</para>
+
+</section>
+
+
+<section>
+<title>rm</title>
+
+<para>
+Por otra parte, tenemos este comando con el que deberías tener <emphasis>mucho cuidado</emphasis>. rm significa <emphasis>Remove (Remover)</emphasis> y sirve precisamente para borrar un archivo o un directorio (y sus contenidos). Se utiliza tecleando 'rm' seguido del nombre del archivo que quieres eliminar; si quieres remover un directorio puedes usar el mismo comando utilizando el parámentro -R como se indica a continuación:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>rm -R nombre-de-directorio
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+donde 'nombre-de-directorio' es por supuesto el nombre del directorio que deseas remover. Para hacer esto ultimo puedes usar también rmdir (que significa remove directory). <emphasis>Tienes que ser EXTRAMADAMENTE cuidadosa con estos comandos</emphasis> porque usarlos imprudentemente puede provocar el fin de tu sistema operativo.
+
+</para>
+
+</section>
+
+<section>
+<title>locate</title>
+
+<para>
+Este comando te ayuda a <emphasis>encontrar archivos en tu sistema</emphasis>. La ubicación de todos los archivos en tu sistema se almacena en una base de datos que se actualiza periódicamente usando el comando updatedb. Para encontrar un archivo simplemente teclea 'locate' seguido de una parte del nombre del archivo o directorio que busques. Por ejemplo, si estoy buscando el archivo icecast.conf debería teclear:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>locate icecast.conf
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Si no obtengo ningun resultado significa que el archivo no existe en mi sistema o que existe pero mi base de datos no sabe donde está. En este ultimo escenario podría teclear updatedb y volverlo a intentar.
+</para>
+
+<para>
+
+Con locate no puedes destruir nada así que experimenta tanto como quieras. Algunas veces updatedb puede tomar un poco de tiempo para ejecutarse si no lo has ejecutado recientemente o si tienes una máquina lenta; este comando consume bastante recursos del CPU en máquinas lentas así que nunca lo uses si estás realizando alguna 'misión crítica' en tu máquina.
+</para>
+
+<para>
+También disfrutarás experimentar con <emphasis>whereis, which</emphasis> y <emphasis>find</emphasis> para buscar y encontrar archivos en tu sistema.
+
+</section>
+
+<section>
+<title>cp</title>
+
+<para>
+Este es corto para... ¿adivinaste?.. <emphasis>copiar</emphasis>. Se usa como 'mv' con la única diferencia de que crea una copia dejando el archivo original sin cambios.
+
+</para>
+
+</section>
+
+<section>
+<title>ping</title>
+
+<para>
+Normalmente no se incluye en los 10 comandos que mas necesitas conocer pero es muy útil si necesitas saber si estás en línea. El comando <emphasis>ping</emphasis> envía una petición a una computadora de la red y si esta computadora está conectada entonces responderá. Teclea 'ping' seguido de alguna URL que conozcas, por ejemplo sería buena idea intentar los siguiente:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>ping www.dyne.org
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+</para>
+
+<para>
+Si la computadora recibe la petición obtendrás alguna información de regreso en la terminal, la cual se desplegará hasta que detengas el proceso ping tecleando <emphasis>ctrl + c</emphasis>.
+
+</para>
+
+<para>
+Si no obtienes ninguna respuesta de ping entonces probablemente estás desconectada. Sin embargo hay que saber que algunas máquinas no responden a las peticiones ping por seguridad u otras razones, así que asegúrate saber si realmente la máquina a la que estás enviando las peticiones responde a ping.
+</para>
+
+<para>
+También es que algunas conexiones a internet no permiten tráfico ping... por ejemplo mientras Jaromil estaba escribiendo la versión en inglés de este manual, se econtraba en un café internet en Riga donde tenían una conexión rápida pero no podía ejecutar ping; esto era debido quizá a que pensaban que solo los hackers malvados usan ping y por lo tanto tenían algunas medidas paranóicas de seguridad que no le permitían hacer todas las cosas utiles en la red...
+
+</para>
+</section>
+
+<section>
+<title>tab</title>
+
+<para>
+
+Tab no es un comando sino mas bien un atajo de teclado... cada teclado tiene una <emphasis>tecla tab</emphasis> y es muy útil en GNU/Linux. Quizá utilizaste alguna vez esta tecla para alinear palabras y aunque en GNU/Linux la podrás seguir utilizando para hacer eso, al utilizar tab en una terminal Linux ahorras tanto tiempo que cuando la domines la usarás todo el tiempo.
+
+</para>
+
+<para>
+Básicamente la tecla tab sirve para <emphasis>completar automáticamente</emphasis> lo que escribes en la consola. Si por ejemplo qiero mover hacia algún lado el archivo 'dsjkdshdsdsjhds_ddsjw22.txt' mediante el comando mv puedo teclear cada una de las letras del estúpido nombre de este archivo, o puedo teclear 'mv' (para 'moverlo') seguido de las primeras letras del nombre del archivo y luego presionar la tecla 'tab' que mágicamente completará el resto del nombre del archivo. Si el nombre del archivo no se completa significa que existen varios archivos (o directorios) que empiezan con estas pocas letras que he tecleado, por lo que podría teclear algunas letras mas del nombre del archivo y teclear tab nuevamente o ayudarme tecleando dos veces *tab* y así me mostrará una lista de los archivos que comienzan con estas letras.
+</para>
+
+<para>
+Tab es tu amigo, hay que usarlo mucho.
+</para>
+
+</section>
+
+<section>
+<title>Otros comandos</title>
+
+<para>
+Al principio de este capítulo dijimos que existen algunos 'otros' comandos que es recomendable conocer, estos son:
+
+
+<simplelist>
+<member>ldconfig</member>
+<member>./configure</member>
+<member>make</member>
+<member>make install</member>
+<member>tar</member>
+<member>more</member>
+<member>whereis</member>
+</simplelist>
+Ya hemos hablado de algunos de ellos, nombrándolos *whereis* y *updatedb*. Los demás son útiles cuando estas instalando software.
+
+</para>
+
+<para>
+More se usa si quieres tener un mayor control de la salida en terminal de cualquier comando. Si por ejemplo estoy en un directorio que contiene 1000 archivos y tecleo 'ls' la salida del comando no se ajustará agradablemente a la pequeña ventana de mi terminal que la desplegará tan rápidamente que no me sirve. Para desplegarlo mas lentamente y poder leer la salida incluimos 'more', de esta manera:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>ls | more
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+Si yo uso esto en mi directorio con 1000 archivos obtengo como salida una página a la vez, para ver la página siguiente presiono la barra espaciadora; presionando 'q' termina 'more'. Muy bien, seguramente te estás preguntando qué es esa curiosa linea delgada en el comando anterior... bueno, pues eso es conocido como el comando <emphasis>pipe</emphasis>.
+</para>
+
+<para>
+Pipe te permite combinar comandos para controlar el tipo de salida que obtienes, normalmente se utiliza para refinar un comando tal y como lo hacen los parámetros de comando. Por lo tanto cuando obtengas fluidez con estos comandos puedes escribir cosas que parecen ecuaciones pero que realmente son maneras de usar comandos generales... y pipe es fundamental para perfecionar tu eficiciencia.
+
+</para>
+
+
+</section>
+
+
+</section> <!-- text commands -->
+
+<section>
+<title>Estructura de Archivos de Linux</title>
+
+<para>
+Si abres una terminal y tecleas lo siguiente (seguido de la teclea 'Enter'):
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>cd /
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Te ubicarás en el directorio superior del sistema de archivos de Linux. Si luego tecleas:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>ls -al
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Verás entonces algo similar a esto:
+
+<screen>
+total 80
+drwxr-xr-x  19 root root  4096 Oct  9 13:57 .
+drwxr-xr-x  19 root root  4096 Oct  9 13:57 ..
+drwxr-xr-x   2 root root  4096 Oct  5 09:31 bin
+drwxr-xr-x   3 root root  4096 Oct  9 21:47 boot
+drwxr-xr-x   1 root root     0 Jan  1  1970 dev
+drwxr-xr-x  71 root root  4096 Oct 15 11:35 etc
+drwxr-xr-x   4 root root  4096 Oct  9 19:21 home
+drwxr-xr-x   8 root root  4096 Sep 18 23:29 lib
+drwx------   2 root root 16384 Sep 18 20:06 lost+found
+drwxr-xr-x   9 root root  4096 Oct  9 16:36 mnt
+drwxr-xr-x   9 root root  4096 Oct  8 23:20 opt
+dr-xr-xr-x  64 root root     0 Oct 15 11:35 proc
+drwx------  75 root root  8192 Oct 15 12:35 root
+drwxr-xr-x   2 root root  4096 Sep 23 18:58 sbin
+drwxr-xr-x   9 root root     0 Oct 15 11:35 sys
+drwxrwxrwt  60 root root  4096 Oct 15 12:36 tmp
+drwxr-xr-x  17 root root  4096 Oct  5 09:31 usr
+drwxr-xr-x  15 root root  4096 Oct  9 13:57 var
+</screen>
+
+<para>
+
+La lista anterior es lo más aproximado a la estructura general del directorio de Linux. Cada nombre en la extrema derecha representa un directorio, y cada directorio contiene archivos y directorios que son específicos a ese directorio. Por ejemplo el directorio 'lib' contiene librerías de software que tu sistema utiliza. Por ahora tu solo tienes que precocuparte por un directorio: el directorio 'home'. Este directorio contiene folders con nombres que corresponden a cada uno de los usuarios de la máquina. Si tu nombre de acceso es 'juana' por ejemplo entonces tu entrada a la máquina será al directorio de 'home' que tiene el mismo nombre de tu usuaria (es decir, 'juana' en este ejemplo).
+</para>
+
+<para>
+Una cosa importante de tener en cuenta ahora es precisamente esta estructura de directorios de Linux. Otra cosa importante es que Linux consiste mayoritariamente de archivos de texto y por lo tanto puedes cambiar casi cada parte de Linux -como se ve y como trabaja- tan solo editando el archivo de texto apropiado. En ambientes Windows y Machintosh tu haces este tipo de cambios a traves de pequeñas aplicaciones con una pequeña interfaz gráfica (GUI). En Windows por ejemplo, si quieres cambiar la resolución de tu pantalla usas el panel de control 'display' localizado en el directorio de paneles de control. En Linux puedes hacer esto editando un archivo de texto.
+</para>
+
+<para>
+Esto tiene algunas ventajas, como la de ofrecerte mayor control. Pero también tiene algunas desventajas, como que puede ser dificil aprender cuales archivos editar y qué cambios hacer. Algunas veces para facilitar la transición a Linux desde otros sistemas operativos, puedes encontrar algunos softwares de configuración para Linux instalados en tu sistema los cuales utilizan una GUI (Interfaz Gráfica de Usuario) similares a Macintosh y Windows. Pero este no es siempre el caso, así que eventualmente tendrás que encontrar por tí misma cómo hacer esto manualmente con un editor de texto.
+
+</para>
+
+</section> <!-- linux file structure -->
+
+
+<section>
+<title>Editores de Texto</title>
+
+<para>
+Si no sabes como usar un editor de texto en Linux no podrás realmente ir muy lejos poque leer los archivos 'README' e 'INSTALL' será una necesidad muy temprana cuando vas aprendiendo a usar la línea de comandos.
+</para>
+
+<para>
+
+Sobre los editores de texto se ha escrito mucho en varios libros así que nos preguntamos cómo hablar aquí de esto y hacerles justicia... bueno, es algo difícil pero podemos echarle un vistazo de cualquier modo. Elegiremos arbitrariamente un par: <emphasis>nano</emphasis> y <emphasis>vim</emphasis>. También revisaremos <emphasis>less</emphasis> que no es un editor pero si un comando que te permite leer archivos de tu sistema.
+
+<section>
+<title>less</title>
+
+<para>
+Empezemos con 'less'. Este es un comando que abre archivos de texto únicamente para leerlos. Si por ejemplo, el directorio en el que estoy actualmente trabajando tiene un archivo llamado 'README', entonces intento este comando:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>less README
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+Para desplazarte <emphasis>arriba y abajo utiliza las flechas correspondientes</emphasis> y para salir teclea la letra <emphasis>q</emphasis>.
+
+</para>
+
+<para>
+
+Recuerda que less solo te permite leer archivos. Para editarlos necesitarás un editor de textos o de palabras (a veces no hay mucha diferencia entre ambos).
+
+</para>
+
+</section>
+
+<section>
+<title>vim</title>
+
+<para>
+Vim es un editor de texto comunmente utilizado por programadores para trabajar con código. Para abrir un archivo con vim lo mejor es teclear vim y luego el nombre del archivo, para que de esta manera vim se abra con el archivo ya cargado. Por ejemplo, si queremos leer el archivo "README" del mismo directorio donde estamos trabajando, tecleamos:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>vim README
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+</para>
+
+<para>
+Para desplazarte arriba y abajo del archivo utiliza las flechas correspondientes y para salir de vim teclea primero el signo de dos puntos <emphasis>:</emphasis>, luego la letra <emphasis>q</emphasis> y luego enter.
+
+<para>
+Hay mucho que decir acerca de los editores 'vi' y 'vim' que no vamos a decirlo aquí, pero lo que deberías saber es cómo abrir un archivo (indicado arriba) y luego editarlo. Para editar un archivo en vim necesitas primero abrirlo y luego presionar la tecla <emphasis>i</emphasis>.
+
+</para>
+
+<para>
+Ahora, estamos imaginando que vim es muy diferente a cualquier otro editor de texto que haz utilizado antes, por eso es que algunas explicaciones son necesarias. Inicialmente Vim abre el archivo como de solo lectura, lo que significa que cuando tu lo abres no podrás cambiarlo. Para editar un archivo Vim tiene un mundo de comando que puedes usar para trabajar con el archivo y la mayoría de estos comandos se ejecutan con tan solo teclear una simple letra, o están en el formato:
+<screen>
+: comando
+</screen>
+donde 'comando' es el nombre del comando que quieras usar. Los comandos están designados por abreviaturas: una <emphasis>i</emphasis> por ejemplo, significa <emphasis>insertar</emphasis>. La siguiente es una tabla de los comandos de vim que deberías conocer:
+<screen>
+
+comando                                           acción
+i  (usado en modo de solo lectura)        inserta texto
+:w (usado en modo de solo lectura)        escribe los cambios al archivo
+u  (usado en modo de solo lectura)        deshace los cambios
+:q (usado en modo de solo lectura)        sale de vim
+
+</screen>
+
+</para>
+
+<para>
+
+
+Adicionalmente, presionando la tecla <emphasis>esc</emphasis> (escape) podrás decirle a vim que regrese al modo original (solo lectura), de hecho deberías presionar escape antes de ejecutar cualquiera de los comandos. Por ejemplo, si quiero abrir el archivo "README" y luego editar algo de texto, debería de hacer lo siguiente: 1) comenzar tecleando <emphasis>vim README </emphasis>en la terminal, lo que abrirá el archivo "README" como explicamos antes; 2) Si quiero editar el archivo utilizo las teclas de flechas para ubicarme donde quiero insertar o borrar algo de texto, y entonces presiono <emphasis>i</emphasis> para ubicarme en el modo de inserción y de este modo cualquier cosa que yo teclee aparecerá en el mismo documento; 3) Cuando he terminado de hacer los cambios presiono la tecla <emphasis>esc</emphasis> y finalmente para escribir y guardar los cambios en el archivo tecleo <emphasis>:w</emphasis>; 4) Ahora necesito salir de vim y para eso presiono la tecla <emphasis>esc seguido de :q</emphasis>.
+
+</para>
+
+<para>
+Ahora busca un archivo y experimenta. Si no haz utilizado antes algo como vim te llevará algo de tiempo acostumbrarte, así que dedicale algo de tiempo para trabajar con el antes de que realmente lo necesites usar.
+
+</para>
+</section>
+
+</section> <!-- text editors -->
+
+<section>
+<title>Instalando Software desde las fuentes</title>
+
+<para>
+Instalar software en Linux es un tema amplio porque cada version de Linux tiene su propio sistema de manejo de paquetes, aunque todos los tipos de Linux posibilitan a los usuarios instalar software usando el código fuente. Sin embargo probablemente no querrás batallar con este proceso hasta que no sepas un poco mas cómo usar los comandos y el sistema de archivos de Linux. Si no sabes acerca de estas dos cosas, es mejor que primero leas al respecto y luego regreses por aquí.
+</para>
+
+<section>
+<title>Descomprimir</title>
+
+<para>
+Instalar software desde el código fuente funciona en cualquier sistema Linux y es muy bueno saber sobre este proceso. Una vez que tengas el paquete fuente, el proceso sigue mas o menos esta ruta:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>tar xvfz nombredepaquete.tar.gz
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+En este ejemplo anterior 'nombredepaquete' es el actual nombre del paquete que tu quieras instalar. El comando <emphasis>tar</emphasis> seguido de los parámetros <emphasis>xvfz</emphasis> descomprime un archivo <emphasis>tar.gz</emphasis> y crea un nuevo directorio conteniendo todas las fuentes extraídas. Luego tienes que cambiar tu directorio de trabajo usando el comando 'cd'; normalmente el nuevo directorio llevará el nombre del paquete descomprimido pero sin la terminación '.tar.gz'.
+
+Por ejemplo si mi paquete realmente se llamaba 'paquete.tar.gz.' entonces luego de ejecutarle el comando 'tar xvfz' tendré un nuevo directorio llamado 'nombredepaquete' al cual podría entrar si tecleo 'cd nombredepaquete'. Si no estás segura de cual es el nombre del directorio teclea 'ls'.
+</para>
+
+</section>
+
+<section>
+<title>Configurar</title>
+
+<para>
+Muy bien, una vez dentro del nuevo directorio podemos empezar con el proceso de instalación. Para hacer esto, el 99% de las veces necesitarás teclear lo siguiente:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>./configure
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+Bueno, esto no es realmente un comando. Cada paquete de instalación contiene tiene normalmente un script llamado <emphasis>configure</emphasis>. Poniéndole un punto y luego una diagonal después del nombre del script ( ./configure ) le dices a Linux que ejecute (corra) ese script. Luego entonces, el script hace su trabajo verificando qué tipo de máquina tienes, que tienes instalado, que tipo de Linux estás utilizando, etc, etc.
+</para>
+
+<para>
+El problema mas común al llegar a este punto es que el script de configuración se detenga y te diga que existen librerías ausentes de las cuales el nuevo software depende. Este puede ser uno de los horrores por los que la gente inventó los sistemas de manejo de paquetes. De cualquier modo si experimentas este error necesitas buscar bien sobre el error que el software está diciendo y encontrar lo que le falta para luego comenzar de nuevo el proceso de instalación con el nuevo paquete. No estamos bromeando cuando decimos que una instalación de sofware nuevo puede tomar días mientras buscas y descargas todos los paquetes que necesitas.
+</para>
+
+</section>
+
+<section>
+<title>Compilar</title>
+
+<para>
+Asumiendo que no tienes ningún error mientras ejecutas el script de configuración, deberías agradecerle a cualquiera que sea el angel que te rodea. Luego, el próximo comando a teclear en el proceso de instalación es el siguiente:
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>make
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+Este comando prácticamente hace (compila) el software para tí, teniendo como resultado final varios archivos compilados que en conjunto forman tu software. El tiempo que 'make' pueda tomar para realizar su proceso depende de la velocidad de tu máquina y del tamaño de las fuentes del paquete que estes instalando, además de que tener abiertas otras aplicaciones también puede volver lento el proceso.
+
+</para>
+
+<para>
+Cuando make se ha detenido, tecleamos lo siguiente:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>make install
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+y esto instalará el nuevo software en el lugar correcto de tu sistema. Luego solo necesitas teclear el nombre de la nueva aplicación en tu terminal y debería ejecutarse. Si no lo hace y te devuelve un error, un remedio común es teclear <emphasis>ldcongif</emphasis> e intentarlo de nuevo. El comando 'ldconfig' actualiza el sistema para que tu sistema operativo sepa que hay nuevos archivos de librerias, etc.
+
+</para>
+
+</section>
+
+</section> <!-- Install software from source -->
+
+</chapter>

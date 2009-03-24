@@ -1,11 +1,11 @@
 <chapter>
   <title>Software para Gráficos</title>
-  <subtitle>Manipulación de imágenes y modelaje 3d</subtitle>
+  <subtitle>Manipulación de imágenes y modelaje 3D</subtitle>
 
 <para>
 
 La distribución  dyne:bolic incluye algunos  programas excelentes para
-la composición de imágenes y el modelaje 3d:
+la composición de imágenes y el modelaje 3D:
 </para>
 
 <para>
@@ -13,9 +13,9 @@ la composición de imágenes y el modelaje 3d:
 <secondary> Gimp </secondary>
 </indexterm>
 
-<emphasis>Gimp</emphasis> es una aplicación  muy completa que capaz de
-crear y editar imágenes de mapas  de bits y ofrece un entorno perfecto
-para los  gráficos de internet  así como una poderosa  tecnología para
+<emphasis>Gimp</emphasis> es una aplicación  muy completa capaz de
+crear y editar imágenes de mapas de bits que ofrece un entorno perfecto
+para los  gráficos de internet. Contiene una poderosa  tecnología para
 automatizar sus operaciones y hasta generar logotipos estilizados.
 </para>
 
@@ -27,8 +27,7 @@ automatizar sus operaciones y hasta generar logotipos estilizados.
 </indexterm>
 
 <emphasis>Inkscape</emphasis>  es un  editor  de gráficos  vectoriales
-adaptable para el dibujo a mano, caricaturas y comics y demás gráficos
-generalmente escalables, convirtiéndose  en una herramienta ideal para
+adaptable para el dibujo a mano, para las caricaturas y los comics y todos los  gráficos generalmente escalables, convirtiéndose  en una herramienta ideal para
 folletos e impresiones de alta resolución y tetracromáticas.
 
 </para>
@@ -40,9 +39,9 @@ folletos e impresiones de alta resolución y tetracromáticas.
 </indexterm>
 
 <emphasis>Blender</emphasis> consiste en  una poderoso entorno para el
-modelaje en 3d y el desarrollo  de juegos: tiene una interfaz muy bien
+modelaje en 3D y el desarrollo  de juegos: tiene una interfaz muy bien
 desarrollada, un motor  escrito en Phyton para el  trazado y escritura
-del  comportamiento  de  objetos.   Puede producir  escenas  así  como
+del  comportamiento  de  objetos.  Puede producir  escenas  así  como
 aplicaciones    interactivas    y    animaciones    en    líneas    de
 tiempo. Actualmente  existe una  gran comunidad de  artistas usándolo,
 hay tutoriales y  ejemplos disponibles en su sitio  web, además de que
