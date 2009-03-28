@@ -18,8 +18,11 @@ computadoras recicladas. Solo recuerda que  necesitas planear bien la arquitectu
 de tus recursos dependiendo de tu situación específica.
 </para>
 
-<section> <title>Arrancar desde el disco duro</title>
-<indexterm><primary>arrancar desde disco duro</primary></indexterm>
+<section> 
+<title>Arrancar desde el disco duro</title>
+
+<indexterm><primary>disco duro</primary></indexterm>
+
 <para>
 Con Docking  vimos que  simplemente al mover  un  directorio a  la  raíz  de  una partición  puede  dejarnos arrancar desde  el CD y usar el  sistema desde el disco  duro. Esto es una manera muy simple y segura  de tener un sistema de arranque doble: con el CD dentro para dyne:bolic, con el CD fuera para cualquier otra cosa. Aún así  a mucha gente realmente le  gustaría deshacerse del CD,
 así que aquí se explica cómo hacerlo.

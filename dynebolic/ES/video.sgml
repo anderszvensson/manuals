@@ -7,99 +7,51 @@
 </indexterm>
 
 <para>
-Hoy en día  la plataforma GNU/Linux ofrece un  interesante panorama de
-herramientas  para la  producción,  edición y  manipulación de  video;
-puedes  reproducir cualquier  tipo de  archivo  de video  y DVD,  pero
-también  codificarlo   para  distribuirlo  además   de  cambiar  entre
-formatos.   Mas  aún,   puedes  encontrar   software  para   grabar  y
-edición-subtitulación  no lineal,  además de  software para  mezclar y
-hacer stream.
+Hoy en día la plataforma GNU/Linux ofrece un interesante panorama de herramientas para la producción, edición y manipulación de video; puedes reproducir cualquier tipo de archivo de video y DVD, pero también codificarlo para distribuirlo y cambiar entre formatos. Mas aún, puedes encontrar software para grabar y para realizar edición-subtitulación no lineal, además de software para mezclar varios canales de video y hacer stream.
 </para>
 
-<para>
-Sin embargo deberías considerar que la mayoría de las herramientas que
-corren en  la plataforma  GNU/Linux están en  desarrollo: de  hecho tu
-puedes ayudar mucho probando  y reportando los errores que encuentres,
-así es  como cualquiera  puede ayudar a  que el softeare  libre crezca
-mucho mejor, como lo hace.
+<para>Sin embargo deberías considerar que la mayoría de las herramientas que corren en la plataforma GNU/Linux están en desarrollo: de hecho tu puedes ayudar mucho probando y reportando los errores que encuentres, así es como cualquiera puede ayudar a que este software libre crezca mucho mejor, como de hecho lo hace.
 </para>
 
-<para>
-Ahora vamos a saber cómo configurar un dispositivo de video disponible
-y  luego navegar  en  el  software de  video  incluido en  dyne:bolic,
-siguiendo una subdivisión en las categorías de tareas.
+<para>Ahora vamos a saber cómo configurar un dispositivo de video disponible y luego navegar por el software de video incluido en dyne:bolic, siguiendo las categorías de tareas que este software realiza.
 </para>
+
 
 <section>
   <title>Configurando tus dispositivos de video</title>
 
 <indexterm><primary> Video </primary>
-<secondary>Device setup</secondary>
+<secondary>configuración de dispositivos</secondary>
 </indexterm>
 
 <para>
-Hay  varios  dispositivos  que   pueden  ser  usados  en  computadoras
-personales para  obtener entrada de  video: Webcams USB y  tarjetas de
-captura,   tarjetas   PCI   para   TV,  Firewire   y   hasta   puertos
-paralelos.   Todos  ellos   tienen  diferentes   Circuitos  Integrados
-Auxiliares  (Chipset)  y  fabricantes.  Estos  dispositivos  necesitan
-diferentes controladores (drivers) de Linux.
+
+Hay varios dispositivos que pueden ser usados en computadoras personales para capturar video: Webcams por USB, tarjetas de captura, tarjetas PCI para TV, Firewire y puertos paralelos. Todos ellos tienen diferentes fabricantes y Circuitos Integrados Auxiliares (Chipset). Estos dispositivos necesitan diferentes controladores (drivers) para funcionar en Linux.
 </para>
 
-<para>
-Dyne:bolic  es  capaz  de  reconocer automáticamenete  la  mayoría  de
-tarjetas  PCI (internas)  y  tarjetas  de TV  al  momento de  arrancar
-(WinTV, BTTV),  y ahora también reconoce controladores  Firewire y USB
-webcams: todos serán  inicializados al cargar el sistema  y pueden ser
-accesados          desde          los         dispositivos          de
-video  <emphasis>/dev/video0</emphasis>  o  los  subsecuentes  números
-(video1, video2..) en caso de que tengas mas de uno.
+<para>Dyne:bolic es capaz de reconocer automáticamenete la mayoría de tarjetas PCI para TV (internas) al momento de arrancar (WinTV, BTTV) y ahora también reconoce controladores Firewire y webcams USB: todos serán inicializados al cargar el sistema y pueden ser accesados desde los dispositivos de video <emphasis>/dev/video0</emphasis> o los subsecuentes números (video1, video2..) en caso de que tengas mas de un dispositivo de este tipo.
 </para>
 
-<para>
-Si  tu  dispositivo de  video  no  es  reconocido automáticametne  (si
-/dev/video no existe) entonces tu necesitas configurarlo a mano. En el
-caso  de las  webcams USB  un buen  lugar para  comenzar  una busqueda
-indirecta  es el  <ulink  url="http://www.linux-usb.org">sitio web  de
-Linux-usb</ulink>. También la guía elaborada  por Spot para el usar tu
-cámara es  un buen lugar a  visitar para buscar  más información sobre
-qué hacer.
+<para>Si tu dispositivo de video no es reconocido automáticamente (cuando /dev/video no existe) entonces tú necesitas configurarlo a mano. En el caso de las webcams USB un buen lugar para buscar es <ulink url="http://www.linux-usb.org">el sitio web de Linux-usb</ulink>. También puedes revisar <ulink
+url="http://spot.river-styx.com/viewarticle.php?id=16">la guía elaborada por Spot para usar la cámara</ulink> es un buen lugar a visitar para buscar más información sobre qué hacer en casos así.
 </para>
 
-<para>
-Si la  documentación en línea  dice que tu dispositivo  está soportado
-por un  controlador de un kernel específico,  puedes intentar cargarlo
-usando el comando  '<emphasis>modprobe modulename</emphasis>' y ver si
-todo fue bien  mirando lo que dicen la últimas  líneas del mensaje que
-devuelve  el  comando  '<emphasis>dmesg</emphasis>'.   Muchos  módulos
-están  presentes  en  dyne:bolic,  pero algunos  pueden  requerir  ser
-compilados usando  las fuentes  del kernel, lo  cual es  un complicado
-proceso que  no puede ser  explicado aquí: necesitarías  encontrar mas
-instrucciones en línea sobre cómo  hacerlo y descargar las fuentes del
-kernel       dyne:II.         Para       esto       es       necesario
-usar <emphasis>dyneSDK</emphasis> (ver el capítulo Desarrollo)
-</para>
-
+<para>Si la documentación en línea dice que tu dispositivo está soportado por un controlador de kernel específico, puedes intentar cargarlo usando el comando '<emphasis>modprobe nombre-del-módulo</emphasis>' y comprobar que todo resultó bien mirando lo que dicen la últimas líneas del mensaje que devuelve el comando '<emphasis>dmesg</emphasis>'. Muchos módulos están presentes en dyne:bolic, pero algunos pueden requerir ser compilados usando las fuentes del kernel, lo cual es un complicado proceso que no puede ser explicado aquí: necesitarías encontrar más instrucciones en línea sobre cómo hacerlo y descargar las fuentes del kernel dyne:II. Para esto es necesario usar <emphasis>dyneSDK</emphasis> (ver el capítulo Desarrollo)</para>
 </section>
 
 <section>
 <title>VeeJay</title>
 
 <para>
-
-Las aplicaciones  ?VeeJay implementan una  aproximación vanguardista a
-la  manipulación de video  en tiempo  real que  toma ventaja  del alto
-poder  computacional/informático que las  computadoras ofrecen  hoy en
-día. Si  eres una  persona activa  en los campos  de artes  visuales y
-medios  electrónicos, danza  o escenografía,  este software  puede ser
-interesante y en ocasiones muy útil en tus investigaciones.
+Las aplicaciones VeeJay implementan una aproximación vanguardista a la manipulación de video en tiempo real que toma ventaja del alto poder computacional/informático que las computadoras ofrecen hoy en día. Si eres una persona activa en los campos de las artes visuales y los medios electrónicos, la danza o la escenografía, este software puede ser interesante y en ocasiones muy útil para tus investigaciones.
 </para>
 
+<indexterm><primary> Video </primary>
+<secondary> FreeJ </secondary>
+</indexterm>
+
 <para>
-<ulink  url="http://freej.dyne.org">FreeJ</ulink> es  un  mezclador de
-vision: un instrumento para manipulación de video en tiempo real usado
-en los campos  de la danza, el teatro,  el veejaying, la visualización
-médica y en la Televisión.
+<ulink url="http://freej.dyne.org">FreeJ</ulink> es un mezclador de visión: un instrumento para la manipulación de video en tiempo real usado en los campos de la danza, el teatro, el veejaying, la visualización médica y la Televisión.
 </para>
 
 <para>
@@ -114,12 +66,9 @@ maravilloso mundo de la programación.
 <para>
   Mas      documentación       sobre      FreeJ      se      encuentra
 en   <emphasis>/opt/video/share/freej</emphasis>,   especialmente   la
-referencia                                                           al
-script. Un <ulink url="http://lab.dyne.org/FreejTutorialPiotr_01">amistoso
-manual de  usuario</ulink> está disponible en línea  y más información
-puede                 encontrarse                 en                el
-sitio <ulink url="http://freej.dyne.org">freej.dyne.org</ulink>
+referencia al script. Un <ulink url="http://lab.dyne.org/FreejTutoriales">amistoso manual de usuario</ulink> está disponible en línea, y más información puede encontrarse en el sitio <ulink url="http://freej.dyne.org">freej.dyne.org</ulink>
 </para>
+
 
 <para>
 
@@ -127,12 +76,14 @@ sitio <ulink url="http://freej.dyne.org">freej.dyne.org</ulink>
 <secondary> EffecTV </secondary>
 </indexterm>
 
-Otras  herramientas  incluídas  en  dyne:bolic  son  utiles  para  ser
+Otras  herramientas  incluidas  en  dyne:bolic  son  utiles  para  ser
 aplicadas    al     video    en    tiempo     real    de    diferentes
 maneras: <emphasis>EffecTV</emphasis> puede  aplicar efectos en tiempo
 real a  imágenes, una  por una, realizando  "espejos de  distorsión" y
 otros  posibles   usos  divertidos;
+</para>
 
+<para>
 <indexterm><primary> Video </primary>
 <secondary> Xaos </secondary>
 </indexterm>
@@ -141,21 +92,19 @@ Xaos te  permite explorar el  psicodélico mundo del caos  matemático y
 los fractales :)
 </para>
 
+
 <para>
 <indexterm><primary> Video </primary>
 <secondary> Pure Data </secondary>
 </indexterm>
 
-
 Una pieza de software destacada es <emphasis>Pure Data</emphasis>, que
 junto  con varias  extensiones  genera una  herramienta para  conectar
-varias unidades de  procesamiento en una escritura visual  al día para
-generar máquinas  sonoras y herramientas interactivas  de video.  Pure
+varias unidades de  procesamiento en una escritura visual que genera máquinas  sonoras y herramientas interactivas  de video.  Pure
 Data, también llamado PD, es tan poderosa como complicada de aprender;
 ayuda el  hecho de que ahora  ha sido adoptada por  varias escuelas de
 arte mediático alrededor del mundo  como un proyecto libre y de código
 abierto, para que los estudiantes puedan realizar sus proyectos.
-
 </para>
 
 <para>
@@ -166,9 +115,10 @@ implementar  el módulo  de software  <emphasis>pure.dyne</emphasis> el
 cual  te  ofrece  todo  lo  que necesitas  para  comenzar  a  utilizar
 directamente Pure  Data sin problemas de instalación:  visita el sitio
 web <ulink url="http://puredyne.goto10.org">puredyne.goto10.org</ulink>
-para descargar una copia y agregala a tu sistema dyne:bolic.
+para descargar una copia e incorporarla a tu sistema dyne:bolic.
 
 </para>
+
 </section>
 
 <section>
@@ -188,9 +138,8 @@ para descargar una copia y agregala a tu sistema dyne:bolic.
 
 
 <para>
-Los  programas  están equipados  para  reproducir  varios formatos  de
-video, como los archivos AVI, MPEG, DIVX y WMV, señales de tarjetas de
-TV o  Quicktime, RTPS y  señales de red  en vivo tipo HTTP.   Hasta el
+Los  reproductores de video incluidos en dyne:bolic soportan varios formatos, como los archivos tipo AVI, MPEG, DIVX y WMV; también las señales de tarjetas de
+TV o  Quicktime, RTPS y  señales de red en vivo tipo HTTP.   Hasta el
 momento, dyne:bolic  es compatible con  la mayoría de los  formatos de
 video existentes: gracias al  software libre <emphasis>Mplayer, Xine y
 FFMpeg</emphasis> tienes  la oportunidad de  ver archivos que  de otra
@@ -213,44 +162,38 @@ tienes que presionar 'q').
 
 <para>
 La grabación de video tiene soporte para usarse en un amplio número de
-dispositivos:   desde    la   tarjeta    de   TV/video   y    el   DVD
-usando <emphasis>MEncoder</emphasis> hasta una herramienta de línea de
-comandos que puede  ser usada desde una XTerminal,  un poco complicada
-pero muy poderosa, revísalo en  el manual.
-
+dispositivos: desde la   tarjeta de   TV/video   y   hasta el   DVD pueden ser grabadas usando <emphasis>Mencoder</emphasis>, una herramienta de línea de
+comandos para ser usada desde una XTerminal, que aunque es un poco complicada resulta muy poderosa.
+</para>
 
 <indexterm><primary> Video </primary>
 <secondary> Kino </secondary>
 </indexterm>
 
-Una interfaz amigable para la captura  de DV a través de firewire está
-disponible  con <emphasis>Kino</emphasis>;
-
-
 <indexterm><primary> Video </primary>
 <secondary> XawTV </secondary>
 </indexterm>
 
-mientras que <emphasis>XawTV</emphasis>  ofrece soporte para todos los
-otros tipos de dispositivos de video y puede ser muy bueno para checar
-si  el tuyo  es  reconocido ya  que  tiene el  soporte  mas amplio  de
-hardware.
+<para> 
+ Una interfaz amigable para la captura de DV a través de firewire está disponible con <emphasis>Kino</emphasis>; mientras que <emphasis>XawTV</emphasis> ofrece soporte para todos los otros tipos de dispositivos de video, por lo que puede ser muy bueno para checar si el tuyo es reconocido ya que tiene el soporte mas amplio de hardware.
 </para>
 
 </section>
 
 <section>
   <title>Editar</title>
-<para>
+
 
 <indexterm><primary> Video </primary>
 <secondary> Cinelerra </secondary>
 </indexterm>
 
+<para>
 Dentro  de dybe:bolic  encontrarás  <emphasis>Cinelerra</emphasis>, el
 cual  ofrece un  acercamiento  a  la edición  no  lineal mediante  una
-agradable interfaz, es veloz y tiene buena respuesta.
+agradable interfaz, y rapidez y efectividad en su desempeño.
 </para>
+
 
 <para>
 Puedes obtener  una introducción a Cinelerra con  el manual disponible
@@ -259,7 +202,12 @@ en <ulink url="http://manual.cinelerra.org">manual.cinelerra.org</ulink>
 o                                                                    en
 este <ulink url="http://www.robfisher.net/video/cinelerra1.html">tutorial
 en línea</ulink>.
+
+Si tienes curiosidad de ver lo que es posible realizar con Cinelerra, echa un vistazo a la <ulink url="http://lab.dyne.org/cinelerra/ListOfCinelerraProductions">galería de videos</ulink> de los usuarios de Dyne:Bolic, donde podrás agregar tus maravillosas creaciones.
+ 
 </para>
+
+
 
 <para>
 
@@ -268,17 +216,17 @@ en línea</ulink>.
 </indexterm>
 
 También <emphasis>AviDeMux</emphasis> es  una herramienta útil para el
-cortado rápido de video, ofrece  soporte a mas formatos de entrada que
+cortado rápido de video, ofrece  soporte a más formatos de entrada que
 Cinelerra y  puede ser usado  para convertir entre algunos  formatos y
 para hacer tareas simples de edición.
 </para>
 
+
 <para>
 Considera que las tareas de  edición de video son las más demandantes,
-así  que   necesitas  una  relativamente   rápida  computadora  (desde
-2004-2005) para poder lograr  una adecuada interactividad y resultados
-satisfactorios.
+así  que   necesitarás de  una computadora  relativamente rápida (por ejemplo las fabricadas a partir del año 2004 o 2005) para poder lograr  una adecuada interactividad y resultados satisfactorios.
 </para>
+
 
 <para>
 <indexterm><primary> Video </primary>
@@ -288,8 +236,7 @@ satisfactorios.
 Para  convertir  entre  formatos  de  video, se  incluye  la  poderosa
 herramienta <emphasis>Transcode</emphasis>, la  cual es una aplicación
 de línea  de comandos que puede  ser aplicada para  convertir un largo
-número de  archivos o  fácilmente accesible a  través de  una interfaz
-gráfica.
+número de  archivos. Esta herramienta además es fácilmente accesible a  través de  una interfaz gráfica.
 </para>
 
 </section>
@@ -307,12 +254,12 @@ Con Mpeg4IP podrás hacer stream  en formato Mpeg4 y para eso necesitas
 un servidor corriendo el software  de transmisión Darwin. La señal que
 resulte  puede   ser  vista  con  la  mayoría   de  los  reproductores
 disponibles hoy en día en varias plataformas. Este método ofrece buena
-calidad  y una secuencia  de cuadros  de imágen  lis (sin  saltos); se
+calidad  y una secuencia  de cuadros  de imágen  sin  saltos; se
 puede  grabar mientras se  reproduce; usa  eficientemente el  ancho de
 banda cuando se utiliza en multicast, y puede transmitir el audio y el
 video  sincronizados.  Sus  deventajas   son  que  puede  ser  difícil
-encontrar o  levantar un  servidor que transmita,  y que  las máquinas
-lentas no pueden ni reproducirlo ni transmitirlo (intensidad de CPU).
+encontrar o  levantar un  servidor que lo transmita,  y que  las máquinas
+lentas no pueden ni reproducirlo ni transmitirlo (debido al uso intensivo de CPU).
 </para>
 
 <para>
@@ -322,9 +269,8 @@ lentas no pueden ni reproducirlo ni transmitirlo (intensidad de CPU).
 </indexterm>
 
 Con FreeJ puedes combinar diferentes fuentes de video, aplicar efectos
-y sobreponer  texto, colocar imágenes transparentes y  mucho mas; toda
-la señal  puede ser  codificada en  vivo con el  codec libre  Theora y
-enviada a un servidor activo Icecast2, de esta manera cualquiera puede
+y sobreponer  texto, colocar imágenes transparentes y  mucho más; toda
+la señal  puede ser  codificada en  vivo con el  codec libre  Theora para luego ser enviada a un servidor activo Icecast2. De esta manera cualquiera puede
 tomar tu señal desde el  internet y reproducirla usando por ejemplo el
 reproductor  <ulink url="http://www.videolan.org">VideoLan</ulink> que
 está  disponible  para  todas  las plataformas  de  computadoras.   La
@@ -333,13 +279,14 @@ característica única  de FreeJ, pero  una desventaja puede ser  que al
 principio tengas dificultadas para  manejar el programa dado que tiene
 que ser activado  con marcas específicas desde una  XTerminal para así
 poder activar las funcionalidades de transmisión. Para saber más sobre
-esto revisa el  capítulo anteriror que habla sobre  VeeJaying y revisa
+esto revisa el  capítulo anterior que habla sobre  VeeJaying y revisa
 también                           el                          capítulo
 de  <ulink  url="http://lab.dyne.org/FreejStreaming">Streaming  en  la
 documentación         en        línea         de        FreeJ</ulink>.
-En     <emphasis>/opt/video/share/freej</emphasis>    de    dyne:bolic
+En <emphasis>/opt/video/share/freej</emphasis>    de    dyne:bolic
 encontrarás un script de ejemplo para hacer stream.
 </para>
+
 
 <para>
 
@@ -347,20 +294,18 @@ encontrarás un script de ejemplo para hacer stream.
 <secondary> HasciiCam </secondary>
 </indexterm>
 
-Hasciicam  es otro  software  Rasta, el  primero  que Jaromil  publicó
+<emphasis>Hasciicam</emphasis>  es otro  software  Rasta, el  primero  que Jaromil  publicó
 (2000) distribuido por  dyne.org. Es capaz de transformar  un video en
 texto colocando letras  en vez de colores llenando  la imágen como una
 escala de  grises. Con esta  codificación la imágen es  poco detallada
 pero muy interesante, y su transmisión por internet usa muy poco ancho
-de banda: Vía ftp, Hascciicam puede  subir video a un servidor via ftp
-y puede ser vista  directamente desde cualquier navegador (también los
+de banda: Hascciicam puede  subir video a un servidor via ftp
+y la señal puede ser vista  directamente desde cualquier navegador (incluidos los
 basados en texto), por lo tanto puede funcionar para generar stream de
-video incluso  usando computadoras antiguas  agregándole un componente
+video incluso usando computadoras antiguas  agregándole un componente
 especial: los carácteres  ASCII. La desventaja aquí es  que tenemos un
-video  formado de  carácteres: bueno  pero  que no  ofrece una  imágen
-definida,  tan sólo  monocromática  y  que no  alcanza  a aplanar  los
-cuadros de  imágen al  movimiento. Para más  información de  cómo usar
-mira <emphasis>man hasciicam</emphasis>.
+video  formado de  carácteres: interesante visualmente pero  que no  ofrece una  imágen muy definida,  tan sólo  monocromática  y  que no  alcanza  a aplanar  los
+cuadros de  imágen al  movimiento. Para más  información de  cómo usar esta herramienta revisa <emphasis>man hasciicam</emphasis>.
 
 </para>
 
