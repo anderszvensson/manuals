@@ -18,8 +18,6 @@ crear y editar imágenes de mapas de bits que ofrece un entorno perfecto
 para los  gráficos de internet. Contiene una poderosa  tecnología para
 automatizar sus operaciones y hasta generar logotipos estilizados.
 </para>
-
-
 <para>
 
 <indexterm><primary> Image </primary>
@@ -44,14 +42,14 @@ desarrollada, un motor  escrito en Phyton para el  trazado y escritura
 del  comportamiento  de  objetos.  Puede producir  escenas  así  como
 aplicaciones    interactivas    y    animaciones    en    líneas    de
 tiempo. Actualmente  existe una  gran comunidad de  artistas usándolo,
-hay tutoriales y  ejemplos disponibles en su sitio  web, además de que
+hay tutoriales y  ejemplos <ulink url="http://www.blender.org/">disponibles en su sitio  web</ulink>, además de que
 un detallado manual puede ser  solicitado en línea.  Blender es una de
 las  mejores herramientas  en el  mundo  del software  libre y  código
-abierto para  producciones multimedia de cualquier  tipo.  Está siendo
-adoptado para la producción  de varias películas profesionales. Usando
+abierto para  producciones multimedia de cualquier  tipo, por lo que está siendo
+adoptado para la producción  de varias películas a nivel profesional. Usando
 la  modularidad  de dyne:bolic  (clustering  capability) puedes  crear
 granjas computarizadas o de  segmentos (render farms) distribuyendo la
-carga   en    varias   computadoras    en   la   misma    red,   checa
+carga   en    varias   computadoras   de   la   misma    red,   checa
 el <ulink url="http://spot.river-styx.com/viewarticle.php?id=12">tutorial
 de Spot disponible en línea</ulink>.
 
