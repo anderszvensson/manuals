@@ -1,41 +1,43 @@
 <chapter>
 <title>Software para Comunicación</title>
 <subtitle>Software para comunicación incluido en dyne:bolic</subtitle>
-<indexterm><primary> Network </primary></indexterm>
+<indexterm><primary> Redes </primary>
+<secondary> Comunicación</secondary>
+</indexterm>
 
 <para>
-Desde  su  nacimiento,  los  sistemas UNIX  han  estado  especilamente
+Desde  su  nacimiento  los  sistemas UNIX  han  estado  especialmente
 diseñados para trabajo en  red, para manejar eficientemente protocolos
 de  comunicación conectando  computadoras a  través  de la  red y  por
 supuesto para Internet. Siendo  un sistema GNU/Linux, dynebolic ofrece
-un amplio margen de posibilidades y aplicaciones, desde el mas simplea
+un amplio margen de posibilidades y aplicaciones, desde el mas simple 
 hasta el más avanzado software para redes.
 </para>
 
 <para>
 Como   una  herramienta  práctica   para  el   hacktivismo  mediático,
 dyne:bolic enfatiza  la protección de  la privacidad de  los usuarios,
-ofreciendo un  proxy para el anonimato, además  de herramientas listas
-para usarse y que sirven para encriptar correos electrónicos.
+ofreciendo un  proxy para el anonimato, además de herramientas para encriptar correos electrónicos.
 </para>
 
 <para>
 
-<indexterm><primary> Network </primary>
+<indexterm><primary> Redes </primary>
 <secondary> Samba </secondary>
+</indexterm>
+<indexterm><primary> Redes </primary>
+<secondary> Compartir </secondary>
 </indexterm>
 
 Los   demonios  para  compartir   archivos  <emphasis>Samba</emphasis>
-funcionan  por default  en dyne:bolic,  compartiendo en  modo  de solo
-lectura el sistema en función, haciéndolo disponible para intalarlo en
-una  red  local.  Si  quieres compartir  otros  directorios  necesitas
-cambiar  a   mano  el  archivo  de  configuración   que  se  encuentra
+funcionan  por default  en dyne:bolic. Esto permite compartir en  modo  de solo
+lectura el sistema en función dentro de una red local, permitiendo con esto una intalación del sistema vía red. Si  quieres compartir  otros  directorios  necesitas cambiar  a   mano  el  archivo  de  configuración   que  se  encuentra
 en <emphasis>/etc/samba</emphasis>
 </para>
 
 <section>
   <title>Navega por la red</title>
-  <subtitle>Software para entrar a la world wide web</subtitle>
+  <subtitle>Software para entrar a la World Wide Web</subtitle>
 
 <para>
 
@@ -47,40 +49,37 @@ páginas WWW.
 
 <para>
 
-<indexterm><primary> Network </primary>
+<indexterm><primary> Redes </primary>
 <secondary> Mozilla </secondary>
 </indexterm>
 
-El primer y mas conocido navegador es Firefox, el cual es desarrollado
+<indexterm><primary> Redes </primary>
+<secondary> Firefox </secondary>
+</indexterm>
+
+El primer y mas conocido navegador es <emphasis>Firefox</emphasis>, el cual es desarrollado
 por el  equipo Mozilla para tener una  herramienta completamente capaz
 para entrar a la red.  Firefox tiene una interfaz intuitiva, manejo de
-marcadores y un par de plugins que pueden ser usados para extender sus
+marcadores y varios plugins que pueden ser usados para extender sus
 funcionalidades.
 </para>
 
 
 <para>
 
-<indexterm><primary> Network </primary>
+<indexterm><primary> Redes </primary>
 <secondary> Links </secondary>
 </indexterm>
-
-
-Luego tenemos Links  el cual es una alternativa  ligera a la anterior:
-corre mucho mas rápido  en computadoras antiguas mientras que mantiene
-la mayoría de  las funcionalidades más importantes. Se  destaca por su
-calidad y  velocidad al desplegar páginas web,  conviertiéndolo en una
-gran herramienta para las presentaciones.
-
+Luego tenemos <emphasis>Links</emphasis> el cual es una alternativa ligera a la anterior: corre mucho mas rápido en computadoras antiguas mientras que mantiene la mayoría de las funcionalidades más importantes. Se destaca por su calidad y velocidad al desplegar páginas web, conviertiéndolo en una gran herramienta para realizar presentaciones.
 </para>
 
 
 
 <para>
-<indexterm><primary> Network </primary>
-<secondary> NVU Web page editor </secondary></indexterm>
+<indexterm><primary> Redes </primary>
+<secondary> editor web NVU </secondary></indexterm>
 
-Para la  edición de páginas web,  los diseñadores disponen  de Nvu, un
+Para la  edición de páginas web,  los diseñadores disponen  de <emphasis>NVU</emphasis>, un
 programa que contiene un poderoso entorno WYSIWYG plenamente integrado
 con los  estandares para páginas  web de Firefox/Mozilla. Esta  es una
 amigable  herramienta que  también encontrarás  disponible  para otras
@@ -90,31 +89,30 @@ minutos.
 </para>
 
 <para>
-<indexterm><primary> Network </primary>
-<secondary> Wget Web spider </secondary></indexterm>
+<indexterm><primary> Redes </primary>
+<secondary> Wget </secondary></indexterm>
 
 También  se incluye  una poderosa  "araña" para  rastrear  y descargar
 sitios  web completos:  nos referimos  a  la herramienta  de línea  de
-comandos Wget.  Puedes descubrir  cómo funciona consultando  su manual
-desde una Terminal X, tecleando man wget.
+comandos <emphasis>Wget</emphasis>.  Puedes descubrir  cómo funciona consultando  su manual
+desde una Terminal X, tecleando 'man wget'.
 </para>
 
 
 <para>
 
 <indexterm>
-<primary> Network </primary>
+<primary> Redes </primary>
 <secondary> Tor </secondary>
 </indexterm>
 <indexterm>
-<primary> Privacy </primary>
-<secondary> Tor anonymity proxy </secondary>
+<primary> Privacidad </primary>
+<secondary> proxy de anonimato Tor </secondary>
 </indexterm>
 
 Para mejor  privacidad y anonimato  cuando navegas, pero  también para
 alejar espantosos  anuncios y ventanas emergentes, un  proxy puede ser
-configurado  para ejecutarse  al  iniciar el  sistema:  Tor puede  ser
-configurado para hacer todas  las conecciones a internet completamente
+configurado  para ejecutarse  al  iniciar el  sistema:  <emphasis>Tor</emphasis> puede  ser configurado para hacer todas  las conecciones a internet completamente
 anónimas y no rastreables.
 </para>
 
@@ -122,21 +120,40 @@ anónimas y no rastreables.
   Para     activar    esta     funcionalidad    mira     dentro    del
 archivo <emphasis>dyne.cfg</emphasis> en tu  DOCK y agrega "tor" en la
 lista de demonios que deben iniciar durante el arranque.
+</para>
 
+<para>
+De este modo y suponiendo que además de tor, quisieras que también samba iniciara durante el arranque, tu archivo dyne.cfg contendría algo similar a esto: 
+ 
+<screen>
+# Daemons started
+# comma separated list of services to be launched at startup
+# supported values: ssh,samba,firewall,cups,rsync,tor
+# (further documentation on the manual)
+daemons=tor,samba
+</screen>
 </para>
 
 </section>
 
 <section>
   <title>Correo electrónico y encriptación</title>
-  <subtitle>Envía tus cartas de modo seguro</subtitle>
+  <subtitle>Envía tus mensajes de modo seguro</subtitle>
 
-<indexterm><primary> Privacy </primary>
-<secondary> Email </secondary>
+<indexterm><primary> Privacidad </primary>
+<secondary> Correo electrónico </secondary>
 </indexterm>
 
-<indexterm><primary> Network </primary>
-<secondary> Email </secondary>
+<indexterm><primary> Redes </primary>
+<secondary> Correo electrónico </secondary>
+</indexterm>
+
+<indexterm><primary> Redes </primary>
+<secondary> seguridad </secondary>
+</indexterm>
+
+<indexterm><primary> Privacidad </primary>
+<secondary> gpg </secondary>
 </indexterm>
 
 <para>
@@ -162,12 +179,20 @@ implementación        revisa       las        hojas       electrónicas
 en <ulink url="http://www.gnupg.org">www.gnupg.org</ulink>.
 </para>
 
-<indexterm><primary> Privacy </primary>
+<indexterm><primary> Privacidad </primary>
 <secondary> Enigmail </secondary>
 </indexterm>
 
-<indexterm><primary> Network </primary>
+<indexterm><primary> Redes </primary>
 <secondary> Thunderbird </secondary>
+</indexterm>
+
+<indexterm><primary> Redes </primary>
+<secondary> Correo electrónico </secondary>
+</indexterm>
+
+<indexterm><primary> Correo electrónico </primary>
+<secondary> Seguridad </secondary>
 </indexterm>
 
 <para>
@@ -175,16 +200,17 @@ Dyne:bolic  viene   equipado  con   el  popular  programa   de  correo
 electrónico Thunderbird  con el que se pueden  manejar varias cuentas,
 descargar  buzones  y  crear  folders  y filtros  para  organizar  los
 mensajes.  Se puede  integrar  con el  sistema  de encriptación  GnuPG
-instalando una extensión llamada Enigmail.
+instalando una extensión llamada <emphasis>Enigmail</emphasis>, disponible desde <ulink url="https://addons.mozilla.org/es-ES/thunderbird/addon/71">el portal de complementos de Mozilla</ulink>.
 </para>
 
 <para>
-También  se incluye  el  Asistente  de Privacidad  de  GNU (GPA)  para
+También  se incluye  el  <emphasis>Asistente  de Privacidad  de  GNU (GPA)</emphasis>  para
 ayudarte a generar tus llaves  encriptadoras y organizar en un llavero
-local las de tus amigas.
+local las de tus amigas y amigos. Este programa tiene la ventaja de que utilizando su amigable interfaz gráfica puedes encriptar fácilmente archivos de cualquier tipo.
 </para>
 
 </section>
 
 </chapter>
+
 
