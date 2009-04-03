@@ -1,34 +1,18 @@
 <chapter>
-<title>Development tools</title>
-<subtitle>Extend and customize the dyne liveCD</subtitle>
+<title>Herramientas para el desarrollo</title>
+<subtitle>Extiende y personaliza el live CD de Dyne</subtitle>
 
 <para>
-
-Dyne:II comes with an SDK to re-master a dyne liveCD including all
-your modifications and to package additional software collections.
-In fact, Dyne:II is a Dyne to produce Dyne.
-
-See it like a Nomad Distribution attached to no hardware. You carry
-your live cd/dvd/usb key loaded. you boot on it on any machine, you do
-your stuff (from a user AND/OR developer point of view), you create a
-new live cd, you remove all your traces and you leave the camp.  Just
-walk around the world with your rewritable CD or usb-stick and that's
-it.
-
+Dyne:II incluye SDK para remasterizar el live CD de dyne de manera que puedas incluir todas tus modificaciones personales al sistema así como las colecciones de software que tu decidas instalarle. De hecho, <emphasis>Dyne:II es un Dyne para producir Dyne</emphasis>. Considerala como una Distribución Nómada anexada a ningún hardware. Puedes llevar contigo tu versión viva del cd/dvd/usb y cargarla en cualquier máquina, hacer tus cosas (desde el punto de vista del usuario Y/O del desarrollador), puedes crear un nuevo live CD, limpiar todos tus rastros y luego abandonar el lugar. Solo camina por el mundo con tu CD re-escribible o con tu llavero usb y eso es todo.
 </para>
 
-<para>
+<para>Dyne:bolic es un sistema operativo un poco simple y minimalista (la filosofía sobre la que está basada esta distribución tiene referencia con <ulink url="http://www.slackware.com/">Slackware</ulink> en particular y en general con el principio KISS)<footnote><para> Según la <ulink url="http://es.wikipedia.org/wiki/Principio_KISS">Wikipedia</ulink> "(...)Este término es un acrónimo que corresponde a la frase en inglés «Mantenlo simple, estúpido» <emphasis>(Keep It Simple, Stupid)</emphasis>. Para evitar ser tosco, el acrónimo se hace corresponder con otras expresiones tales como <emphasis>«Manténgalo breve y simple» («Keep It Short and Simple»)</emphasis> u otras similares, pero que mantienen la misma idea del principio. (...) El principio KISS es aquel que recomienda el desarrollo empleando partes sencillas, comprensibles y con errores de fácil detección y corrección, rechazando lo enrevesado e innecesario en el desarrollo de sistemas complejos en ingeniería." </para></footnote>, todo escrito en shell y construido desde cero. Las librerías de funciones junto con los programas auxiliares están todos incluidos en el directorio /lib/dyne, donde el código está cuidadosamente documentado. </para>
 
-Dyne:bolic is a quite simple and minimalistic operating system (the
-underlying distribution philosophy can be referred to the Slackware
-one and more in general to the KISS principle), all scripted in shell,
-awk and sed from scratch. Function libraries along with auxiliary
-programs are all included in the /lib/dyne directory, where the code
-is fairly documented.
+<para>En este capítulo encontrarás documentación acerca de cómo crear y publicar nuevos módulos para luego empaquetarlos en un nuevo CD. Para más información y como referencia a la estructura interna de dyne:bolic toma en cuenta que esta distribución está escrita desde cero siguiendo el libro <ulink url="http://www.linuxfromscratch.org">Linux From Scratch</ulink>, el cual ofrece una extensa explicación de cómo todo fue agrupado. </para>
 
-</para>
+<para>Se incluyen los compiladores GNU C y C++ junto con varios lenguajes de script y herramientas relativas externas como Python, Perl, Tcl/Tk y Ruby. Además se incluyen 3 diferentes entornos de desarrollo para la programación visual básica: <emphasis>Glade</emphasis>, funcionando con GTK y C; <emphasis>Fluid</emphasis>, funcionando con Fltk y C++, y <emphasis>Gambas</emphasis>, disponible con el módulo externo devel. Además se incluye <emphasis>gtkdialog</emphasis> para que puedas rápidamente realizar diálogos gráficos e interacción con el usuario combinando varios componentes. </para>
 
-<indexterm><primary>Architecture</primary></indexterm>
+<indexterm><primary>Arquitectura</primary></indexterm>
 
 <para>
 
@@ -40,6 +24,8 @@ book <ulink url="http://www.linuxfromscratch.org">Linux From
 Scratch</ulink> which provides an extensive explanation on how
 everything was put together
 </para>
+
+
 
 <indexterm><primary>Programming</primary></indexterm>
 
