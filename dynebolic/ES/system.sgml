@@ -3,10 +3,10 @@
 
 <para>
 Con Dyne:bolic no necesitas instalar nada en tu disco duro porque este
-no es  se toca mientras  usas el sistema.  Más aún, dependiendo de tu modo de trabajar, este sistema puede  arrancar desde el disco duro, desde el CD,
-o desde algún dispositivo USB  o desde  la red  (se explica  en el  siguiente capítulo)  y puede guardar datos en  un sólo archivo que puede  ser transportado a través de diferentes medios. El sistema operativo completo cabe  en un disco
+no se toca mientras  usas el sistema.  Más aún, dependiendo de tu modo de trabajar, este sistema puede  arrancar desde el disco duro, desde el CD,
+o desde algún dispositivo USB  o desde  la red  (esto se explica  en el  siguiente capítulo). Dyne:bolic puede guardar datos en  un sólo archivo que puede  ser transportado a través de diferentes medios. Este sistema operativo completo cabe  en un disco
 compacto, y  para ejecutarse  desde el disco  duro tan  sólo necesitas
-copiar el directorio  <emphasis>dyne</emphasis> (ver docking), en tanto  que en ordenadores
+copiar el directorio  <emphasis>dyne</emphasis> (ver Docking), en tanto  que en ordenadores
 ligeros esto se puede hacer utilizando la red. Esto hace a dyne:bolic muy fácil
 de usar y mantener,  evitando riesgos por desconfiguración: el sistema
 se  presenta tal  como es  ofreciendo  un gran  escritorio repleto  de
@@ -30,7 +30,7 @@ animaciones 3D y mucho mas.
 </para>
 
 <para>
-Haz click en CONFIGURE en tu menú para ajustar tu sistema.
+Haz click en CONFIGURE en tu menú para ajustar tu sistema a tu modo.
 </para>
 
 
@@ -48,5 +48,183 @@ página      de      Spot</ulink>      y     leer      el      artículo
 sobre <ulink url="http://www.osnews.com/story.php?news_id=6490">dyne:bolic
 en OS News</ulink> (ambos en ingles).
 </para>
+
+<indexterm><primary>Volumenes</primary></indexterm>
+<indexterm><primary>NTFS</primary></indexterm>
+
+<section>
+<title>Utilizando volumenes de datos para almacenar información</title>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-volumes" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<para>
+
+Para un fácil acceso a los archivos de los dispositivos de almacenamiento conectados a tu sistema (discos duros, cd, floppy, usb) puedes usar los iconos localizados en la parte superior derecha de tu escritorio, donde también se encuentran botones para entrar a tu red local de archivos compartidos, y para usar tus cuentas de acceso a internet. Las particiones de estas unidades de almacenamiento serán montadas automáticamente en el directorio <emphasis>/mnt</emphasis>, el cual estará enlazado desde tu área personal bajo el nombre de <emphasis>Volumes</emphasis>.  Puedes leer y escribir en todos los sistemas de archivos excepto los sistemas NT, los cuales serán de sólo lectura.
+</para>
+
+<indexterm><primary>unidades usb</primary></indexterm>
+
+<para>
+Los dispositivos de almacenamiento usb (tales como llaveros, tarjetas de memoria y algunas cámaras digitales) pueden ser abiertas simplemente haciendo doble click en el símbolo de usb. Debido a que en ocasiones algunas maneras de acomodar las particiones confunden la autodetección, puedes intentar los siguientes comandos desde una Xterminal:
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>mount /dev/sdXY /mnt/usb</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+
+sustituyendo 'X' con letras (a,b,c...)y 'Y' con números (1,2,3...), por ejemplo <emphasis>/dev/sda2</emphasis>.
+</para>
+
+<para>
+Si tu computadora sólo tiene una unidad de cd o dvd, utilizando <emphasis>docking</emphasis> puedes liberar cualquiera de estas unidades para usarlas luego de cargar dyne:bolic (revisa el siguiente capítulo donde se explica cómo hacer DOCKING). De esta manera puedes reproducir o copiar cd/dvd, y navegar dentro de los archivos que contengan.
+</para>
+
+<indexterm><primary>organización del sistema de archivos</primary></indexterm>
+
+<para>
+Para tener un panorama general de la organización de los diferentes directorios que se encuentran en los sistemas GNU/Linux, te sugerimos lee atentamente el manual <emphasis>hier</emphasis>, el cual lo encuentras tecleando "man hier" en la Xterminal.
+</para>
+
+</section>
+
+<section>
+<title>Anida tu directorio personal y tus configuraciones</title>
+
+<indexterm><primary>nesting</primary></indexterm>
+<indexterm><primary>anidar</primary></indexterm>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-nest-main" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<para>
+En Dyne:II por defecto tus directorios <emphasis>/home, /etc y /var</emphasis> residen en la memoria: cada archivo y configuración que guardes no estarán allí la próxima vez que cargues el sistema.
+
+Para guardar tu directorio personal (home) y tus configuraciones de manera permanente necesitas crear un <emphasis>NIDO</emphasis> (o NEST) que es simplemente un archivo llamado "dyne.nst" el cual estará ubicado en un disco duro o en algún dispositivo de almacenamiento usb, desde donde será cargado al inicio del sistema. Tu sólo necesitas crear un nido y dyne:bolic lo buscará al momento de iniciar, si lo encuentra entonces comenzará a usarlo automáticamente.</para>
+
+<para>
+La función de <emphasis>anidamiento</emphasis> es muy práctica para mantener todas las configuraciones que hagas a tu sistema (ajustes, archivos guardados, cuentas de usuario, lenguaje, datos privados, etc) lo cual es muy útil para transportar o respaldar tus configuraciones personales. Un ejemplo es cuando te anidas en un llavero usb: arrancas el sistema con el llavero conectado para luego usar tu nido con todas las configuraciones y ajustes que hayas realizado, incluidos los archivos guardados en tu /home, los cuales siempre estarán contigo dentro de tu llavero usb. De esta manera no necesitarás ni siquiera una computadora portátil para viajar con tu entorno de software y tus datos: únicamente lleva contigo un CD de dyne:bolic y tu llavero usb para que desde donde sea que puedas cargar el sistema tengas tu directorio /home contigo. </para>
+
+
+<para>
+<emphasis>¿Cómo crear un nido?</emphasis>
+ Durante la pantalla de bienvenida o dentro de tu <emphasis>Home</emphasis>, presiona el botón <emphasis>Configure</emphasis> y luego elige <emphasis>Nest</emphasis> (el pequeño icono en forma de pato). Se te preguntará si quieres crear un nido en tu disco duro o en tu llavero USB. Elige un partición y el tamaño que necesites: una buena opción puede ser elegir entre 250 y 500 megabytes dependiendo de qué tanto tengas pensado usar el sistema, modificarlo y abrirlo a otros usuarios.
+</para>
+
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-nest-hd" format="jpg">
+   </imageobject>
+</mediaobject>
+
+
+<para>
+Desde la versión 2.4 de dyne:bolic, al momento de crear un nido verás también un botón con un candado: presionalo y tu nido será asegurado con una fuerte encriptación. Si decides activarlo se te pedirá una contraseña la cual tendrás que proporcionar durante el arranque del sistema, en el momento de que el nido sea cargado. Sin esta contraseña será muy difícil tener acceso al nido, por lo que podrás obtener una buena seguridad de tus datos personales. 
+</para>
+
+<para>
+Si te anidas en un disco duro, las particiones soportadas son: Dos,
+Fat32, Ext2, ReiserFS, Beos (BeFS), y NTFS (con soporte desde la versión 2.5).  El nido es tan sólo un archivo creado dentro del directorio /dyne que como recordarás, se ubica en la partición raíz (C:\ o D:\ en sistemas de archivos tipo DOS). Este archivo se llama <emphasis>dyne.nst</emphasis>. Para borrar tu nido simplemente borra ese archivo.
+
+<para>
+Desde la versión 2.5 es posible también montar un nido después de arrancar un sistema: tan sólo tienes que conectar tu llavero usb y navegar hasta el contenido del directorio dyne/. Si haces doble click en el archivo dyne.nst (el que tiene el icono del pato) se montará tu directorio personal, si está encriptado se te pedirá la contraseña.
+</para>
+
+</section>
+
+<section>
+
+<title>¿Instalar en el Disco Duro? ¡Dock!</title>
+<indexterm><primary>docking</primary></indexterm>
+
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/shot-dock" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<para>
+Dyne:bolic resuelve el problema de la instalación de una manera muy simple: ¡no hay instalación! :) simplemente copia un directorio y a esto se le llama hacer "<emphasis>docking</emphasis>".
+
+</para>
+
+<para>
+
+Docking te permite correr el sistema desde un disco duro acelerando el proceso de carga. De esta manera también puedes arrancar el sistema desde un floppy o desde una partición multi-arranque.
+
+</para>
+<para>
+Docking consiste en copiar el directorio dyne/ del CD al disco duro, ocupando menos de 700 megabytes de espacio. No necesitas cambiar nada en tu partición, sólo tienes que copiar el directorio dentro: puedes usar el método de arrastrar y soltar el folder dyne/ en tu disco duro, ¡eso es todo!. 
+
+Luego de hacer 'docking', puedes arrancar con el CD dentro y este será expulsado automáticamente después de la primera fase del proceso de arranque: ¡esta es la señal de que el dock va bien! 
+</para>
+
+<para>Así, incluso sin la necesidad de reparticionar o reconfigurar un doble arranque, puedes cambiarte a dyne:bolic usando un CD o un floppy, pero corriendo el sistema desde el disco duro a toda velocidad, tal y como si fuera un sistema operativo instalado... ¡y hasta mejor!
+
+Por supuesto, es fácil eliminar el dock: ¡sólo tienes que borrar el directorio /dyne de tu disco duro! 
+</para>
+
+<para>
+Recuerda que hacer un Docking es diferente de hacer un Nido: <emphasis>Docking</emphasis> sirve para correr el sistema y todas las aplicaciones desde el disco duro en vez del CD.
+<emphasis>Anidar</emphasis> sirve para almacenar tu directorio personal y tus configuraciones en un simple archivo que puedes guardar en un llavero usb o en un disco duro.
+
+Para más información sobre el proceso de docking, puedes visitar la documentación en línea disponible <ulink url="http://lab.dyne.org/EsDocking">en las páginas del wiki comunitario</ulink>.
+</para>
+
+</section>
+
+
+<section>
+<title>Módulos extra de software</title>
+<indexterm><primary>módulos</primary></indexterm>
+
+<para>
+
+Dyne:II ofrece la posibilidad de expandirse usando modulos <emphasis>.dyne</emphasis>, que son una variada colección de aplicaciones que pueden ser fácilmente instaladas y usadas. De hecho el sistema base contiene ya algunos de estos módulos, que los encuentras en el directorio <emphasis>dyne/modules/</emphasis>.
+
+Desde el menú puedes verlos siguiendo la ruta <emphasis>CONFIGURE ->
+DYNE -> MODULES</emphasis>
+
+</para>
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/shot-modules" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<para>
+Módulos adicionales dyne están disponibles en línea en el portal de dynebolic.org en la sección de <emphasis>Extras</emphasis>. Descargalos y activalos con tan sólo depositar los archivos .dyne dentro del directorio dyne/modules de tu Docking.  Luego reinicia tu sistema para activar los nuevos módulos ¡y es todo!
+</para>
+
+<para>
+Los usuarios pueden usar fácilmente sus módulos en diferentes máquinas, teniendo siempre a la mano el software que necesitan. Los módulos pueden ser también usados en diferentes versiones de dyne: tan sólo es necesario actualizar el dock para luego incorporarle tus módulos.
+</para>
+
+<indexterm><primary>pure:dyne</primary></indexterm>
+
+<para>
+Descarga módulos libres y de código abiertos desde <ulink url="ftp://ftp.dyne.org/dynebolic/modules"</ulink>. Existen muchas extensiones interesantes: herramientas de oficina y para el desarrollo de software, manuales y por supuesto juegos :)</para>
+
+<para>
+Varios desarrolladores y artistas están activamente contribuyendo con sus módulos, los cuales se listan en <ulink url="http://lab.dyne.org/DyneModules"></ulink>.
+</para>
+
+
+<para>
+Cuando instalas nuevos módulos, lo único en lo que tienes que tener cuidado es revisar de donde provienen ya que un módulo malicioso o roto puede tener acceso a todo tu sistema. Por supuesto para instalar cualquier módulo adicional tienes que  ser root. En nuestro website sugerimos únicamente módulos que hemos previamente probado, pero de cualquier manera tu eres libre de elegir en quien confías: así como lo hiciste cuando decidiste ejecutar este sistema en tu computadora, ¿no es así? :)
+</para>
+
+
+</section>
+
+
 
 </chapter>
