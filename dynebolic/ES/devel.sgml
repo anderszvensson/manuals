@@ -3,147 +3,86 @@
 <subtitle>Extiende y personaliza el live CD de Dyne</subtitle>
 
 <para>
-Dyne:II incluye SDK para remasterizar el live CD de dyne de manera que puedas incluir todas tus modificaciones personales al sistema así como las colecciones de software que tu decidas instalarle. De hecho, <emphasis>Dyne:II es un Dyne para producir Dyne</emphasis>. Considerala como una Distribución Nómada anexada a ningún hardware. Puedes llevar contigo tu versión viva del cd/dvd/usb y cargarla en cualquier máquina, hacer tus cosas (desde el punto de vista del usuario Y/O del desarrollador), puedes crear un nuevo live CD, limpiar todos tus rastros y luego abandonar el lugar. Solo camina por el mundo con tu CD re-escribible o con tu llavero usb y eso es todo.
+Dyne:II incluye SDK para remasterizar el live CD de manera que puedas incluir todas tus modificaciones personales al sistema así como las colecciones de software que tu decidas instalarle. De hecho, <emphasis>Dyne:II es un Dyne para producir Dyne</emphasis>. Considerala como una <emphasis>Distribución Nómada incrustada a ningún hardware</emphasis>. Puedes llevar contigo tu versión viva del cd/dvd/usb y cargarla en cualquier máquina, hacer tus cosas (desde el punto de vista del usuario y/o del desarrollador), puedes crear un nuevo live CD, limpiar todos tus rastros y luego abandonar el lugar. Solo camina por el mundo con tu CD re-escribible o con tu llavero usb y eso es todo.
 </para>
 
+<indexterm><primary>Arquitectura</primary></indexterm>
 <para>Dyne:bolic es un sistema operativo un poco simple y minimalista (la filosofía sobre la que está basada esta distribución tiene referencia con <ulink url="http://www.slackware.com/">Slackware</ulink> en particular y en general con el principio KISS)<footnote><para> Según la <ulink url="http://es.wikipedia.org/wiki/Principio_KISS">Wikipedia</ulink> "(...)Este término es un acrónimo que corresponde a la frase en inglés «Mantenlo simple, estúpido» <emphasis>(Keep It Simple, Stupid)</emphasis>. Para evitar ser tosco, el acrónimo se hace corresponder con otras expresiones tales como <emphasis>«Manténgalo breve y simple» («Keep It Short and Simple»)</emphasis> u otras similares, pero que mantienen la misma idea del principio. (...) El principio KISS es aquel que recomienda el desarrollo empleando partes sencillas, comprensibles y con errores de fácil detección y corrección, rechazando lo enrevesado e innecesario en el desarrollo de sistemas complejos en ingeniería." </para></footnote>, todo escrito en shell y construido desde cero. Las librerías de funciones junto con los programas auxiliares están todos incluidos en el directorio /lib/dyne, donde el código está cuidadosamente documentado. </para>
 
 <para>En este capítulo encontrarás documentación acerca de cómo crear y publicar nuevos módulos para luego empaquetarlos en un nuevo CD. Para más información y como referencia a la estructura interna de dyne:bolic toma en cuenta que esta distribución está escrita desde cero siguiendo el libro <ulink url="http://www.linuxfromscratch.org">Linux From Scratch</ulink>, el cual ofrece una extensa explicación de cómo todo fue agrupado. </para>
 
+<indexterm><primary>Programación</primary></indexterm>
+
 <para>Se incluyen los compiladores GNU C y C++ junto con varios lenguajes de script y herramientas relativas externas como Python, Perl, Tcl/Tk y Ruby. Además se incluyen 3 diferentes entornos de desarrollo para la programación visual básica: <emphasis>Glade</emphasis>, funcionando con GTK y C; <emphasis>Fluid</emphasis>, funcionando con Fltk y C++, y <emphasis>Gambas</emphasis>, disponible con el módulo externo devel. Además se incluye <emphasis>gtkdialog</emphasis> para que puedas rápidamente realizar diálogos gráficos e interacción con el usuario combinando varios componentes. </para>
 
-<indexterm><primary>Arquitectura</primary></indexterm>
-
-<para>
-
-In this chapter you'll find documentation on how to create and publish
-new modules, repack a new CD. For more informations and as a reference
-to the inner structure of dyne:bolic keep in mind this distribution is
-written from scratch following the
-book <ulink url="http://www.linuxfromscratch.org">Linux From
-Scratch</ulink> which provides an extensive explanation on how
-everything was put together
-</para>
-
-
-
-<indexterm><primary>Programming</primary></indexterm>
-
-<para>
-The GNU C and C++ Compiler is included along with several scripting
-language and relative toolkit externals as Python, Perl, Tcl/Tk and
-Ruby. Also 3 different integrated development environments are
-included for visual programming: <emphasis>Glade</emphasis> working
-with GTK and C, <emphasis>Fluid</emphasis> working with Fltk and C++,
-<emphasis>Gambas</emphasis> (provided by the external devel module)
-for basic visual programming.  Also
-<emphasis>gtkdialog</emphasis> is used so you can quickly realize
-graphical dialogs and user interaction combining various components.
-</para>
-
-<indexterm><primary>Customize</primary></indexterm>
-
 <section>
-<title>Customize your dyne liveCD</title>
+<indexterm><primary>Personalizar</primary></indexterm>
+<title>Personalizando tu live CD de Dyne</title>
 
-<para>
-It is possible to customize and expand dyne:bolic in various ways:
-creating software modules to add applications and distribute them to
-friends, as well change the behaviour of the system when booting.  To
-facilitate customization and development
-a <emphasis>dynesdk</emphasis> tool is provided, automatizing the
-process of packing changes into a new live CD.
+<para>Es posible personalizar y expandir dyne:bolic en varias maneras: creando módulos de software para agregar aplicaciones y distribuirlas a la comunidad, además de que es posible cambiar el comportamiento del sistema durante el arranque. Para facilitar la personalización y el desarrollo, se incluye la herramienta <emphasis>dynesdk</emphasis> para automatizar el proceso de empaquetar los cambios en un nuevo live CD. 
 </para>
 
-<para>
-For a good introduction on the potential of this tool you can read
-online Stomfi's article on customizing dyne:bolic
-on <ulink url="http://www.linux.com/articles/54607"></ulink>
+<para>Para una buena introducción a los potenciales de esta herramienta puedes leer el artículo (en inglés) de <ulink url="http://www.linux.com/articles/54607">Stomfi</ulink> sobre lo que es posible hacer para personalizar dyne:bolic. 
 </para>
 
 <indexterm><primary>SDK</primary></indexterm>
 
-<para>
-To get started with your development first create the SDK in the DOCK
-on your harddisk: 
-
+<para>Para comenzar con tu propio desarrollo primero tienes que crear SDK en el DOCK de tu disco duro: </para>
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>dynesdk mksdk
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
-you'll be prompted with two questions: it is safe to
-answer <emphasis>no</emphasis> in both cases, unless you want to
-change things in the dyne:II core:
+<para>Recibirás dos preguntas a las que es mas seguro contestar <emphasis>no</emphasis> en ambos casos, a menos de que quieras modificar el core de dyne:II: </para>
 
 <screen>
 <prompt>* [?] do you want to uncompress the dyne.sys (y/N) ?</prompt>
 <prompt>* [?] do you want to download the kernel sources (y/N) ?</prompt>
 </screen>
 
-in case you don't give an answer, it will default to NO after 10
-seconds and go on.
+<para>
+en caso de que tardes en responder o no respondas, se tomará NO como respuesta por defecto después de 10 segundos y se continuará. 
 </para>
 
-<para>
-This procedure will create an SDK directory inside $DYNE_SYS_MNT/dyne,
-then populate it with development files that are downloaded from the
-online subversion repository if you have network connectivity.
-</para>
+<para>Este procedimiento creará un directorio SDK dentro de $DYNE_SYS_MNT/dyne, para luego habitarlo con los archivos de desarrollo que son descargados desde el repositorio en línea de subversion, si es que tienes conexión a la red.</para> 
 
-<para>
-With the SDK you can pack modifications to your system inside a new CD
-ISO: that is created out of the contents of SDK/cdrom, you can add and
-remove modules from SDK/cdrom/dyne/modules as well add things inside
-the CD filesystem.
-</para>
+<para>Con SDK puedes empaquetar las modificaciones a tu sistema en un nuevo ISO CD el cual se genera con los contenidos del directorio SDK/cdrom. Puedes luego agregar y remover módulos desde SDK/cdrom/dyne/modules así como agregar cualquier otra cosa dentro del sistema de archivos del CD, como por ejemplos archivos README personalizados, iconos, etc. </para>
 
 </section>
 
 <section>
-<title>Create new software modules</title>
+<title>Crear nuevos módulos de software</title>
 
-<para>Once you have an SDK and some space available on your harddisk
-you can start creating your own software modules to add applications
-to dyne:bolic, see the "Extra software modules" section of this manual
-for more information about features and usage of .dyne modules, now
-we'll go on with some instructions on how to create them.
-</para>
+<para>Una vez que tengas un SDK y un poco de espacio disponible en tu disco duro puedes empezar a crear tus propios módulos de software para agregar aplicaciones a dyne:bolic. Si necesitas más información sobre las características y el uso de los modulos dyne, puedes revisar la sección "<emphasis>Módulos extra de software</emphasis>" de este manual. Ahora continuaremos con algunas instrucciones en cómo crearlos. </para>
 
 <para>
-First of all make sure you dock your system on a harddisk, then create
-an SDK (see previous chapter). When you have an SDK directory in your
-harddisk you can see it's location just typing:
+Antes que nada asegurate que tienes un dock de tu sistema en un disco duro, luego crea un SDK (mira el capítulo anterior). Cuando tengas un directorio SDK en tu directorio puedes ver su localización con tan solo teclear: 
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>echo $DYNE_SYS_MNT/SDK
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
-Next step is to create the module directory in the SDK, so let's
-choose our module name first: we are going to create the spaghetti
-module, with the commands
+El próximo paso es crear el directorio para los módulos en el SDK y para eso elegiremos un nombre para nuestro módulo: vamos a crear el módulo tortilla con los comandos: 
 
 <screen>
-<prompt>[d:b] ~ # </prompt><userinput>mkdir -p $DYNE_SYS_MNT/SDK/modules/spaghetti
+<prompt>[d:b] ~ # </prompt><userinput>mkdir -p $DYNE_SYS_MNT/SDK/modules/tortilla
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-<prompt>[d:b] ~ # </prompt><userinput>mkdir $DYNE_SYS_MNT/SDK/modules/spaghetti/bin
+<prompt>[d:b] ~ # </prompt><userinput>mkdir $DYNE_SYS_MNT/SDK/modules/tortilla/bin
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-<prompt>[d:b] ~ # </prompt><userinput>mkdir $DYNE_SYS_MNT/SDK/modules/spaghetti/lib
+<prompt>[d:b] ~ # </prompt><userinput>mkdir $DYNE_SYS_MNT/SDK/modules/tortilla/lib
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-<prompt>[d:b] ~ # </prompt><userinput>touch $DYNE_SYS_MNT/SDK/modules/spaghetti/VERSION
+<prompt>[d:b] ~ # </prompt><userinput>touch $DYNE_SYS_MNT/SDK/modules/tortilla/VERSION
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
-
-basically we are just creating the bin and lib directories and a
-VERSION file inside the module, you can do that with any filebrowser
-or midnight commander if you like: c'mon, make yourself comfortable ;)
 </para>
 
 <para>
-The last thing to do is to activate our spaghetti module, mounting it
-on /opt/spaghetti since all modules are activated in the /opt
-prefix. To do that we use again a DyneSdk command
+básicamente estamos creando los directorios bin y lib además del archivo VERSION dentro del módulo, lo que puedes hacer con cualquier explorador de archivos o con midnight commander si quieres: vamos, sientete cómoda ;) 
+</para>
+
+<para>
+El último paso es activar nuestro módulo tortilla montándolo en /opt/tortilla ya que todos los módulos son activados en el prefijo /opt. Para hacer esto usamos nuevamente el comando DyneSdk: 
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>dynesdk mount
@@ -152,211 +91,167 @@ prefix. To do that we use again a DyneSdk command
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
-That's it! our new module is mounted in /opt and we have our PATHs
-configured accordingly.
+¡Eso es todo! Nuestro nuevo módulo está montado en /opt y tenemos nuestras rutas configuradas correctamente. 
+</para>
+
+<para>Ten en cuenta que antes de comenzar el desarrollo de tu módulo, necesitas montar el dynesdk cada vez que reinicies. Puedes también abrir un módulo existente para trabajar en su desarrollo (por ejemplo tu excelente módulo tlayuda en el que tienes semanas trabajando); para esto utilizas el comando: 
+
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>dynesdk devel tlayuda
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
 </para>
 
 <para>
-Keep in mind that you need to use dynesdk mount once after every boot,
-before starting development on your module. You can as well open up
-for development an already existing module (your good old gnocchi
-module for instance) with the command:
+Te regresará una pregunta, si es que quieres descomprimir el contenido del módulo para su desarrollo, indicándote el espacio que ocupará en tu disco duro. 
+
+Paso seguido puedes compilar el software tortilla con 
 
 <screen>
-<prompt>[d:b] ~ # </prompt><userinput>dynesdk devel gnocchi
+<prompt>[d:b] ~ # </prompt><userinput>./configure --prefix=/opt/tortilla
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
-You'll be then prompted with a question, if you want to decompress the
-content of the module for development, with an indication about the
-space that will be occupied by it on your harddisk.
+o en algunos casos editar el PREFIX en el Makefile - ¡y no olvides ponerle salsa! :) 
+</para>
+
+<para>Para hacerlo más facil, cuando el software se construye con los usuales "./configure && make && make install" puedes usar el comando <emphasis>dynemodconf</emphasis> (seguido por el nombre del módulo) en vez de llamar directamente a ./configure. Esto ajustará el prefijo mas correctamente. Por ejemplo para compilar "mole-0.5" con el flag "--con-frijoles" dentro de tu módulo de tortilla: 
+
+<screen>
+<prompt>[d:b] ~/mole-0.5 # </prompt><userinput>dynemodconf tortilla --con-frijoles
+</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
 </para>
 
 <para>
-Now you can compile the spaghetti software you like with
+Una vez que has terminado de cocinar... digo, compilar, entonces puedes juntar todo en un módulo comprimido .dyne con 
 
 <screen>
-<prompt>[d:b] ~ # </prompt><userinput>./configure --prefix=/opt/spaghetti
+<prompt>[d:b] ~/mole-0.5 # </prompt><userinput>dynesdk squash tortilla
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
-or editing the PREFIX in the Makefile in some cases - and don't forget
-the sauce! :)
-</para>
+¡y ahi está! tu nuevo módulo se encontrará en $DYNE_SYS_MNT/dyne/SDK/cdrom/dyne/modules/tortilla.dyne listo para ser incluido en el próximo CD ISO que puedes empaquetar con <emphasis>dynesdk mkiso</emphasis>. </para>
 
 <para>
-To make it easier, when software is built with the usual "./configure
-&& make && make install", you can use
-the <emphasis>dynemodconf</emphasis> command (followed by the module
-name) instead of calling ./configure directly: that will set the
-prefix and more environment correctly, for example to compile
-"aglio-0.5" with flag "--with-basilico" inside our spaghetti module:
-
+Antes de liberar tu módulo a la comunidad, es una buena idea llenar alguna información acerca de tu creación para que la gente pueda contactarte y visitar las páginas del software. Para esto es el archivo VERSION que contiene un formato muy simple:
+ 
 <screen>
-<prompt>[d:b] ~/aglio-0.5 # </prompt><userinput>dynemodconf spaghetti --with-basilico
-</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-</screen>
-
-Once you are done with cook... ahem, compiling, then you can squash
-everything into a compressed .dyne module with
-
-<screen>
-<prompt>[d:b] ~/aglio-0.5 # </prompt><userinput>dynesdk squash spaghetti
-</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
-</screen>
-
-and that's it! your new module will be found in
-$DYNE_SYS_MNT/dyne/SDK/cdrom/dyne/modules/spaghetti.dyne and ready
-to be included in the next CD ISO that you can pack with dynesdk
-mkiso.
-<para>
-
-<para>
-Before releasing your module into the public, is a good idea to fill
-up some information about your creation so that people can contact you
-and visit software homepages. That's what the VERSION file is for, and
-it's format is very simple:
-
-<screen>
-name            Spaghetti
-desc            spaghetti pizza mandolino e presidente scemo
+name            Tortilla
+desc            Frijoles negros en salsa de mole con tortillas
 version         1.0
-url             http://tuttifrutti.org/spaghetti
-packager        The Crazy Cook http://tuttifrutti.org/~crazycook
+url             http://craizymaiz.tv/tortilla
+packager        La Tlayudera Loca http://craizymaiz.tv/~tlayudera
 </screen>
 
-Just use your favorite text editor to fill in these fields, leave a
-space or a tab between the field name and value and that's it.
-<para>
-
+Usa tu editor de texto preferido para llenar estos campos, deja un espacio o una tabla entre cada nombre de campo y eso es todo.
+</para>
 
 <para>
-You can add entries and submenus for the user to start up your
-software. To do so create an applist file inside your module's etc
-directory, like for example /opt/spaghetti/etc/applist.
+Puedes agregar entradas o submenús para que el usuario pueda ejecutar tu software. Para hacer esto crea un archivo applist dentro del directorio etc de tu módulo, por ejemplo opt/tortilla/etc/applist. El archivo applist contendrá una lista de las aplicaciones binarias, las descripciones y los modos para comenzarlo mediante la utilización de flags. 
 
-The applist file will list application binaries, descriptions and ways
-to start them up thru flags. Here it follows a description of the
-format, basically a | separated list:
+A continuación se muestra una descripción del formato, que es básicamente una lista separada por un | 
 
 <screen>
-# format:
-# name | description | command | flags | web url | author
+# formato:
+# nombre | descripcion | comado | flags | web url | autor
 
 # flags:
-# runonce | multi = if there should be only one instance running, or not
-# terminal        = if it should run in a terminal
-# manual          = if it's a manual entry
-# root | user     = if it must be run as root or as user
+# runonce | multi = si debería ejecutarse sólo una instancia, o no
+# terminal        = si debería ejecutarse en una terminal
+# manual          = si es una entrada de manual
+# root | user     = si debe ejecutarse como root o como usario
 
-# submenus can start and end with
-# Begin | MySubmenu
-# End | MySubmenu
-</screen>
-
-for example:
-
-<screen>
-Begin | SPAGHETTI
-
-AglioeOlio | aglio olio e peperoncino | pasta --agliolio | | http://tuttifrutti.org | The Crazy Cook
-Puttanesca | olive capperi e alici | pasta --puttan | | http://tuttifrutti.org | The Crazy Cook
-Pesto | pesto alla genovese | pasta --pesto | | http://tuttifrutti.org | The Crazy Cook
-
-End | SPAGHETTI
-</screen>
-
-You can also have submenus, just use Begin and End once again
-inside. For a complete example see the system application list in
-<emphasis>$DYNE_SYS_MNT/applist</emphasis>.
-</para>
-
-<para>
-In case your module needs to set environment variables (like custom
-paths and general settings for applications) you can simply declare
-them in a env file inside the etc directory. That file can contain
-declarations of environment variables, one per line, which will be
-exported in the running system, for example in our spaghetti module
-<emphasis>/opt/spaghetti/etc/env</emphasis> will look like:
-
-<screen>
-KITCHEN_PATH=/opt/spaghetti/lib/kitchen
-GLOBAL_TASTE=spicy
-COOK_PROFILE=big_nose
+# submenús pueden comenzar o finalizar con
+# Begin | MiSubmenu
+# End | MiSubmenu
 </screen>
 </para>
 
 <para>
-You can include your own home settings inside a module, so that they
-will override the default dyne:II user settings. This is useful when
-you want to change the window manager default configuration (with a
-new desktop image for example) or deliver pre-configured applications
-(with a .config file in home).
+por ejemplo: 
 
-To do this you simply have to create a <emphasis>skel</emphasis>
-directory inside your module: all files that are included in it will
-be automatically copied into all users home directories and setted up
-to be adopted for users that are created in future.  <
-<para>
+<screen>
+Begin | TORTILLA
 
-<para>
-In your modules you can include any kernel module correctly compiled
-for the dyne:II kernel.
+Sope | maiz blanco agua y cal | masa --ovalo-chico | | http://craizymaiz.tv/ | La Tlayudera Loca
+Tlayuda | maiz azul agua y cal | masa --circulo-gigante | | http://craizymaiz.tv/ | La Tlayudera Loca
+Memela | maiz rojo agua y cal | masa --circulo-chico | | http://craizymaiz.tv/ | La Tlayudera Loca
 
-To do this you have to create a <emphasis>kernel</emphasis> directory
-inside your module: all kernel modules contained will be searched and
-loaded if found by the <emphasis>loadmod</emphasis> command, to be
-used instead of the standard modprobe.
+End | TORTILLA
+</screen>
 
-In case the module is not naturally requested by your hardware
-configuration (not listed by the pcimodules command), you build your
-own detection or force loading of your module inside a module startup
-script.
-
-You can prepare a script inside your module to be executed every time
-your module is activated.
-
-To do this you have to create an <emphasis>etc</emphasis> directory
-inside your module: <emphasis>all executable files included in the
-rc.* wildcard</emphasis> will be launched at startup, with the first
-$1 argument being the name of the module itself.
+Puedes también tener submenus utilizando Begin y End cada vez que lo necesites. Para ver un ejemplo completo mira la lista que se encuentra en <emphasis>$DYNE_SYS_MNT/applist</emphasis>.
 </para>
 
 <para>
-So here is resumed the file structure contained in modules:
+En caso de que tu módulo necesite ajustar variables de entorno (como rutas opcionales y ajustes generales para aplicaciones) puedes simplemente declararlas en un archivo env dentro del directorio etc. Este archivo puede contener declaraciones variables de entorno, una por línea, las cuales serán exportadas en el sistema que se ejecuta, por ejemplo en nuestro módulo tortilla <emphasis>/opt/tortilla/etc/env</emphasis> mostrará algo similar a esto: 
+
 <screen>
-VERSION required file 	    contains information about the module and its sources
-bin 	optional directory  contains all binaries, automatically included in $PATH
-lib 	optional directory  contains all libraries, automatically included in $LD_LIBRARY_PATH
-etc 	optional directory, contains rc.* startup scripts executed at activation
-skel 	optional directory, contains all settings to be added to /home/user and /etc/skel
-kernel 	optional directory, contains kernel modules that can be loaded by loadmod
+COCINA_PATH=/opt/tortilla/lib/cocina
+SABOR_GLOBAL=picante
+PERFIL_COCINERA=narigona
 </screen>
-You have the power to create, now go make something wonderful! :)
+
+</para>
+
+<para>Puedes incluir tu configuración personal de usuario (home settings) dentro del módulo, para que estos sobrescriban los ajustes de usuario que dyne:II trae predeterminados. Esto es útil cuando quieres cambiar los ajustes predeterminados del manejador de ventanas (con una imágen para el escritorio por ejemplo) o mostrar aplicaciones preconfiguradas (con un archivo .config en tu home).
+ </para>
+ 
+<para>Para hacer esto simplemente tienes que crear un directorio <emphasis>skel</emphasis> dentro de tu módulo: todos los archivos que sean incluidos en el serán automáticamente copiados a todos los directorios home de todos los usuarios, ajustándolos para que sean adoptados por los usuarios que sean creados en el futuro. 
+</para>
+
+<para>En tus módulos puedes incluir cualquier módulo de kernel correctamente compilado para el kernel de dyne:II. 
+</para>
+
+<para>Para hacer eso tienes que crear un directorio <emphasis>kernel</emphasis> dentro de tu módulo: para que estos módulos sean usados en vez del modprobe standard, todos los módulos de kernel contenidos serán buscados y cargados si el comando <emphasis>loadmod</emphasis> los encuentra. 
+</para>
 <para>
+En caso de que el módulo no sea solicitado de manera natural por la configuración de tu hardware (osea que no sea listado por el comando pcmimodules), construye tu propia detección o forza la carga de tu módulo dentro de un módulo con script de arranque. Puedes hacer un script dentro de tu módulo para que se ejecute cada vez que tu módulo es activado.</para>
+
+<para>
+ Para hacer esto tienes que crear un directorio <emphasis>etc</emphasis> dentro de tu módulo: <emphasis>todos los archivos ejecutables incluidos en el comodín rc.*</emphasis> serán lanzados al inicio, siendo el primer argumento $1 parte del nombre del módulo mismo. </para>
+
+<para>
+
+Esta es en resumen la estructura del archivo contenida en los módulos: 
+<screen>
+VERSION archivo requerido     contiene información acerca del módulo y sus fuentes
+
+bin     directorio opcional,  contiene todos los binarios, automáticamente incluido en $PATH
+
+lib     directorio opcional,  contiene todas las librerías, automáticamente incluido en $LD_LIBRARY_PATH
+
+etc     directorio opcional,  contiene scripts de arranque rc.* ejecutados durante la activación
+
+skel    directorio opcional,  contiene todas las configuraciones que serán agregadas a /home/usuario y /etc/skel
+
+kernel  directorio opcional,  contiene módulos de kernel que pueden ser cargados por loadmod
+</screen>
+¡Tienes el poder de crear, ahora inventa algo maravilloso! :)
+</para>
 
 </section>
 
 <section>
-<title>Compile a new kernel</title>
 
-<para>
-Assumed that you already learned how to compile a Linux kernel from
-the sources available on <emphasis>kernel.org</emphasis>, compiling a
-new kernel for dyne:bolic is relatively easy.
+<title>Compilar un nuevo kernel</title>
+<indexterm><primary>kernel</primary></indexterm>
+
+<para>Asumiendo que ya aprendiste como compilar un kernel Linux desde las fuentes disponibles en <emphasis>kernel.org</emphasis>, compilar un nuevo kernel para dyne:bolic es relativamente fácil. 
 </para>
 
-<para>
-Just go ahead as usual after unpacking the sourcecode:
+<para>Tan solo hay que ir como de costumbre después de desempaquetar el código fuente: 
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>make menuconfig
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
-The  kernel configuration  will be  prompted, which  you can  adapt as
-desired. In case you like to start from the current running dyne:bolic
-kernel as a base configuration, do from inside the kernel directory:
+</para>
+
+<para>
+Te regresará la configuración del kernel, la cual tu puedes adaptar como desees. En caso de que quieras tomar como configuración base para comenzar el kernel de dyne:bolic que se está ejecutando, desde el directorio kernel ejecuta: 
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>zcat /proc/config.gz > .config
@@ -365,9 +260,9 @@ kernel as a base configuration, do from inside the kernel directory:
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
-In case you are compiling a more recent kernel, you'll be prompted to
-answer to new questions introduced by this version. After configuring
-your kernel you can compile it using <emphasis>make</emphasis>:
+</para>
+
+<para>En caso de que compiles un kernel mas reciente, tendrás que responder nuevas preguntas incluidas en esa nueva versión. Después de configurar tu kernel puedes compilarlo usando make: 
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>make bzImage && make modules
@@ -376,36 +271,24 @@ your kernel you can compile it using <emphasis>make</emphasis>:
 
 </para>
 
-<para>
-After you are done with  your kernel compilation, packing a dyne:bolic
-kernel is  done with  a simple command  given inside the  linux source
-directory:
+
+<para>Cuando termines con la compilación de tu kernel, para empaquetar un kernel dyne:bolic se utiliza un comando que está dentro del directorio de fuentes linux: 
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>dynesdk mkkern
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
-
-The <emphasis>mkkern</emphasis> function of dynesdk will pack the
-kernel and its modules inside <emphasis>SDK/cdrom/dyne</emphasis>.  A
-compressed file containing all modules (usually sized below 20MB) will
-be named after the linux version with file
-extension <emphasis>.kmods</emphasis>.  The kernel itself will also be
-named after the linux version (reduced to 8.3 chars for compatibility
-with some bootloaders) with file extension <emphasis>.krn</emphasis>.
 </para>
 
 <para>
-The  reason of  this setup  is  that, having  all the  kernel and  its
-modules in two files easily recognizable by their extension it becomes
-very easy  to swap kernels in a  dock: just drop the  new files inside
-the dyne/ directory and re-configure the bootloader accordingly. Since
-the .krn and .kmods files  are already compressed, distribution of new
-dyne:bolic  kernels can  be done  as-is,  just sharing  the two  files
-around.
+La función <emphasis>mkkern</emphasis> de dynesdk empaquetará el kernel y sus módulos dentro de <emphasis>SDK/cdrom/dyne</emphasis>. Un archivo comprimido conteniendo todos los módulos (usualmente con un tamaño menor a 20MB) será nombrado con la versión de linux y tendrá la extensión <emphasis>.kmods</emphasis>. El kernel en sí será nombrado con la versión de linux (reducida a 8.3 caracteres para la compatibilidad con algunos cargadores de arranque) y tendrá la extensión .krn. 
+</para>
+
+<para>La razón para este acomodo es que, teniendo todos los kernels y sus módulos en dos archivos facilmente reconocibles por su extensión, se vuelve muy fácil compartir kernels en un dock: tan solo hay que poner el nuevo archivo dentro del directorio dyne/ y reconfigurar el cargador de arranque adecuadamente. Dado que los archivos .krn y .kmods están comprimidos, la distribución de nuevos kernels dyne:bolic se consigue tal cual, tan solo compartiendo los dos archivos. 
 </para>
 
 </section>
 
 
 </chapter>
+
