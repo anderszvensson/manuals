@@ -23,6 +23,16 @@ con tan solo un click. La configuración de Xfce es muy flexible: puedes crear m
 </para>
 
 <para>
+Para  tener un panorama general de cómo funciona dyne:bolic y cuales son sus funcionalidades puedes revisar <ulink url="http://lab.dyne.org/ArticulosDyne">los artículos enlazados en el wiki comunitario</ulink>.
+</para>
+
+<mediaobject>
+   <imageobject>
+     <imagedata align="center" fileref="images/shot-configure" format="jpg">
+   </imageobject>
+</mediaobject>
+
+<para>
 El menú  del software incluido en Dyne:bolic está organizado por  tareas, así  que fácilmente
 puedes encontrar la manera  de reproducir, grabar, editar y transmitir
 tanto audio  como video, comunicarte  y publicar textos, crear páginas web,
@@ -33,39 +43,19 @@ animaciones 3D y mucho mas.
 Haz click en CONFIGURE en tu menú para ajustar tu sistema a tu modo.
 </para>
 
-
-<mediaobject>
-   <imageobject>
-     <imagedata align="center" fileref="images/shot-configure" format="jpg">
-   </imageobject>
-</mediaobject>
-
-<para>
-Para  una  introducción  a  las  funcionalidades  al  utilizar  varios
-escritorios                                                      puedes
-visitar <ulink url="http://spot.river-styx.com/viewarticle.php?id=8">la
-página      de      Spot</ulink>      y     leer      el      artículo
-sobre <ulink url="http://www.osnews.com/story.php?news_id=6490">dyne:bolic
-en OS News</ulink> (ambos en ingles).
-</para>
-
 <indexterm><primary>Volumenes</primary></indexterm>
 <indexterm><primary>NTFS</primary></indexterm>
 
 <section>
 <title>Utilizando volumenes de datos para almacenar información</title>
 
+<para>Para un fácil acceso a los archivos de los dispositivos de almacenamiento conectados a tu sistema (discos duros, cd, floppy, usb) puedes usar los iconos localizados en la parte superior derecha de tu escritorio, donde también se encuentran botones para entrar a tu red local de archivos compartidos, y para usar tus cuentas de acceso a internet. Las particiones de estas unidades de almacenamiento serán montadas automáticamente en el directorio <emphasis>/mnt</emphasis>, el cual estará enlazado desde tu área personal bajo el nombre de <emphasis>Volumes</emphasis>.  Puedes leer y escribir en todos los sistemas de archivos excepto los sistemas NT, los cuales serán de sólo lectura.
+</para>
 <mediaobject>
    <imageobject>
         <imagedata align="center" fileref="images/shot-volumes" format="jpg">
    </imageobject>
 </mediaobject>
-
-<para>
-
-Para un fácil acceso a los archivos de los dispositivos de almacenamiento conectados a tu sistema (discos duros, cd, floppy, usb) puedes usar los iconos localizados en la parte superior derecha de tu escritorio, donde también se encuentran botones para entrar a tu red local de archivos compartidos, y para usar tus cuentas de acceso a internet. Las particiones de estas unidades de almacenamiento serán montadas automáticamente en el directorio <emphasis>/mnt</emphasis>, el cual estará enlazado desde tu área personal bajo el nombre de <emphasis>Volumes</emphasis>.  Puedes leer y escribir en todos los sistemas de archivos excepto los sistemas NT, los cuales serán de sólo lectura.
-</para>
-
 <indexterm><primary>unidades usb</primary></indexterm>
 
 <para>
