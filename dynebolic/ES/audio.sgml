@@ -17,7 +17,7 @@ La mayoría de las aplicaciones de audio en dyne:bolic se pueden conectar entre 
 </para>
 
 <para>
-Este enfoque revolucionario para la producción de audio, seguramente recompensará satisfactoriamente tu voluntad de utilizar estas herramientas. En este sentido, puedes comenzar conociendo las perspectivas tecnológicas de Spot (en inglés) que se encuentran en <ulink url="http://spot.river-styx.com/viewarticle.php?id=14"></ulink> y en <ulink url="http://spot.river-styx.com/viewarticle.php?id=17"></ulink>.
+Este enfoque revolucionario para la producción de audio, seguramente recompensará satisfactoriamente tu voluntad de utilizar estas herramientas. Puedes comenzar conociendo las perspectivas tecnológicas de Spot (en inglés) que se encuentran en <ulink url="http://spot.river-styx.com/viewarticle.php?id=14"></ulink> y en <ulink url="http://spot.river-styx.com/viewarticle.php?id=17"></ulink>.
 </para>
 
 <section>
@@ -71,7 +71,7 @@ Este sistema operativo ofrece versátiles reproductores para muchos formatos de 
 </section>
 
 <section>
-<title>Acciona</title>
+<title>Creación Sonora</title>
 
 <para>
 Esta sección incluye software para producir música en vivo, interactuar en tiempo real con las aplicaciones que generan sonido a partir de los inputs de micrófono, midi, teclado o mouse. Todos estos programas requieren que Jack funcione adecuadamente, de manera que pueda estar interconectado en una cadena de programas, como un rack virtual de diferentes aplicaciones.
@@ -83,7 +83,7 @@ Esta sección incluye software para producir música en vivo, interactuar en tie
 <secondary> Hydrogen </secondary>
 </indexterm>
 
-<emphasis>Hydrogen</emphasis>es una caja de ritmos en la que puedes cargar instrumentos de prueba y componer una partitura para que se toque a un ritmo específico. Su página ofrece una colección de muchos kits de percusiones más que puedes descargar, <ulink url="http://www.hydrogen-music.org"></ulink>.
+<emphasis>Hydrogen</emphasis>es una caja de ritmos en la que puedes cargar instrumentos de prueba y componer una partitura para que se toque a un ritmo específico. Su sitio web ofrece una colección de varios kits de percusiones que puedes descargar <ulink url="http://www.hydrogen-music.org"></ulink>.
 
 </para>
 
@@ -92,9 +92,7 @@ Esta sección incluye software para producir música en vivo, interactuar en tie
 <indexterm><primary> Audio </primary>
 <secondary> Jamin </secondary>
 </indexterm>
-
-
-<emphasis>Jamin</emphasis>es la interfaz de masterización de audio de Jack. Puede desempeñar masterización de audio profesional en flujos de inputs en estéreo y ecualizar señales con una interfaz intuitiva y avanzada para dar forma a todas las frecuencias en tiempo real.
+<emphasis>Jamin</emphasis>es la interfaz de masterización de audio de Jack. Puede desempeñar masterización de audio profesional en flujos de inputs en estéreo y ecualizar señales con una interfaz intuitiva y al mismo tiempo avanzada que permite dar forma a todas las frecuencias en tiempo real.
 </para>
 
 
@@ -104,7 +102,7 @@ Esta sección incluye software para producir música en vivo, interactuar en tie
 <secondary> Jack Rack </secondary>
 </indexterm>
 
-<emphasis>Jack Rack</emphasis>es un poderoso rack de efectos que pueden aplicar cadenas de plugins de audio (LADSPA) al sonido ya producido con otros programas. Usando Jack puedes interconectar tus sonidos con todas las demás herramientas de interpretación y añadir uno de los más de 200 efectos disponibles en dyne:bolic.
+<emphasis>Jack Rack</emphasis>es un poderoso rack de efectos que puede aplicar cadenas de plugins de audio (LADSPA) al sonido ya producido con otros programas. Usando Jack puedes interconectar tus sonidos con todas las demás herramientas de interpretación y añadir uno de los más de 200 efectos disponibles en dyne:bolic.
 </para>
 
 <para>
@@ -174,12 +172,12 @@ Esta versión de dyne:bolic llega a tí con sofware actualizado para grabar y ma
 <secondary> MuSE </secondary>
 </indexterm>
 
-<emphasis>MuSE</emphasis> es otro Software Rasta de dyne.org incluido, que te permite transmitir audio en internet a través de varios servidores (Icecast, Darwin y Shoutcast) en formato OGG o MP3, así tus escuchas podrán sintonizar tu voz y tu música conectándose con cualquier reproductor disponible.
+<emphasis>MuSE</emphasis> es otro Software Rasta de dyne.org que te permite transmitir audio en internet a través de varios servidores (Icecast, Darwin y Shoutcast) en formato OGG o MP3. De esta maner tus escuchas podrán sintonizar tu voz y tu música conectándose con cualquier reproductor disponible.
 
 </para>
 
 <para>
-MuSE puede mezclar hasta 6 bitstreams de audio codificados (desde archivos o la red, ogg o mp3) más una señal de input de la tarjeta de sonido, el flujo resultante puede ser reproducido localmente en la tarjeta de sonido y/o codificado a diferentes bitrates, grabado en el disco duro y/o transmitido a la red.
+MuSE puede mezclar hasta 6 bitstreams de audio codificados (archivos locales, red, ogg, mp3, etc) mas una señal de input de la tarjeta de sonido, el flujo resultante puede ser reproducido localmente en la tarjeta de sonido y/o codificado a diferentes bitrates, grabado en el disco duro y/o transmitido a la red.
 </para>
 
 <para>
