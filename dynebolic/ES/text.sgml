@@ -1,35 +1,24 @@
 <chapter>
 
-  <title>Software para Texto</title>
-  <subtitle>Edición de texto y publicación con dyne:bolic</subtitle>
+<title>Software para Texto</title>
+<subtitle>Edición de texto y publicación con dyne:bolic</subtitle>
 
 
-<indexterm><primary> Texto </primary></indexterm>
+<indexterm><primary>Texto</primary></indexterm>
 
 <para>
-Dyne:bolic  incluye  software que  te  permite  fácilmente escribir  y
-componer  cualquier  tipo de  documento:  hipertextos  que pueden  ser
-publicados en internet (HTML),  textos formateados para imprimir (RTF,
-PDF                 Postscript                 y                 hasta
-el desacreditado formato DOC.
-  
-<footnote><para>
-Por varias razones no deberías usar el formato .DOC: aún sin que tú lo decidas expone todos tus cambios previos al documento lo cual conlleva un riesgo de privacidad; puede transportar peligrosos virus que pueden afectar otros sistemas operativos propietarios; además guarda tu texto de una manera exclusiva por lo que te predispone a utilizar software privativo. Para más información revisa con atención <ulink url="http://www.gnu.org/philosophy/no-word-attachments.es.html">el documento relativo a este tema.</ulink>    
+Dyne:bolic incluye software que te permite fácilmente escribir y editar  cualquier tipo de documento: hipertextos que pueden ser publicados en internet (HTML), textos formateados para imprimir (RTF, PDF, Postscript) y hasta el desacreditado formato DOC. <footnote><para>
+Por varias razones no deberías usar el formato .DOC: aún sin que tú lo decidas expone todos tus cambios previos al documento lo cual conlleva un riesgo de privacidad; puede transportar peligrosos virus que pueden afectar otros sistemas operativos propietarios. Además guarda tu texto de una manera exclusiva por lo que te predispone a utilizar software privativo. Para más información revisa con atención <ulink url="http://www.gnu.org/philosophy/no-word-attachments.es.html">el documento relativo a este tema.</ulink>    
 </para></footnote>
 </para>
-
 
 <para>
 <indexterm><primary> Texto </primary>
 <secondary> AbiWord </secondary>
 </indexterm>
 
-El procesador  de palabras <emphasis>Abiword</emphasis> rápidamente está alcanzando un nivel artístico con multiples herramientas  utiles para tu trabajo diario,
-para tus necesidades  personales o para divertirte escribiendo al
-viejo  estilo.  Es  capaz  de  leer  y escribir  todos  los  tipos  de
-documentos  industriales   standard,  como  los   documentos  de  Open
-Office.org, Microsoft Word,  Wordperfect, Texto de Formato Enriquecido
-(RTF), paginas HTML para web y mucho más.
+El procesador  de palabras <emphasis>Abiword</emphasis> rápidamente está alcanzando un nivel artístico con multiples herramientas utiles para tu trabajo diario, para tus necesidades personales o para divertirte escribiendo al
+viejo estilo. Es capaz de leer y escribir todos los tipos de documentos industriales standard, como los documentos de Open Office, Microsoft Word,  Wordperfect, Texto de Formato Enriquecido (RTF), páginas HTML para web y mucho más.
 </para>
 
 <para>
@@ -38,10 +27,8 @@ Office.org, Microsoft Word,  Wordperfect, Texto de Formato Enriquecido
 <secondary> Scribus </secondary>
 </indexterm>
 
-<emphasis>Scribus</emphasis>  es  un programa  de  publicación  para  componer en  formatos vectoriales  como PDF y  Postscrip. Resulta  útil para  paginar texto
-imprimible  de  manera profesional y sirve  para  producir  revistas,
-folletos y la mayoría de las publicaciones que necesiten mezclar texto
-e imágen en una página siguiendo plantillas ajustables.
+<emphasis>Scribus</emphasis> es un programa de publicación para componer en formatos vectoriales como PDF y Postscrip. Resulta útil para paginar texto
+imprimible de manera profesional y sirve para producir revistas, folletos y la mayoría de las publicaciones que necesiten mezclar texto e imágen en una página siguiendo plantillas ajustables.
 </para>
 
 
@@ -51,10 +38,7 @@ e imágen en una página siguiendo plantillas ajustables.
 <secondary> Nedit </secondary>
 </indexterm>
 
-Nedit es  un editor de texto  plano que ofrece un  marcado de sintaxis
-para un par de lenguajes de  código fuente. Es un programa intuitivo y
-fácil de  usar para novatos, pero  al mismo tiempo  ofrece un poderoso
-entorno para programadores.
+Nedit es un editor de texto plano que ofrece un marcado de sintaxis para un par de lenguajes de código fuente. Es un programa intuitivo y fácil de usar para novatos, pero al mismo tiempo ofrece un poderoso entorno para programadores.
 </para>
 
 <para>
@@ -63,32 +47,21 @@ entorno para programadores.
 <secondary> AntiWord </secondary>
 </indexterm>
 
-Finalmente,  <emphasis>Antiword</emphasis>  es  una  aplicación  muy  útil  para  convertir
-cualquier  archivo .doc  en un  archivo de  texto plano  utilizando un
-simple comando, dejando el  posicionamiento de líneas intacto. Para un
-rápido inicio, intenta esto:
+Finalmente, <emphasis>Antiword</emphasis> es una aplicación muy útil para convertir cualquier archivo .doc en un archivo de texto plano utilizando un simple comando, dejando el posicionamiento de líneas intacto. Para un rápido inicio, intenta esto:
 <screen>
 <prompt>[d:b] ~ #</prompt><userinput>antiword malo.doc > bueno.txt</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
-como sucede en otros casos,  existen páginas de manual que ofrecen mas
-información  sobre el    uso   de   este   programa,  tan  sólo   tienes   qe
-teclear <emphasis>man antiword</emphasis> en una terminal.
+como sucede en otros casos, existen páginas de manual que ofrecen mas información sobre el uso de este programa, tan  sólo tienes qe teclear <emphasis>man antiword</emphasis> en una terminal.
 </para>
 
 <para>
 
-<indexterm><primary> Texto </primary>
-<secondary> Open Office </secondary>
+<indexterm><primary>Texto</primary>
+<secondary>Open Office</secondary>
 </indexterm>
-En  caso de  que necesites  una  completa paquetería  de oficina  para
-satisfacer tus necesidades,  existe el módulo de dyne  <emphasis>Open Office 2.0</emphasis>
-disponible  <ulink url="ftp://ftp.dyne.org/dynebolic/modules/">en  línea para  descargarlo  desde  nuestro sitio</ulink>:  puedes
-colocarlo dentro del directorio de  módulos de tu Dock ( dyne/modules/
-) y  al próximo reinicio  de tu sistema  lo encontrarás en el  menú de
-aplicaciones.  Con  Open Office puedes  leer y  escribir  todos  los
-archivos .DOC, las  hojas de cálculo .XLS, las  presentaciones .PPT, y mucho
-más.
+En caso de que necesites una completa paquetería de oficina para satisfacer tus necesidades, existe el módulo de dyne  <emphasis>Open Office 2.0</emphasis>
+disponible <ulink url="ftp://ftp.dyne.org/dynebolic/modules/">en línea para  descargarlo desde nuestro sitio</ulink>: puedes colocarlo dentro del directorio de módulos de tu Dock ( dyne/modules/) y al próximo reinicio de tu sistema lo encontrarás en el menú de aplicaciones.  Con Open Office puedes leer y escribir  todos los archivos .DOC, las hojas de cálculo .XLS, las presentaciones .PPT, y mucho más.
 </para>
 
 </chapter>

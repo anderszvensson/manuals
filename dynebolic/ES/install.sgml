@@ -3,10 +3,9 @@
 
 <para>
 Este capítulo describe varias formas  de usar Dyne:bolic
-de manera  avanzada:  Cómo   agrupar  múltiples   computadoras  para
-aprovechar  sus  recursos   compartidos;  cómo  convertir  el  sistema
-residente en  varias computadoras para crear un laboratorio de medios,  y cómo
-mantener tus datos seguros de invasiones a tu privacidad.
+de manera  avanzada:  cómo   agrupar  múltiples   computadoras  para
+aprovechar  sus  recursos   compartidos;  cómo  hacer que un  sistema
+residente en  varias computadoras pueda usarse para crear un laboratorio de medios,  y cómo mantener tus datos seguros de invasiones a tu privacidad.
 </para>
 
 <para>
@@ -14,14 +13,13 @@ El conocimiento proveído por  este capítulo requiere algo de confianza
 con  lo básico  de los  sistemas GNU/Linux  y el  uso de  la  línea de
 comandos. De este modo tendrás mayores capacidades para instalar de  manera
 flexible laboratorios de medios completamente  funcionales inclusive si utilizas 
-computadoras recicladas. Solo recuerda que  necesitas planear bien la arquitectura
-de tus recursos dependiendo de tu situación específica.
+computadoras recicladas. Solo recuerda que  necesitas planear bien la arquitectura de tus recursos dependiendo de tu situación específica.
 </para>
 
 <section> 
 <title>Arrancar desde el disco duro</title>
 
-<indexterm><primary>disco duro</primary></indexterm>
+<indexterm><primary>Disco duro</primary></indexterm>
 
 <para>
 Con Docking  vimos que  simplemente al mover  un  directorio a  la  raíz  de  una partición  puede  dejarnos arrancar desde  el CD y usar el  sistema desde el disco  duro. Esto es una manera muy simple y segura  de tener un sistema de arranque doble: con el CD dentro para dyne:bolic, con el CD fuera para cualquier otra cosa. Aún así  a mucha gente realmente le  gustaría deshacerse del CD,
@@ -30,10 +28,9 @@ así que aquí se explica cómo hacerlo.
 
 <para>
 Considera que la siguiente operación no es necesaria para correr
-dyne:bolic  desde el  disco duro.  Si no  estás familiarizada  con los
+dyne:bolic  desde el  disco duro.  Si no  estás familiarizado  con los
 sectores de arranque y la  geometría de partición tal vez necesites de la
-intervención de alguien con mayor experiencia por si algo  sale mal. Además, en  caso de que cometas un error podrías borrar  todos los datos guardados en tu disco
-duro y/o quedarte sin la posibilidad  de arrancar de nuevo en tu viejo
+intervención de alguien con mayor experiencia por si algo  sale mal. Además, en  caso de que cometas un error podrías borrar  todos los datos guardados en tu disco duro y/o quedarte sin la posibilidad  de arrancar de nuevo en tu viejo
 sistema operativo.
 </para>
 
@@ -53,7 +50,7 @@ computadora.
 </para>
 
 
-<indexterm><primary>partitioning</primary></indexterm>
+<indexterm><primary>Particionado</primary></indexterm>
 <indexterm><primary>cfdisk</primary></indexterm>
 <indexterm><primary>mke3fs</primary></indexterm>
 
@@ -68,7 +65,7 @@ que haya en el disco</emphasis>.
 </para>
 
 
-<indexterm><primary>grub</primary></indexterm>
+<indexterm><primary>Grub</primary></indexterm>
 
 <para>
 Una  vez que  tengas un  disco particionado  y  formateado necesitarás
@@ -78,14 +75,7 @@ directamente en dyne:bolic, sin necesidad de usar un CD.
 </para>
 
 <para>
-  <emphasis>Para re-configurar tu  cargador de arranque</emphasis> (no
-es  necesario si instalaste  uno desde  cero usando  dyne:bolic) busca
-entre  las particiones  de tu  disco duro,  en caso  de que  tengas un
-directorio llamado  boot/ mira si  dentro hay otro  directorio llamado
-grub/, si  lo hay encontrarás  en él la  configuración de tu  grub, un
-simple archivo de  texto llamado grub.conf o menu.lst  el cuál tendrás
-que editar  a mano,  añadiendo algunas líneas  al final  para integrar
-dyne:bolic a las opciones del menú de arranque:
+<emphasis>Para re-configurar tu  cargador de arranque</emphasis> (no es  necesario si instalaste  uno desde  cero usando  dyne:bolic) busca entre  las particiones  de tu  disco duro,  en caso  de que  tengas un directorio llamado  boot/ mira si  dentro hay otro  directorio llamado grub/, si  lo hay encontrarás  en él la  configuración de tu  grub, un simple archivo de  texto llamado grub.conf o menu.lst  el cuál tendrás que editar  a mano,  añadiendo algunas líneas  al final  para integrar dyne:bolic a las opciones del menú de arranque:
 
 <screen>
 <userinput>
@@ -123,15 +113,7 @@ image = /dyne/2618ck1d.krn
 </userinput>
 </screen>
 
-Asegúrate de que el directorio /dyne esté dentro de la partición en la
-que arrancas, lo cual se  configura en lilo en la línea <emphasis>boot
-=  /dev/hd*</emphasis> que  usualmente se  encuentra al  principio del
-archivo lilo.conf .  Por favor observa que el parámetro "image=" lleva
-un camino completo al archivo del kernel, que se llama como su versión
-en  una  forma  condensada,   por  ejemplo  aquí  2618ck1d  representa
-2.6.18-ck1-dyne.    El  formato  condensado   es  necesario   por  una
-restricción de nombre de archivo  8.3 del sistema de arranque isolinux
-del CD.
+Asegúrate de que el directorio /dyne esté dentro de la partición en la que arrancas, lo cual se  configura en lilo en la línea <emphasis>boot =  /dev/hd*</emphasis> que  usualmente se  encuentra al  principio del archivo lilo.conf .  Por favor observa que el parámetro "image=" lleva un camino completo al archivo del kernel, que se llama como su versión en  una  forma  condensada,   por  ejemplo  aquí  2618ck1d  representa 2.6.18-ck1-dyne.    El  formato  condensado   es  necesario   por  una restricción de nombre de archivo  8.3 del sistema de arranque isolinux del CD.
 </para>
 
 <para>Feliz hackeo ;)</para>
