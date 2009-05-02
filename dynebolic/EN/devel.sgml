@@ -223,7 +223,7 @@ and that's it! your new module will be found in
 $DYNE_SYS_MNT/dyne/SDK/cdrom/dyne/modules/spaghetti.dyne and ready
 to be included in the next CD ISO that you can pack with dynesdk
 mkiso.
-<para>
+</para>
 
 <para>
 Before releasing your module into the public, is a good idea to fill
@@ -241,7 +241,7 @@ packager        The Crazy Cook http://tuttifrutti.org/~crazycook
 
 Just use your favorite text editor to fill in these fields, leave a
 space or a tab between the field name and value and that's it.
-<para>
+</para>
 
 
 <para>
@@ -311,7 +311,7 @@ To do this you simply have to create a <emphasis>skel</emphasis>
 directory inside your module: all files that are included in it will
 be automatically copied into all users home directories and setted up
 to be adopted for users that are created in future.  <
-<para>
+</para>
 
 <para>
 In your modules you can include any kernel module correctly compiled
@@ -347,7 +347,7 @@ skel 	optional directory, contains all settings to be added to /home/user and /e
 kernel 	optional directory, contains kernel modules that can be loaded by loadmod
 </screen>
 You have the power to create, now go make something wonderful! :)
-<para>
+</para>
 
 </section>
 

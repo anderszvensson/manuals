@@ -189,6 +189,7 @@ Fat32, Ext2, ReiserFS, Beos (BeFS), and NTFS (supported since version
 2.5).  The nest is just one file created in the /dyne directory at the
 root of your partition (C:\ or D:\ in the DOS filesystem) called
 <emphasis>dyne.nst</emphasis>. To erase a nest simply delete that file.
+</para>
 
 <para>
 Since version 2.5 it is also possible to mount nests after boot: just

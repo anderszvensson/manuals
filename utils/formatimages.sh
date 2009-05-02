@@ -37,6 +37,17 @@ case $target in
 	
 	;;
 
+    rtf)
+	# rtf images want no extensions
+	outdir="$lang/images"
+	mkdir -p $outdir
+	for i in `ls images/*`; do
+	    file="`basename $i | cut -d. -f1`"
+	    echo "converting $file without extension"
+	    cp $i "$outdir/${file}"
+	done
+	
+	;;
 
     *)
 	echo "ERROR in image/convert.sh - must specify a target, i.e: convert.sh EN html"

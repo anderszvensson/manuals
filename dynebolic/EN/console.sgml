@@ -255,6 +255,8 @@ I have a directory in there called 'adam'), I would type:
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
+</para>
+
 </section>
 
 <section>
@@ -603,6 +605,8 @@ drwxr-xr-x  17 root root  4096 Oct  5 09:31 usr
 drwxr-xr-x  15 root root  4096 Oct  9 13:57 var
 </screen>
 
+</para>
+
 <para>
 The above listing is a  fairly standard directory structure for Linux.
 Each name on the far  right represents a directory, and each directory
@@ -659,7 +663,7 @@ at  best get  a  superficial  glimpse. We  will  arbitrarily choose  a
 couple:  <emphasis>nano</emphasis>  and <emphasis>vim</emphasis>.   We
 will also look at <emphasis>less</emphasis> which is not an editor but
 is a command that allows you to read files on your system.
-
+</para>
 
 <section>
 <title>less</title>
