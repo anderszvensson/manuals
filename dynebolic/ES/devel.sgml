@@ -3,7 +3,7 @@
 <subtitle>Extiende y personaliza el live CD de Dyne</subtitle>
 
 <para>
-Dyne:II incluye SDK para remasterizar el live CD de manera que puedas incluir todas tus modificaciones personales al sistema así como las colecciones de software que tu decidas instalarle. De hecho, <emphasis>Dyne:II es un Dyne para producir Dyne</emphasis>. Considerala como una <emphasis>Distribución Nómada incrustada a ningún hardware</emphasis>. Puedes llevar contigo tu versión viva del cd/dvd/usb y cargarla en cualquier máquina, hacer tus cosas (desde el punto de vista del usuario y/o del desarrollador), puedes crear un nuevo live CD, limpiar todos tus rastros y luego abandonar el lugar. Solo camina por el mundo con tu CD re-escribible o con tu llavero usb y eso es todo.
+Dyne:II incluye SDK para remasterizar el live CD de manera que puedas incluir todas tus modificaciones personales al sistema así como las colecciones de software que tu decidas instalarle. De hecho, <emphasis>Dyne:II es un Dyne para producir Dyne</emphasis>. Considerala como una <emphasis>Distribución Nómada incrustada a ningún hardware</emphasis>. Puedes llevar contigo tu versión viva del cd/dvd/usb y cargarla en cualquier máquina, hacer tus cosas (desde el punto de vista del usuario y/o del desarrollador), luego puedes crear un nuevo live CD, limpiar todos tus rastros y finalmente abandonar el lugar. Solo camina por el mundo con tu CD re-escribible o con tu llavero usb y eso es todo.
 </para>
 
 <indexterm><primary>Arquitectura</primary></indexterm>
@@ -19,7 +19,7 @@ Dyne:II incluye SDK para remasterizar el live CD de manera que puedas incluir to
 <indexterm><primary>Personalizar</primary></indexterm>
 <title>Personalizando tu live CD de Dyne</title>
 
-<para>Es posible personalizar y expandir dyne:bolic en varias maneras: creando módulos de software para agregar aplicaciones y distribuirlas a la comunidad, además de que es posible cambiar el comportamiento del sistema durante el arranque. Para facilitar la personalización y el desarrollo, se incluye la herramienta <emphasis>dynesdk</emphasis> para automatizar el proceso de empaquetar los cambios en un nuevo live CD. 
+<para>Es posible personalizar y expandir dyne:bolic en varias maneras, por ejemplo creando módulos de software para agregar aplicaciones y distribuirlas a la comunidad. También es posible cambiar el comportamiento del sistema durante el arranque. Para facilitar la personalización y el desarrollo, se incluye la herramienta <emphasis>dynesdk</emphasis> para automatizar el proceso de empaquetar los cambios en un nuevo live CD. 
 </para>
 
 <para>Para una buena introducción a los potenciales de esta herramienta puedes leer el artículo (en inglés) de <ulink url="http://www.linux.com/articles/54607">Stomfi</ulink> sobre lo que es posible hacer para personalizar dyne:bolic. 
@@ -33,7 +33,7 @@ Dyne:II incluye SDK para remasterizar el live CD de manera que puedas incluir to
 </userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
 </screen>
 
-<para>Recibirás dos preguntas a las que es mas seguro contestar <emphasis>no</emphasis> en ambos casos, a menos de que quieras modificar el core de dyne:II: </para>
+<para>Recibirás dos preguntas a las que es mas seguro contestar <emphasis>no</emphasis> en ambos casos, a menos de que quieras modificar el core de dyne:II </para>
 
 <screen>
 <prompt>* [?] do you want to uncompress the dyne.sys (y/N) ?</prompt>
@@ -41,12 +41,12 @@ Dyne:II incluye SDK para remasterizar el live CD de manera que puedas incluir to
 </screen>
 
 <para>
-en caso de que tardes en responder o no respondas, se tomará NO como respuesta por defecto después de 10 segundos y se continuará. 
+en caso de que tardes en responder o no respondas, se tomará NO como respuesta por defecto después de 10 segundos y dynesdk continuará. 
 </para>
 
 <para>Este procedimiento creará un directorio SDK dentro de $DYNE_SYS_MNT/dyne, para luego habitarlo con los archivos de desarrollo que son descargados desde el repositorio en línea de subversion, si es que tienes conexión a la red.</para> 
 
-<para>Con SDK puedes empaquetar las modificaciones a tu sistema en un nuevo ISO CD el cual se genera con los contenidos del directorio SDK/cdrom. Puedes luego agregar y remover módulos desde SDK/cdrom/dyne/modules así como agregar cualquier otra cosa dentro del sistema de archivos del CD, como por ejemplos archivos README personalizados, iconos, etc. </para>
+<para>Con SDK puedes empaquetar las modificaciones a tu sistema en un nuevo ISO CD el cual se genera con los contenidos del directorio SDK/cdrom. Puedes luego agregar y remover módulos desde SDK/cdrom/dyne/modules así como agregar cualquier otra cosa dentro del sistema de archivos del CD, como por ejemplo archivos README personalizados, iconos, etc. </para>
 
 </section>
 
@@ -56,7 +56,7 @@ en caso de que tardes en responder o no respondas, se tomará NO como respuesta 
 <para>Una vez que tengas un SDK y un poco de espacio disponible en tu disco duro puedes empezar a crear tus propios módulos de software para agregar aplicaciones a dyne:bolic. Si necesitas más información sobre las características y el uso de los modulos dyne, puedes revisar la sección "<emphasis>Módulos extra de software</emphasis>" de este manual. Ahora continuaremos con algunas instrucciones en cómo crearlos. </para>
 
 <para>
-Antes que nada asegurate que tienes un dock de tu sistema en un disco duro, luego crea un SDK (mira el capítulo anterior). Cuando tengas un directorio SDK en tu directorio puedes ver su localización con tan solo teclear: 
+Antes que nada asegurate que tienes un dock de tu sistema en un disco duro y luego crea un SDK (mira el capítulo anterior). Cuando tengas un directorio SDK en tu directorio puedes ver su localización con tan solo teclear: 
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>echo $DYNE_SYS_MNT/SDK
@@ -94,7 +94,7 @@ El último paso es activar nuestro módulo tortilla montándolo en /opt/tortilla
 ¡Eso es todo! Nuestro nuevo módulo está montado en /opt y tenemos nuestras rutas configuradas correctamente. 
 </para>
 
-<para>Ten en cuenta que antes de comenzar el desarrollo de tu módulo, necesitas montar el dynesdk cada vez que reinicies. Puedes también abrir un módulo existente para trabajar en su desarrollo (por ejemplo tu excelente módulo tlayuda en el que tienes semanas trabajando); para esto utilizas el comando: 
+<para>Ten en cuenta que antes de comenzar el desarrollo de tu módulo, necesitas montar el dynesdk cada vez que reinicies. Puedes también abrir un módulo existente para trabajar en su desarrollo, pongamos por ejemplo tu excelente módulo tlayuda en el que tienes semanas trabajando; para hacer esto utilizas el comando: 
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>dynesdk devel tlayuda
@@ -185,7 +185,7 @@ Puedes también tener submenus utilizando Begin y End cada vez que lo necesites.
 </para>
 
 <para>
-En caso de que tu módulo necesite ajustar variables de entorno (como rutas opcionales y ajustes generales para aplicaciones) puedes simplemente declararlas en un archivo env dentro del directorio etc. Este archivo puede contener declaraciones variables de entorno, una por línea, las cuales serán exportadas en el sistema que se ejecuta, por ejemplo en nuestro módulo tortilla <emphasis>/opt/tortilla/etc/env</emphasis> mostrará algo similar a esto: 
+En caso de que tu módulo necesite ajustar variables de entorno (como rutas opcionales y ajustes generales para aplicaciones) puedes simplemente declararlas en un archivo env dentro del directorio etc. Este archivo puede contener declaraciones y variables de entorno, una por línea, las cuales serán exportadas en el sistema que se ejecuta, por ejemplo en nuestro módulo tortilla <emphasis>/opt/tortilla/etc/env</emphasis> mostrará algo similar a esto: 
 
 <screen>
 COCINA_PATH=/opt/tortilla/lib/cocina
@@ -207,10 +207,9 @@ PERFIL_COCINERA=narigona
 <para>Para hacer eso tienes que crear un directorio <emphasis>kernel</emphasis> dentro de tu módulo: para que estos módulos sean usados en vez del modprobe standard, todos los módulos de kernel contenidos serán buscados y cargados si el comando <emphasis>loadmod</emphasis> los encuentra. 
 </para>
 <para>
-En caso de que el módulo no sea solicitado de manera natural por la configuración de tu hardware (osea que no sea listado por el comando pcmimodules), construye tu propia detección o forza la carga de tu módulo dentro de un módulo con script de arranque. Puedes hacer un script dentro de tu módulo para que se ejecute cada vez que tu módulo es activado.</para>
+En caso de que el módulo no sea solicitado de manera natural por la configuración de tu hardware (osea que no sea listado por el comando pcmimodules), construye tu propia detección o forza la carga de tu módulo dentro de un módulo con un script de arranque. Puedes hacer un script dentro de tu módulo para que se ejecute cada vez que tu módulo es activado.</para>
 
-<para>
- Para hacer esto tienes que crear un directorio <emphasis>etc</emphasis> dentro de tu módulo: <emphasis>todos los archivos ejecutables incluidos en el comodín rc.*</emphasis> serán lanzados al inicio, siendo el primer argumento $1 parte del nombre del módulo mismo. </para>
+<para> Para hacer esto tienes que crear un directorio <emphasis>etc</emphasis> dentro de tu módulo: <emphasis>todos los archivos ejecutables incluidos en el comodín rc.*</emphasis> serán lanzados al inicio, siendo el primer argumento $1 parte del nombre del módulo mismo. </para>
 
 <para>
 
@@ -241,7 +240,7 @@ kernel  directorio opcional,  contiene módulos de kernel que pueden ser cargado
 <para>Asumiendo que ya aprendiste como compilar un kernel Linux desde las fuentes disponibles en <emphasis>kernel.org</emphasis>, compilar un nuevo kernel para dyne:bolic es relativamente fácil. 
 </para>
 
-<para>Tan solo hay que ir como de costumbre después de desempaquetar el código fuente: 
+<para>Tan sólo hay que proceder como de costumbre después de desempaquetar el código fuente: 
 
 <screen>
 <prompt>[d:b] ~ # </prompt><userinput>make menuconfig
@@ -284,7 +283,7 @@ Te regresará la configuración del kernel, la cual tu puedes adaptar como desee
 La función <emphasis>mkkern</emphasis> de dynesdk empaquetará el kernel y sus módulos dentro de <emphasis>SDK/cdrom/dyne</emphasis>. Un archivo comprimido conteniendo todos los módulos (usualmente con un tamaño menor a 20MB) será nombrado con la versión de linux y tendrá la extensión <emphasis>.kmods</emphasis>. El kernel en sí será nombrado con la versión de linux (reducida a 8.3 caracteres para la compatibilidad con algunos cargadores de arranque) y tendrá la extensión .krn. 
 </para>
 
-<para>La razón para este acomodo es que, teniendo todos los kernels y sus módulos en dos archivos facilmente reconocibles por su extensión, se vuelve muy fácil compartir kernels en un dock: tan solo hay que poner el nuevo archivo dentro del directorio dyne/ y reconfigurar el cargador de arranque adecuadamente. Dado que los archivos .krn y .kmods están comprimidos, la distribución de nuevos kernels dyne:bolic se consigue tal cual, tan solo compartiendo los dos archivos. 
+<para>La razón para este acomodo es que, teniendo todos los kernels y sus módulos en dos archivos facilmente reconocibles por su extensión, se vuelve muy fácil compartir kernels en un dock: tan sólo hay que poner el nuevo archivo dentro del directorio dyne/ y reconfigurar el cargador de arranque adecuadamente. Dado que los archivos .krn y .kmods están comprimidos, la distribución de nuevos kernels dyne:bolic se consigue tal cual, tan solo compartiendo los dos archivos. 
 </para>
 
 </section>
