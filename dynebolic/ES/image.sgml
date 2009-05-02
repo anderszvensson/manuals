@@ -4,39 +4,37 @@
 
 <para>
 
-La distribución  dyne:bolic incluye algunos  programas excelentes para
-la composición de imágenes y el modelaje 3D:
+La distribución  dyne:bolic incluye  programas excelentes para
+la composición de imágenes y el modelaje 3D.
 </para>
 
 <para>
-<indexterm><primary> Image </primary>
+<indexterm><primary> Imágen </primary>
 <secondary> Gimp </secondary>
 </indexterm>
 
 <emphasis>Gimp</emphasis> es una aplicación  muy completa capaz de
-crear y editar imágenes de mapas de bits que ofrece un entorno perfecto
-para los  gráficos de internet. Contiene una poderosa  tecnología para
+crear y editar imágenes de mapas de bits. Ofrece un entorno perfecto
+para los  gráficos de internet ya que contiene una poderosa  tecnología para
 automatizar sus operaciones y hasta generar logotipos estilizados.
 </para>
 <para>
 
-<indexterm><primary> Image </primary>
-<secondary> InkScape </secondary>
+<indexterm><primary> Imágen </primary>
+<secondary> Inkscape </secondary>
 </indexterm>
 
-<emphasis>Inkscape</emphasis>  es un  editor  de gráficos  vectoriales
-adaptable para el dibujo a mano, para las caricaturas y los comics y todos los  gráficos generalmente escalables, convirtiéndose  en una herramienta ideal para
+<emphasis><ulink url="http://www.inkscape.org/?lang=es">Inkscape</ulink></emphasis> es un  editor  de gráficos  vectoriales adaptable para el dibujo a mano, para las caricaturas y los comics y para la creación de todos los  gráficos generalmente escalables, convirtiéndose  en una herramienta ideal para
 folletos e impresiones de alta resolución y tetracromáticas.
-
 </para>
 
 <para>
 
-<indexterm><primary> Image </primary>
+<indexterm><primary> Imágen </primary>
 <secondary> Blender </secondary>
 </indexterm>
 
-<emphasis>Blender</emphasis> consiste en  una poderoso entorno para el
+<emphasis>Blender</emphasis> consiste en un poderoso entorno para el
 modelaje en 3D y el desarrollo  de juegos: tiene una interfaz muy bien
 desarrollada, un motor  escrito en Phyton para el  trazado y escritura
 del  comportamiento  de  objetos.  Puede producir  escenas  así  como
@@ -56,7 +54,7 @@ de Spot disponible en línea</ulink>.
 </para>
 
 <para>
-<indexterm><primary> Image </primary>
+<indexterm><primary> Imágen </primary>
 <secondary> GQview </secondary>
 </indexterm>
 
@@ -68,15 +66,13 @@ interactivamente tus galerías de imágenes.
 
 <para>
 
-<indexterm><primary> Image </primary>
-<secondary> ImageMagick </secondary>
+<indexterm><primary> Imágen </primary>
+<secondary> Image Magick </secondary>
 </indexterm>
 
-<emphasis>Image Magick</emphasis> es un paquete de líneas de comandos,
-iniciando  con el  convertidor  desde la  terminal (ver  <emphasis>man
-convert</emphasis>)   puedes  fácilmente  aplicar   operaciones  sobre
-múltiples archivos aplicándoles conversión de formatos y filtros a una
-gran cantidad de imágenes.
+<emphasis>Image Magick</emphasis> es un paquete de líneas de comandos para manipular imágenes. Uno de ellos es el convertidor (ver  <emphasis>man
+convert</emphasis>) con el que puedes fácilmente ejecutar operaciones sobre
+múltiples archivos para convertirlos de un formato a otro, o aplicarles distintos filtros a varias imágenes.
 </para>
 
 </chapter>
