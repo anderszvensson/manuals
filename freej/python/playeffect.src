@@ -1,18 +1,32 @@
+# system wide useful modules
 import threading
-import freej
 import time
 import sys
 
+import freej
+
+# creates and initializes the freej context at give size
 cx = freej.Context()
 cx.init(400,300,0,0)
 
+# refreshes the list of available filter effects
 cx.plugger.refresh(cx)
 
+# opens the file given on commandline as a layer
 lay = cx.open(sys.argv[1])
+
+# gets the vertigo filter effect
 filt = cx.filters["vertigo"]
+
+# adds the filter to the layer
 lay.add_filter(filt)
-lay.active = True
+
+# start the layer thread
+lay.start()
+
+# adds the layer to the freej context
 cx.add_layer(lay)
 
+# starts freej in a separate thread
 th = threading.Thread(target = cx.start , name = "freej")
 th.start();

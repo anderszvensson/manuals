@@ -1,16 +1,78 @@
 <chapter>
 <title>Install</title>
 
+<section>
+<title>Distributed packages</title>
+
+<para>
+FreeJ packages are available  on mainstream GNU/Linux distributions as
+Debian, Ubuntu and Fedora, successfully compiled for x86, 64bit, MIPS,
+PPC and even more hardware platforms: to install them you can use your
+favorite  software manager  like Synaptic  or apt-get,  something like
+"<emphasis>apt-get install freej</emphasis>" will work.
+</para>
+
+<para>
+FreeJ is  made out of  multiple components, basically consisting  of a
+library, one or  more application interfaces and one  or more language
+bindings.  At the time of  this publication the following packages are
+commonly found:
+
+<itemizedlist>
+
+<listitem><para>
+<emphasis>freej</emphasis> main command-line interface (CLI)
+</para></listitem>
+
+<listitem><para>
+<emphasis>freej-dbg</emphasis> CLI debugging symbols
+</para></listitem>
+
+<listitem><para>
+<emphasis>freej-doc</emphasis> documentation and examples
+</para></listitem>
+
+<listitem><para>
+<emphasis>libfreej0</emphasis> run-time library
+</para></listitem>
+
+<listitem><para>
+<emphasis>libfreej-dev</emphasis> development headers
+</para></listitem>
+
+<listitem><para>
+<emphasis>libfreej0-dbg</emphasis> library debugging symbols
+</para></listitem>
+
+<listitem><para>
+<emphasis>python-freej</emphasis> python language bindings
+</para></listitem>
+
+<listitem><para>
+<emphasis>python-freej-dbg</emphasis> python debugging symbols
+</para></listitem>
+
+</itemizedlist>
+
+</para>
+
+</section>
 
 <section>
-<title>Download the source</title>
+<title>Compile from source</title>
 
 <para>
 Stable     sources    for     FreeJ     are    regularly     published
 on <ulink url="ftp://ftp.dyne.org/freej/releases">ftp.dyne.org</ulink>
-server and its  mirrors. You can use stable releases  in case you want
-to  employ this software  in a  production environment,  although some
-newest features and fixes will be missing.
+server and its  mirrors.
+
+<screen>
+  <userinput>ftp://ftp.dyne.org/freej/releases</userinput>
+</screen>
+
+You can use  stable releases in case you want  to employ this software
+in a  production environment, although some newest  features and fixes
+will be missing.
 </para>
 
 <para>
@@ -29,8 +91,8 @@ system, then run from a terminal:
 
 This  will  download all  the  revisioned  source  repository on  your
 harddisk,  with an  occupation lower  than 50MB,  which you  can later
-update  running  the command  'git  pull'  from  inside the  directory
-created.
+update  running  the  command  'git  pull --rebase'  from  inside  the
+directory created.
 </para>
 
 <para>
@@ -41,21 +103,19 @@ to          our          way          to          interact          by
 the <ulink url="http://lab.dyne.org/Code">Developer's Lounge</ulink>.
 </para>
 
-</section>
+
 
 <section>
-<title>Compile the source</title>
+<title>Dependencies</title>
 
 <para>
 To compile FreeJ source code you will need to fulfill a minimum set of
 dependencies, while optionally  you can link a range  of libraries for
 extended  functionality  as video  playback,  encoding and  streaming.
-FreeJ  code has  been tested  to compile  on x86  (little-endian), PPC
-(big-endian) and ARM (embedded) architectures.
 </para>
 
 <para>
-Minimum requirements:
+The Minimum requirements are:
 
 <indexterm><primary>GCC</primary></indexterm>
 <indexterm><primary>SDL</primary></indexterm>
@@ -64,44 +124,225 @@ Minimum requirements:
   <member>A sane GNU C++ compiler toolchain</member>
   <member>SDL libraries for visualization</member>
 </simplelist>
+
+</para>
+
+<para>
+Having just  those the source  code can be  tweaked to compile  into a
+minimal version of FreeJ, still missing many features.
 </para>
 
 
 <para>
-Optional extensions:
+The recommended components are:
 
-<indexterm><primary>SDL</primary></indexterm>
 <indexterm><primary>FFmpeg</primary></indexterm>
 <indexterm><primary>Swig</primary></indexterm>
 <indexterm><primary>Ogg</primary></indexterm>
 <indexterm><primary>Vorbis</primary></indexterm>
+<indexterm><primary>Theora</primary></indexterm>
 
-<simplelist>
-  <member>FFmpeg  libraries for video playback</member>
-  <member>Ogg/Theora/Vorbis libraries for video encoding and streaming</member>
-  <member>Swig code wrapper for language bindings</member>
-  <member>Python and/or Ruby to use the language bindings</member>
-</simplelist>
+<itemizedlist>
+  <listitem><para><emphasis>FFmpeg</emphasis>  libraries for video playback</para></listitem>
+  <listitem><para><emphasis>Ogg/Theora/Vorbis</emphasis> libraries for video encoding and streaming</para></listitem>
+  <listitem><para><emphasis>XUL-runner</emphasis> libraries for a recent javascript interpreter</para></listitem>
+  <listitem><para><emphasis>Jack and FFTW3</emphasis> for audio analysis and parametrization</para></listitem>
+  <listitem><para><emphasis>Swig</emphasis> code wrapper for language bindings</para></listitem>
+  <listitem><para><emphasis>Python</emphasis> (and ipython console) for the language bindings</para></listitem>
+  <listitem><para><emphasis>OpenGL</emphasis> libraries for video output in 3d context</para></listitem>
+</itemizedlist>
 
-In case  your building system  is a GNU/Linux distribution,  then make
-sure  you  have installed  the  corresponding  -dev  packages for  the
-aforementioned components.
 </para>
 
 <para>
-If you  are trying to compile this  software on OSX, you  will need to
-open  an account  as  "Apple Developer"  and  download the  developers
-tools. These are not really free,  their use is a concession by the A.
-corporation even if they include the  GNU C compiler. Also you will to
-install     some    free     packaged    collection     of    software
-as             <ulink            url="http://fink.sf.net">Fink</ulink>
-or  <ulink url="http://www.macports.org">Macports</ulink>  and proceed
-installing the aforementioned components. You'll need good unix skills
-to  compile a working  executable, if  you don't  feel daring  then we
-suggest the more user-friendly packaging of stable binary releases for
-OSX                              found                              on
-the <ulink url="ftp://ftp.dyne.org/freej/binaries">ftp.dyne.org/freej</ulink>
+In case  your building system  is a GNU/Linux distribution,  then make
+sure  you  have installed  the  corresponding  -dev  packages.
 </para>
+
+</section>
+
+
+<section>
+<title>Build on GNU/Linux</title>
+
+<para>
+Once having  attained the source code  of FreeJ we can  proceed to its
+compilation, but  first make  sure all necessary  development packages
+area available, on Debian and Ubuntu operating systems those are:
+
+<itemizedlist>
+
+<listitem><para>
+<emphasis>pkg-config</emphasis> manage compile and link flags for libraries 
+</para></listitem>
+
+<listitem><para>
+<emphasis>flex</emphasis> a fast lexical analyzer generator. 
+</para></listitem>
+
+<listitem><para>
+<emphasis>bison</emphasis> a parser generator that is compatible with YACC 
+</para></listitem>
+
+<listitem><para>
+<emphasis>libsdl-dev</emphasis> Simple Direct Media layer package
+</para></listitem>
+
+<listitem><para>
+<emphasis>libpng-dev</emphasis> Portable Network Graphics package
+</para></listitem>
+
+<listitem><para>
+<emphasis>libjpeg-dev</emphasis> Jpeg image development package
+</para></listitem>
+
+<listitem><para>
+<emphasis>libfreetype6-dev</emphasis> FreeType 2 font engine
+</para></listitem>
+
+<listitem><para>
+<emphasis>libfontconfig-dev</emphasis> font configuration package
+</para></listitem>
+
+<listitem><para>
+<emphasis>libogg-dev</emphasis> Ogg Bitstream Library Development 
+</para></listitem>
+
+<listitem><para>
+<emphasis>libvorbis-dev</emphasis> The Vorbis General Audio Compression Codec
+</para></listitem>
+
+<listitem><para>
+<emphasis>libtheora-dev</emphasis> The Theora Video Compression Codec
+</para></listitem>
+
+<listitem><para>
+<emphasis>libslang2-dev</emphasis> The S-Lang programming library
+</para></listitem>
+
+<listitem><para>
+<emphasis>libavcodec-dev</emphasis> FFMpeg development files for libavcodec 
+</para></listitem>
+
+<listitem><para>
+<emphasis>libavformat-dev</emphasis> FFMpeg development files for libavformat 
+</para></listitem>
+
+<listitem><para>
+<emphasis>libswscale-dev</emphasis> FFMpeg development files for libswscale 
+</para></listitem>
+
+<listitem><para>
+<emphasis>libunicap2-dev</emphasis> unified interface to video capture devices
+</para></listitem>
+
+<listitem><para>
+<emphasis>libbluetooth-dev</emphasis> BlueZ Linux Bluetooth library 
+</para></listitem>
+
+<listitem><para>
+<emphasis>fftw3-dev</emphasis> Fast Fourier Transform library
+</para></listitem>
+
+<listitem><para>
+<emphasis>libjack-dev</emphasis> JACK Audio Connection Kit
+</para></listitem>
+
+<listitem><para>
+<emphasis>libasound-dev</emphasis> Alsa sound libraries
+</para></listitem>
+
+<listitem><para>
+<emphasis>libmozjs-dev</emphasis> Mozilla SpiderMonkey JavaScript library 
+</para></listitem>
+
+<listitem><para>
+<emphasis>xulrunner-dev</emphasis> Gecko engine library 
+</para></listitem>
+
+<listitem><para>
+<emphasis>python-all-dev</emphasis> Python development packages 
+</para></listitem>
+
+<listitem><para>
+<emphasis>python-central</emphasis> register and build utility for Python packages 
+</para></listitem>
+
+<listitem><para>
+<emphasis>swig</emphasis> Generate scripting interfaces to C/C++ code 
+</para></listitem>
+
+<listitem><para>
+<emphasis>libhtml-template-perl</emphasis> HTML Templates with Perl for generated documentation
+</para></listitem>
+
+</itemizedlist>
+
+</para>
+
+<para>
+
+After having uncompressed the FreeJ source code into its directory, go
+inside and type:
+
+<screen>
+  <userinput>./configure --enable-python</userinput>
+  <userinput>make</userinput>
+  <userinput>sudo make install</userinput>
+</screen>
+
+If no  errors occurred then  you should have  at this point  all FreeJ
+libraries    and   language    bindings    compiled   and    installed
+in   <emphasis>/usr/local</emphasis>   directories.    To   test   the
+installation type  <emphasis>freej</emphasis> in a console  and see if
+it starts, or run a python interpreter as <emphasis>ipython</emphasis>
+and give it the command <emphasis>import freej;</emphasis>.
+
+</para>
+
+
+</section>
+
+
+
+<section>
+<title>Build on Apple/OSX</title>
+
+<para>
+If you  are trying to compile this  software on OSX, you  will need to
+open an account as "Apple Developer" and download the XCode developers
+tools. These  are not really  free, their use  is a concession  by the
+Apple corporation  even if they include  the GNU C  compiler. Also you
+will  need  to  install  the free packaged  collection  of  software
+<ulink   url="http://www.macports.org">Macports</ulink>   and  proceed
+installing the needed packages: <emphasis> </emphasis>.
+
+<screen>
+  <userinput>sudo port install slang2 fftw-3 spidermonkey</userinput>
+  <userinput>sudo port install libsdl libsdl_image libsdl_ttf libsdl_gfx</userinput>
+  <userinput>sudo port install ffmpeg-devel +no_nonfree</userinput>
+</screen>
+
+</para>
+
+
+
+<para>If you  think you are  set, you can  open the XCode  project for
+FreeJ inside  the osx/ directory,  where there are  implemented native
+Carbon/Cocoa OSX  components used internally by our  engine, with well
+satisfying results.</para>
+
+<para>You don't  need to do  all this to  run FreeJ on  Apple/OSX: the
+user-friendly packaging of stable binary releases for OSX is hosted on
+our web page at the address
+<ulink url="http://freej.dyne.org">freej.dyne.org</ulink>
+</para>
+
+</section>
+
+
+<section>
+<title>Build on Microsoft/Win</title>
 
 <para>
 No-one of  us so  far felt  like compiling FreeJ  on the  M$ platform,
@@ -117,20 +358,26 @@ should           be            provided           already           by
 the <ulink url="http://www.mingw.org">MinGW</ulink> project.
 </para>
 
+</section>
+
+<section>
+<title>Build for embedded platforms</title>
+
 <para>
 Experimental builds  of FreeJ  have succeeded to  work on  common game
 consoles.   If you  are  trying  to compile  on  embedded ARM,  you'll
 probably have some fun :) the autoconf/automake setup will work out of
 the    box    with   a    sane    cross-compiling   toolchain    based
 on <ulink url="http://gcc.gnu.org">GCC</ulink>,  like the one provided
-by  <ulink  url="http://www.devkitpro">devkitPro</ulink>: if  properly
-linked to the right libraries  and with some minor adjustement to code
-this software  can run on game  consoles like NDS or  GP2X, set-top TV
-boxes and some palmar devices  as personal managers and new generation
-phones. Let's get  in touch: we are interested  in further development
-in this direction!
+by    <ulink    url="http://www.devkitpro.org">devkitPro</ulink>:   if
+properly linked to the right libraries and with some minor adjustement
+to  code this  software can  run on  game consoles  like NDS  or GP2X,
+set-top TV boxes and some  palmar devices as personal managers and new
+generation phones.  Let's get in  touch: we are interested  in further
+development in this direction!
 </para>
 
+</section>
 
 </section>
 </chapter>

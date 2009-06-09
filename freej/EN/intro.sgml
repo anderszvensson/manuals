@@ -197,9 +197,11 @@ Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 <para>FreeJ is copyleft (GNU GPLv3)
 
 <simplelist>
-  <member>2001 - 2008 by Denis Roio</member>
+  <member>2001 - 2009 by Denis Roio</member>
   <member>2004 - 2005 by Silvano Galliani</member>
   <member>2005 - 2008 by Christoph Rudorff</member>
+  <member>2008 - 2009 by Luca Bigliardi</member>
+  <member>2008 - 2009 by Pablo Martin</member>
 </simplelist>
 
 Statically included libraries are  copyright of the respective authors

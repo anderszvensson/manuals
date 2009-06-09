@@ -5,28 +5,43 @@ import freej
 cx = freej.Context()
 cx.init(400,300,0,0)
 
+### declare the Trigger Controller
 class Frame(freej.TriggerController):
 
   def __init__(self, *args):
     super(Frame, self).__init__(*args)
 
-# to be removed (bugfix of activate in controller)
-  def activate(self):
-    self.active = True
 
+  ### the dispatch function is the callback
+  ### it will be called at every frame
 
   def dispatch(self):
-    print "dispatch callback activated"
+      ### rotate around 360 degrees, incrementing
+      ### this function is called once every frame
+      if self.i>360: self.i=0
+      self.i += 1
+      self.txt.set_rotate( self.i )
+      return 1
+      # dispatch should always return an integer value
 
-# please  note  the following return: is needed
-# at  the end of the function, else Ruby will
-# return an exception and bail out
+ 
 
-    return 1
-
-
+### create an instance of our Trigger Controller
 f = Frame()
+### set rotation index to zero
+f.i = 0
+### create a text layer inside the controller
+f.txt = freej.TextLayer()
+f.txt.init(cx);
+f.txt.write("Hello World!")
+f.txt.start();
+cx.add_layer(f.txt);
+
+
+# register it on the current context
 cx.register_controller(f)
 
+
+# start running freej in a separate thread
 th = threading.Thread(target = cx.start , name = "freej")
 th.start();

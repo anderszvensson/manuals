@@ -1,0 +1,28 @@
+# system wide useful modules
+import threading
+import time
+
+import freej
+
+# creates and initializes the freej context at give size
+cx = freej.Context()
+cx.init(400,300,0,0)
+
+# create an instance of a TextLayer
+txt = freej.TextLayer()
+
+# initializes the new layer with the freej context
+txt.init(cx);
+
+# writes the hello world text inside the layer
+txt.write("Hello World!")
+
+# start the layer
+txt.start();
+
+# add the layer to the screen
+cx.add_layer(txt);
+
+# starts freej in a separate thread
+th = threading.Thread(target = cx.start , name = "freej")
+th.start();

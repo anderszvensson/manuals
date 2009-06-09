@@ -1,6 +1,36 @@
+<section>
+<title>Hello World</title>
+
+<indexterm><primary>TextLayer</primary></indexterm>
+
+<para>
+Here below the  classical "Hello World" script that  simply opens up a
+FreeJ output window and a Text Layer, writing into it,
+</para>
+
+%helloworld
+
+<para>
+After  initialisation of  <emphasis>cx</emphasis> as  a  FreeJ context
+a   <emphasis>TextLayer</emphasis>  is   initialised   and  added   to
+it. Please  note the sequence for  creating the layer  is fixed: first
+the  constructor, then  <emphasis>init()</emphasis> is  called passing
+the  context  as an  argument,  some text  is  written  into it  using
+the <emphasis>write()</emphasis> method, the layer is then started and
+added to the context.
+</para>
+</section>
 
 <section>
 <title>Play and apply an effect</title>
+
+<indexterm><primary>Plugger</primary></indexterm>
+<indexterm><primary>Filters</primary></indexterm>
+
+<para>
+The following script should be run with an argument: an image or video
+file that will be reproduced with a filter effect applied on it.
+</para>
 
 %playeffect
 
@@ -34,6 +64,9 @@ capabilities.  There are many possibilities out there ;^)
 <section>
 <title>Controllers</title>
 
+<indexterm><primary>Controller</primary></indexterm>
+<indexterm><primary>TriggerController</primary></indexterm>
+
 <para>
 Controllers in  FreeJ are  listeners which will  dispatch asynchronous
 messages from input channels, that is for example a keyboard that will
@@ -47,25 +80,25 @@ controller.
 
 <para>
 Here below an example of this  use with the most basic controller: the
-<emphasis>TriggerCtrl</emphasis>,  once created  and  registered, will
-call dispatch() every time a frame is processed:
+<emphasis>TriggerController</emphasis>,  once created  and registered,
+will call dispatch() every time a frame is processed:
 </para>
 
 %controller
 
 <para>
 It initializes  a new FreeJ instance  as usual, then  declares the new
-class  <emphasis>Frame</emphasis> overloading  the  TriggerCtrl.  With
-this new class  we overload the <emphasis>dispatch</emphasis> function
-to  print  out  some  output  every  time is  called,  that  is  every
+class  <emphasis>Frame</emphasis>  overloading the  TriggerController.
+With  this  new class  we  overload the  <emphasis>dispatch</emphasis>
+function to print out some output  every time is called, that is every
 frame.
 </para>
 
 <para>
 At  last  the  script creates  an  instance  of  the new  Frame  class
-(inheriting all methods from TriggerCtrl) registers it to be called by
-the engine  with the <emphasis>register_controller()</emphasis> method
-in the Context.
+(inheriting  all methods  from TriggerController)  registers it  to be
+called            by             the            engine            with
+the <emphasis>register_controller()</emphasis> method in the Context.
 </para>
 
 <para>
