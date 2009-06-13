@@ -4,9 +4,14 @@ import time
 
 import freej
 
-# creates and initializes the freej context at give size
+# initializes FreeJ creating a Contex
 cx = freej.Context()
-cx.init(400,300,0,0)
+
+# creates a screen of given size
+scr = freej.SdlScreen( 400, 300 )
+
+# adds the screen
+cx.add_screen(scr)
 
 # create an instance of a TextLayer
 txt = freej.TextLayer()

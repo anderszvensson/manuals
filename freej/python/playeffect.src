@@ -1,32 +1,43 @@
-# system wide useful modules
+		# system wide useful modules
 import threading
 import time
 import sys
 
 import freej
 
-# creates and initializes the freej context at give size
+		# initializes FreeJ creating a Contex
 cx = freej.Context()
-cx.init(400,300,0,0)
 
-# refreshes the list of available filter effects
+		# creates a screen of given size
+scr = freej.SdlScreen( 400, 300 )
+
+      		# adds the screen
+cx.add_screen(scr)
+
+		# refreshes the list of available filter effects
 cx.plugger.refresh(cx)
 
-# opens the file given on commandline as a layer
+		# check that we have an argument
+if(sys.argv.__len__()<2):
+    print "[!] this script needs an argument: file to play"
+    quit()
+
+		# opens the file given on commandline as a layer
 lay = cx.open(sys.argv[1])
 
-# gets the vertigo filter effect
+
+		# gets the vertigo filter effect
 filt = cx.filters["vertigo"]
 
-# adds the filter to the layer
-lay.add_filter(filt)
+		# adds the filter to the layer
+lay.add_filter( filt )
 
-# start the layer thread
+		# start the layer thread
 lay.start()
 
-# adds the layer to the freej context
+		# adds the layer to the freej context
 cx.add_layer(lay)
 
-# starts freej in a separate thread
+		# starts freej in a separate thread
 th = threading.Thread(target = cx.start , name = "freej")
 th.start();

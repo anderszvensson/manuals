@@ -2,8 +2,11 @@
 import threading
 import freej
 
-cx = freej.Context()
-cx.init(400,300,0,0)
+# context and screen initialization
+cx  = freej.Context()
+scr = freej.SdlScreen( 400, 300 )
+cx.add_screen( scr )
+
 
 ### declare the Trigger Controller
 class Frame(freej.TriggerController):
