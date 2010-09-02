@@ -1,0 +1,99 @@
+<chapter>
+<title>Discover the system</title>
+
+<section>
+<title>Your desktop environment</title>
+
+
+<para>
+Dyne:bolic doesn't requires to install anything on your harddisks,
+which can be left untouched while the system is used. Still, depending
+from your preferred way to operate, it can boot from harddisk, CD, USB
+or network (explained the following chapter) and it can store data in
+a single file that can be transported across different media.
+</para>
+
+<indexterm><primary>Xfce</primary></indexterm>
+
+<para>
+The default desktop manager is <ulink
+url="http://www.xfce.org">Xfce</ulink>, it offers you multiple
+desktops (try ctrl+F2 and other numbers) and a menu that you can
+recall by clicking the right mouse button on the background. On the
+upper right corner you have your storage devices which you can access
+with a click. 
+</para>
+
+<para>
+Inside the application menu software is organized by tasks, so you can
+easily find your way to play, record, edit and stream both audio and
+video, communicate and publish text, webpages, 3d animations and much
+more.
+</para>
+
+
+</section>
+
+<section>
+<title>Privacy and freedom of expression</title>
+
+<para>
+The distinction between what is public and what is private is becoming
+more and more blurred with the increasing intrusiveness of the media
+and advances in electronic technology. While this distinction is
+always the outcome of continuous cultural negotiation, it continues to
+be critical, for where nothing is private, democracy becomes
+impossible
+<footnote><para>quote from Privacy Conference, Social Research, New
+School University</para></footnote>
+</para>
+
+<para>
+The internet offers plenty of free services, on the wave of the Web2.0
+fuzz and the community boom, while all private informations are hosted
+on servers owned by global corporations and monopolies.
+</para>
+
+<para>
+We urge you to reflect on the importance of keeping privacy for
+personal data. Our present world is full of prevarication and
+political imprisonments, war rages in several places and media is
+mainly used for propaganda by the powers in charge. Some of us face
+the dangers of being tracked by oppressors opposing our self
+definition, independent thinking and resistance to omologation.
+</para>
+
+<para>
+People have the right to protect their privacy as much as their
+freedom to express.
+</para>
+
+<para>
+It is important to keep in mind that noone else than *you* can ensure
+the privacy of your personal data. Server hosted services and web
+integrated technologies (like FACEBOOK & co.) gather all data into
+huge information pools that are made available to established
+economical and cultural regimes.
+</para>
+
+<para>
+This free operating system supports strong encryption of your private
+data with (Linux dm-crypt i586 optimized Rijndael hashed SHA256) using
+the application <emphasis>cryptkeeper</emphasis> providing an
+efficient and user-friendly tool to protect your bookmarks,
+addressbook, documents and emails by carrying them back with you.
+  </para>
+
+<para>
+A passkey to read your data is stored inside a file, which is also
+protected by a password. It is possible to keep everything with you on
+a small usb stick, still being sure that the data won't be easily
+recovered in case you loose it.  You can also give the passkey
+protecting your data to a friend, to make the data unaccessible until
+you meet again, which can be useful in case of tricky transports.
+You'll find more informations in the following sections about nesting
+and privacy.</para>
+
+</section>
+
+</chapter>

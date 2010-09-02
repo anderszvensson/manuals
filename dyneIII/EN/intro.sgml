@@ -1,0 +1,310 @@
+
+<chapter>
+<title>The hacktive media</title>
+
+<para>
+dyne:bolic GNU/Linux is a live bootable distribution working
+<emphasis>directly from the CD</emphasis>.. It can recognize most of
+your hardware devices and offers a vast range of software for sound
+and video production, streaming, 3d modeling, peer to peer and
+filesharing, deejaying, veejaying and more.
+</para>
+
+<para>
+This operating system focuses on providing <emphasis>multimedia
+functionalities</emphasis> to surf, stream, record, edit, encode and
+broadcast both sound and video.
+</para>
+
+<para>
+dyne:bolic it is made by and shaped on the needs of media activists,
+artists and creatives to stimulate the production and not only the
+fruition of digital and analog informations.
+Empowered by GNU/Linux and the groovy open source software community,
+this operating system takes birth as a grassroot effort to spread free
+software and the spirit of sharing informations.
+</para>
+
+<para>
+This is an ALPHA release of the version 3 of our operating system and
+you are one of the first people ever using it! after 4 years of design
+and development, we are basing this new foundation on the Debian
+GNU/Linux operating system, keeping an 100% free approach to the
+selection of the software we include.
+</para>
+
+
+<para>
+
+For more informations visit the homepage on <ulink url="http://dynebolic.org">dynebolic.org</ulink>
+where more online documentation is made available.
+To contribute you can <ulink url="http://bugs.dyne.org">report bugs</ulink> and
+get in touch with the community of users and developers joining the
+the <ulink url="http://lists.dyne.org">discussion mailinglists</ulink> or the
+ <ulink url="http://dyne.im">chat channel</ulink>.
+</para>
+
+
+<section>
+<title>How to use this manual</title>
+
+<indexterm><primary>manuals</primary></indexterm>
+
+<para>
+Far from being complete in exploring the possibilities of each
+single software, you'll get introduced and find basic directions on
+how to use, modify and employ dynebolic in various circumstances.
+</para>
+
+<para>
+When in need of in-deep information on how to operate a particular
+software, you should consult the included <emphasis>man pages</emphasis>.
+</para>
+
+<para>
+The manpage is the name of the manual page describing usage of the
+program, you can use it with the <emphasis>man</emphasis> command from
+an <emphasis>XTerminal</emphasis> inside dyne:bolic :
+<screen>
+<prompt>[d:b] ~ # </prompt><userinput>man hasciicam</userinput> <lineannotation><keycap>[Enter]</keycap></lineannotation>
+</screen>
+it will show an higly informative text about the usage of the program;
+the manpage name usually matches the name of the program executable
+itself.
+</para>
+
+<para>
+Always keep in mind: the <emphasis>man</emphasis> command is your
+friend :) it works in every GNU/Linux system providing information
+about every command, and with all the commands that are around there
+is a lot to discover! for example have a look at manuals like "sox"
+or "convert", you'll find out that you can do a lot of things just
+from the XTerminal commandline!
+</para>
+
+
+<para>
+At last, in case you are using intensively a certain software for
+your purposes, don't miss to consult its own documentation and join
+the community of users around it: there you can discover more about its
+usage and development.
+</para>
+
+</section>
+
+<section>
+<title>This is Rasta software</title>
+
+<indexterm><primary>rastasoft</primary></indexterm>
+<indexterm><primary>afrolinux</primary></indexterm>
+
+<mediaobject>
+   <imageobject>
+        <imagedata align="center" fileref="images/shot-credits" format="jpg">
+   </imageobject>
+</mediaobject>
+
+
+ <para> Jah Rastafari Livity
+bless our Freedom!  This is free software, share it for the good of
+yourself and your people, respect others and let them express, be free
+and let others be free.  Live long and prosper in Peace!
+</para>
+
+<para>
+But, no Peace without Justice.
+This software is about Resistance inna babylon world which tries to control
+more and more the way we communicate and we share informations and knowledge.
+This software is for all those who cannot afford to have the latest expensive
+hardware to speak out their words of consciousness and good will.
+This software has a full range of applications for production and not only
+fruition of information, it's a full multimedia studio, you don't need to buy
+anything to express your voice.
+Freedom and sharing of knowledge are solid principles for evolution and that's
+where this software comes from.
+</para>
+
+<para>
+Inna babylon, money is the main requirement to make a voice possible to
+be heard by others. Capitalist and fundamentalist governments all around
+the world rule with huge TV monopolies spreading their propaganda,
+silencing all criticism.
+</para>
+
+<para>
+
+This is a struggle for Redemption from existing operating systems
+which always require new expensive hardware for doing the same as
+ever: give us free players but make us pay for producing our own
+voices. And the one who protects you rips you off, as the Arabs say.
+
+</para>
+
+<para>
+Dyne:bolic is a tool to produce and publish yourself, freely.
+There is nothing to consume here, there is all you need to create.
+</para>
+
+<para>
+
+Commercial operating systems always give a possibility to listen - all
+kinds of "free to download" players, but always with restrictions and
+no easy way for everybody to speak out.
+
+The way communication is structured follows the hierarchy of powers
+allready established in babylon's mediascapes and, worst than ever,
+money is the main requirement to spread a voice and let it be heard by
+others.
+
+</para>
+
+<para>
+
+Neverthless, proprietary software spreads the dependence from business
+companies thru the populace: whenever we share our knowledge on how to
+use a certain software, we make the people in need to buy the tools
+from merchants in order to express their creativity. This is great
+responsability for anyone of us who teaches somebody how to do
+something with software: the need to buy will be slavery under the
+merchantile interests of capitalism.
+
+</para>
+
+<para>
+
+The roots of Rasta culture can be found in Resistance to slavery.
+This software is not a business.  This software is free as of speech
+and is one step in the struggle for Redemption and Freedom.  This
+software is dedicated to the memory of Patrice Lumumba, Marcus Garvey,
+Marthin Luther King, Steve Biko, Walter Rodney, Malcom X; in
+solidarity with Mumia Abu Jamal and all those who still resist to
+slavery, racism and oppression, who still fight imperialism and seek
+an alternative to the hegemony of capitalism in our World.
+
+  </para>
+
+<para>
+<ulink url="http://rastasoft.org">Hic Sunt Leones</ulink>.
+And Much Blessings in Jah Luv to All Those who still Resist.
+Selah.
+</para>
+
+</section>
+
+<section>
+<title>Streamtime</title>
+<subtitle>Employing dyne:bolic for the freedom of communication</subtitle>
+
+<indexterm><primary>streamtime</primary></indexterm>
+
+<para>
+
+<ulink url="http://www.streamtime.org">Streamtime</ulink> is a project
+of <emphasis>Radio Reedflute</emphasis> in collaboration with
+<emphasis>Rastasoft</emphasis>, developed with artists and activists
+from Iraq and elsewhere. Streamtime is a loose network of media
+activists dedicated to assist autonomous networking. Streamtime uses
+old and new media for the production of content and networks in the
+fields of media, arts, culture and activism in crisis areas, like
+Iraq.
+
+</para>
+
+
+<para>
+
+We imagine improvised expressive devices like a CD that turns your PC
+into an on line streaming studio. Imagine a mob that creates a traffic
+jam. Think of the religious policeman in London, the konfused kollege
+kid and the jealous dentist in Baghdad and the jailed blogger blogging
+on in Cairo. Building autonomous networks in extreme conditions.
+
+</para>
+
+<para>
+
+Streamtime uses old and new media for the production of content and
+networks in the fields of media, arts, culture and activism in crisis
+areas, like Iraq. Streamtime offers a diffuse environment for
+developing do-it-yourself media. We focus on a cultural sense of
+finding your own way in the quagmire that is Iraq, and its
+representation in the global media. We should not try to change
+politics in order to foster cultural change; we should support
+cultural manifestation in order to force political change.
+
+</para>
+
+<para>
+
+Streamtime may take the form of a campaign, a work of collaborative
+art, a current of unheard sounds, unspeakable words and unseen
+imaginations.
+</para>
+
+<para>
+Remote interaction and ubiquitous dialogues, dematerialized
+communication and participation on the streets.  Space in its
+territorial, acoustic and cybernetic dimensions is fragmented and
+recomposed realtime.  Hacking codes both moral and digital, forming
+new maps, mutant drawings and unstable skins.  Information overload
+can be abandoned in favor of consciousness and collaborative
+practices.  Memory has a digital, diverse, horizontal voice.
+
+</para>
+
+</section>
+
+
+<section>
+<title>License and disclaimer</title>
+
+<indexterm><primary>license</primary><secondary>copyright</secondary></indexterm>
+
+<para>
+The dyne:OS user's manual is
+Copyright (c) 2003 - 2010 Denis Jaromil Roio
+</para>
+
+<para>
+
+Thanks for reviewing and inspirations go to the Streamtime crew, all
+the bloggers from Baghdad and any other crazy place in the world where
+people like us happens to be living, has to live it, and can even find
+a way to survive.
+
+</para>
+
+
+<para>
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with the Introductory and Colophon sections being invariant, with the
+Front-Cover and Back-Cover Texts clearly stating authorship and
+copyright notices.
+You should have received a copy of the GNU Free Documentation License
+along with this manual; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+</para>
+
+<para>
+dyne:bolic GNU/Linux is
+copyright (C) 2001 - 2010 Denis Jaromil Roio
+</para>
+<para>
+Dyne:bolic is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+</para>
+</section>
+
+</chapter>
