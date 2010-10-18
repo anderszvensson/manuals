@@ -1,14 +1,20 @@
-# system wide useful modules
-import threading
-import time
+# FreeJ python - hello world example
 
+# load the FreeJ python extension
 import freej
 
-# initializes FreeJ creating a Contex
+# we make heavy use of multi-threading
+import threading
+
+# initialize FreeJ creating a Contex
 cx = freej.Context()
 
-# creates a screen of given size
-scr = freej.SdlScreen( 400, 300 )
+# create an output Screen
+scr = freej.SdlScreen()
+
+# initialized the Screen size
+#        wdt  hgt  bpp
+scr.init(400, 300, 32)
 
 # adds the screen
 cx.add_screen(scr)
@@ -16,17 +22,17 @@ cx.add_screen(scr)
 # create an instance of a TextLayer
 txt = freej.TextLayer()
 
-# initializes the new layer with the freej context
-txt.init(cx);
+# initializes the new layer
+txt.init();
 
 # writes the hello world text inside the layer
 txt.write("Hello World!")
 
-# start the layer
+# start the layer thread
 txt.start();
 
 # add the layer to the screen
-cx.add_layer(txt);
+scr.add_layer(txt);
 
 # starts freej in a separate thread
 th = threading.Thread(target = cx.start , name = "freej")

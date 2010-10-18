@@ -1,10 +1,17 @@
+# FreeJ python - controller example
 
+# system wide useful modules
 import threading
 import freej
 
-# context and screen initialization
-cx  = freej.Context()
-scr = freej.SdlScreen( 400, 300 )
+# initialize FreeJ creating a Contex
+cx = freej.Context()
+
+# create an output Screen
+scr = freej.SdlScreen()
+scr.init(400, 300, 32)
+
+# adds the Screen to the Context
 cx.add_screen( scr )
 
 
@@ -35,15 +42,14 @@ f = Frame()
 f.i = 0
 ### create a text layer inside the controller
 f.txt = freej.TextLayer()
-f.txt.init(cx);
+f.txt.init();
 f.txt.write("Hello World!")
 f.txt.start();
-cx.add_layer(f.txt);
+scr.add_layer(f.txt);
 
 
-# register it on the current context
+# register our Frame Trigger to the Context
 cx.register_controller(f)
-
 
 # start running freej in a separate thread
 th = threading.Thread(target = cx.start , name = "freej")
